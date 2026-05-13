@@ -27,7 +27,6 @@
    ' <a href="/commentary.html">Market Commentary</a>',
    ' <a href="/education.html">Education</a>',
    ' <a href="/strategies.html">Options Strategies</a>',
-   ' <a href="/about.html">About</a>',
    '</div>'
   ].join('\n');
  }
