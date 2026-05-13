@@ -1,32 +1,30 @@
 // nav.js — Dependability Holdings LLC
-// Top utility bar + category tab bar
+// Row 1: DEPENDABILITY wordmark + centered tagline + right nav links
+// Row 2: section tab bar (Overview / Forecast / Commentary / Education / Strategies)
 (function () {
 
- // ── Utility Bar ──────────────────────────────────────────
+ // ── Row 1: Top Black Bar ──────────────────────────────────
  var utility = document.getElementById('site-utility');
  if (utility) {
   utility.innerHTML = [
-   '<div class="utility-bar">',
-   ' <div class="brand"><a href="/index.html">DEPENDABILITY</a></div>',
-   ' <div class="utility-links">',
+   '<nav class="top-bar">',
+   ' <a href="/" class="top-wordmark">DEPENDABILITY</a>',
+   ' <span class="top-tagline">Independent market research and options analysis</span>',
+   ' <div class="top-links">',
    '  <a href="/about.html">About</a>',
    '  <a href="/methodology.html">Methodology</a>',
    '  <a href="/about.html#contact">Contact</a>',
    ' </div>',
-   '</div>'
+   '</nav>'
   ].join('\n');
  }
 
- // ── Category Tab Bar ───────────────────────────────────────
+ // ── Row 2: Section Tab Bar ───────────────────────────────
  var nav = document.getElementById('site-nav');
  if (nav) {
   nav.innerHTML = [
    '<div class="tab-bar">',
-   ' <div class="nav-left">',
-   '  <a href="/index.html" class="nav-logo">DEPENDABILITY</a>',
-   '  <span class="nav-descriptor">Independent market research and options analysis</span>',
-   ' </div>',
-   ' <div class="nav-right">',
+   ' <div class="tab-bar-inner">',
    '  <a href="/index.html">Overview</a>',
    '  <a href="/forecast.html">Forecast</a>',
    '  <a href="/commentary.html">Market Commentary</a>',
