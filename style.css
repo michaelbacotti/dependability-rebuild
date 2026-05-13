@@ -152,6 +152,16 @@ small, .small {
  z-index: 100;
 }
 
+.site-descriptor {
+ background: #000000;
+ color: #ffffff;
+ text-align: center;
+ font-size: 12px;
+ letter-spacing: 0.04em;
+ padding: 8px 1rem;
+ border-bottom: 1px solid #333;
+}
+
 .tab-bar {
  max-width: var(--max-width);
  margin: 0 auto;
