@@ -22,11 +22,17 @@
  if (nav) {
   nav.innerHTML = [
    '<div class="tab-bar">',
-   ' <a href="/index.html">Overview</a>',
-   ' <a href="/forecast.html">Forecast</a>',
-   ' <a href="/commentary.html">Market Commentary</a>',
-   ' <a href="/education.html">Education</a>',
-   ' <a href="/strategies.html">Options Strategies</a>',
+   ' <div class="nav-left">',
+   '  <a href="/index.html" class="nav-logo">DEPENDABILITY</a>',
+   '  <span class="nav-descriptor">Independent market research and options analysis</span>',
+   ' </div>',
+   ' <div class="nav-right">',
+   '  <a href="/index.html">Overview</a>',
+   '  <a href="/forecast.html">Forecast</a>',
+   '  <a href="/commentary.html">Market Commentary</a>',
+   '  <a href="/education.html">Education</a>',
+   '  <a href="/strategies.html">Options Strategies</a>',
+   ' </div>',
    '</div>'
   ].join('\n');
  }
