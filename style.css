@@ -1,0 +1,694 @@
+/* ================================================
+ Dependability Holdings LLC — Main Stylesheet
+ Single file for entire site. All styles here.
+ ================================================ */
+
+/* 1. CSS Variables */
+:root {
+ --color-bg: #ffffff;
+ --color-text: #1a1a1a;
+ --color-accent: #c8001e;
+ --color-utility-bg: #111111;
+ --color-utility-text: #ffffff;
+ --color-category: #666666;
+ --color-date: #888888;
+ --color-border: #e0e0e0;
+ --font-heading: Georgia, serif;
+ --font-body: system-ui, -apple-system, Inter, sans-serif;
+ --max-width: 1200px;
+ --nav-height: 48px;
+ --utility-height: 40px;
+}
+
+/* 2. Reset & Base */
+*, *::before, *::after {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+}
+
+html {
+ font-size: 16px;
+ -webkit-text-size-adjust: 100%;
+}
+
+body {
+ font-family: var(--font-body);
+ color: var(--color-text);
+ background-color: var(--color-bg);
+ line-height: 1.6;
+ min-height: 100vh;
+ display: flex;
+ flex-direction: column;
+}
+
+main {
+ flex: 1;
+}
+
+a {
+ color: var(--color-accent);
+ text-decoration: none;
+}
+
+a:hover {
+ text-decoration: underline;
+}
+
+img {
+ max-width: 100%;
+ height: auto;
+}
+
+/* 3. Typography */
+h1, h2, h3, h4, h5, h6 {
+ font-family: var(--font-heading);
+ color: var(--color-text);
+ line-height: 1.25;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+
+p {
+ margin-bottom: 1rem;
+}
+
+small, .small {
+ font-size: 0.875rem;
+}
+
+.category-label {
+ font-size: 0.75rem;
+ text-transform: uppercase;
+ letter-spacing: 0.1em;
+ color: var(--color-category);
+ font-weight: 600;
+}
+
+.date-text {
+ font-size: 0.8125rem;
+ color: var(--color-date);
+}
+
+.accent-link {
+ color: var(--color-accent);
+ font-weight: 500;
+}
+
+/* 4. Utility Bar */
+#site-utility {
+ background-color: var(--color-utility-bg);
+ color: var(--color-utility-text);
+ height: var(--utility-height);
+ line-height: var(--utility-height);
+}
+
+.utility-bar {
+ max-width: var(--max-width);
+ margin: 0 auto;
+ padding: 0 24px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.utility-bar .brand {
+ font-size: 0.9375rem;
+ font-weight: 700;
+ letter-spacing: 0.05em;
+ color: #ffffff;
+}
+
+.utility-bar .brand a {
+ color: #ffffff;
+ text-decoration: none;
+}
+
+.utility-bar .utility-links {
+ display: flex;
+ gap: 20px;
+}
+
+.utility-bar .utility-links a {
+ font-size: 0.8125rem;
+ color: #cccccc;
+ text-decoration: none;
+ transition: color 0.2s;
+}
+
+.utility-bar .utility-links a:hover {
+ color: #ffffff;
+}
+
+/* 5. Category Tab Bar */
+#site-nav {
+ background-color: #ffffff;
+ border-bottom: 1px solid var(--color-border);
+ position: sticky;
+ top: 0;
+ z-index: 100;
+}
+
+.tab-bar {
+ max-width: var(--max-width);
+ margin: 0 auto;
+ padding: 0 24px;
+ display: flex;
+ gap: 0;
+ overflow-x: auto;
+ -webkit-overflow-scrolling: touch;
+}
+
+.tab-bar a {
+ display: block;
+ padding: 14px 20px;
+ font-size: 0.875rem;
+ font-weight: 500;
+ color: var(--color-text);
+ text-decoration: none;
+ border-bottom: 3px solid transparent;
+ transition: color 0.2s, border-color 0.2s;
+ white-space: nowrap;
+}
+
+.tab-bar a:hover {
+ color: var(--color-accent);
+}
+
+.tab-bar a.active {
+ color: var(--color-accent);
+ border-bottom-color: var(--color-accent);
+}
+
+/* 6. Container */
+.container {
+ max-width: var(--max-width);
+ margin: 0 auto;
+ padding: 0 24px;
+}
+
+/* 7. Homepage — Hero Section */
+.hero-section {
+ border-bottom: 1px solid var(--color-border);
+}
+
+.hero-grid {
+ display: grid;
+ grid-template-columns: 2fr 1fr;
+ gap: 0;
+ max-width: var(--max-width);
+ margin: 0 auto;
+}
+
+.hero-featured {
+ padding: 48px 48px 48px 24px;
+ border-right: 1px solid var(--color-border);
+}
+
+.hero-featured .category-label {
+ margin-bottom: 8px;
+}
+
+.hero-featured .date-text {
+ margin-bottom: 12px;
+}
+
+.hero-featured h2 {
+ font-size: 2rem;
+ margin-bottom: 16px;
+}
+
+.hero-featured p {
+ color: #333333;
+ margin-bottom: 20px;
+ line-height: 1.7;
+}
+
+.hero-sidebar {
+ padding: 48px 24px 48px 48px;
+}
+
+.hero-sidebar h3 {
+ font-size: 0.75rem;
+ text-transform: uppercase;
+ letter-spacing: 0.1em;
+ color: var(--color-category);
+ font-weight: 600;
+ margin-bottom: 20px;
+}
+
+.sidebar-article {
+ padding: 16px 0;
+ border-bottom: 1px solid var(--color-border);
+}
+
+.sidebar-article:last-child {
+ border-bottom: none;
+}
+
+.sidebar-article .category-label {
+ margin-bottom: 4px;
+}
+
+.sidebar-article .date-text {
+ margin-bottom: 4px;
+}
+
+.sidebar-article h4 {
+ font-size: 1rem;
+ font-family: var(--font-body);
+}
+
+.sidebar-article h4 a {
+ color: var(--color-text);
+ text-decoration: none;
+}
+
+.sidebar-article h4 a:hover {
+ color: var(--color-accent);
+}
+
+/* 8. Section Headers */
+.section-header {
+ display: flex;
+ justify-content: space-between;
+ align-items: baseline;
+ padding: 32px 24px 16px;
+ max-width: var(--max-width);
+ margin: 0 auto;
+}
+
+.section-header h2 {
+ font-size: 0.75rem;
+ text-transform: uppercase;
+ letter-spacing: 0.1em;
+ color: var(--color-category);
+ font-weight: 600;
+ font-family: var(--font-body);
+}
+
+.section-header .explore-link {
+ font-size: 0.875rem;
+ color: var(--color-accent);
+ font-weight: 500;
+}
+
+/* 9. Card Grids */
+.card-grid {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 24px;
+ max-width: var(--max-width);
+ margin: 0 auto;
+ padding: 0 24px 48px;
+}
+
+.article-card {
+ border-top: 3px solid var(--color-accent);
+ padding-top: 20px;
+ background: #ffffff;
+}
+
+.article-card.education-card {
+ border-top-color: var(--color-border);
+}
+
+.article-card .category-label {
+ margin-bottom: 8px;
+}
+
+.article-card .date-text {
+ margin-bottom: 10px;
+}
+
+.article-card h3 {
+ font-size: 1.125rem;
+ margin-bottom: 12px;
+}
+
+.article-card h3 a {
+ color: var(--color-text);
+ text-decoration: none;
+}
+
+.article-card h3 a:hover {
+ color: var(--color-accent);
+}
+
+.article-card p {
+ font-size: 0.9375rem;
+ color: #555555;
+ line-height: 1.6;
+}
+
+/* 10. Footer */
+#site-footer {
+ background-color: #ffffff;
+ border-top: 1px solid var(--color-border);
+ margin-top: auto;
+}
+
+.main-footer {
+ max-width: var(--max-width);
+ margin: 0 auto;
+ padding: 40px 24px;
+}
+
+.footer-grid {
+ display: grid;
+ grid-template-columns: 1.5fr 1fr 1fr;
+ gap: 40px;
+}
+
+.footer-brand h4 {
+ font-family: var(--font-heading);
+ font-size: 1.25rem;
+ color: var(--color-accent);
+ margin-bottom: 12px;
+}
+
+.footer-brand p {
+ font-size: 0.875rem;
+ color: #666666;
+ line-height: 1.6;
+}
+
+.footer-nav h5 {
+ font-size: 0.75rem;
+ text-transform: uppercase;
+ letter-spacing: 0.1em;
+ color: var(--color-category);
+ font-weight: 600;
+ margin-bottom: 16px;
+ font-family: var(--font-body);
+}
+
+.footer-nav ul {
+ list-style: none;
+}
+
+.footer-nav li {
+ margin-bottom: 8px;
+}
+
+.footer-nav a {
+ font-size: 0.875rem;
+ color: #666666;
+ text-decoration: none;
+}
+
+.footer-nav a:hover {
+ color: var(--color-accent);
+}
+
+.footer-legal {
+ font-size: 0.75rem;
+ color: #999999;
+ line-height: 1.5;
+}
+
+.footer-legal p {
+ margin-bottom: 8px;
+}
+
+.footer-bottom {
+ max-width: var(--max-width);
+ margin: 0 auto;
+ padding: 24px 24px 0;
+ border-top: 1px solid var(--color-border);
+ margin-top: 24px;
+}
+
+.footer-bottom p {
+ font-size: 0.8125rem;
+ color: #999999;
+ text-align: center;
+}
+
+/* 11. Page Layouts (Forecast, Commentary, Education, About) */
+.page-hero {
+ border-bottom: 1px solid var(--color-border);
+ padding: 48px 24px;
+ text-align: center;
+}
+
+.page-hero h1 {
+ font-size: 2.25rem;
+ margin-bottom: 16px;
+}
+
+.page-hero p {
+ font-size: 1.0625rem;
+ color: #555555;
+ max-width: 680px;
+ margin: 0 auto;
+}
+
+.page-content {
+ padding: 48px 24px;
+ max-width: var(--max-width);
+ margin: 0 auto;
+}
+
+/* 12. Feature Cards (Forecast page) */
+.feature-grid {
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ gap: 24px;
+ margin-top: 32px;
+}
+
+.feature-card {
+ border: 1px solid var(--color-border);
+ border-top: 3px solid var(--color-accent);
+ padding: 28px;
+}
+
+.feature-card h3 {
+ font-size: 1.125rem;
+ margin-bottom: 12px;
+}
+
+.feature-card p {
+ font-size: 0.9375rem;
+ color: #555555;
+ margin-bottom: 16px;
+}
+
+.feature-card .card-meta {
+ font-size: 0.8125rem;
+ color: var(--color-date);
+ margin-bottom: 12px;
+}
+
+/* 13. Article Page */
+.article-page {
+ max-width: 800px;
+ margin: 0 auto;
+ padding: 48px 24px;
+}
+
+.article-page .article-header {
+ margin-bottom: 32px;
+ padding-bottom: 24px;
+ border-bottom: 1px solid var(--color-border);
+}
+
+.article-page .category-label {
+ margin-bottom: 12px;
+}
+
+.article-page h1 {
+ font-size: 2rem;
+ margin-bottom: 16px;
+ line-height: 1.25;
+}
+
+.article-page .article-meta {
+ font-size: 0.875rem;
+ color: var(--color-date);
+ margin-bottom: 24px;
+}
+
+.article-page .article-body {
+ font-size: 1.0625rem;
+ line-height: 1.8;
+ color: #222222;
+}
+
+.article-page .article-body h2 {
+ font-size: 1.5rem;
+ margin-top: 2rem;
+ margin-bottom: 1rem;
+}
+
+.article-page .article-body h3 {
+ font-size: 1.25rem;
+ margin-top: 1.5rem;
+ margin-bottom: 0.75rem;
+}
+
+.article-page .article-body p {
+ margin-bottom: 1.25rem;
+}
+
+.article-page .article-body ul,
+.article-page .article-body ol {
+ margin-bottom: 1.25rem;
+ padding-left: 1.5rem;
+}
+
+.article-page .article-body li {
+ margin-bottom: 0.5rem;
+}
+
+.article-page .article-body strong {
+ font-weight: 600;
+ color: var(--color-text);
+}
+
+.article-page .article-body .disclaimer {
+ margin-top: 3rem;
+ padding-top: 1.5rem;
+ border-top: 1px solid var(--color-border);
+ font-size: 0.8125rem;
+ color: #888888;
+ line-height: 1.5;
+}
+
+/* 14. Education Sections */
+.edu-section {
+ margin-bottom: 48px;
+}
+
+.edu-section h2 {
+ font-size: 1.5rem;
+ margin-bottom: 20px;
+ padding-bottom: 12px;
+ border-bottom: 1px solid var(--color-border);
+}
+
+.edu-grid {
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ gap: 20px;
+}
+
+.edu-card {
+ padding: 24px;
+ border: 1px solid var(--color-border);
+}
+
+.edu-card h3 {
+ font-size: 1.0625rem;
+ margin-bottom: 10px;
+}
+
+.edu-card p {
+ font-size: 0.9375rem;
+ color: #555555;
+}
+
+/* 15. Methodology page */
+.methodology-content {
+ max-width: 800px;
+ margin: 0 auto;
+}
+
+.methodology-content h2 {
+ font-size: 1.5rem;
+ margin-top: 2rem;
+ margin-bottom: 1rem;
+}
+
+.methodology-content p {
+ font-size: 1.0625rem;
+ line-height: 1.8;
+ margin-bottom: 1.25rem;
+}
+
+/* 16. Buttons / CTAs */
+.btn {
+ display: inline-block;
+ padding: 10px 24px;
+ background-color: var(--color-accent);
+ color: #ffffff;
+ font-size: 0.9375rem;
+ font-weight: 500;
+ text-decoration: none;
+ border: none;
+ cursor: pointer;
+ transition: background-color 0.2s;
+}
+
+.btn:hover {
+ background-color: #a00018;
+ text-decoration: none;
+ color: #ffffff;
+}
+
+/* 17. Utilities */
+.text-center {
+ text-align: center;
+}
+
+.mt-0 { margin-top: 0; }
+.mb-0 { margin-bottom: 0; }
+
+/* 18. Responsive */
+@media (max-width: 900px) {
+ .hero-grid {
+  grid-template-columns: 1fr;
+ }
+ .hero-featured {
+  border-right: none;
+  border-bottom: 1px solid var(--color-border);
+  padding: 32px 24px;
+ }
+ .hero-sidebar {
+  padding: 32px 24px;
+ }
+ .card-grid {
+  grid-template-columns: repeat(2, 1fr);
+ }
+ .footer-grid {
+  grid-template-columns: 1fr 1fr;
+ }
+ .feature-grid {
+  grid-template-columns: 1fr;
+ }
+ .edu-grid {
+  grid-template-columns: 1fr;
+ }
+}
+
+@media (max-width: 600px) {
+ h1 { font-size: 1.875rem; }
+ h2 { font-size: 1.5rem; }
+ .hero-featured h2 { font-size: 1.5rem; }
+ .card-grid {
+  grid-template-columns: 1fr;
+ }
+ .footer-grid {
+  grid-template-columns: 1fr;
+ }
+ .tab-bar a {
+  padding: 12px 14px;
+  font-size: 0.8125rem;
+ }
+ .section-header {
+  padding: 24px 16px 12px;
+ }
+ .card-grid {
+  padding: 0 16px 32px;
+ }
+ .container {
+  padding: 0 16px;
+ }
+ .page-content {
+  padding: 32px 16px;
+ }
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Options Strategies | Dependability Holdings LLC</title>
+ <meta name="description" content="Practical options strategies for different market conditions — iron condors, spreads, volatility plays, and income-generating structures.">
+ <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+  <div class="page-hero">
+   <h1>Options Strategies</h1>
+   <p>Strategy guides matched to market conditions — with entry logic, position management, and exit rules for each scenario.</p>
+  </div>
+
+  <div class="page-content">
+
+   <div class="edu-section">
+    <h2>Range-Bound Markets — Iron Condors</h2>
+    <div class="edu-grid" style="margin-bottom:24px;">
+     <div class="edu-card">
+      <h3>When to Use It</h3>
+      <p>When the underlying is trading in a well-defined range with no clear directional catalyst. The iron condor collects premium from time decay while having a wide enough range to tolerate modest volatility without taking losses.</p>
+     </div>
+     <div class="edu-card">
+      <h3>Structure</h3>
+      <p>Sell OTM put spread (lower strikes) + sell OTM call spread (upper strikes). Both spreads are outside the expected trading range. The wider the wings, the more profit potential but also more risk if the underlying breaks out.</p>
+     </div>
+    <div class="edu-card">
+      <h3>Key Metrics</h3>
+      <p>Target 30–45 days to expiration. Wing width of 15–20 S&amp;P points (or equivalent). Collect a net credit of $1.50–$2.50 per spread. Max risk = width minus credit received.</p>
+     </div>
+     <div class="edu-card">
+      <h3>Exit Rules</h3>
+      <p>Take profit at 50% of max profit. Stop out if the short strike is breached and the long leg cannot be rolled. Never hold through a major event (FOMC, CPI) without adjusting.</p>
+     </div>
+    </div>
+   </div>
+
+   <div class="edu-section">
+    <h2>Moderate Upmove — Bull Call Spread</h2>
+    <div class="edu-grid" style="margin-bottom:24px;">
+     <div class="edu-card">
+      <h3>When to Use It</h3>
+      <p>When you expect a moderate move higher — enough to be profitable but not a runaway move. Buying a naked call is expensive in high-IV environments; the spread reduces cost while maintaining directional exposure.</p>
+     </div>
+     <div class="edu-card">
+      <h3>Structure</h3>
+      <p>Buy a call at a lower strike; sell a call at a higher strike. Same expiration. Net debit. The long call captures the upside; the short call funds it. Max profit = the difference in strikes minus the net debit.</p>
+     </div>
+     <div class="edu-card">
+      <h3>Key Metrics</h3>
+      <p>Buy 2–3 strikes below expected move. Target 30–45 DTE. Net debit should be no more than 50% of the intrinsic value of the long call at entry.</p>
+     </div>
+     <div class="edu-card">
+      <h3>Exit Rules</h3>
+      <p>Take profit when the long call reaches 2x the debit paid. Move the short strike up (rolling) if the underlying breaks through. Don't hold past 2 weeks before expiration if underperforming.</p>
+     </div>
+    </div>
+   </div>
+
+   <div class="edu-section">
+    <h2>Earnings / Event — Long Gamma / Calendar Spread</h2>
+    <div class="edu-grid" style="margin-bottom:24px;">
+     <div class="edu-card">
+      <h3>When to Use It</h3>
+      <p>Before known events (earnings, FDA decisions, mergers) where implied volatility will collapse post-event regardless of the price outcome. Two strategies work here: buying naked options (high risk, high reward) or a calendar spread (defined risk, moderate reward).</p>
+     </div>
+     <div class="edu-card">
+      <h3>Structure — Calendar Spread</h3>
+      <p>Sell the near-term option; buy the same strike and quantity in a later expiration. The near-term option's IV collapses post-event; the longer-dated option retains value. Net debit; profit comes from the IV differential between expirations.</p>
+     </div>
+     <div class="edu-card">
+      <h3>Key Metrics</h3>
+      <p>Use ATM or slightly OTM strikes. Front-load IV should be in the 60th+ percentile historically. Never risk more than 2% of capital on a single calendar spread. Spread the risk across multiple strikes.</p>
+     </div>
+     <div class="edu-card">
+      <h3>Exit Rules</h3>
+      <p>Close the spread the day after the event once IV crush is complete. Do not hold the long option side through a second event. Exit if the position loses more than 50% of the debit before the event.</p>
+     </div>
+    </div>
+   </div>
+
+   <div class="edu-section">
+    <h2>Income — Covered Call / Short Put</h2>
+    <div class="edu-grid">
+     <div class="edu-card">
+      <h3>When to Use It</h3>
+      <p>When you want income generation on a stock you own (covered call) or on a stock you'd be willing to own at a lower price (cash-secured put). Both strategies collect premium in exchange for obligation.</p>
+     </div>
+     <div class="edu-card">
+      <h3>Structure — Covered Call</h3>
+      <p>Own 100 shares of the underlying. Sell one call per 100 shares. Call strike should be above your cost basis by a margin you find acceptable. Pick expirations 3–6 weeks out. Manage or close before ex-dividend dates.</p>
+     </div>
+     <div class="edu-card">
+      <h3>Structure — Cash-Secured Put</h3>
+      <p>Sell a put at a strike at or below your target buy-in price. Set aside enough cash to cover the purchase if assigned. Collect premium. Either the put expires worthless (you keep the premium) or you get assigned at your target price.</p>
+     </div>
+     <div class="edu-card">
+      <h3>Exit Rules</h3>
+      <p>Covered calls: buy back if the underlying drops >10%. Roll up and out if the underlying runs to the short strike and you want to maintain exposure. Short puts: roll down if the underlying drops significantly and you want to maintain the position at a lower cost basis.</p>
+     </div>
+    </div>
+   </div>
+
+  </div>
+ </main>
+
+ <div id="site-footer"></div>
+
+ <script src="/nav.js"></script>
+ <script src="/footer.js"></script>
+
+</body>
+</html>

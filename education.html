@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Options Education | Dependability Holdings LLC</title>
+ <meta name="description" content="Learn options trading from the ground up — core concepts, strategies, the Greeks, and a comprehensive glossary.">
+ <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+  <div class="page-hero">
+   <h1>Options Education</h1>
+   <p>A structured curriculum for traders who want to understand options markets — from first principles to strategy implementation.</p>
+  </div>
+
+  <div class="page-content">
+
+   <!-- Getting Started -->
+   <div class="edu-section">
+    <h2>Getting Started</h2>
+    <div class="edu-grid">
+     <div class="edu-card">
+      <h3>What Is an Option?</h3>
+      <p>An option is a contract that gives the buyer the right — but not the obligation — to buy or sell an underlying asset at a predetermined price on or before a set date. The buyer pays a premium for this right. The seller collects the premium and accepts the corresponding obligation.</p>
+     </div>
+     <div class="edu-card">
+      <h3>Calls vs. Puts</h3>
+      <p>A call gives the right to buy; a put gives the right to sell. Call buyers profit from rising prices; put buyers profit from falling prices. The relationship is symmetrical — for every call buyer there is a call seller (writer), and the same for puts.</p>
+     </div>
+     <div class="edu-card">
+      <h3>Intrinsic vs. Extrinsic Value</h3>
+      <p>The price of an option has two components. Intrinsic value is the amount an option is in-the-money — zero if out-of-the-money. Extrinsic value is everything else: time value plus implied volatility premium. All out-of-the-money options are 100% extrinsic value.</p>
+     </div>
+     <div class="edu-card">
+      <h3>The Options Chain</h3>
+      <p>The options chain lists every available strike price and expiration date for a given underlying. Understanding how to read an options chain — open interest, volume, bid/ask spread, implied volatility — is foundational to execution.</p>
+     </div>
+    </div>
+   </div>
+
+   <!-- Core Concepts -->
+   <div class="edu-section">
+    <h2>Core Concepts</h2>
+    <div class="edu-grid">
+     <div class="edu-card">
+      <h3>Implied Volatility (IV)</h3>
+      <p>IV is the market's forecast of future volatility, embedded in option prices. When IV is high, options are expensive. When IV is low, options are cheap. IV is mean-reverting — this is the basis for the volatility crush strategy around earnings.</p>
+     </div>
+     <div class="edu-card">
+      <h3>Historical Volatility (HV)</h3>
+      <p>HV measures what an asset actually did over a lookback period. Comparing HV to IV tells you whether options are relatively expensive or cheap versus actual past moves. A wide IV/HV spread can signal overstatement of risk by the market.</p>
+     </div>
+     <div class="edu-card">
+      <h3>Put-Call Parity</h3>
+      <p>Put-call parity is the relationship: C - P = S - K/(1+r). It ensures no arbitrage exists between calls, puts, and the underlying. Violations of put-call parity, when they appear, are quickly arbitraged away — but understanding the formula clarifies the entire pricing structure.</p>
+     </div>
+     <div class="edu-card">
+      <h3>Expiration and Assignment Risk</h3>
+      <p>Long options expire worthless if they finish out-of-the-money. In-the-money options at expiration may be automatically exercised. Short options face assignment — early assignment on American-style options is always possible and must be managed.</p>
+     </div>
+    </div>
+   </div>
+
+   <!-- The Greeks -->
+   <div class="edu-section">
+    <h2>The Greeks</h2>
+    <div class="edu-grid">
+     <div class="edu-card">
+      <h3>Delta — Direction Risk</h3>
+      <p>Delta measures how much an option's price changes for a $1 move in the underlying. Calls have positive delta; puts have negative delta. A delta of 0.50 means the option behaves like 50 shares of stock. Delta also approximates the probability of expiring in-the-money.</p>
+     </div>
+     <div class="edu-card">
+      <h3>Gamma — Rate of Change of Delta</h3>
+      <p>Gamma measures how fast delta changes when the underlying moves. Long options have positive gamma; short options have negative gamma. Gamma is highest for at-the-money options near expiration — which is why near-term options can become unstable.</p>
+     </div>
+     <div class="edu-card">
+      <h3>Theta — Time Decay</h3>
+      <p>Theta measures how much value an option loses each day as time passes — the "time decay." Theta accelerates as expiration approaches, particularly for at-the-money options. This is the enemy of option buyers and the friend of option sellers.</p>
+     </div>
+     <div class="edu-card">
+      <h3>Vega — Volatility Sensitivity</h3>
+      <p>Vega measures how much an option's price changes for a 1% move in implied volatility. Long options always have positive vega; short options always have negative vega. In high-IV environments, vega risk becomes a primary concern for both buyers and sellers.</p>
+     </div>
+    </div>
+   </div>
+
+   <!-- Strategies -->
+   <div class="edu-section">
+    <h2>Core Strategies</h2>
+    <div class="edu-grid">
+     <div class="edu-card">
+      <h3>Covered Call</h3>
+      <p>Sell a call against 100 shares you own. You collect premium but cap your upside at the strike price. Effective in flat-to-slightly-bullish environments. The tradeoff: you give up upside participation in exchange for income.</p>
+     </div>
+     <div class="edu-card">
+      <h3>Protective Put</h3>
+      <p>Buy a put against shares you own. You pay a premium for downside protection below the strike. Like insurance — costly if nothing goes wrong, invaluable if something does. Often used ahead of known events.</p>
+     </div>
+     <div class="edu-card">
+      <h3>Bull Call Spread</h3>
+      <p>Buy a call and sell a higher call. Buys upside participation at lower cost but caps the gain at the short strike. Net debit. Works well when you expect a moderate move higher rather than a large one.</p>
+     </div>
+     <div class="edu-card">
+      <h3>Iron Condor</h3>
+      <p>Sell an OTM put spread and an OTM call spread simultaneously. Profits when the underlying stays within a range. The tradeoff: defined risk on both sides, limited profit if the underlying stays flat. Best in low-vol, range-bound environments.</p>
+     </div>
+    </div>
+   </div>
+
+   <!-- Glossary -->
+   <div class="edu-section">
+    <h2>Glossary</h2>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;">
+     <div style="padding:12px 0;border-bottom:1px solid #e0e0e0;">
+      <strong>Ask</strong> — The price at which a seller is willing to sell
+     </div>
+     <div style="padding:12px 0;border-bottom:1px solid #e0e0e0;">
+      <strong>Bid</strong> — The price at which a buyer is willing to purchase
+     </div>
+     <div style="padding:12px 0;border-bottom:1px solid #e0e0e0;">
+      <strong>Bid-Ask Spread</strong> — The difference between bid and ask; a measure of liquidity
+     </div>
+     <div style="padding:12px 0;border-bottom:1px solid #e0e0e0;">
+      <strong>Break-Even Point</strong> — The price at which a position neither profits nor loses
+     </div>
+     <div style="padding:12px 0;border-bottom:1px solid #e0e0e0;">
+      <strong>Breakeven</strong> — Price at which a strategy neither profits nor loses
+     </div>
+     <div style="padding:12px 0;border-bottom:1px solid #e0e0e0;">
+      <strong>Bull Spread</strong> — Strategy designed to profit from moderate upside moves
+     </div>
+     <div style="padding:12px 0;border-bottom:1px solid #e0e0e0;">
+      <strong>Collar</strong> — Protective put + covered call on same underlying
+     </div>
+     <div style="padding:12px 0;border-bottom:1px solid #e0e0e0;">
+      <strong>Debit</strong> — Money paid out to open a position (vs. credit received)
+     </div>
+     <div style="padding:12px 0;border-bottom:1px solid #e0e0e0;">
+      <strong>Exercise</strong> — The act of using the right to buy (call) or sell (put)
+     </div>
+     <div style="padding:12px 0;border-bottom:1px solid #e0e0e0;">
+      <strong>Expiration</strong> — The date after which an option ceases to exist
+     </div>
+     <div style="padding:12px 0;border-bottom:1px solid #e0e0e0;">
+      <strong>Gamma</strong> — Rate of change of delta; convexity of option price
+     </div>
+     <div style="padding:12px 0;border-bottom:1px solid #e0e0e0;">
+      <strong>Greeks</strong> — Measures of option price sensitivity (delta, gamma, theta, vega)
+     </div>
+     <div style="padding:12px 0;border-bottom:1px solid #e0e0e0;">
+      <strong>Hedge Ratio</strong> — Number of options needed to offset underlying risk
+     </div>
+     <div style="padding:12px 0;border-bottom:1px solid #e0e0e0;">
+      <strong>In-the-Money (ITM)</strong> — Option with intrinsic value (call: S>K; put: S<K)
+     </div>
+     <div style="padding:12px 0;border-bottom:1px solid #e0e0e0;">
+      <strong>IV Rank</strong> — Current IV relative to its range over the past year
+     </div>
+     <div style="padding:12px 0;border-bottom:1px solid #e0e0e0;">
+      <strong>Open Interest</strong> — Total number of open contracts at a given strike/expiry
+     </div>
+     <div style="padding:12px 0;border-bottom:1px solid #e0e0e0;">
+      <strong>Out-of-the-Money (OTM)</strong> — Option with no intrinsic value
+     </div>
+     <div style="padding:12px 0;border-bottom:1px solid #e0e0e0;">
+      <strong>Premium</strong> — The price of an option; the cost to buy or income to sell
+     </div>
+     <div style="padding:12px 0;border-bottom:1px solid #e0e0e0;">
+      <strong>Rho</strong> — Sensitivity of option price to interest rate changes
+     </div>
+     <div style="padding:12px 0;border-bottom:1px solid #e0e0e0;">
+      <strong>Strike Price</strong> — The predetermined price at which an option can be exercised
+     </div>
+     <div style="padding:12px 0;border-bottom:1px solid #e0e0e0;">
+      <strong>Theoretical Value</strong> — Model-derived estimate of fair option price
+     </div>
+     <div style="padding:12px 0;border-bottom:1px solid #e0e0e0;">
+      <strong>Theta</strong> — Time decay; daily erosion of option value
+     </div>
+     <div style="padding:12px 0;border-bottom:1px solid #e0e0e0;">
+      <strong>Vega</strong> — Sensitivity to implied volatility changes
+     </div>
+     <div style="padding:12px 0;border-bottom:1px solid #e0e0e0;">
+      <strong>Volatility Crush</strong> — The rapid decline in IV after a known event resolves
+     </div>
+    <div style="padding:12px 0;border-bottom:1px solid #e0e0e0;">
+      <strong>Volume</strong> — Number of contracts traded in a given period
+     </div>
+    </div>
+   </div>
+
+  </div>
+ </main>
+
+ <div id="site-footer"></div>
+
+ <script src="/nav.js"></script>
+ <script src="/footer.js"></script>
+
+</body>
+</html>
