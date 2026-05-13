@@ -198,8 +198,15 @@ small, .small {
  -webkit-overflow-scrolling: touch;
 }
 
-.tab-bar a:not(.nav-logo) {
- display: block;
+.tab-bar-inner {
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ gap: 0;
+}
+
+.tab-bar-inner a {
+ display: inline-block;
  padding: 14px 20px;
  font-size: 0.875rem;
  font-weight: 500;
@@ -210,11 +217,11 @@ small, .small {
  white-space: nowrap;
 }
 
-.tab-bar a:not(.nav-logo):hover {
+.tab-bar-inner a:hover {
  color: var(--color-accent);
 }
 
-.tab-bar a:not(.nav-logo).active {
+.tab-bar-inner a.active {
  color: var(--color-accent);
  border-bottom-color: var(--color-accent);
 }
@@ -715,7 +722,14 @@ small, .small {
  .footer-grid {
   grid-template-columns: 1fr;
  }
- .tab-bar a:not(.nav-logo) {
+ .tab-bar-inner {
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ gap: 0;
+}
+
+.tab-bar-inner a {
   padding: 12px 14px;
   font-size: 0.8125rem;
  }
