@@ -748,8 +748,8 @@ small, .small {
 }
 /* Financial header image */
 .article-header-image {
-  width: 100%;
-  aspect-ratio: 16 / 9;
+  width: min(100%, 720px);
+  aspect-ratio: 2 / 1;
   overflow: hidden;
   margin: 1.5rem 0;
   border: 1px solid #e0e0e0;
