@@ -1,0 +1,15 @@
+{
+  "urls": [
+    "https://www.dependability.us",
+    "https://www.dependability.us/forecast.html",
+    "https://www.dependability.us/about.html",
+    "https://www.dependability.us/commentary.html",
+    "https://www.dependability.us/education.html",
+    "https://www.dependability.us/contact.html",
+    "https://www.dependability.us/strategies.html",
+    "https://www.dependability.us/methodology.html"
+  ],
+  "concurrency": 5,
+  "backlog": 10,
+  "checks": ["internal", "fragment"]
+}

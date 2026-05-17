@@ -1,0 +1,27 @@
+{
+  "name": "dependability-rebuild",
+  "version": "1.0.0",
+  "description": "",
+  "main": "footer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelbacotti/dependability-rebuild.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/michaelbacotti/dependability-rebuild/issues"
+  },
+  "homepage": "https://github.com/michaelbacotti/dependability-rebuild#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "linkinator": "^7.6.1",
+    "pa11y": "^9.1.1",
+    "playwright": "^1.60.0"
+  }
+}
