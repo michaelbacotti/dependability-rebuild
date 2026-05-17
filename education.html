@@ -23,22 +23,32 @@
 
   <div class="page-content">
 
-   <div class="archive-grid" style="display:flex;flex-direction:column;gap:0;">
+   <div id="edu-articles" class="archive-grid" style="display:flex;flex-direction:column;gap:0;">
 
-    <div class="resource-card" style="padding:1rem;border-bottom:1px solid var(--color-border);">
+    <!-- All Education articles — rendered by JS, newest first -->
+    <!-- Article 1 -->
+    <div class="resource-card edu-item" style="padding:1rem;border-bottom:1px solid var(--color-border);" data-date="2026-05-15">
      <div style="font-size:.7rem;font-weight:600;color:var(--color-accent);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.25rem;">OPTIONS EDUCATION / MACRO</div>
      <h3 style="font-size:1rem;margin-bottom:.5rem;"><a href="/gold-as-a-store-of-value" style="color:#000;">Gold as a Store of Value: What Drives the Price in 2026</a></h3>
      <p style="font-size:.85rem;color:#666;line-height:1.5;">Gold sits at the intersection of money, fear, inflation, and portfolio insurance. Here's what drives the price in 2026 — and why it still matters.</p>
      <div style="font-size:.75rem;color:#888;margin-top:.25rem;">May 15, 2026</div>
     </div>
 
-    <div class="resource-card" style="padding:1rem;border-bottom:1px solid var(--color-border);">
+    <!-- Article 2 -->
+    <div class="resource-card edu-item" style="padding:1rem;border-bottom:1px solid var(--color-border);" data-date="2026-05-10">
      <div style="font-size:.7rem;font-weight:600;color:var(--color-accent);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.25rem;">OPTIONS EDUCATION</div>
      <h3 style="font-size:1rem;margin-bottom:.5rem;"><a href="/articles/2026-05-10-iv-crush-explained" style="color:#000;">Implied Volatility Crush: How to Position Ahead of Earnings Season</a></h3>
      <p style="font-size:.85rem;color:#666;line-height:1.5;">IV crush is one of the most predictable events in options markets — and one of the most misunderstood by retail traders. This piece explains the mechanics and walks through the calendar spread approach to harvesting IV decay.</p>
      <div style="font-size:.75rem;color:#888;margin-top:.25rem;">May 10, 2026</div>
     </div>
 
+   </div>
+
+   <!-- Pagination -->
+   <div id="edu-pagination" style="display:flex;justify-content:center;align-items:center;gap:1rem;margin:2rem 0;font-size:.875rem;">
+     <button id="edu-prev" onclick="eduGoPage(currentPage - 1)" style="padding:.5rem 1rem;border:1px solid var(--color-accent);background:transparent;color:var(--color-accent);border-radius:4px;cursor:pointer;font-family:inherit;">&#8592; Previous</button>
+     <span id="edu-page-info" style="color:#666;"></span>
+     <button id="edu-next" onclick="eduGoPage(currentPage + 1)" style="padding:.5rem 1rem;border:1px solid var(--color-accent);background:transparent;color:var(--color-accent);border-radius:4px;cursor:pointer;font-family:inherit;">Next &#8594;</button>
    </div>
 
    <div class="archive-intro" style="max-width:720px;margin:3rem auto;">
@@ -57,8 +67,54 @@
  <script src="/nav.js"></script>
  <script src="/footer.js"></script>
 
+ <script>
+ (function() {
+   var ARTICLES_PER_PAGE = 10;
+   var items = Array.prototype.slice.call(document.querySelectorAll('.edu-item'));
+   var totalItems = items.length;
+   var totalPages = Math.max(1, Math.ceil(totalItems / ARTICLES_PER_PAGE));
+
+   function getPageParam() {
+     var params = new URLSearchParams(window.location.search);
+     var p = parseInt(params.get('page'), 10);
+     return (isNaN(p) || p < 1) ? 1 : Math.min(p, totalPages);
+   }
+
+   function renderPage(page) {
+     var start = (page - 1) * ARTICLES_PER_PAGE;
+     var end = start + ARTICLES_PER_PAGE;
+     items.forEach(function(item, i) {
+       item.style.display = (i >= start && i < end) ? '' : 'none';
+     });
+     var prevBtn = document.getElementById('edu-prev');
+     var nextBtn = document.getElementById('edu-next');
+     var info = document.getElementById('edu-page-info');
+     prevBtn.disabled = (page <= 1);
+     prevBtn.style.opacity = (page <= 1) ? '0.4' : '1';
+     nextBtn.disabled = (page >= totalPages);
+     nextBtn.style.opacity = (page >= totalPages) ? '0.4' : '1';
+     info.textContent = 'Page ' + page + ' of ' + totalPages;
+
+     // Show pagination only if more than one page
+     var pagDiv = document.getElementById('edu-pagination');
+     pagDiv.style.display = (totalPages <= 1) ? 'none' : 'flex';
+   }
+
+   window.eduGoPage = function(page) {
+     if (page < 1 || page > totalPages) return;
+     var params = new URLSearchParams(window.location.search);
+     params.set('page', page);
+     history.replaceState(null, '', window.location.pathname + '?' + params.toString());
+     currentPage = page;
+     renderPage(page);
+   };
+
+   var currentPage = getPageParam();
+   renderPage(currentPage);
+ })();
+ </script>
 
  <div id="site-footer"></div>
- 
+
 </body>
 </html>
