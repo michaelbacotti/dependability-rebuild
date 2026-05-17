@@ -491,6 +491,9 @@ small, .small {
  font-size: 1.0625rem;
  color: #555555;
  max-width: 680px;
+ margin: 0 auto;
+}
+
 .page-hero .hero-blurb {
  font-size: 1rem;
  color: #666666;
@@ -500,6 +503,7 @@ small, .small {
  border-top: 1px solid var(--color-border);
  padding-top: 20px;
  margin-bottom: 0;
+}
 }
  margin: 0 auto;
 }
