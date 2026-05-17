@@ -485,6 +485,7 @@ small, .small {
 .page-hero h1 {
  font-size: 2.25rem;
  margin-bottom: 16px;
+ text-align: center;
 }
 
 .page-hero p {
