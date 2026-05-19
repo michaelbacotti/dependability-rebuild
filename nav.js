@@ -11,9 +11,9 @@
    ' <a href="/" class="top-wordmark">DEPENDABILITY</a>',
    ' <span class="top-tagline">Independent market research and options analysis</span>',
    ' <div class="top-links">',
-   '  <a href="/about.html">About</a>',
-   '  <a href="/methodology.html">Methodology</a>',
-   '  <a href="/about.html#contact">Contact</a>',
+   '  <a href="/about">About</a>',
+   '  <a href="/methodology">Methodology</a>',
+   '  <a href="/about#contact">Contact</a>',
    ' </div>',
    '</nav>'
   ].join('\n');
@@ -25,11 +25,11 @@
   nav.innerHTML = [
    '<div class="tab-bar">',
    ' <div class="tab-bar-inner">',
-   '  <a href="/index.html">Overview</a>',
-   '  <a href="/forecast.html">Forecast</a>',
-   '  <a href="/commentary.html">Market Commentary</a>',
-   '  <a href="/education.html">Education</a>',
-   '  <a href="/strategies.html">Options Strategies</a>',
+   '  <a href="/index">Overview</a>',
+   '  <a href="/forecast">Forecast</a>',
+   '  <a href="/commentary">Market Commentary</a>',
+   '  <a href="/education">Education</a>',
+   '  <a href="/strategies">Options Strategies</a>',
    ' </div>',
    '</div>'
   ].join('\n');
@@ -40,10 +40,10 @@
  var tabs = document.querySelectorAll('.tab-bar a');
  tabs.forEach(function (tab) {
   var href = tab.getAttribute('href');
-  if (href === path || (href !== '/index.html' && path.startsWith(href))) {
+  if (href === path || (href !== '/index' && path.startsWith(href))) {
    tab.classList.add('active');
   }
-  if (href === '/index.html' && (path === '/' || path === '/index.html')) {
+  if (href === '/index' && (path === '/' || path === '/index')) {
    tab.classList.add('active');
   }
  });
