@@ -16,7 +16,7 @@
    '   <ul>',
    '    <li><a href="/forecast">S&amp;P 500 &amp; VIX Forecast</a></li>',
    '    <li><a href="/commentary">Market Commentary</a></li>',
-   '    <li><a href="/education">Options Education</a></li>',
+   '    <li><a href="/education">Education</a></li>',
    '    <li><a href="/strategies">Options Strategies</a></li>',
    '   </ul>',
    '  </div>',
