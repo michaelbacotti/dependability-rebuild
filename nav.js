@@ -26,10 +26,10 @@
    '<div class="tab-bar">',
    ' <div class="tab-bar-inner">',
    '  <a href="/index">Overview</a>',
-   '  <a href="/forecast">Forecast</a>',
    '  <a href="/commentary">Market Commentary</a>',
-   '  <a href="/education">Education</a>',
+   '  <a href="/forecast">Forecast</a>',
    '  <a href="/strategies">Options Strategies</a>',
+   '  <a href="/education">Education</a>',
    ' </div>',
    '</div>'
   ].join('\n');
