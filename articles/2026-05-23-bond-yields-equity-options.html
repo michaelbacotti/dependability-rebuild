@@ -12,9 +12,10 @@
  .share-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #999; margin-right: 4px; }
  .share-btn { display: inline-flex; align-items: center; gap: 5px; padding: 7px 12px; border-radius: 4px; font-size: 12px; text-decoration: none; border: 1px solid #cc0000; background: transparent; cursor: pointer; font-family: inherit; color: #cc0000; transition: opacity 0.15s; }
  .share-btn:hover { opacity: 0.7; }
+ .disclaimer { margin: 2.5rem 0; padding: 1rem 1.25rem; background: #f5f0e8; border-left: 4px solid #cc0000; font-size: 0.875rem; line-height: 1.6; color: #555; }
  </style>
-<link rel="canonical" href="https://dependability.us/articles/2026-05-23-bond-yields-equity-options"> <meta property="og:title" content="Bond Yields and Equity Options: The Interest Rate Connection">
- <meta property="og:description" content="Understanding how Treasury yields affect option pricing through the lens of the Black-Scholes model, rho, and put-call parity.">
+<link rel="canonical" href="https://dependability.us/https://dependability.us/articles/2026-05-23-bond-yields-equity-options.html"> <meta property="og:title" content="PAGE TITLE">
+ <meta property="og:description" content="PAGE DESCRIPTION">
  <meta property="og:image" content="https://dependability.us/articles/2026-05-23-bond-yields-equity-options.png">
  <meta property="og:type" content="article">
  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
@@ -26,87 +27,85 @@
 
  <main>
 
-  <div class="article-page">
 
-   <div class="article-header">
-    <div class="category-label">EDUCATION / RATES</div>
-    <h1>Bond Yields and Equity Options: The Interest Rate Connection</h1>
-    <div class="article-meta">May 23, 2026 &nbsp;|&nbsp; Dependability Research Desk</div>
-   </div>
-   <div class="article-header-image">
-    <img src="/articles/2026-05-23-bond-yields-equity-options.png" alt="Interest rate and equity options relationship" style="width:100%;display:block;">
-   </div>
-   <div class="article-body">
+   <div class="article-page">
+
+    <div class="article-header">
+     <div class="category-label">EDUCATION / RATES</div>
+     <h1>Bond Yields and Equity Options: The Interest Rate Connection</h1>
+     <div class="article-meta">May 23, 2026 &nbsp;|&nbsp; Dependability Research Desk</div>
+    </div>
+    <div class="article-header-image">
+     <img src="/articles/2026-05-23-bond-yields-equity-options.png" alt="Bond Yields and Equity Options: The Interest Rate Connection" style="width:100%;display:block;">
+    </div>
+    <div class="article-body">
 
 <p>When traders think about what moves option prices, implied volatility and the underlying stock tend to dominate the conversation. But there is a quieter variable — one that sits inside every options model and quietly shapes premium across the entire chain: the risk-free interest rate. It rarely creates dramatic headlines. It rarely shows up in the Greeks most retail traders watch. But it is always there, and in a period of elevated and volatile rates, understanding it becomes a genuine edge.</p>
-
 <h2>The Black-Scholes Foundation</h2>
 <p>The Black-Scholes model, introduced in 1973, gave the world a closed-form solution for pricing European options. Among its inputs — stock price, strike, time to expiration, volatility — sits a variable that many traders treat as a footnote: the risk-free rate, denoted as <em>r</em>. In the original BSM framework, <em>r</em> represents the continuously compounded, risk-free return — essentially the yield on a Treasury bill held to maturity matching the option's expiration.</p>
 <p>In textbook examples, this is often 5% or some round number. In the real world, it changes constantly. And while a 25-basis-point shift in short-term rates may seem trivial relative to a 10-point move in the underlying, it flows directly into the pricing model — affecting every strike, every expiration, in ways that compound across large position sizes.</p>
 <p>The mechanism is straightforward in theory: a higher risk-free rate increases the expected present value of the strike price (the cost of tying up capital to buy the stock at a fixed price), which makes call options more valuable (you defer payment and earn interest on your capital) and put options less valuable (it is cheaper to simply hold cash and sell the stock). This is not a marginal effect — in a 5% rate environment versus a 0.5% environment, the pricing differential is material for longer-dated options.</p>
-
 <h2>Rho: The Greek You Probably Ignore</h2>
 <p>Among the options Greeks, rho is the least discussed in retail circles — primarily because in the low-rate decade following the 2008 financial crisis, it barely mattered. When risk-free rates hover near zero, small proportional changes in <em>r</em> produce negligible changes in option premiums. That era is over. In 2026, with rates at their highest levels in two decades, rho has become a first-order consideration for any serious options position.</p>
 <p>Rho measures the sensitivity of an option's price to a 1% change in the risk-free interest rate. For a call option, rho is positive — higher rates push call prices up. For a put option, rho is negative — higher rates push put prices down. The asymmetry is important and reflects the fundamental asymmetry between the two instruments: a call is a leveraged alternative to buying stock; a put is a form of insurance. Insurance becomes relatively less attractive when you can earn a meaningful yield on cash held against the exercise price.</p>
 <p>The practical implication: if you are buying puts in a rising rate environment without accounting for rho, you are fighting two headwinds — the rate environment is working against your put premium even if volatility is stable. Conversely, call buyers in a rising rate environment receive a modest tailwind from rho itself, separate from any directional thesis on the underlying.</p>
-
 <h2>Put-Call Parity and the Treasury Yield Link</h2>
 <p>Put-call parity is one of the most important structural relationships in options pricing. It states that the price of a call option minus the price of a put option equals the current stock price minus the present value of the strike price, adjusted for dividends. Algebraically: C - P = S - K*e^(-rT). This relationship must hold in efficient markets — any significant deviation creates an arbitrage opportunity.</p>
 <p>The implication for rates is direct: as <em>r</em> increases, the present value of the strike price (K*e^(-rT)) falls, which increases the right-hand side of the equation. To maintain parity, call prices must increase relative to put prices, or put prices must fall relative to calls. In practice, both sides adjust, but the asymmetry in rho means calls tend to absorb more of the rate-driven premium increase than puts do in a relative sense.</p>
 <p>This is why a trader who buys puts as a portfolio hedge in a rising rate environment needs to be more aggressive in their vol thesis to overcome the structural drag from rho. It is also why covered calls on high-delta positions become relatively more attractive in the same environment — the call premium reflects additional rate-adjusted value that may not have existed in a zero-rate world.</p>
-
 <h2>The Interest Rate Environment in 2026</h2>
 <p>The Federal Reserve held its benchmark rate at 4.25%–4.50% as of Q1 2026, having paused after a series of cuts in late 2025. The market is pricing a cautious path — two cuts priced in for the full year, with significant uncertainty around whether even that materializes. Inflation has proven stickier than the Fed anticipated, and labor market resilience has given policymakers cover to remain patient. The 10-year Treasury yield has stabilized around 4.15%–4.20%, with the 2-year/10-year spread having steepened modestly as the curve pricing softens.</p>
 <p>This is meaningfully different from the zero-rate world of 2009–2015, or even the near-zero environment of 2019. Every option priced using BSM or a comparable model is reflecting a 4%+ risk-free rate. For longer-dated options — LEAPS with two or three years to expiration — the cumulative rho effect is substantial. A 3-year LEAP call at $100 strike under a 4.25% rate assumption versus a 0.50% rate assumption prices materially higher in the former scenario. That is not volatility — it is interest rate math.</p>
-
 <h2>Practical Implications for Your Positions</h2>
 <p>For traders managing options positions, the practical question is not theoretical — it is whether you have accounted for rate expectations in your position sizing, strike selection, and strategy choice.</p>
 <p>The most rate-sensitive sectors provide the clearest examples. <strong>Regional banks</strong> are among the most directly impacted: their net interest margin is a function of the yield curve shape, and their stock options reflect both the rate level and the market's rate expectations. When the curve steepens, banks benefit; when the curve flattens or inverts, their upside is capped. Options on regional bank stocks price in a complex interaction between the underlying business dynamics and the rate backdrop that a trader ignoring rho simply will not see.</p>
 <p><strong>REITs</strong> (real estate investment trusts) are similarly rate-sensitive — higher rates increase the cost of the leveraged asset base that underpins their business model, pressuring both stock prices and the calls and puts on those names. The rho effect compounds the fundamental pressure: rising rates make calls cheaper on a relative basis and puts more expensive, which works against the natural hedge a long put structure would provide.</p>
 <p><strong>Utilities</strong>, often treated as bond proxies, show the inverse pattern: when rates fall, their relative attractiveness increases, and call options on utility stocks reflect that improved positioning. In 2026's current environment — stable but elevated rates with modest easing expectations — utility options are pricing in a benign but not dramatically supportive rate scenario.</p>
-
 <h2>Using Rate Expectations in Your Strategy</h2>
 <p>The central practical principle is straightforward: <strong>option prices embed rate expectations</strong>, and those expectations shift over time. When the market prices in a rate cut, it is effectively lowering the risk-free rate embedded in options — which should push call prices down and put prices up, all else equal. When the market prices in rate hikes or a prolonged hold, the opposite occurs.</p>
 <p>This means that the <em>realized</em> rho for your position depends on whether the rate environment evolves as the market currently expects. If you buy calls expecting rates to fall and they stay elevated, you may be paying more for those calls than the eventual scenario justifies — you are overpaying relative to the future rate path.</p>
 <p>The most actionable application is in <strong>calendar spreads</strong> and <strong>diagonal spreads</strong> where the short leg's rho behavior offsets or complements the long leg's directional exposure. If you believe rates will decline (Fed cuts), you might sell a higher-strike call in the near term (capturing current elevated rate premium) while buying a lower-strike call further out (which benefits when rates fall and the stock rises). The interplay between the two legs' rho profiles is a strategic variable most traders underuse.</p>
-
 <h2>The Risk of Ignoring Rho</h2>
 <p>In a high-rate environment, ignoring rho is not a neutral decision — it is an active headwind. A long put position that is sized correctly for a 2% vol move may underperform expectations in a 4%+ rate environment not because the vol thesis was wrong but because the rate math was working against you. The put's rho drag may be 5–10 cents per contract per week on longer-dated puts — small individually, but material across a portfolio or in the final weeks of a longer-dated position.</p>
 <p>More acutely: in a <strong>rising rate environment</strong>, calls will tend to outperform puts on a rate-adjusted basis even if the underlying stock goes nowhere. A trader who is long puts and wrong on direction, in a rising rate environment, is fighting two losing battles simultaneously. Similarly, a covered call seller in a rising rate environment may be pleasantly surprised by the call premium they collect — but that premium is partly rho compensation, and it will compress if rates fall unexpectedly.</p>
 <p>The takeaway is not to become a rate hawk or to trade rho directly. It is to incorporate the risk-free rate into your framework the same way you incorporate volatility and delta — as a structural variable that shapes the option prices you are buying and selling. In 2026, with rates meaningfully above zero and the Fed's path uncertain, this is not an academic exercise. It is a practical edge.</p>
+<p>strong>Disclaimer:/strong> This research is for informational purposes only and does not constitute investment advice. Options trading involves substantial risk of loss. Dependability Holdings LLC has no positions in the securities mentioned. Past performance is not indicative of future results.</p>
 
-<div class="disclaimer">
-<strong>Disclaimer:</strong> This research is for informational purposes only and does not constitute investment advice. Options trading involves substantial risk of loss. Dependability Holdings LLC has no positions in the securities mentioned. Past performance is not indicative of future results.
-</div>
+    </div>
+
+
+    <div class="disclaimer">
+     <strong>Disclaimer:</strong> This research is for informational purposes only and does not constitute investment advice. Options trading involves substantial risk of loss. Dependability Holdings LLC has no positions in the securities mentioned. Past performance is not indicative of future results.
+    </div>
 
 <div class="share-bar">
- <span class="share-label">Share</span>
- <a class="share-btn share-x" href="#" target="_blank" rel="noopener" aria-label="Share on X">
- <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
- </a>
- <a class="share-btn share-facebook" href="#" target="_blank" rel="noopener" aria-label="Share on Facebook">
- <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
- </a>
- <a class="share-btn share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
- <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
- </a>
- <button class="share-btn share-copy" aria-label="Copy link" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.querySelector('.copy-label').textContent='Copied!';setTimeout(()=>{this.querySelector('.copy-label').textContent='Copy'},2000)})">
- <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
- <span class="copy-label">Copy</span>
- </button>
+  <span class="share-label">Share</span>
+  <a class="share-btn share-x" href="#" target="_blank" rel="noopener" aria-label="Share on X">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+  </a>
+  <a class="share-btn share-facebook" href="#" target="_blank" rel="noopener" aria-label="Share on Facebook">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+  </a>
+  <a class="share-btn share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+  </a>
+  <button class="share-btn share-copy" aria-label="Copy link" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.querySelector('.copy-label').textContent='Copied!';setTimeout(()=>{this.querySelector('.copy-label').textContent='Copy'},2000)})">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+    <span class="copy-label">Copy</span>
+  </button>
 </div>
+
 <script>
 document.querySelectorAll('.share-x, .share-facebook, .share-linkedin').forEach(function(el) {
- var url = encodeURIComponent(window.location.href);
- var title = encodeURIComponent(document.title);
- if (el.classList.contains('share-x')) el.href = 'https://x.com/intent/tweet?url=' + url + '&text=' + title;
- if (el.classList.contains('share-facebook')) el.href = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
- if (el.classList.contains('share-linkedin')) el.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + url;
+  var url = encodeURIComponent(window.location.href);
+  var title = encodeURIComponent(document.title);
+  if (el.classList.contains('share-x')) el.href = 'https://x.com/intent/tweet?url=' + url + '&text=' + title;
+  if (el.classList.contains('share-facebook')) el.href = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
+  if (el.classList.contains('share-linkedin')) el.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + url;
 });
 </script>
 
    </div>
-  </div>
 
  </main>
 
@@ -116,43 +115,7 @@ document.querySelectorAll('.share-x, .share-facebook, .share-linkedin').forEach(
  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
  <script src="/nav.js"></script>
 
-<div id="site-footer">
-  <div class="main-footer">
-   <div class="footer-grid">
-    <div class="footer-brand">
-     <h4>Dependability Holdings LLC</h4>
-     <p>Independent financial research and market analysis. Our work focuses on options market dynamics, volatility regimes, and macro-driven positioning.</p>
-    </div>
-    <div class="footer-nav">
-     <h5>Research</h5>
-     <ul>
-      <li><a href="/forecast">S&amp;P 500 &amp; VIX Forecast</a></li>
-      <li><a href="/commentary">Market Commentary</a></li>
-      <li><a href="/education">Options Education</a></li>
-      <li><a href="/strategies">Options Strategies</a></li>
-     </ul>
-    </div>
-    <div class="footer-nav">
-     <h5>Company</h5>
-     <ul>
-      <li><a href="/about">About</a></li>
-      <li><a href="/methodology">Methodology</a></li>
-      <li><a href="/contact">Contact</a></li>
-     </ul>
-    </div>
-    <div class="footer-nav">
-     <h5>Legal</h5>
-     <ul>
-      <li><a href="/privacy">Privacy Policy</a></li>
-      <li><a href="/terms">Terms of Service</a></li>
-      <li><a href="/disclaimer">Investment Disclaimer</a></li>
-     </ul>
-    </div>
-   </div>
-   <div class="footer-bottom">
-    <p>&copy; 2026 Dependability Holdings LLC. All rights reserved.</p>
-    <p>For informational purposes only. Not investment advice. See our <a href="/methodology">full disclosures</a>.</p>
-   </div>
-  </div>
-</div></body>
+<div id="site-footer"></div>
+
+</body>
 </html>
