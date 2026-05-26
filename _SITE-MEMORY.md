@@ -135,3 +135,76 @@ document.querySelectorAll('.share-x, .share-facebook, .share-linkedin').forEach(
 ## Change Log
 - 2026-05-13 — Initial build — flat HTML financial research site
 - 2026-05-23 — Added canonical article template, share bar standards, footer disclosure standards, article structure rules. Rebranded "Options Education" → "Market Education".
+## Forecast — MD Source of Truth (Added 2026-05-26)
+
+**Source of truth:** `entities/dependability/content/forecasts/` (MD files)
+**Build script:** `entities/dependability/dependability-may26/build.py`
+**Output:** `entities/dependability/website/forecast.html`
+**Pipeline:** `content/forecasts/*.md` → `build.py` → `website/forecast.html` → push → CF Pages
+
+### MD File Format
+Each forecast is a dated `.md` file in `content/forecasts/`:
+```
+---
+date: 2026-05-22
+title: "S&P 500 Forecast — May 22, 2026"
+description: "..."
+category: FORECAST
+archived: true   ← only for older forecasts (not current)
+---
+
+## [H2 Title for Bull Case Box]
+
+[narrative paragraphs and ### subsections]
+
+___
+
+<!-- TARGET_GRID -->
+| CURRENT | 7,473 | SPX · May 22, 2026 |
+| 1 MONTH | 7,600 | +1.7% |
+| 3 MONTH | 7,700 | +3.0% |
+| YEAR-END 2026 | 7,700 | +3.0% base case |
+
+___
+
+<!-- WALL_STREET_CONSENSUS -->
+| Firm | Target | Change |
+| Goldman Sachs | 7,600 | +1.3% |
+...
+
+___
+
+<!-- VOLATILITY_CONTEXT -->
+| Metric | Value | Note |
+| VIX (Current) | ~18–20 | Elevated but stabilizing |
+...
+
+___
+
+### CARD: [Descriptive h3 title]
+
+**Updated:** May 22, 2026
+
+[card body text]
+
+### CARD: [Next card h3 title]
+**Date:** May 22, 2026
+...
+```
+
+### Key Rules
+- **Most recent non-archived MD** → becomes the live `forecast.html` (featured on the site)
+- **Archived MDs** (with `archived: true` in front matter) → compact archive cards at bottom of forecast.html
+- **Card categories** are fixed in build.py: HOW WE FORECAST, OPTIONS FRAMEWORK, MARKET COMMENTARY, KEY RISKS — do NOT change these; they are the category labels
+- **`### CARD:` headings** are the h3 titles — these should be descriptive (e.g., "Our Methodology", "Positioning for the Outlook")
+- **`___` separators** mark the boundary between narrative and structured data blocks
+- **`<!-- TARGET_GRID -->`, `<!-- WALL_STREET_CONSENSUS -->`, `<!-- VOLATILITY_CONTEXT -->`** delimit the three structured data tables
+- After editing MD files: `cd entities/dependability/dependability-may26 && python3 build.py`, then push `website/forecast.html`
+- Deploy: push `entities/dependability/website/` → GitHub → CF Pages auto-deploys
+
+### Weekly Update Process
+1. Copy current forecast MD: `cp content/forecasts/2026-05-22.md content/forecasts/2026-05-29.md`
+2. Edit the new file — update `date:`, `title:`, target values, narrative commentary, card dates
+3. Run: `cd entities/dependability/dependability-may26 && python3 build.py`
+4. Push: `cd entities/dependability/website && git add forecast.html && git commit && git push`
+5. Old forecast → add `archived: true` to its front matter
