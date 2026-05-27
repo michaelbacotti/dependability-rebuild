@@ -1,7 +1,9 @@
 // footer.js — Dependability Holdings LLC
 (function () {
- var footer = document.getElementById('site-footer');
- if (footer) {
+ function populateFooter() {
+  var footer = document.getElementById('site-footer');
+  if (!footer) return;
+  if (footer.innerHTML.trim() !== '') return; // already populated
   footer.innerHTML = [
    '<div class="main-footer">',
    ' <div class="footer-grid">',
@@ -44,4 +46,12 @@
    '</div>'
   ].join('\n');
  }
+
+ // Try immediately, then on DOMContentLoaded, then on load
+ if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', populateFooter);
+ } else {
+  populateFooter();
+ }
+ window.addEventListener('load', populateFooter);
 })();
