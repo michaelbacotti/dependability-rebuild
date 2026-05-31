@@ -3,8 +3,8 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Iron Condors: Premium Collection in Range-Bound Markets | Dependability Holdings LLC</title>
- <meta name="description" content="When the market has no clear directional catalyst, the iron condor collects premium from time decay. Here's how to structure it for income while managing the risk of breakout moves.">
+ <title>Iron Condors: Complete Strategy Guide for Range-Bound Markets | Dependability Holdings LLC</title>
+ <meta name="description" content="Complete iron condor strategy guide — structure, metrics, adjustments, exit rules, common mistakes, and comparison with related strategies. Target 30-45 DTE with 15-20 point wings.">
  <link rel="stylesheet" href="/style.css">
  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
  <style>
@@ -14,8 +14,8 @@
  .share-btn:hover { opacity: 0.7; }
  .disclaimer { margin: 2.5rem 0; padding: 1rem 1.25rem; background: #f5f0e8; border-left: 4px solid #cc0000; font-size: 0.875rem; line-height: 1.6; color: #555; }
  </style>
-<link rel="canonical" href="/articles/iron-condors-range-bound-markets"> <meta property="og:title" content="Iron Condors: Premium Collection in Range-Bound Markets | Dependability Holdings LLC">
- <meta property="og:description" content="When the market has no clear directional catalyst, the iron condor collects premium from time decay. Here's how to structure it for income while managing the risk of breakout moves.">
+<link rel="canonical" href="/articles/iron-condors-range-bound-markets"> <meta property="og:title" content="Iron Condors: Complete Strategy Guide for Range-Bound Markets | Dependability Holdings LLC">
+ <meta property="og:description" content="Complete iron condor strategy guide — structure, metrics, adjustments, exit rules, common mistakes, and comparison with related strategies. Target 30-45 DTE with 15-20 point wings.">
  <meta property="og:image" content="https://dependability.us">
  <meta property="og:type" content="article">
  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
@@ -32,26 +32,152 @@
 
     <div class="article-header">
      <div class="category-label">FORECASTS & OPTIONS STRATEGIES</div>
-     <h1>Iron Condors: Premium Collection in Range-Bound Markets</h1>
+     <h1>Iron Condors: Complete Strategy Guide for Range-Bound Markets</h1>
      <div class="article-meta">May 15, 2026 &nbsp;|&nbsp; Dependability Research Desk</div>
     </div>
     <div class="article-header-image">
-     <img src="" alt="Iron Condors: Premium Collection in Range-Bound Markets" style="width:100%;display:block;">
+     <img src="" alt="Iron Condors: Complete Strategy Guide for Range-Bound Markets" style="width:100%;display:block;">
     </div>
     <div class="article-body">
 
 <p>When the market is trading in a well-defined range with no clear directional catalyst, the iron condor is among the most effective tools available to an options trader. The strategy collects premium from time decay while maintaining a wide enough range to tolerate modest volatility without taking losses.</p>
-<h2>Structure</h2>
-<p>Sell an OTM put spread at lower strikes + sell an OTM call spread at upper strikes. Both spreads are outside the expected trading range. The wider the wings, the more profit potential but also more risk if the underlying breaks out.</p>
-<h2>Key Metrics</h2>
+<h2>What Is an Iron Condor?</h2>
+<p>An iron condor is a four-legged options position consisting of:</p>
 <ul>
-  <li><strong>Duration:</strong> Target 30–45 days to expiration</li>
-  <li><strong>Wing width:</strong> 15–20 S&P points (or equivalent percentage for other underlyings)</li>
-  <li><strong>Credit received:</strong> $1.50–$2.50 per spread</li>
-  <li><strong>Max risk:</strong> Strike width minus credit received</li>
+  <li><strong>Short put spread</strong> (lower side): Sell a put, buy a further OTM put as protection</li>
+  <li><strong>Short call spread</strong> (upper side): Sell a call, buy a further OTM call as protection</li>
 </ul>
-<h2>Exit Rules</h2>
-<p>Take profit at 50% of max profit. Stop out if the short strike is breached and the long leg cannot be rolled. Never hold through a major event — FOMC, CPI, earnings — without adjusting.</p>
+<p>Both spreads are placed outside the expected trading range. You collect a net credit up front and profit as long as the underlying stays within your sold strikes. The risk is defined and limited to the width of the wider wing minus the credit received.</p>
+<h2>Structure Details</h2>
+<p><strong>Sell OTM put spread (lower strikes):</strong></p>
+<ul>
+  <li>Sell a put at a lower strike (e.g., SPX 5,700 on a 5,800 market)</li>
+  <li>Buy a further OTM put as a floor (e.g., SPX 5,650)</li>
+  <li>The difference between sold and bought strikes defines your max risk on that side</li>
+</ul>
+<p><strong>Sell OTM call spread (upper strikes):</strong></p>
+<ul>
+  <li>Sell a call at a higher strike (e.g., SPX 6,050 on a 5,800 market)</li>
+  <li>Buy a further OTM call as a ceiling (e.g., SPX 6,100)</li>
+  <li>Same logic applies — width minus credit = max risk on that side</li>
+</ul>
+<p>The two spreads work independently and together form the condor's profit zone.</p>
+<h2>Key Metrics</h2>
+<p>| Parameter | Target | Rationale |</p>
+<p>|---|---|---|</p>
+<p>| Days to expiration (DTE) | 30–45 days | Theta acceleration peaks 30-45 days out; earlier closing captures most decay |</p>
+<p>| Wing width | 15–20 S&P points (SPX) or 5% (stocks/ETFs) | Wide enough to absorb volatility without constant management |</p>
+<p>| Net credit collected | $1.50–$2.50 per spread (SPX) | Target 20-30% of wing width as credit |</p>
+<p>| Max risk per spread | Wing width minus credit | Define your loss before entry |</p>
+<p>| Position size | No more than 2% of capital per condor | Manage tail risk across multiple positions |</p>
+<h2>When to Use It</h2>
+<p>The iron condor works best when:</p>
+<ol>
+  <li><strong>The underlying is in a well-defined range</strong> — no clear directional catalyst, support and resistance visible</li>
+  <li><strong>Implied volatility is elevated but expected to decline</strong> — IV crush after events adds a tailwind</li>
+  <li><strong>You want to collect premium while being wrong</strong> — the wide wings allow some breathing room</li>
+  <li><strong>You have a specific range expectation</strong> — place sold strikes 1-2 standard deviations outside the range</li>
+</ol>
+<p><strong>Avoid iron condors when:</strong></p>
+<ul>
+  <li>A major catalyst is imminent (FOMC, CPI, earnings) — unexpected moves eat into wings</li>
+  <li>IV rank is below 20th percentile — premium collection is insufficient</li>
+  <li>The underlying is in a strong trend — managing a condor in a trending market costs more than it earns</li>
+</ul>
+<h2>Entry Logic</h2>
+<p><strong>Strike selection:</strong></p>
+<ul>
+  <li>Use price history to identify support/resistance zones</li>
+  <li>Place short strikes 1–2 standard deviations outside the current range</li>
+  <li>For SPX: a 15-20 point wing at 5,800 is roughly 0.25-0.35% from current price</li>
+  <li>For QQQ: a 2-3 point wing at 450 is roughly 0.5-0.7% from current price</li>
+</ul>
+<p><strong>Sizing the position:</strong></p>
+<ul>
+  <li>Determine your max loss per condor (wing width - credit)</li>
+  <li>Risk no more than 2% of total capital on a single position</li>
+  <li>Example: $100K portfolio → max $2,000 per condor position</li>
+  <li>If max risk per condor = $1,000, run 2 simultaneous positions maximum</li>
+</ul>
+<p><strong>Entry timing:</strong></p>
+<ul>
+  <li>Enter when IV rank is in the 40-70th percentile</li>
+  <li>Avoid entering before major events (leave 2 weeks buffer around FOMC/CPI)</li>
+  <li>Consider partial entry: sell one side, wait for fill on the other, then complete the full position</li>
+</ul>
+<h2>Position Management</h2>
+<p><strong>Taking profit:</strong></p>
+<ul>
+  <li>Close at 50% of max profit (standard rule)</li>
+  <li>Example: credit of $2.00, max profit $2.00 → take profit at $1.00 profit</li>
+  <li>This captures 50% of the theoretical max while leaving room for more</li>
+</ul>
+<p><strong>Adjusting losing positions:</strong></p>
+<ul>
+  <li>If the underlying touches the short put strike, roll the put side down and out (same width, later expiration)</li>
+  <li>If it touches the short call strike, roll the call side up and out</li>
+  <li>Rolling costs credits; track cumulative P&L across adjustments</li>
+</ul>
+<p><strong>Stop-out rules:</strong></p>
+<ul>
+  <li>If the underlying breaks through the long strike and you can't roll, close the position</li>
+  <li>Never hold through a major event with a losing condor — adjust or close</li>
+  <li>Set a mental stop at 2x the credit received as max loss before adjusting</li>
+</ul>
+<h2>Common Mistakes</h2>
+<h3>1. Wing width too narrow</h3>
+<p>Squeezing the wings to collect more credit increases the probability of touching the short strikes. A 10-point SPX wing looks attractive but provides almost no room for the market to move.</p>
+<p><strong>Fix:</strong> Stick to 15-20+ point wings on SPX. The credit will be lower but the win rate will be higher.</p>
+<h3>2. Holding through major events</h3>
+<p>Iron condors are short volatility strategies. FOMC meetings, CPI prints, and earnings can cause outsized moves that blow through both wings simultaneously.</p>
+<p><strong>Fix:</strong> Close or adjust any condor within 2 weeks of a major event. The IV collapse after the event can be used to your advantage by opening a new position post-event.</p>
+<h3>3. Position sizing too large</h3>
+<p>Running 5 condors at 2% risk each = 10% of capital at risk across correlated underlyings.</p>
+<p><strong>Fix:</strong> Treat all SPX/QQQ positions as correlated. A SPX move affects QQQ. Total directional exposure should be tracked across the portfolio.</p>
+<h3>4. Entry when IV rank is low</h3>
+<p>Opening an iron condor when VIX is at 12 and IV rank is in the bottom decile means the premium collected won't cover the cost of the hedge.</p>
+<p><strong>Fix:</strong> Wait for IV rank above 30-40th percentile before opening. The extra premium makes the math work better and gives you a buffer.</p>
+<h3>5. Not taking profit at 50%</h3>
+<p>Holding to expiration hoping for max profit is a loser's game — unexpected moves can strip away all gains.</p>
+<p><strong>Fix:</strong> Automate the 50% rule. Use a spread tracker and close when profit target is hit.</p>
+<h2>Exit Rules Summary</h2>
+<p>| Scenario | Action |</p>
+<p>|---|---|</p>
+<p>| Profit reaches 50% of max | Close and take profit |</p>
+<p>| Underlying touches short strike | Roll down and out (puts) or up and out (calls) |</p>
+<p>| Underlying breaks long strike | Close entire position |</p>
+<p>| Major event within 2 weeks | Adjust position or close |</p>
+<p>| 2 weeks from expiration, underperforming | Evaluate and close or roll |</p>
+<h2>Iron Condor vs Related Strategies</h2>
+<p>| Strategy | Best For | Max Profit | Max Loss | Complexity |</p>
+<p>|---|---|---|---|---|</p>
+<p>| <strong>Iron Condor</strong> | Range-bound, collecting premium | Credit received | Wing width - credit | Medium |</p>
+<p>| <strong>Iron Butterfly</strong> | Very tight range, high IV | Narrow credit | Wing width - credit | Medium |</p>
+<p>| <strong>Bull Put Spread</strong> | Bullish bias, income | Credit received | Strike width - credit | Low |</p>
+<p>| <strong>Bear Call Spread</strong> | Bearish bias, income | Credit received | Strike width - credit | Low |</p>
+<p>| <strong>Short Straddle</strong> | Very low volatility expectation | Credit received | Unlimited | High |</p>
+<p>The iron condor is the most versatile of the premium-collection strategies because its wide wings let you stay in the trade longer than the tighter iron butterfly, and its directional neutrality means you don't need to pick a direction.</p>
+<h2>Greeks and Risk Characteristics</h2>
+<p>At 30-45 DTE with neutral strikes:</p>
+<ul>
+  <li><strong>Delta:</strong> Near zero at entry (short both call and put spreads offset each other)</li>
+  <li><strong>Theta:</strong> Strongly positive — you collect time decay daily</li>
+  <li><strong>Vega:</strong> Negative — you want IV to decline; a rise in IV hurts both sides</li>
+  <li><strong>Gamma:</strong> Low — the position is relatively insensitive to small moves</li>
+</ul>
+<p><strong>Key sensitivity:</strong> The position benefits from a slow, grinding move within the range. Rapid movement in any direction is harmful, especially on the downside.</p>
+<h2>Historical Context</h2>
+<p>Iron condors became a retail staple in the 2010s as zero-commission trading reduced the cost of multi-leg execution. During the 2020-2022 high-VIX environment, condors placed with 30-45 DTE and 15-20 point wings on SPX generated consistent credits of $1.50-$3.00 per spread, with win rates of 65-75%.</p>
+<p>The strategy performs best in the following regimes:</p>
+<ul>
+  <li>Post-FOMC IV crush</li>
+  <li>Summer doldrums (June-August)</li>
+  <li>Post-earnings season (November-December)</li>
+</ul>
+<h2>Tools for Building Iron Condors</h2>
+<p>We use [OptionsStrat](https://optionstrat.com/ventureprise) to visualize break-even points, max profit/loss zones, probability distributions, and Greeks across strikes and expirations. Before entry, model the exact wing width, credit received, and probability of touch using their platform.</p>
+<p><strong>Next:</strong> [Bull Call Spreads: Defined-Risk Bullish Direction](/articles/bull-call-spreads-defined-risk/)</p>
+<p><em>This content is for informational purposes only. Options trading involves substantial risk of loss. Dependability Holdings LLC has no positions in the securities mentioned. Past performance is not indicative of future results.</em></p>
 
     </div>
 

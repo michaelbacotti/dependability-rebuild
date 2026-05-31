@@ -3,8 +3,8 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Bull Call Spreads: Defined-Risk Directional Exposure | Dependability Holdings LLC</title>
- <meta name="description" content="When you expect a moderate move higher, a bull call spread reduces cost versus buying naked calls while maintaining directional exposure. Here's how to build and manage the position.">
+ <title>Bull Call Spreads: Complete Strategy Guide for Moderate Bullish Moves | Dependability Holdings LLC</title>
+ <meta name="description" content="Complete bull call spread strategy guide — structure, strike selection, entry timing, Greeks, exit rules, common mistakes, and comparison with naked calls and other bullish strategies.">
  <link rel="stylesheet" href="/style.css">
  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
  <style>
@@ -14,8 +14,8 @@
  .share-btn:hover { opacity: 0.7; }
  .disclaimer { margin: 2.5rem 0; padding: 1rem 1.25rem; background: #f5f0e8; border-left: 4px solid #cc0000; font-size: 0.875rem; line-height: 1.6; color: #555; }
  </style>
-<link rel="canonical" href="/articles/bull-call-spreads-defined-risk"> <meta property="og:title" content="Bull Call Spreads: Defined-Risk Directional Exposure | Dependability Holdings LLC">
- <meta property="og:description" content="When you expect a moderate move higher, a bull call spread reduces cost versus buying naked calls while maintaining directional exposure. Here's how to build and manage the position.">
+<link rel="canonical" href="/articles/bull-call-spreads-defined-risk"> <meta property="og:title" content="Bull Call Spreads: Complete Strategy Guide for Moderate Bullish Moves | Dependability Holdings LLC">
+ <meta property="og:description" content="Complete bull call spread strategy guide — structure, strike selection, entry timing, Greeks, exit rules, common mistakes, and comparison with naked calls and other bullish strategies.">
  <meta property="og:image" content="https://dependability.us">
  <meta property="og:type" content="article">
  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
@@ -32,26 +32,179 @@
 
     <div class="article-header">
      <div class="category-label">FORECASTS & OPTIONS STRATEGIES</div>
-     <h1>Bull Call Spreads: Defined-Risk Directional Exposure</h1>
+     <h1>Bull Call Spreads: Complete Strategy Guide for Moderate Bullish Moves</h1>
      <div class="article-meta">May 20, 2026 &nbsp;|&nbsp; Dependability Research Desk</div>
     </div>
     <div class="article-header-image">
-     <img src="" alt="Bull Call Spreads: Defined-Risk Directional Exposure" style="width:100%;display:block;">
+     <img src="" alt="Bull Call Spreads: Complete Strategy Guide for Moderate Bullish Moves" style="width:100%;display:block;">
     </div>
     <div class="article-body">
 
 <p>When you expect a moderate move higher — enough to be profitable but not a runaway move — a bull call spread offers defined-risk directional exposure at a fraction of the cost of buying naked calls. Buying a naked call is expensive in elevated IV environments; the spread reduces cost while maintaining upside participation.</p>
-<h2>Structure</h2>
-<p>Buy a call at a lower strike; sell a call at a higher strike. Same expiration. Net debit. The long call captures the upside; the short call funds it. Max profit = the difference in strikes minus the net debit paid.</p>
-<h2>Key Metrics</h2>
+<h2>What Is a Bull Call Spread?</h2>
+<p>A bull call spread consists of:</p>
 <ul>
-  <li><strong>Strike selection:</strong> Buy 2–3 strikes below the expected move</li>
-  <li><strong>Duration:</strong> Target 30–45 DTE</li>
-  <li><strong>Cost:</strong> Net debit should be no more than 50% of the intrinsic value of the long call at entry</li>
-  <li><strong>Position sizing:</strong> Risk no more than 1–2% of capital on a single spread</li>
+  <li><strong>Buy</strong> a call at a lower strike (closer to current price)</li>
+  <li><strong>Sell</strong> a call at a higher strike (above your target)</li>
+  <li><strong>Same expiration</strong> for both legs</li>
+  <li><strong>Net debit</strong> — you pay upfront; the short call partially funds the long call</li>
 </ul>
-<h2>Exit Rules</h2>
-<p>Take profit when the long call reaches 2x the debit paid. Move the short strike up (rolling) if the underlying breaks through your target. Don't hold past 2 weeks before expiration if underperforming.</p>
+<p>The max profit is the difference between the strikes minus the net debit paid. The max loss is simply the net debit paid.</p>
+<p><strong>Example:</strong></p>
+<ul>
+  <li>Stock at $100</li>
+  <li>Buy $105 call for $3.00</li>
+  <li>Sell $115 call for $1.00</li>
+  <li>Net debit: $2.00 (=$200 per spread)</li>
+  <li>Max profit: $10 (strike width) - $2.00 (debit) = $8.00 (=$800 per spread)</li>
+  <li>Max loss: $2.00 (=$200 per spread)</li>
+  <li>Breakeven: $107 (buy strike + net debit)</li>
+</ul>
+<h2>Why Use a Spread Instead of a Naked Call?</h2>
+<p>Buying a naked call in elevated IV environments is expensive. When implied volatility is high, out-of-the-money calls are priced with a significant premium that works against you if the stock doesn't move aggressively.</p>
+<p><strong>The IV problem:</strong></p>
+<ul>
+  <li>Stock at $100, IV 80th percentile</li>
+  <li>30-day $110 call might cost $4.00</li>
+  <li>Stock moves 5% to $105 — the call might only gain $1.50 in value</li>
+  <li>You lost money despite being right on direction</li>
+</ul>
+<p><strong>The spread solution:</strong></p>
+<ul>
+  <li>Same stock at $100, IV 80th percentile</li>
+  <li>Buy $105 call for $2.50</li>
+  <li>Sell $115 call for $0.75</li>
+  <li>Net debit: $1.75 (=$175 per spread)</li>
+  <li>Same 5% move to $105 → net value of spread = $5 (width $10 - debit $1.75)</li>
+  <li>Profit = $5.00 - $1.75 = $3.25 on $1.75 risk = 185% return</li>
+</ul>
+<p>The short call funds the long call, reducing the cost of directional exposure while keeping the upside.</p>
+<h2>Key Metrics</h2>
+<p>| Parameter | Target | Rationale |</p>
+<p>|---|---|---|</p>
+<p>| Strike selection | 2–3 strikes below expected move | Captures moderate move without needing explosive rally |</p>
+<p>| Days to expiration (DTE) | 30–45 days | Theta decay accelerates here; sufficient time for move to develop |</p>
+<p>| Net debit | No more than 50% of intrinsic value of long call | Ensures reasonable risk/reward; avoid paying full intrinsic value |</p>
+<p>| Position size | No more than 2% of capital per spread | Manage tail risk; spreads can still lose 100% of debit |</p>
+<p>| Max profit target | 2x debit paid | Realistic take-profit level for moderate moves |</p>
+<h2>When to Use It</h2>
+<p><strong>Ideal conditions:</strong></p>
+<ul>
+  <li>Moderate bullish outlook (5–15% expected move)</li>
+  <li>IV elevated or rising (but not extremely high)</li>
+  <li>You have a specific price target in mind</li>
+  <li>Want defined risk with limited capital at risk</li>
+</ul>
+<p><strong>Better alternatives in other scenarios:</strong></p>
+<ul>
+  <li><strong>Strong explosive move expected:</strong> Buy naked call or debit call spread with wider width</li>
+  <li><strong>Very low IV:</strong> Long call alone is cheaper; the spread doesn't add enough value</li>
+  <li><strong>Neutral/sideways:</strong> Bull call spread is wrong tool — use iron condor or bull put spread</li>
+  <li><strong>Bearish:</strong> Bear call spread or bear put spread</li>
+</ul>
+<h2>Entry Logic</h2>
+<p><strong>Strike selection process:</strong></p>
+<ol>
+  <li><strong>Identify your price target</strong> — where do you expect the stock to be at expiration?</li>
+  <li><strong>Subtract the net debit</strong> — this is your breakeven, not your target</li>
+  <li><strong>Place the short strike at or slightly above your target</strong> — this maximizes credit and keeps debit reasonable</li>
+  <li><strong>Place the long strike below your target</strong> — gives the stock room to move into the profit zone</li>
+</ol>
+<p><strong>Example with a real target:</strong></p>
+<ul>
+  <li>Stock at $150, expect move to $165 in 6 weeks</li>
+  <li>Breakeven at $155 ($150 + $5 debit)</li>
+  <li>Buy $155 call, sell $175 call</li>
+  <li>Debit = $5.00, max profit = $15 ($20 width - $5 debit)</li>
+  <li>This requires a 10% move to hit the profit zone — reasonable for a 6-week horizon</li>
+</ul>
+<p><strong>Sizing the position:</strong></p>
+<ul>
+  <li>Determine max loss (net debit per spread)</li>
+  <li>Risk no more than 1-2% of portfolio per position</li>
+  <li>Example: $100K portfolio, 2% max = $2,000 per position</li>
+  <li>If each spread costs $200 debit, max 10 spreads... but run 3-5 at a time across correlated names</li>
+</ul>
+<p><strong>Entry timing:</strong></p>
+<ul>
+  <li>Enter when you have high confidence in the catalyst (earnings, FDA date, product launch)</li>
+  <li>Enter when IV is high enough to make the spread cheap relative to naked call</li>
+  <li>Avoid entering when the stock has already gapped up 5%+ in a day — the move may be exhausted</li>
+</ul>
+<h2>Position Management</h2>
+<p><strong>Taking profit:</strong></p>
+<ul>
+  <li>Standard exit: close when profit = 2x the debit paid</li>
+  <li>Example: debit $2.00 → take profit at $4.00 (100% return)</li>
+  <li>This captures most of the move without holding to expiration</li>
+</ul>
+<p><strong>Rolling the short strike:</strong></p>
+<ul>
+  <li>If the stock breaks through your short strike and you still like the position</li>
+  <li>Buy back the short call, sell a new higher-strike call (same expiration)</li>
+  <li>Collect additional credit, extend the position's runway</li>
+  <li>Do this only if the fundamental thesis hasn't changed</li>
+</ul>
+<p><strong>Managing losers:</strong></p>
+<ul>
+  <li>If the stock moves against you (drops), the spread loses value</li>
+  <li>Do not hold past 2 weeks before expiration — time decay accelerates</li>
+  <li>Evaluate: is the thesis broken (close) or just early (hold)?</li>
+  <li>A drop to the long strike with 3+ weeks left is not a reason to close</li>
+</ul>
+<p><strong>Stop-out rules:</strong></p>
+<ul>
+  <li>If stock drops below the long strike with >2 weeks remaining and thesis is intact: hold</li>
+  <li>If stock drops and you lose confidence in the thesis: close at 2x max loss</li>
+  <li>If 1 week from expiration and still significantly underwater: close or roll</li>
+</ul>
+<h2>Greeks Characteristics</h2>
+<p>At 30-45 DTE with moderate upside bias:</p>
+<ul>
+  <li><strong>Delta:</strong> Positive — long call dominates, net delta is positive (0.30–0.50 for a 10-wide spread)</li>
+  <li><strong>Theta:</strong> Slightly negative early — time decay costs on the long leg but is partially offset by short call decay</li>
+  <li><strong>Vega:</strong> Slightly positive — long call has more vega than short call, so net is long volatility</li>
+  <li><strong>Gamma:</strong> Positive — the spread benefits from large moves in either direction near expiration</li>
+</ul>
+<p><strong>Key insight:</strong> The bull call spread is slightly long volatility. If IV rises while the stock moves, you get a double benefit.</p>
+<h2>Bull Call Spread vs Alternatives</h2>
+<p>| Strategy | When to Use | Max Loss | Max Profit | Cost |</p>
+<p>|---|---|---|---|---|</p>
+<p>| <strong>Bull Call Spread</strong> | Moderate bullish, IV elevated | Net debit | Width - debit | Medium |</p>
+<p>| <strong>Long Call</strong> | Strong bullish, low IV, need full upside | Premium paid | Unlimited | High |</p>
+<p>| <strong>Bear Call Spread</strong> | Moderately bearish | Width - credit | Credit received | Low |</p>
+<p>| <strong>Bull Put Spread</strong> | Bullish with range, income target | Width - credit | Credit received | Very low |</p>
+<p>| <strong>Ratio Call Spread</strong> | Bullish, slightly bullish on IV | Net debit (or more) | Asymmetric | Medium |</p>
+<h2>Common Mistakes</h2>
+<h3>1. Buying spreads that are too wide</h3>
+<p>A 20-wide spread looks more profitable but costs more and requires a bigger move.</p>
+<p><strong>Fix:</strong> Use tighter spreads (5-10 wide) to reduce debit and improve breakeven.</p>
+<h3>2. Holding through expiration</h3>
+<p>Time decay accelerates in the last 2 weeks. If the spread is underwater, holding to expiration guarantees the loss.</p>
+<p><strong>Fix:</strong> Close at 2 weeks DTE if significantly underwater and thesis hasn't materialized.</p>
+<h3>3. Not taking profit at 2x</h3>
+<p>Holding hoping for max profit often leads to giving back gains.</p>
+<p><strong>Fix:</strong> Take 50% profit when you can. If you expect more, close half and let the rest run.</p>
+<h3>4. Entry when IV is low</h3>
+<p>The spread's advantage is the short call funding the long call. If IV is low, the short call doesn't provide enough credit.</p>
+<p><strong>Fix:</strong> Wait for IV to rise above 40th percentile before entering bullish spreads.</p>
+<h3>5. Oversizing on a single trade</h3>
+<p>Bull call spreads can lose 100% of the debit. If you allocate 20% of capital to one spread and it goes wrong, you devastate your account.</p>
+<p><strong>Fix:</strong> 1-2% of capital per position. Run 3-5 positions across different tickers for diversification.</p>
+<h2>Exit Rules Summary</h2>
+<p>| Scenario | Action |</p>
+<p>|---|---|</p>
+<p>| Profit reaches 2x debit | Take profit — close the spread |</p>
+<p>| Stock breaks through short strike | Roll up (buy back short, sell new higher strike) |</p>
+<p>| Stock drops below long strike, 2+ weeks left | Hold — thesis may still be valid |</p>
+<p>| Stock drops, thesis broken | Close — cut the loss |</p>
+<p>| 1 week from expiration, underwater | Close or roll to next month |</p>
+<p>| IV collapse before expected move | Evaluate — IV crush hurts if stock hasn't moved |</p>
+<h2>Tools for Building Bull Call Spreads</h2>
+<p>We use [OptionsStrat](https://optionstrat.com/ventureprise) to model the exact strike combination, probability of profit, and Greeks for any bull call spread before entry. Enter your price target, expiration, and IV environment to see the optimal spread structure.</p>
+<p><strong>Previous:</strong> [Iron Condors: Premium Collection in Range-Bound Markets](/articles/iron-condors-range-bound-markets/)</p>
+<p><strong>Next:</strong> [Calendar Spreads: Profiting from IV Crush Around Events](/articles/calendar-spreads-earnings-iv-crush/)</p>
+<p><em>This content is for informational purposes only. Options trading involves substantial risk of loss. Dependability Holdings LLC has no positions in the securities mentioned. Past performance is not indicative of future results.</em></p>
 
     </div>
 
