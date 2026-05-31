@@ -22,8 +22,6 @@
 /the-dollars-lever.html /the-dollars-lever 301
 /tlt-new-bond-regime.html /tlt-new-bond-regime 301
 
-# ----- ARTICLE .HTML PAGES -----
-/articles/* /articles/${1} 301
 
 # ----- FORECAST TRAILING SLASH -----
 /forecast/ /forecast 301
