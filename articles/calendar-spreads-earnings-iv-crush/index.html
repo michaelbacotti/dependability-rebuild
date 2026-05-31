@@ -52,13 +52,22 @@
 <p><strong>Example:</strong></p>
 <ul>
   <li>Stock at $150, earnings in 2 weeks</li>
-  <li>Sell $150 call expiring in 2 weeks for $5.00</li>
-  <li>Buy $150 call expiring in 6 weeks for $7.00</li>
+  <li>Sell $150 call expiring in 2 weeks for $3.00 (near-term IV elevated)</li>
+  <li>Buy $150 call expiring in 8 weeks for $5.00 (longer-dated retains more value)</li>
   <li>Net debit: $2.00 (=$200 per spread)</li>
-  <li>Post-earnings: stock moves to $160</li>
-  <li>Near-term $150 call worth ~$10 (intrinsic + IV)</li>
-  <li>Longer-dated $150 call worth ~$14</li>
-  <li>Close by selling the 6-week call and buying back the near-term → profit</li>
+</ul>
+<p>Post-earnings, stock moves to $160:</p>
+<ul>
+  <li>Near-term $150 call: worth ~$10 at expiration (intrinsic value), but IV collapsed so little extra → bought back for ~$10 → <strong>net $0 on this leg</strong> (you sold it at $3, bought it back at $10, loss of $7)</li>
+  <li>Longer-dated $150 call: worth ~$12 (still has time, IV partially retained) → sell it for $12 → <strong>net +$7 on this leg</strong> (bought at $5, sold at $12)</li>
+  <li>Net: -$7 (near-term) + +$7 (longer-dated) ≈ <strong>breakeven on the directional move</strong></li>
+</ul>
+<p>The calendar profits when IV crushes without a large directional move. The near-term option collapses fast and cheap to close; the longer-dated retains enough value to more than offset it.</p>
+<p><strong>Better scenario — stock stays flat at $150:</strong></p>
+<ul>
+  <li>Near-term $150 call: worth ~$0 (expires worthless, no intrinsic, IV crushed) → bought back for $0 → <strong>net +$3 on this leg</strong> (sold at $3, bought back for $0)</li>
+  <li>Longer-dated $150 call: worth ~$5 (no intrinsic, some IV retained, still has time) → sell it for $5 → <strong>net $0 on this leg</strong> (bought at $5, sold at $5)</li>
+  <li>Net: +$3 (near-term closed) + $0 (longer-dated) = <strong>$3 profit on $2 debit</strong> = <strong>150% return</strong></li>
 </ul>
 <h2>Why Calendar Over Buying Naked Options?</h2>
 <p>Buying naked options before earnings is high-risk: you need the stock to move far enough to overcome the elevated IV, and if the move doesn't happen, you lose the full premium.</p>
@@ -70,18 +79,14 @@
 </ol>
 <p><strong>The math:</strong></p>
 <ul>
-  <li>Naked $150 call costs $5.00 (2 weeks to earnings)</li>
-  <li>Stock moves 5% → call worth $7.50 → profit $2.50 on $5.00 risk = 50%</li>
-  <li>Stock moves 3% → call worth $6.00 → profit $1.00 on $5.00 risk = 20%</li>
-  <li>Stock stays flat → IV crush → call worth $2.00 → loss $3.00 = 60% loss</li>
+  <li>Stock at $150, earnings in 2 weeks, near-term IV elevated (60th+ percentile)</li>
+  <li>Selling a naked $150 call: premium received = $3.00 (you collect this upfront)</li>
+  <li>The naked option's profit depends on whether the stock moves far enough to offset the elevated premium</li>
+  <li>With a calendar: sell 2-week $150 call for $3.00, buy 8-week $150 call for $5.00</li>
+  <li>Net debit: $2.00. Profit comes from the near-term collapsing faster than the longer-dated</li>
+  <li>The near-term option loses time value faster; the longer-dated retains proportionally more of its IV</li>
+  <li>This is why the calendar is the preferred strategy around events — you profit from IV collapse with defined risk, not directional betting.</li>
 </ul>
-<p>Calendar spread with same move:</p>
-<ul>
-  <li>Sell 2-week $150 call for $5.00, buy 6-week $150 call for $7.00</li>
-  <li>Stock moves 5%, IV crushes → near-term expires worth ~$10, longer-dated worth ~$14</li>
-  <li>But you sold the near-term and bought the longer-dated... the near-term loses its IV premium fast while longer-dated retains more</li>
-</ul>
-<p>The key is that the near-term option's time value collapses faster than the longer-dated option's, and the IV crush hits the near-term harder because it has less time remaining.</p>
 <h2>Key Metrics</h2>
 <p>| Parameter | Target | Rationale |</p>
 <p>|---|---|---|</p>
