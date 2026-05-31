@@ -5,7 +5,7 @@
 # Root index
 /index.html / 301
 
-# Static pages (still .html files)
+# Static pages
 /about.html /about/ 301
 /contact.html /contact/ 301
 /disclaimer.html /disclaimer/ 301
@@ -13,9 +13,34 @@
 /terms.html /terms/ 301
 /strategies.html /strategies/ 301
 
-# Section listing pages (flat .html → directory)
+# Section listing pages
 /commentary.html /commentary/ 301
 /education.html /education/ 301
+/forecast.html /forecast/ 301
+/archive.html /archive/ 301
+/methodology.html /methodology/ 301
 
-# Individual article pages
-# These are now articles/slug/index.html — old .html URLs redirect
+# Root-level articles (now slug/index.html)
+/gold-as-a-store-of-value.html /gold-as-a-store-of-value/ 301
+/inflation-measurement-modern-economy.html /inflation-measurement-modern-economy/ 301
+/oil-paradox-energy-dominance.html /oil-paradox-energy-dominance/ 301
+/the-dollars-lever.html /the-dollars-lever/ 301
+/tlt-new-bond-regime.html /tlt-new-bond-regime/ 301
+
+# Article pages (now in articles/slug/index.html)
+/articles/2026-05-01-put-call-parity.html /articles/2026-05-01-put-call-parity/ 301
+/articles/2026-05-10-iv-crush-explained.html /articles/2026-05-10-iv-crush-explained/ 301
+/articles/2026-05-12-market-outlook.html /articles/2026-05-12-market-outlook/ 301
+/articles/2026-05-13-research-themes.html /articles/2026-05-13-research-themes/ 301
+/articles/2026-05-13-trump-china-summit.html /articles/2026-05-13-trump-china-summit/ 301
+/articles/2026-05-14-spacex-ipo-etf-exposure.html /articles/2026-05-14-spacex-ipo-etf-exposure/ 301
+/articles/2026-05-22-sell-in-may.html /articles/2026-05-22-sell-in-may/ 301
+/articles/2026-05-23-bond-yields-equity-options.html /articles/2026-05-23-bond-yields-equity-options/ 301
+/articles/2026-05-23-gamma-scalping.html /articles/2026-05-23-gamma-scalping/ 301
+/articles/2026-05-23-market-regime-change.html /articles/2026-05-23-market-regime-change/ 301
+/articles/2026-05-23-reading-the-skew.html /articles/2026-05-23-reading-the-skew/ 301
+/articles/2026-05-23-understanding-the-vix.html /articles/2026-05-23-understanding-the-vix/ 301
+/articles/2026-05-25-short-interest-surging.html /articles/2026-05-25-short-interest-surging/ 301
+/articles/bull-call-spreads-defined-risk.html /articles/bull-call-spreads-defined-risk/ 301
+/articles/forecast-methodology-2026.html /articles/forecast-methodology-2026/ 301
+/articles/iron-condors-range-bound-markets.html /articles/iron-condors-range-bound-markets/ 301
