@@ -1,31 +1,21 @@
 # ============================================================
-# DEPENDABILITY REDIRECTS - Comprehensive .html → clean URL redirects
-# Fixes: 51 "Page with redirect" GSC errors
+# DEPENDABILITY — Legacy .html → Clean URL Redirects
 # ============================================================
 
-# ----- ROOT-LEVEL .HTML PAGES -----
-/about.html /about 301
-/contact.html /contact 301
-/disclaimer.html /disclaimer 301
-/education.html /education 301
-/forecast.html /forecast 301
-/privacy.html /privacy 301
-/strategies.html /strategies 301
-/terms.html /terms 301
+# Root index
 /index.html / 301
 
-# Article pages at root (not in /articles/)
-/methodology.html /methodology 301
-/gold-as-a-store-of-value.html /gold-as-a-store-of-value 301
-/inflation-measurement-modern-economy.html /inflation-measurement-modern-economy 301
-/oil-paradox-energy-dominance.html /oil-paradox-energy-dominance 301
-/the-dollars-lever.html /the-dollars-lever 301
-/tlt-new-bond-regime.html /tlt-new-bond-regime 301
+# Static pages (still .html files)
+/about.html /about/ 301
+/contact.html /contact/ 301
+/disclaimer.html /disclaimer/ 301
+/privacy.html /privacy/ 301
+/terms.html /terms/ 301
+/strategies.html /strategies/ 301
 
+# Section listing pages (flat .html → directory)
+/commentary.html /commentary/ 301
+/education.html /education/ 301
 
-# ----- FORECAST TRAILING SLASH -----
-/forecast/ /forecast 301
-
-# ============================================================
-# Orphan .html files deleted to prevent Google duplicate content
-# ============================================================
+# Individual article pages
+# These are now articles/slug/index.html — old .html URLs redirect
