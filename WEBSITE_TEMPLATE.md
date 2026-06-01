@@ -588,6 +588,8 @@ Each section:
 </section>
 ```
 
+**⚠️ EXACTLY 3 cards per section** — never 2 or 4. A 3-column grid with fewer cards leaves blank space; with 4 cards it wraps to 2+2 which looks uneven. Always show exactly 3.
+
 Education cards use `.article-card education-card` (neutral top border). Market Commentary uses standard `.article-card` (accent top border).
 
 ---
