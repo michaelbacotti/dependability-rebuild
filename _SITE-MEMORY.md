@@ -208,3 +208,21 @@ ___
 3. Run: `cd entities/dependability/dependability-may26 && python3 build.py`
 4. Push: `cd entities/dependability/website && git add forecast.html && git commit && git push`
 5. Old forecast → add `archived: true` to its front matter
+
+## Homepage Card Layout Rule (added 2026-06-01)
+
+**Each homepage card-grid section shows EXACTLY 3 article cards.**
+- 3-column grid (`.card-grid`) with 4 cards wraps to 2+2 — visually wrong
+- Template (`WEBSITE_TEMPLATE.md`) now documents this explicitly
+- If fewer than 3 articles exist in a category, either: (a) wait until 3 exist, or (b) use a placeholder card that links to the hub page
+- If more than 3 articles exist, pick the 3 most recent
+
+Current homepage card sections:
+- Hero sidebar: exactly 5 sidebar-article blocks (not card-grid)
+- FORECASTS & OPTIONS STRATEGIES: exactly 3 article-card blocks ✓ (fixed 2026-06-01)
+- EDUCATION: exactly 3 article-card education-card blocks
+
+## Build & Deploy
+- Edit HTML source in `entities/dependability/website/`
+- Commit and push to `github.com/michaelbacoti/dependability-rebuild`
+- Deploy via CF Pages or run `workflows/dependability/forecast-update.lobster` for full deploy
