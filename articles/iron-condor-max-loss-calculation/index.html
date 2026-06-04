@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Iron Condor Max Loss Calculation: Wing Width, Position Sizing, and Correlation | Dependability Holdings LLC</title>
+ <meta name="description" content="How to calculate iron condor max loss, size positions to portfolio risk, and manage correlated positions. The 2% rule, correlation across underlyings, and why max loss is the input that drives the rest of the trade.">
+ <link rel="stylesheet" href="/style.css">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <style>
+ .share-bar { display: flex; align-items: center; gap: 10px; margin: 40px 0 32px; padding: 16px 0; border-top: 1px solid #e8e4dd; border-bottom: 1px solid #e8e4dd; }
+ .share-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #999; margin-right: 4px; }
+ .share-btn { display: inline-flex; align-items: center; gap: 5px; padding: 7px 12px; border-radius: 4px; font-size: 12px; text-decoration: none; border: 1px solid #cc0000; background: transparent; cursor: pointer; font-family: inherit; color: #cc0000; transition: opacity 0.15s; }
+ .share-btn:hover { opacity: 0.7; }
+ .disclaimer { margin: 2.5rem 0; padding: 1rem 1.25rem; background: #f5f0e8; border-left: 4px solid #cc0000; font-size: 0.875rem; line-height: 1.6; color: #555; }
+ </style>
+<link rel="canonical" href="/articles/iron-condor-max-loss-calculation/"> <meta property="og:title" content="Iron Condor Max Loss Calculation: Wing Width, Position Sizing, and Correlation | Dependability Holdings LLC">
+ <meta property="og:description" content="How to calculate iron condor max loss, size positions to portfolio risk, and manage correlated positions. The 2% rule, correlation across underlyings, and why max loss is the input that drives the rest of the trade.">
+ <meta property="og:image" content="https://dependability.us/og-image.jpg">
+ <meta property="og:type" content="article">
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+
+   <div class="article-page">
+
+    <div class="article-header">
+     <div class="category-label">FORECASTS & OPTIONS STRATEGIES</div>
+     <h1>Iron Condor Max Loss Calculation: Wing Width, Position Sizing, and Correlation</h1>
+     <div class="article-meta">June 04, 2026 &nbsp;|&nbsp; Dependability Research Desk</div>
+    </div>
+    <div class="article-header-image">
+     <img src="" alt="Iron Condor Max Loss Calculation: Wing Width, Position Sizing, and Correlation" style="width:100%;display:block;">
+    </div>
+    <div class="article-body">
+
+<p>The iron condor has defined risk: the maximum loss is known at entry and is a function of the wing width and the credit collected. But "defined risk" is not the same as "manageable risk." A position can have a defined max loss and still be poorly sized for the portfolio, or it can be sized correctly but be one of several correlated positions that all hit max loss at the same time. The math of max loss is simple; the discipline of applying it to a portfolio is what determines whether the strategy survives a bad streak.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<p>This article covers the max loss formula, the 2% rule for position sizing, and the correlation problem that arises when running multiple condors on related underlyings.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="7590828986" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<h2>The Max Loss Formula</h2>
+<p>For a single iron condor:</p>
+<p><strong>Max Loss = Wing Width − Net Credit Collected</strong></p>
+<p>For a 15-point wide SPX condor with $1.80 credit:</p>
+<p>Max Loss = $15.00 − $1.80 = <strong>$13.20 per spread</strong></p>
+<p>In dollar terms, with each spread representing one contract (100 shares equivalent for equities, $100 multiplier for SPX):</p>
+<p>Max Loss = $13.20 × $100 = <strong>$1,320 per contract</strong></p>
+<p>The max loss is realized only if the underlying moves through both short strikes and reaches the long strikes on both sides at expiration. In practice, traders close the position well before that point, so the realized loss is usually less than the max loss.</p>
+<h2>Position Sizing: The 2% Rule</h2>
+<p>The standard position sizing rule for iron condors: <strong>risk no more than 2% of total portfolio capital on a single condor</strong>. The 2% is calculated on the max loss, not on the buying power reduction or the margin requirement.</p>
+<p>For a $100,000 portfolio:</p>
+<p>Max risk per condor = $100,000 × 0.02 = <strong>$2,000</strong></p>
+<p>If the condor's max loss is $1,320 per contract, the position can be 1 contract ($1,320 risk) or 1.5 contracts ($1,980 risk). Rounding down, the position is 1 contract.</p>
+<p>The 2% rule has two purposes:</p>
+<ol>
+  <li><strong>Survive a bad streak.</strong> A trader who risks 2% per position can have 10 consecutive max-loss trades before losing 20% of capital. A trader who risks 10% per position is out of the game after 3 consecutive losses.</li>
+  <li><strong>Allow the strategy to work.</strong> Iron condors have a 65-75% win rate, which means 25-35% of trades will be losers. The 2% rule gives the strategy enough room to absorb the losers without forcing the trader to reduce size or exit the program.</li>
+</ol>
+<h2>Buying Power Reduction vs Max Loss</h2>
+<p>Buying power reduction (BPR) is the margin required to hold the position. For a cash-secured or portfolio-margin account, BPR is typically a fraction of the notional wing width. For a 15-point SPX condor, BPR might be $1,500-$3,000 per contract, depending on the broker and account type.</p>
+<p>The 2% rule is applied to max loss, not BPR. The reason: BPR is a function of the broker's margin model and can change over time; max loss is a function of the position structure and is stable.</p>
+<p>| Position Parameter | SPX 15-pt Condor, $1.80 Credit |</p>
+<p>|---|---|</p>
+<p>| Wing width | $15.00 |</p>
+<p>| Net credit | $1.80 |</p>
+<p>| Max loss per contract | $1,320 |</p>
+<p>| Typical BPR per contract (Reg-T) | $1,500 - $3,000 |</p>
+<p>| Position size at 2% of $100K | 1 contract |</p>
+<p>| Capital at risk | $1,320 (1.32% of portfolio) |</p>
+<h2>Sizing for Multiple Positions</h2>
+<p>A portfolio running 5-10 simultaneous condors should size each position so that the total portfolio risk (the sum of max losses) does not exceed 10-15% of capital. This means each individual position is sized at 1-2% of capital, and the positions are selected to be uncorrelated.</p>
+<p>For a $100,000 portfolio running 5 condors:</p>
+<ul>
+  <li>Total portfolio risk budget: 10-15% = $10,000 - $15,000</li>
+  <li>Per-position risk: 2-3% = $2,000 - $3,000</li>
+  <li>Per-position size: 1-2 contracts each</li>
+</ul>
+<p>If any single position goes to max loss, the portfolio loses 1.32% of capital. If three positions go to max loss simultaneously (a correlated event), the portfolio loses ~4% of capital. That is a survivable drawdown.</p>
+<h2>Correlation: The Hidden Risk</h2>
+<p>The single biggest risk in a multi-condor portfolio is correlation. If all 5 condors are on SPX-related instruments (SPX, SPY, NDX, RUT, VIX), they will all move in the same direction at the same time during a market event. A 5-position portfolio with correlated underlyings is effectively a 5x leveraged single-position bet.</p>
+<p>The fix: diversify across underlyings that have low correlation in their short-term price movements.</p>
+<p>| Correlation Tier | Examples | Suitability for Multi-Condor Portfolio |</p>
+<p>|---|---|---|</p>
+<p>| High (>0.7) | SPX, SPY, ES | Use 1-2 maximum |</p>
+<p>| Moderate (0.4-0.7) | NDX, QQQ, IWM | Use 1-2 maximum |</p>
+<p>| Low (0.1-0.4) | XLF, XLE, GLD, TLT, individual stocks | Use freely |</p>
+<p>| Very low (<0.1) | Unrelated sectors (XLV vs XLE), international ETFs, currencies | Use freely |</p>
+<p>A balanced portfolio might include 1 SPX condor, 1 condor on a sector ETF (XLF or XLE), 1 condor on a broad market ETF (QQQ or IWM), and 1-2 condors on individual stocks in unrelated sectors. The correlations between these positions are low enough that a market event that hits one is unlikely to hit all.</p>
+<h2>Worst-Case Portfolio Loss</h2>
+<p>For a 5-position portfolio with $2,000 max loss per position:</p>
+<p>| Scenario | Portfolio Loss |</p>
+<p>|---|---|</p>
+<p>| All 5 positions expire worthless (best case) | +$9,000 (assuming $1.80 credit per spread) |</p>
+<p>| 3 positions win, 2 hit max loss | -$1,000 net ($3,600 wins, $4,000 losses) |</p>
+<p>| All 5 hit max loss (worst case, all correlated) | -$10,000 (-10% of capital) |</p>
+<p>The "all 5 hit max loss" scenario only happens if the positions are highly correlated and the market makes an unprecedented move. The probability is low for an uncorrelated portfolio, but it is non-zero. The 2% per-position rule limits the worst-case loss to a survivable level.</p>
+<h2>Reducing Max Loss Through Adjustments</h2>
+<p>A condor that is approaching max loss can be adjusted to reduce the realized loss. The standard adjustments:</p>
+<ul>
+  <li><strong>Roll the untested side forward.</strong> This adds premium to the position and gives the threatened side more time.</li>
+  <li><strong>Roll the tested side to a wider strike.</strong> This increases the max loss on the threatened side but moves the short strike further from the current price.</li>
+  <li><strong>Close the position early.</strong> A condor that has lost 50% of its credit can usually be closed for the remaining 50%, capping the loss at half the max loss.</li>
+</ul>
+<p>The 2% rule assumes the position is closed before reaching max loss. The trader who lets every position go to max loss is over-allocating to losers; the trader who closes at 50% of max loss is keeping the strategy within its risk budget.</p>
+<h2>Max Loss vs Expected Loss</h2>
+<p>Max loss is the worst case. Expected loss is what the position is statistically likely to lose. For a 70% win rate condor with $1.80 credit and $13.20 max loss:</p>
+<ul>
+  <li>70% of trades win $1.80 = $1.26 expected value per trade</li>
+  <li>30% of trades lose (assume average loss of $6.60, half of max loss) = -$1.98 expected loss per trade</li>
+  <li>Net expected value = $1.26 − $1.98 = -$0.72 per trade</li>
+</ul>
+<p>The math is negative because the position is sized for max loss but loses on average only half of max loss. The 2% rule and the discipline of closing at 50% of max loss are what convert the negative expected value of any single trade into a positive expected value of the program.</p>
+<h2>Putting It Together</h2>
+<p>Max loss is the input that drives the rest of the trade:</p>
+<ul>
+  <li>It determines position size (2% of capital)</li>
+  <li>It determines portfolio risk (10-15% total across all positions)</li>
+  <li>It determines correlation budget (low-correlation underlyings only)</li>
+  <li>It determines adjustment triggers (close at 50% of max loss, roll if adjustment cost is less than 50% of max loss)</li>
+</ul>
+<p>A trader who skips the max loss calculation is essentially running an undefined-risk premium-collection program, which is a different strategy with a different risk profile.</p>
+<h2>Modeling the Position</h2>
+<p>We use [OptionsStrat](https://optionstrat.com/ventureprise) to model the max loss, breakevens, and probability of profit for any condor structure before entry. The platform shows the full payoff diagram and the expected value based on the underlying's volatility and the time to expiration, which makes the position-sizing decision visible at a glance.</p>
+<p><strong>Parent:</strong> [Iron Condors: Complete Strategy Guide for Range-Bound Markets](/articles/iron-condors-range-bound-markets/)</p>
+<p><strong>Previous:</strong> [Iron Condor Greeks Explained: Delta, Theta, Vega, Gamma at Each Stage](/articles/iron-condor-greeks-explained/)</p>
+<p><strong>Next:</strong> [SPX vs QQQ Iron Condors: Instrument Comparison, Sizing, and Margin](/articles/spx-vs-qqq-iron-condors/)</p>
+<p><em>This content is for informational purposes only. Options trading involves substantial risk of loss. Dependability Holdings LLC has no positions in the securities mentioned. Past performance is not indicative of future results.</em></p>
+
+    </div>
+
+
+    <div class="disclaimer">
+     <strong>Disclaimer:</strong> This research is for informational purposes only and does not constitute investment advice. Options trading involves substantial risk of loss. Dependability Holdings LLC has no positions in the securities mentioned. Past performance is not indicative of future results.
+    </div>
+
+
+<div class="share-bar">
+  <span class="share-label">Share</span>
+  <a class="share-btn share-x" href="#" target="_blank" rel="noopener" aria-label="Share on X">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+  </a>
+  <a class="share-btn share-facebook" href="#" target="_blank" rel="noopener" aria-label="Share on Facebook">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+  </a>
+  <a class="share-btn share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+  </a>
+  <button class="share-btn share-copy" aria-label="Copy link" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.querySelector('.copy-label').textContent='Copied!';setTimeout(()=>{this.querySelector('.copy-label').textContent='Copy'},2000)})">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+    <span class="copy-label">Copy</span>
+  </button>
+</div>
+
+
+<script>
+document.querySelectorAll('.share-x, .share-facebook, .share-linkedin').forEach(function(el) {
+  var url = encodeURIComponent(window.location.href);
+  var title = encodeURIComponent(document.title);
+  if (el.classList.contains('share-x')) el.href = 'https://x.com/intent/tweet?url=' + url + '&text=' + title;
+  if (el.classList.contains('share-facebook')) el.href = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
+  if (el.classList.contains('share-linkedin')) el.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + url;
+});
+</script>
+
+   </div>
+
+ </main>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+ <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+ <script src="/nav.js"></script>
+ <script src="/footer.js"></script>
+
+<div id="site-footer"></div>
+
+</body>
+</html>

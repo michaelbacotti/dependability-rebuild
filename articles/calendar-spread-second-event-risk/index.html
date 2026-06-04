@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Calendar Spread Second Event Risk: Avoiding Multiple Major Events on the Same Underlying | Dependability Holdings LLC</title>
+ <meta name="description" content="Calendar spread second event risk — what happens when a second major catalyst (earnings, FDA, rate decision) hits the same underlying during the position's life. How to detect, avoid, and manage the risk.">
+ <link rel="stylesheet" href="/style.css">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <style>
+ .share-bar { display: flex; align-items: center; gap: 10px; margin: 40px 0 32px; padding: 16px 0; border-top: 1px solid #e8e4dd; border-bottom: 1px solid #e8e4dd; }
+ .share-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #999; margin-right: 4px; }
+ .share-btn { display: inline-flex; align-items: center; gap: 5px; padding: 7px 12px; border-radius: 4px; font-size: 12px; text-decoration: none; border: 1px solid #cc0000; background: transparent; cursor: pointer; font-family: inherit; color: #cc0000; transition: opacity 0.15s; }
+ .share-btn:hover { opacity: 0.7; }
+ .disclaimer { margin: 2.5rem 0; padding: 1rem 1.25rem; background: #f5f0e8; border-left: 4px solid #cc0000; font-size: 0.875rem; line-height: 1.6; color: #555; }
+ </style>
+<link rel="canonical" href="/articles/calendar-spread-second-event-risk/"> <meta property="og:title" content="Calendar Spread Second Event Risk: Avoiding Multiple Major Events on the Same Underlying | Dependability Holdings LLC">
+ <meta property="og:description" content="Calendar spread second event risk — what happens when a second major catalyst (earnings, FDA, rate decision) hits the same underlying during the position's life. How to detect, avoid, and manage the risk.">
+ <meta property="og:image" content="https://dependability.us/og-image.jpg">
+ <meta property="og:type" content="article">
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+
+   <div class="article-page">
+
+    <div class="article-header">
+     <div class="category-label">FORECASTS & OPTIONS STRATEGIES</div>
+     <h1>Calendar Spread Second Event Risk: Avoiding Multiple Major Events on the Same Underlying</h1>
+     <div class="article-meta">June 04, 2026 &nbsp;|&nbsp; Dependability Research Desk</div>
+    </div>
+    <div class="article-header-image">
+     <img src="" alt="Calendar Spread Second Event Risk: Avoiding Multiple Major Events on the Same Underlying" style="width:100%;display:block;">
+    </div>
+    <div class="article-body">
+
+<p>A calendar spread is a defined-risk trade with a defined event (earnings, FDA, merger) as the catalyst for the IV crush. The position assumes that the only major event during the holding period is the one being traded. If a second major event hits the same underlying during the position's life, the IV profile can shift in unexpected ways: the IV may not crush (because the second event is keeping volatility elevated), or the IV may move in the wrong direction (because the second event has its own expected outcome). Either outcome can damage the calendar spread.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<p>This article covers the second event risk, how to detect it before entry, the common scenarios that produce it, and the practical decision rule for avoiding or managing it.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="7590828986" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<h2>What Is Second Event Risk</h2>
+<p>Second event risk is the risk that a major catalyst occurs during the life of a calendar spread that is not the catalyst the position is trading. The second event can be:</p>
+<ul>
+  <li>A second earnings announcement (e.g., quarterly earnings + special announcement)</li>
+  <li>An FDA decision after a successful Phase 3 trial</li>
+  <li>A rate decision by the Federal Reserve that is relevant to the underlying</li>
+  <li>A major contract win or loss</li>
+  <li>A regulatory action or investigation</li>
+  <li>A merger or acquisition announcement</li>
+</ul>
+<p>The second event can occur before or after the primary event. If it occurs before, the IV crush is delayed or muted (because the market is pricing in the second event). If it occurs after, the IV may not stay crushed (because the second event is keeping volatility elevated).</p>
+<h2>The IV Profile with Two Events</h2>
+<p>A single-event underlying has a clear IV profile: IV rises into the event, then crushes after. A two-event underlying has a more complex profile:</p>
+<p>| Time Period | Single-Event IV | Two-Event IV |</p>
+<p>|---|---|---|</p>
+<p>| T-30 to T-14 (first event) | 80% | 80% (first event) |</p>
+<p>| T-14 to T+0 (first event) | 90% (peak) | 90% (peak, combined effect) |</p>
+<p>| T+0 to T+5 (after first event) | 40% (crushed) | 70% (partially crushed, second event) |</p>
+<p>| T+5 to T-7 (second event) | 40% | 75% (rising again) |</p>
+<p>| T-7 to T+5 (around second event) | 40% | 90% (peak) and 40% (crush) |</p>
+<p>The two-event profile is "double peaked" — IV rises into the first event, partially crushes, then rises again into the second event. The calendar spread that was entered for the first event does not capture the full IV crush, because the second event is keeping IV elevated.</p>
+<h2>The Calendar's Exposure</h2>
+<p>The calendar spread is short the near-term option and long the longer-dated option. The position is exposed to the IV differential between the two expirations. With two events:</p>
+<ul>
+  <li>The near-term option (around the first event) crushes partially, then rises again into the second event.</li>
+  <li>The longer-dated option (around the second event) crushes fully at the second event.</li>
+</ul>
+<p>The differential between the two IV profiles is smaller than it would be for a single event. The calendar's profit potential is reduced.</p>
+<h2>The Common Scenarios</h2>
+<p><strong>Earnings + Fed decision in the same month:</strong> A stock that reports earnings on October 25 and is also affected by the FOMC decision on October 28. The IV profile has two peaks, and the calendar spread entered for earnings does not capture the full IV crush.</p>
+<p><strong>Earnings + product announcement:</strong> A company that reports earnings and also announces a major product launch in the same week. The product announcement keeps IV elevated after earnings.</p>
+<p><strong>Earnings + sector-wide event:</strong> A company in a sector that is affected by a sector-wide catalyst (e.g., oil prices, regulatory change). The sector-wide event keeps IV elevated for all companies in the sector.</p>
+<p><strong>Earnings + activist investor announcement:</strong> A company that reports earnings and is also targeted by an activist investor in the same period. The activist announcement creates additional uncertainty.</p>
+<p><strong>Multiple product milestones:</strong> A pharmaceutical company with multiple FDA decisions in the same period. The combined effect keeps IV elevated throughout.</p>
+<h2>The Detection: How to Find Second Events</h2>
+<p>The detection of second events requires a pre-entry check of the underlying's calendar. The steps:</p>
+<ol>
+  <li><strong>Check the earnings date</strong> for the underlying (most companies have a known earnings date 30-60 days in advance).</li>
+  <li><strong>Check the sector-level events</strong> for the next 60-90 days (FOMC, CPI, major industry conferences).</li>
+  <li><strong>Check the company-specific calendar</strong> for product launches, FDA decisions, investor days, and other known catalysts.</li>
+  <li><strong>Check the news flow</strong> for any unusual activity (insider transactions, analyst downgrades, rumors).</li>
+</ol>
+<p>A simple check: search for "[ticker] calendar 2026" or use a financial calendar tool to see all known events for the underlying.</p>
+<h2>The Avoidance: Skip the Trade</h2>
+<p>The simplest approach is to skip the calendar trade when a second event is detected. The cost of skipping is the foregone profit from the calendar; the benefit is the avoidance of the second event risk.</p>
+<p>A useful rule: <strong>if a second major event is within 14 days of the primary event, skip the calendar trade</strong>. The second event will keep IV elevated, and the IV crush will be muted.</p>
+<p>For a primary event on day T, the second event check covers:</p>
+<ul>
+  <li>Days T-14 to T+14: any major event in this window will affect the IV profile.</li>
+</ul>
+<h2>The Adjustment: Reduce Size</h2>
+<p>If the second event is more than 14 days away, the calendar can still be entered, but with a reduced size. The reduced size accounts for the smaller IV crush:</p>
+<p>| Time Between Events | Calendar Adjustment |</p>
+<p>|---|---|</p>
+<p>| 0-7 days | Skip the trade |</p>
+<p>| 7-14 days | Reduce size to 50% of standard |</p>
+<p>| 14-30 days | Reduce size to 75% of standard |</p>
+<p>| 30+ days | Standard size |</p>
+<p>The reduced size is the trader's defense against the muted IV crush. The smaller position produces a smaller loss if the IV crush is muted.</p>
+<h2>The Adjustment: Different Strikes</h2>
+<p>For a two-event underlying, the strike selection can be adjusted to capture the directional bias of the second event. If the trader has a view on the second event, the strike can be shifted to incorporate the view.</p>
+<p>For example, a stock that reports earnings on October 25 and has a product announcement on November 10. The trader expects the product announcement to be positive. The calendar can be entered with a strike slightly above the current price to add a bullish bias.</p>
+<p>The strike adjustment is a way to convert the calendar from a pure IV crush trade to a directional trade with an IV crush component.</p>
+<h2>The Adjustment: Different Expirations</h2>
+<p>For a two-event underlying, the expiration pairing can be adjusted to capture the second event. The standard 14-30 day near-term / 45-60 day longer-dated pairing can be extended to capture the second event.</p>
+<p>For a primary event on day T and a second event on day T+30, the calendar can be entered with a 30 DTE near-term and a 60-75 DTE longer-dated. The longer-dated option captures the second event's IV, and the calendar's profit is realized at the second event.</p>
+<p>The trade-off: the longer-dated calendar is more expensive (the longer-dated option has a higher premium) and the IV differential is spread over a longer period.</p>
+<h2>The Detection After Entry: Monitoring</h2>
+<p>For a calendar already in the portfolio, the trader should monitor for new events that could affect the IV profile. The monitoring includes:</p>
+<ul>
+  <li>News flow for the underlying (any major announcement)</li>
+  <li>Sector-level events (FOMC, regulatory actions)</li>
+  <li>Company-specific events (insider transactions, analyst actions)</li>
+  <li>The IV itself (if IV stops declining as expected, there may be a new event)</li>
+</ul>
+<p>If a second event is detected, the trader can close the position (if the size of the position is small) or adjust the position (if the size is meaningful).</p>
+<h2>The Common Mistakes</h2>
+<p><strong>Not checking the calendar before entry.</strong> The trader enters a calendar for earnings, not realizing that an FDA decision is in the same week. The IV crush is muted, and the position loses money.</p>
+<p><strong>Holding through the second event.</strong> The trader enters a calendar for earnings, sees the IV crush, and holds the position into the second event. The IV rises again, and the position's value declines.</p>
+<p><strong>Adjusting the strike without a view.</strong> The trader shifts the strike to capture the second event's directional bias, but the trader has no specific view on the second event. The adjustment produces a worse risk profile, not a better one.</p>
+<p><strong>Ignoring sector-wide events.</strong> The trader enters a calendar for a single stock's earnings, not realizing that the entire sector is affected by a regulatory action. The IV for all stocks in the sector stays elevated, and the calendar's IV crush is muted.</p>
+<h2>The Practical Decision Rule</h2>
+<p>A practical algorithm for handling second event risk:</p>
+<ol>
+  <li><strong>Before entry:</strong> Check the underlying's calendar for events in the T-14 to T+14 window. If a second event is found, skip the trade or reduce size.</li>
+  <li><strong>At entry:</strong> Use the standard size if no second event is detected. Reduce size if a second event is more than 14 days away.</li>
+  <li><strong>After entry:</strong> Monitor the news flow and the IV profile. If a new event is detected, close the position or adjust.</li>
+  <li><strong>At T+2 to T+3:</strong> If the IV has not crushed as expected, check for a second event. The muted crush may be due to a new catalyst.</li>
+</ol>
+<p>The algorithm is mechanical. The trader who follows it consistently avoids the second event risk or manages it appropriately.</p>
+<h2>The Portfolio-Level Check</h2>
+<p>For a portfolio running multiple calendar spreads, the second event risk should be checked at the portfolio level. A portfolio with 5 calendar spreads on 5 different underlyings may have all 5 affected by a single sector-wide event.</p>
+<p>The portfolio-level check:</p>
+<ul>
+  <li>Sector concentration: limit sector exposure to 30-40% of the portfolio.</li>
+  <li>Event concentration: avoid having more than 2 calendar spreads with overlapping event windows.</li>
+  <li>Underlying correlation: avoid having calendar spreads on highly correlated underlyings.</li>
+</ul>
+<p>The portfolio-level check is the second line of defense. The first line of defense is the per-trade second event check.</p>
+<h2>Modeling the IV Profile</h2>
+<p>We use [OptionsStrat](https://optionstrat.com/ventureprise) to model the calendar spread's IV profile for the underlying. The platform shows the historical IV, the expected IV around the event, and the projected IV crush, which makes the second event risk visible at a glance.</p>
+<p><strong>Parent:</strong> [Calendar Spreads: Profiting from IV Crush Around Known Events](/articles/calendar-spreads-earnings-iv-crush/)</p>
+<p><strong>Previous:</strong> [Calendar Spread Near-Term Expiration Guide: What Happens and How to Manage the Long Leg](/articles/calendar-spread-near-term-expiration-guide/)</p>
+<p><strong>Next:</strong> [Calendar Spread Front-Load IV Rank: Waiting for IV Rank 60+ Before Entry](/articles/calendar-spread-front-load-iv-rank/)</p>
+<p><em>This content is for informational purposes only. Options trading involves substantial risk of loss. Dependability Holdings LLC has no positions in the securities mentioned. Past performance is not indicative of future results.</em></p>
+
+    </div>
+
+
+    <div class="disclaimer">
+     <strong>Disclaimer:</strong> This research is for informational purposes only and does not constitute investment advice. Options trading involves substantial risk of loss. Dependability Holdings LLC has no positions in the securities mentioned. Past performance is not indicative of future results.
+    </div>
+
+
+<div class="share-bar">
+  <span class="share-label">Share</span>
+  <a class="share-btn share-x" href="#" target="_blank" rel="noopener" aria-label="Share on X">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+  </a>
+  <a class="share-btn share-facebook" href="#" target="_blank" rel="noopener" aria-label="Share on Facebook">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+  </a>
+  <a class="share-btn share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+  </a>
+  <button class="share-btn share-copy" aria-label="Copy link" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.querySelector('.copy-label').textContent='Copied!';setTimeout(()=>{this.querySelector('.copy-label').textContent='Copy'},2000)})">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+    <span class="copy-label">Copy</span>
+  </button>
+</div>
+
+
+<script>
+document.querySelectorAll('.share-x, .share-facebook, .share-linkedin').forEach(function(el) {
+  var url = encodeURIComponent(window.location.href);
+  var title = encodeURIComponent(document.title);
+  if (el.classList.contains('share-x')) el.href = 'https://x.com/intent/tweet?url=' + url + '&text=' + title;
+  if (el.classList.contains('share-facebook')) el.href = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
+  if (el.classList.contains('share-linkedin')) el.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + url;
+});
+</script>
+
+   </div>
+
+ </main>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+ <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+ <script src="/nav.js"></script>
+ <script src="/footer.js"></script>
+
+<div id="site-footer"></div>
+
+</body>
+</html>

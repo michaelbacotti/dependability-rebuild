@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Iron Condor IV Rank Entry Timing: Threshold, VIX Relationship, Event Avoidance | Dependability Holdings LLC</title>
+ <meta name="description" content="When to enter iron condors based on IV rank, VIX level, and the event calendar. The 40-70 IV rank band, VIX-vs-IV-rank differences, and how to avoid entering into a regime change.">
+ <link rel="stylesheet" href="/style.css">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <style>
+ .share-bar { display: flex; align-items: center; gap: 10px; margin: 40px 0 32px; padding: 16px 0; border-top: 1px solid #e8e4dd; border-bottom: 1px solid #e8e4dd; }
+ .share-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #999; margin-right: 4px; }
+ .share-btn { display: inline-flex; align-items: center; gap: 5px; padding: 7px 12px; border-radius: 4px; font-size: 12px; text-decoration: none; border: 1px solid #cc0000; background: transparent; cursor: pointer; font-family: inherit; color: #cc0000; transition: opacity 0.15s; }
+ .share-btn:hover { opacity: 0.7; }
+ .disclaimer { margin: 2.5rem 0; padding: 1rem 1.25rem; background: #f5f0e8; border-left: 4px solid #cc0000; font-size: 0.875rem; line-height: 1.6; color: #555; }
+ </style>
+<link rel="canonical" href="/articles/iron-condor-iv-rank-entry-timing/"> <meta property="og:title" content="Iron Condor IV Rank Entry Timing: Threshold, VIX Relationship, Event Avoidance | Dependability Holdings LLC">
+ <meta property="og:description" content="When to enter iron condors based on IV rank, VIX level, and the event calendar. The 40-70 IV rank band, VIX-vs-IV-rank differences, and how to avoid entering into a regime change.">
+ <meta property="og:image" content="https://dependability.us/og-image.jpg">
+ <meta property="og:type" content="article">
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+
+   <div class="article-page">
+
+    <div class="article-header">
+     <div class="category-label">FORECASTS & OPTIONS STRATEGIES</div>
+     <h1>Iron Condor IV Rank Entry Timing: Threshold, VIX Relationship, Event Avoidance</h1>
+     <div class="article-meta">June 04, 2026 &nbsp;|&nbsp; Dependability Research Desk</div>
+    </div>
+    <div class="article-header-image">
+     <img src="" alt="Iron Condor IV Rank Entry Timing: Threshold, VIX Relationship, Event Avoidance" style="width:100%;display:block;">
+    </div>
+    <div class="article-body">
+
+<p>The iron condor is a short-volatility trade. The position profits when implied volatility is elevated at entry and either stays elevated or declines. Entering at low IV means the credit collected is too small to justify the risk. Entering at very high IV means the position is exposed to a regime change (a sudden IV crush) that erodes the credit collected. The right entry timing balances credit against the risk of a regime change, and that balance is captured by IV rank.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<p>This article covers the IV rank threshold for entry, the relationship between VIX and IV rank, the event calendar implications, and the practical decision rule for when to open a new condor.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="7590828986" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<h2>What IV Rank Measures</h2>
+<p>IV rank is the current implied volatility expressed as a percentile of the range of IV over the past 252 trading days (one year). The formula:</p>
+<p><strong>IV Rank = (Current IV − 52-Week Low IV) / (52-Week High IV − 52-Week Low IV) × 100</strong></p>
+<p>An IV rank of 50% means the current IV is exactly in the middle of the 52-week range. An IV rank of 80% means the current IV is near the 52-week high. An IV rank of 20% means the current IV is near the 52-week low.</p>
+<p>IV rank is preferred over absolute IV (VIX) for entry timing because it normalizes for the volatility regime. A VIX of 20 in a low-volatility environment (52-week range 10-15) corresponds to an IV rank of 100%. The same VIX of 20 in a high-volatility environment (52-week range 18-35) corresponds to an IV rank of 13%. The IV rank tells you whether the current VIX is "expensive" or "cheap" relative to history.</p>
+<h2>The 40-70 IV Rank Band</h2>
+<p>The standard entry band for iron condors is IV rank 40-70%. The boundaries:</p>
+<ul>
+  <li><strong>Below 40%:</strong> The premium collected is too small relative to the risk. A condor entered at IV rank 30% collects 30-40% less credit than a condor entered at IV rank 50%, but the max loss is the same. The risk-adjusted return is poor.</li>
+  <li><strong>40-60%:</strong> The sweet spot. Premium is meaningful, and the position has enough vega exposure to benefit from a moderate IV decline. Most condors should be entered in this band.</li>
+  <li><strong>60-70%:</strong> Higher credit, but the position is at risk of an IV regime change. The IV is near the top of its range, and any normalization (VIX mean-reversion) will produce a vega-positive move for the position. This is acceptable for high-conviction setups, but it carries more risk.</li>
+  <li><strong>Above 70%:</strong> The IV is at or near a 52-week high. The credit is large, but the position is exposed to a sudden crush. Use only for event-driven setups (FOMC, earnings) where the crush is expected and the timing is known.</li>
+</ul>
+<p>| IV Rank | Entry Decision | Rationale |</p>
+<p>|---|---|---|</p>
+<p>| 0-30% | Skip | Premium too small for the risk |</p>
+<p>| 30-40% | Selective | OK for low-vol environment traders who can size to lower credit |</p>
+<p>| 40-60% | Default entry | Standard risk-adjusted return |</p>
+<p>| 60-70% | High conviction only | Larger credit but elevated crush risk |</p>
+<p>| 70-100% | Event-driven only | Best used for known IV crush events |</p>
+<h2>VIX vs IV Rank</h2>
+<p>VIX (the CBOE Volatility Index) is the most commonly cited volatility measure, but it is not the same as IV rank. VIX is the 30-day forward-looking implied volatility on SPX options. IV rank is a percentile of the VIX's 52-week range.</p>
+<p>VIX level tells you the current volatility regime. IV rank tells you where the current regime sits relative to the past year. Both are useful, but they answer different questions.</p>
+<p>| Question | Best Metric |</p>
+<p>|---|---|</p>
+<p>| Is the market volatile right now? | VIX level |</p>
+<p>| Is the market more or less volatile than usual? | IV rank |</p>
+<p>| Should I enter a premium-collection trade? | IV rank |</p>
+<p>| Should I expect an immediate IV crush? | VIX percentile vs VIX moving average |</p>
+<p>A useful rule: use VIX for situational awareness and IV rank for entry decisions.</p>
+<h2>VIX Mean Reversion</h2>
+<p>VIX is mean-reverting on multi-week timescales. When VIX spikes above 30, it tends to decline back toward 15-20 over the following weeks. When VIX is below 12, it tends to rise back toward 15-20. This mean reversion is the source of profit for short-volatility strategies.</p>
+<p>The mean-reversion pattern means that the best short-volatility entries are after VIX has spiked. A condor entered when VIX is at 30 and IV rank is 80% collects a large credit and has a high probability of benefiting from VIX mean reversion. The risk is that VIX can stay elevated for longer than the condor's expiration (especially in a sustained drawdown environment), so the condor needs to be sized and timed accordingly.</p>
+<h2>Event Avoidance</h2>
+<p>The IV rank band tells you when premium is high, but it does not tell you when premium is about to collapse. Some high-IV environments are followed by a sustained decline (VIX mean reversion); others are followed by a near-term event (FOMC, CPI, earnings) that crushes IV.</p>
+<p>The standard event-avoidance rule: <strong>do not open a new condor within 14 days of a major scheduled event for the underlying.</strong> For SPX, the events to avoid are:</p>
+<ul>
+  <li>FOMC meetings (8 per year)</li>
+  <li>CPI releases (12 per year)</li>
+  <li>Non-farm payrolls (12 per year)</li>
+  <li>GDP releases (4 per year)</li>
+  <li>Major earnings (for individual stocks or sector ETFs)</li>
+</ul>
+<p>A condor opened 5 days before an FOMC meeting is exposed to the event. If the announcement is hawkish, the market drops and the put spread is tested. If the announcement is dovish, the market rallies and the call spread is tested. Either outcome can produce a large mark-to-market loss that requires adjustment or close.</p>
+<p>A condor opened 30+ days before the event has time for the event to pass and for IV to crush. The position can absorb the event-day move and benefit from the post-event volatility decline.</p>
+<h2>The Calendar Overlay</h2>
+<p>The optimal entry is a combination of:</p>
+<ul>
+  <li>IV rank in the 40-70% band</li>
+  <li>At least 21 days to the next major event</li>
+  <li>A VIX level that is not at an extreme (VIX above 35 or below 12 suggests a regime change)</li>
+</ul>
+<p>A practical example:</p>
+<p>| Date | VIX | IV Rank | Days to FOMC | Decision |</p>
+<p>|---|---|---|---|---|</p>
+<p>| 2026-01-15 | 18 | 52% | 28 days | Enter — IV rank in band, FOMC is 4 weeks out |</p>
+<p>| 2026-02-01 | 24 | 78% | 7 days | Skip — too close to FOMC; would enter on Feb 5 after the event |</p>
+<p>| 2026-04-10 | 14 | 18% | 21 days | Skip — IV rank too low; premium insufficient |</p>
+<p>| 2026-06-04 | 22 | 58% | 35 days | Enter — IV rank in band, plenty of time before next event |</p>
+<p>The calendar overlay reduces the number of entries but improves the quality of each entry.</p>
+<h2>Regime Changes</h2>
+<p>The single biggest risk to a short-volatility entry is a regime change. A regime change is a structural shift in the volatility environment, typically triggered by a major event (war, financial crisis, pandemic) or a sustained policy shift (prolonged low interest rates, persistent inflation).</p>
+<p>The 2020 COVID crash is the canonical regime change: VIX spiked from 15 to 82 in three weeks. A condor entered at IV rank 80% in February 2020 went to max loss.</p>
+<p>Regime changes are not predictable in advance, which is why position sizing (the 2% rule) is the primary defense. A trader who sizes correctly can survive a regime change; a trader who over-sizes cannot.</p>
+<p>The secondary defense: avoid entering when VIX is rising rapidly. A VIX that has moved from 15 to 25 in two weeks is signaling that the market expects continued volatility. A condor entered into that move is fighting the trend.</p>
+<h2>The Practical Entry Rule</h2>
+<p>The combined rule:</p>
+<ol>
+  <li>IV rank is in the 40-70% band</li>
+  <li>At least 21 days to the next major event for the underlying</li>
+  <li>VIX is not in an active spike (rising >20% in the past week)</li>
+  <li>The 2% position size rule is met</li>
+</ol>
+<p>If all four conditions are met, enter. If any one condition is not met, wait.</p>
+<p>The discipline to wait is what separates a sustainable condor program from one that gets steam-rolled by the next regime change.</p>
+<h2>Avoiding the "Always In" Trap</h2>
+<p>Some traders try to always be in the market, opening new condors as old ones expire. This produces entries at low IV (when premium is scarce) and entries into events (when premium is high but risk is higher). The result is a string of small wins followed by a few large losses.</p>
+<p>The selective approach — entering only when all four conditions are met — produces fewer entries but better entries. A program that runs 8-10 condors per year at high-quality entries will outperform a program that runs 25-30 condors per year at mediocre entries.</p>
+<h2>Tracking IV Rank</h2>
+<p>We use [OptionsStrat](https://optionstrat.com/ventureprise) to track IV rank, VIX, and the event calendar in one view. The platform shows the current IV rank for SPX, QQQ, and any other underlying, plus the upcoming events for each. The entry decision is made by checking the IV rank against the threshold and the calendar against the event window before opening a new position.</p>
+<p><strong>Parent:</strong> [Iron Condors: Complete Strategy Guide for Range-Bound Markets](/articles/iron-condors-range-bound-markets/)</p>
+<p><strong>Previous:</strong> [SPX vs QQQ Iron Condors: Instrument Comparison, Sizing, and Margin](/articles/spx-vs-qqq-iron-condors/)</p>
+<p><strong>Next:</strong> [Iron Condor Income vs Directional Spreads: Premium Collection vs Alpha Generation](/articles/iron-condor-income-vs-directional-spreads/)</p>
+<p><em>This content is for informational purposes only. Options trading involves substantial risk of loss. Dependability Holdings LLC has no positions in the securities mentioned. Past performance is not indicative of future results.</em></p>
+
+    </div>
+
+
+    <div class="disclaimer">
+     <strong>Disclaimer:</strong> This research is for informational purposes only and does not constitute investment advice. Options trading involves substantial risk of loss. Dependability Holdings LLC has no positions in the securities mentioned. Past performance is not indicative of future results.
+    </div>
+
+
+<div class="share-bar">
+  <span class="share-label">Share</span>
+  <a class="share-btn share-x" href="#" target="_blank" rel="noopener" aria-label="Share on X">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+  </a>
+  <a class="share-btn share-facebook" href="#" target="_blank" rel="noopener" aria-label="Share on Facebook">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+  </a>
+  <a class="share-btn share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+  </a>
+  <button class="share-btn share-copy" aria-label="Copy link" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.querySelector('.copy-label').textContent='Copied!';setTimeout(()=>{this.querySelector('.copy-label').textContent='Copy'},2000)})">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+    <span class="copy-label">Copy</span>
+  </button>
+</div>
+
+
+<script>
+document.querySelectorAll('.share-x, .share-facebook, .share-linkedin').forEach(function(el) {
+  var url = encodeURIComponent(window.location.href);
+  var title = encodeURIComponent(document.title);
+  if (el.classList.contains('share-x')) el.href = 'https://x.com/intent/tweet?url=' + url + '&text=' + title;
+  if (el.classList.contains('share-facebook')) el.href = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
+  if (el.classList.contains('share-linkedin')) el.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + url;
+});
+</script>
+
+   </div>
+
+ </main>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+ <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+ <script src="/nav.js"></script>
+ <script src="/footer.js"></script>
+
+<div id="site-footer"></div>
+
+</body>
+</html>

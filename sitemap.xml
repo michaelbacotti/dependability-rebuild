@@ -25,16 +25,48 @@
   <url><loc>https://dependability.us/articles/2026-05-25-short-interest-surging/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://dependability.us/articles/2026-06-02-are-markets-overbought/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://dependability.us/articles/2026-06-03-this-time-really-different-ai-dot-com/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dependability.us/articles/bull-call-spread-expiration-management/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dependability.us/articles/bull-call-spread-greeks-delta-theta/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dependability.us/articles/bull-call-spread-iv-regime-guide/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dependability.us/articles/bull-call-spread-position-sizing/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dependability.us/articles/bull-call-spread-profit-targets/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dependability.us/articles/bull-call-spread-roll-up-guide/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dependability.us/articles/bull-call-spread-strike-selection/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dependability.us/articles/bull-call-spread-vs-naked-calls/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://dependability.us/articles/bull-call-spreads-defined-risk/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dependability.us/articles/calendar-spread-exit-timing/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dependability.us/articles/calendar-spread-front-load-iv-rank/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dependability.us/articles/calendar-spread-greeks-time-decay/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dependability.us/articles/calendar-spread-iv-crush-math/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dependability.us/articles/calendar-spread-near-term-expiration-guide/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dependability.us/articles/calendar-spread-second-event-risk/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dependability.us/articles/calendar-spread-strike-selection-atm-vs-otm/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dependability.us/articles/calendar-spread-vs-long-straddle/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://dependability.us/articles/calendar-spreads-earnings-iv-crush/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dependability.us/articles/cash-secured-put-assignment-management/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dependability.us/articles/cash-secured-put-reserve-cash-sizing/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dependability.us/articles/cash-secured-put-roll-down-guide/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dependability.us/articles/covered-call-ex-dividend-management/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dependability.us/articles/covered-call-income-math/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dependability.us/articles/covered-call-roll-up-out-guide/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dependability.us/articles/covered-call-vs-cash-secured-put-comparison/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://dependability.us/articles/covered-calls-cash-secured-puts-income/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://dependability.us/articles/forecast-methodology-2026/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://dependability.us/gold-as-a-store-of-value/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://dependability.us/inflation-measurement-modern-economy/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dependability.us/articles/iron-condor-dte-timing-guide/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dependability.us/articles/iron-condor-greeks-explained/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dependability.us/articles/iron-condor-income-vs-directional-spreads/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dependability.us/articles/iron-condor-iv-rank-entry-timing/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dependability.us/articles/iron-condor-max-loss-calculation/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dependability.us/articles/iron-condor-rolling-adjustments-guide/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dependability.us/articles/iron-condor-vs-iron-butterfly/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://dependability.us/articles/iron-condors-range-bound-markets/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://dependability.us/oil-paradox-energy-dominance/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dependability.us/articles/spx-vs-qqq-iron-condors/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://dependability.us/the-dollars-lever/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://dependability.us/tlt-new-bond-regime/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dependability.us/articles/wheel-strategy-covered-call-cash-secured-put/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://dependability.us/forecast/2026-05-29/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://dependability.us/forecast/2026-05-26/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://dependability.us/forecast/2026-05-22/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>

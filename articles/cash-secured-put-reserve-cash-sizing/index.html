@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Cash-Secured Put Reserve Cash Sizing: How Much Cash to Set Aside | Dependability Holdings LLC</title>
+ <meta name="description" content="Cash-secured put reserve cash sizing — how much cash to set aside to back the put obligation, position sizing, opportunity cost, and the trade-off between cash-secured puts and naked puts on margin.">
+ <link rel="stylesheet" href="/style.css">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <style>
+ .share-bar { display: flex; align-items: center; gap: 10px; margin: 40px 0 32px; padding: 16px 0; border-top: 1px solid #e8e4dd; border-bottom: 1px solid #e8e4dd; }
+ .share-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #999; margin-right: 4px; }
+ .share-btn { display: inline-flex; align-items: center; gap: 5px; padding: 7px 12px; border-radius: 4px; font-size: 12px; text-decoration: none; border: 1px solid #cc0000; background: transparent; cursor: pointer; font-family: inherit; color: #cc0000; transition: opacity 0.15s; }
+ .share-btn:hover { opacity: 0.7; }
+ .disclaimer { margin: 2.5rem 0; padding: 1rem 1.25rem; background: #f5f0e8; border-left: 4px solid #cc0000; font-size: 0.875rem; line-height: 1.6; color: #555; }
+ </style>
+<link rel="canonical" href="/articles/cash-secured-put-reserve-cash-sizing/"> <meta property="og:title" content="Cash-Secured Put Reserve Cash Sizing: How Much Cash to Set Aside | Dependability Holdings LLC">
+ <meta property="og:description" content="Cash-secured put reserve cash sizing — how much cash to set aside to back the put obligation, position sizing, opportunity cost, and the trade-off between cash-secured puts and naked puts on margin.">
+ <meta property="og:image" content="https://dependability.us/og-image.jpg">
+ <meta property="og:type" content="article">
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+
+   <div class="article-page">
+
+    <div class="article-header">
+     <div class="category-label">FORECASTS & OPTIONS STRATEGIES</div>
+     <h1>Cash-Secured Put Reserve Cash Sizing: How Much Cash to Set Aside</h1>
+     <div class="article-meta">June 04, 2026 &nbsp;|&nbsp; Dependability Research Desk</div>
+    </div>
+    <div class="article-header-image">
+     <img src="" alt="Cash-Secured Put Reserve Cash Sizing: How Much Cash to Set Aside" style="width:100%;display:block;">
+    </div>
+    <div class="article-body">
+
+<p>A cash-secured put (CSP) requires holding enough cash to buy the underlying stock if the put is assigned. The amount of cash to reserve is the strike price multiplied by 100 (for stocks) or the strike price multiplied by the contract multiplier (for SPX). The sizing of the reserved cash is the central capital allocation question for CSPs, and the answer depends on the strike selection, the position size, the portfolio's other holdings, and the trader's view on the underlying.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<p>This article covers the cash reserve calculation, the position sizing rules, the opportunity cost of reserved cash, and the trade-off between CSPs and naked puts on margin.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="7590828986" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<h2>The Basic Reserve Calculation</h2>
+<p>For a cash-secured put, the cash reserve is:</p>
+<p><strong>Cash Reserve = Strike Price × 100 (for stocks) × Number of Contracts</strong></p>
+<p>For a put sold at a $95 strike on a $100 stock, with 1 contract:</p>
+<p>Cash Reserve = $95 × 100 × 1 = <strong>$9,500</strong></p>
+<p>The reserved cash is held in the account, earning interest (in a money market fund or similar) but not available for other trades. The opportunity cost is the interest that the cash would have earned in a higher-yielding investment.</p>
+<h2>The Strike Selection Impact</h2>
+<p>The strike selection determines the cash reserve. A higher strike (closer to the current price) requires more cash; a lower strike (further from the current price) requires less cash.</p>
+<p>| Strike | Current Stock Price | Cash Reserve per Contract | Premium |</p>
+<p>|---|---|---|---|</p>
+<p>| $100 (ATM) | $100 | $10,000 | $3.00 |</p>
+<p>| $95 (5% OTM) | $100 | $9,500 | $1.50 |</p>
+<p>| $90 (10% OTM) | $100 | $9,000 | $0.75 |</p>
+<p>| $85 (15% OTM) | $100 | $8,500 | $0.30 |</p>
+<p>The trade-off: a higher strike (ATM) collects more premium but requires more cash and is more likely to be assigned. A lower strike (15% OTM) requires less cash and is less likely to be assigned but collects less premium.</p>
+<p>A useful rule: choose the strike that balances premium against cash reserve and assignment probability. The 5-10% OTM strikes are usually the best balance for income generation.</p>
+<h2>The Position Sizing Rules</h2>
+<p>The position sizing for CSPs follows the same 2% rule as other defined-risk strategies:</p>
+<p><strong>Max risk per CSP = 2% of portfolio capital</strong></p>
+<p>For a $100,000 portfolio:</p>
+<p>Max risk per CSP = $100,000 × 0.02 = <strong>$2,000</strong></p>
+<p>The "max risk" for a CSP is typically the difference between the strike and the expected assignment price, adjusted for the premium received. For a $95 strike with $1.50 premium on a $100 stock:</p>
+<p>| Component | Value |</p>
+<p>|---|---|</p>
+<p>| Strike | $95 |</p>
+<p>| Premium received | $1.50 |</p>
+<p>| Effective cost basis if assigned | $93.50 |</p>
+<p>| Current stock price | $100 |</p>
+<p>| Loss vs current price if assigned | $6.50 |</p>
+<p>The "loss vs current price if assigned" is the max risk per contract. For a $2,000 risk budget, the position can be 3 contracts ($19.50 loss × 3 = $58.50... wait, that's not right. Let me recalculate.)</p>
+<p>Actually, the max risk per CSP is more nuanced. The position is fully cash-secured, so the max loss is the difference between the cash reserve and the stock's value at assignment, minus the premium received. For a $95 strike with $1.50 premium:</p>
+<p>| Component | Value |</p>
+<p>|---|---|</p>
+<p>| Cash reserve | $9,500 |</p>
+<p>| Stock value if assigned (at $95 strike) | $9,500 |</p>
+<p>| Premium received | $150 |</p>
+<p>| Net cost if assigned | $9,350 |</p>
+<p>| Loss if stock goes to $0 | $9,350 |</p>
+<p>The max loss for a CSP is the full cash reserve minus the premium received. The position is essentially equivalent to owning the stock at a $1.50 discount, with the obligation to buy at the strike.</p>
+<p>For position sizing, the 2% rule is applied to the max loss, which is the cash reserve minus the premium. For a $9,500 cash reserve with $1.50 premium:</p>
+<p>Max risk per contract = $9,500 - $150 = <strong>$9,350</strong></p>
+<p>For a $100,000 portfolio with 2% risk ($2,000), the position can be 0 contracts (since $9,350 > $2,000). The CSP is too large for a $100,000 portfolio at the 2% rule.</p>
+<p>The 2% rule for CSPs is therefore applied differently. The rule is often:</p>
+<p><strong>Max cash reserve per CSP = 2% of portfolio capital</strong></p>
+<p>For a $100,000 portfolio:</p>
+<p>Max cash reserve per CSP = $100,000 × 0.02 = <strong>$2,000</strong></p>
+<p>For a $9,500 cash reserve per contract, the position can be 0 contracts at the 2% rule (since $9,500 > $2,000).</p>
+<p>This is the fundamental tension of CSPs: the cash reserve is large, and the 2% rule limits the position to a small number of contracts. The CSP is a capital-intensive strategy.</p>
+<h2>The Smaller Strike Solution</h2>
+<p>For smaller portfolios, the strike can be lowered to fit the 2% rule. A $20 strike requires $2,000 cash reserve, which fits the 2% rule for a $100,000 portfolio.</p>
+<p>| Strike | Cash Reserve per Contract | Position Size at 2% Rule |</p>
+<p>|---|---|---|</p>
+<p>| $100 | $10,000 | 0 contracts |</p>
+<p>| $50 | $5,000 | 0 contracts |</p>
+<p>| $20 | $2,000 | 1 contract |</p>
+<p>| $10 | $1,000 | 2 contracts |</p>
+<p>| $5 | $500 | 4 contracts |</p>
+<p>The smaller-strike solution allows position sizing, but the premium collected is also smaller. A $5 strike may collect only $0.10-$0.20 in premium, which is a 2-4% return on the cash reserve for a 30-day put. The return on cash is reasonable, but the absolute premium is small.</p>
+<h2>The Multi-Contract Solution</h2>
+<p>For larger portfolios, the multi-contract solution allows multiple contracts at the same strike. A $500,000 portfolio with 2% risk ($10,000) can run 1 contract at a $10,000 cash reserve, 5 contracts at a $2,000 cash reserve, or 2 contracts at a $5,000 cash reserve.</p>
+<p>| Portfolio Size | Strike | Cash Reserve per Contract | Contracts at 2% Rule |</p>
+<p>|---|---|---|---|</p>
+<p>| $100,000 | $100 | $10,000 | 0 |</p>
+<p>| $100,000 | $20 | $2,000 | 1 |</p>
+<p>| $500,000 | $100 | $10,000 | 1 |</p>
+<p>| $500,000 | $50 | $5,000 | 2 |</p>
+<p>| $1,000,000 | $100 | $10,000 | 2 |</p>
+<p>The multi-contract solution is appropriate for larger portfolios. The trader with $500K+ can run 1-2 contracts at standard strikes, which produces meaningful premium income.</p>
+<h2>The Opportunity Cost of Reserved Cash</h2>
+<p>The reserved cash earns interest but is not invested in higher-yielding assets. The opportunity cost is the difference between the cash yield and the yield of the next-best investment.</p>
+<p>For a $9,500 cash reserve earning 4.5% (current money market rate):</p>
+<p>| Time Period | Interest Earned | Opportunity Cost vs 5% Treasury |</p>
+<p>|---|---|---|</p>
+<p>| 30 days | $35.62 | $3.42 (0.5% × $9,500 × 30/365) |</p>
+<p>| 90 days | $106.85 | $10.27 |</p>
+<p>| 365 days | $433.50 | $41.67 |</p>
+<p>The opportunity cost is small in absolute terms but meaningful relative to the premium collected. A $1.50 premium on a $9,500 cash reserve over 30 days is a 1.5% return on cash. The opportunity cost of 0.5% (vs a Treasury) reduces the net return to 1.0%.</p>
+<h2>The Naked Put Alternative</h2>
+<p>A naked put (sold on margin) does not require cash reserve. The broker holds margin based on the maximum potential loss, but the cash is not reserved. The position is more capital-efficient but has a different risk profile.</p>
+<p>| Parameter | Cash-Secured Put | Naked Put (Margin) |</p>
+<p>|---|---|---|</p>
+<p>| Cash reserve | $9,500 (full strike) | $2,000-$3,000 (margin) |</p>
+<p>| Premium collected | $1.50 | $1.50 |</p>
+<p>| Max loss | $9,350 (full cash reserve) | $9,350 (same) |</p>
+<p>| Buying power efficiency | Low | High |</p>
+<p>| Liquidity risk | None (cash is available) | Margin call risk if position moves against |</p>
+<p>The naked put is more capital-efficient but has higher liquidity risk. The trader who sells a naked put on margin and the position moves against them may face a margin call, which forces them to deposit additional cash or close the position at a loss.</p>
+<p>The CSP is the conservative version; the naked put is the leveraged version. The choice depends on the trader's risk tolerance and capital base.</p>
+<h2>The Account Type Considerations</h2>
+<p>The CSP is appropriate for accounts that require cash-secured positions:</p>
+<ul>
+  <li><strong>IRA accounts:</strong> Most IRA accounts cannot hold naked options. The CSP is the only short-put strategy available.</li>
+  <li><strong>Cash accounts:</strong> Cash accounts require full payment for securities purchases. The CSP is the appropriate short-put strategy.</li>
+  <li><strong>Margin accounts with conservative risk tolerance:</strong> The trader who wants the safety of cash-secured positions can use the CSP in a margin account.</li>
+</ul>
+<p>For margin accounts with higher risk tolerance, the naked put is a viable alternative. The choice depends on the trader's preferences.</p>
+<h2>The Strike Selection for Income</h2>
+<p>The strike selection for income-focused CSPs typically favors higher strikes (closer to ATM) because they collect more premium. The trade-off is the higher assignment probability.</p>
+<p>| Strike | Premium | Assignment Probability (30 DTE) | Return on Cash |</p>
+<p>|---|---|---|---|</p>
+<p>| ATM (100%) | 3.0% of strike | 50% | 3.0% × 50% = 1.5% expected |</p>
+<p>| 5% OTM (95%) | 1.5% of strike | 30% | 1.5% × 30% = 0.45% expected |</p>
+<p>| 10% OTM (90%) | 0.75% of strike | 15% | 0.75% × 15% = 0.11% expected |</p>
+<p>| 15% OTM (85%) | 0.30% of strike | 7% | 0.30% × 7% = 0.02% expected |</p>
+<p>The expected return on cash (premium × probability) is highest for ATM strikes. The ATM CSP has the highest expected return but also the highest assignment probability.</p>
+<h2>The Strike Selection for Stock Acquisition</h2>
+<p>For traders who want to acquire the stock at a discount, the strike selection favors lower strikes (further OTM). The premium is smaller, but the assignment is at a more attractive price.</p>
+<p>| Strike | Premium | Effective Cost Basis | Discount to Current |</p>
+<p>|---|---|---|---|</p>
+<p>| $100 (ATM) | $3.00 | $97.00 | 3.0% |</p>
+<p>| $95 (5% OTM) | $1.50 | $93.50 | 6.5% |</p>
+<p>| $90 (10% OTM) | $0.75 | $89.25 | 10.75% |</p>
+<p>The $90 strike produces a 10.75% discount to the current price if assigned. The premium is smaller, but the entry price is more attractive. This is the appropriate strategy for traders who want to buy the stock at a discount and are comfortable waiting for the assignment.</p>
+<h2>The Decision Rule</h2>
+<p>A practical algorithm for sizing the cash reserve:</p>
+<ol>
+  <li><strong>Determine the portfolio size.</strong></li>
+  <li><strong>Apply the 2% rule:</strong> max cash reserve per CSP = 2% of portfolio.</li>
+  <li><strong>Choose the strike</strong> that fits the 2% rule. If the standard strike is too large, use a smaller strike.</li>
+  <li><strong>Determine the position size</strong> based on the cash reserve and the 2% rule.</li>
+  <li><strong>Consider the opportunity cost</strong> of the reserved cash. The expected premium should exceed the opportunity cost by a meaningful margin.</li>
+  <li><strong>Choose between CSP and naked put</strong> based on the account type and risk tolerance.</li>
+</ol>
+<p>The decision is capital-driven. The trader who has a $100K portfolio and wants to run a $100 strike CSP must either reduce the position size to fit the 2% rule, use a smaller strike, or use a naked put on margin.</p>
+<h2>The Multi-Strike Diversification</h2>
+<p>For a portfolio running multiple CSPs, the strikes should be diversified across underlyings. The cash reserves should be spread across:</p>
+<ul>
+  <li>Different sectors (tech, healthcare, finance, consumer)</li>
+  <li>Different market caps (large, mid, small)</li>
+  <li>Different volatility profiles (high, medium, low)</li>
+</ul>
+<p>The diversification reduces the correlation of the cash reserves and the assignment risk. A market event that affects one sector does not affect all sectors.</p>
+<h2>Modeling the CSP</h2>
+<p>We use [OptionsStrat](https://optionstrat.com/ventureprise) to model the CSP at different strikes before entry. The platform shows the premium, the assignment probability, the effective cost basis, and the return on cash, which makes the strike selection and position sizing decisions visible at a glance.</p>
+<p><strong>Parent:</strong> [Covered Calls and Cash-Secured Puts: Complete Income Strategy Guide](/articles/covered-calls-cash-secured-puts-income/)</p>
+<p><strong>Previous:</strong> [Covered Call Ex-Dividend Management: Early Assignment Risk and Calendar Strategy](/articles/covered-call-ex-dividend-management/)</p>
+<p><strong>Next:</strong> [Covered Call Roll Up and Out Guide: When the Stock Runs to Your Short Strike](/articles/covered-call-roll-up-out-guide/)</p>
+<p><em>This content is for informational purposes only. Options trading involves substantial risk of loss. Dependability Holdings LLC has no positions in the securities mentioned. Past performance is not indicative of future results.</em></p>
+
+    </div>
+
+
+    <div class="disclaimer">
+     <strong>Disclaimer:</strong> This research is for informational purposes only and does not constitute investment advice. Options trading involves substantial risk of loss. Dependability Holdings LLC has no positions in the securities mentioned. Past performance is not indicative of future results.
+    </div>
+
+
+<div class="share-bar">
+  <span class="share-label">Share</span>
+  <a class="share-btn share-x" href="#" target="_blank" rel="noopener" aria-label="Share on X">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+  </a>
+  <a class="share-btn share-facebook" href="#" target="_blank" rel="noopener" aria-label="Share on Facebook">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+  </a>
+  <a class="share-btn share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+  </a>
+  <button class="share-btn share-copy" aria-label="Copy link" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.querySelector('.copy-label').textContent='Copied!';setTimeout(()=>{this.querySelector('.copy-label').textContent='Copy'},2000)})">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+    <span class="copy-label">Copy</span>
+  </button>
+</div>
+
+
+<script>
+document.querySelectorAll('.share-x, .share-facebook, .share-linkedin').forEach(function(el) {
+  var url = encodeURIComponent(window.location.href);
+  var title = encodeURIComponent(document.title);
+  if (el.classList.contains('share-x')) el.href = 'https://x.com/intent/tweet?url=' + url + '&text=' + title;
+  if (el.classList.contains('share-facebook')) el.href = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
+  if (el.classList.contains('share-linkedin')) el.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + url;
+});
+</script>
+
+   </div>
+
+ </main>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+ <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+ <script src="/nav.js"></script>
+ <script src="/footer.js"></script>
+
+<div id="site-footer"></div>
+
+</body>
+</html>

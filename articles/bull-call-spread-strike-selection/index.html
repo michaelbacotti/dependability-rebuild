@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Bull Call Spread Strike Selection: Buy Strike, Debit, and Breakeven Logic | Dependability Holdings LLC</title>
+ <meta name="description" content="Bull call spread strike selection — how to choose the long call strike, the short call strike, the spread width, and the breakeven. Target moves, expected moves, and the debit that makes the trade work.">
+ <link rel="stylesheet" href="/style.css">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <style>
+ .share-bar { display: flex; align-items: center; gap: 10px; margin: 40px 0 32px; padding: 16px 0; border-top: 1px solid #e8e4dd; border-bottom: 1px solid #e8e4dd; }
+ .share-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #999; margin-right: 4px; }
+ .share-btn { display: inline-flex; align-items: center; gap: 5px; padding: 7px 12px; border-radius: 4px; font-size: 12px; text-decoration: none; border: 1px solid #cc0000; background: transparent; cursor: pointer; font-family: inherit; color: #cc0000; transition: opacity 0.15s; }
+ .share-btn:hover { opacity: 0.7; }
+ .disclaimer { margin: 2.5rem 0; padding: 1rem 1.25rem; background: #f5f0e8; border-left: 4px solid #cc0000; font-size: 0.875rem; line-height: 1.6; color: #555; }
+ </style>
+<link rel="canonical" href="/articles/bull-call-spread-strike-selection/"> <meta property="og:title" content="Bull Call Spread Strike Selection: Buy Strike, Debit, and Breakeven Logic | Dependability Holdings LLC">
+ <meta property="og:description" content="Bull call spread strike selection — how to choose the long call strike, the short call strike, the spread width, and the breakeven. Target moves, expected moves, and the debit that makes the trade work.">
+ <meta property="og:image" content="https://dependability.us/og-image.jpg">
+ <meta property="og:type" content="article">
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+
+   <div class="article-page">
+
+    <div class="article-header">
+     <div class="category-label">FORECASTS & OPTIONS STRATEGIES</div>
+     <h1>Bull Call Spread Strike Selection: Buy Strike, Debit, and Breakeven Logic</h1>
+     <div class="article-meta">June 04, 2026 &nbsp;|&nbsp; Dependability Research Desk</div>
+    </div>
+    <div class="article-header-image">
+     <img src="" alt="Bull Call Spread Strike Selection: Buy Strike, Debit, and Breakeven Logic" style="width:100%;display:block;">
+    </div>
+    <div class="article-body">
+
+<p>The bull call spread is a defined-risk bullish position with two legs: a long call at a lower strike and a short call at a higher strike. The strike selection determines the position's breakeven, max profit, max loss, probability of profit, and Greeks. Choosing the right strikes is the difference between a position that works and one that does not. The selection rule is straightforward in principle — buy near the current price, sell above the target — but the specifics of strike width, debit paid, and breakeven placement require careful calibration.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<p>This article covers the strike selection logic, the breakeven math, the relationship between spread width and probability of profit, and the practical decision rule for choosing the strikes.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="7590828986" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<h2>The Basic Structure</h2>
+<p>A bull call spread consists of:</p>
+<ul>
+  <li><strong>Long call</strong> at strike A (lower strike, closer to current price)</li>
+  <li><strong>Short call</strong> at strike B (higher strike, above the target price)</li>
+  <li><strong>Same expiration</strong> for both legs</li>
+  <li><strong>Net debit</strong> = premium paid for the long call minus premium received for the short call</li>
+</ul>
+<p>Example: Stock at $100, expect a move to $107 over the next 30-45 days.</p>
+<ul>
+  <li>Buy the $102 call (just out of the money) for $3.50</li>
+  <li>Sell the $110 call (above the target) for $1.00</li>
+  <li>Net debit: $2.50</li>
+</ul>
+<p><strong>Position parameters:</strong></p>
+<ul>
+  <li>Max loss: $2.50 (debit paid)</li>
+  <li>Max profit: $10 (strike width $8) − $2.50 (debit) = $5.50</li>
+  <li>Breakeven: $102 + $2.50 = $104.50</li>
+  <li>Probability of profit (at expiration): depends on the spread of the underlying's expected move</li>
+</ul>
+<p>The breakeven is the long strike plus the net debit. The trade is profitable if the stock is above $104.50 at expiration.</p>
+<h2>The Long Call Strike</h2>
+<p>The long call strike determines the breakeven and the debit paid. A strike closer to the current price has a higher delta, costs more, and produces a breakeven closer to the current price. A strike further from the current price has a lower delta, costs less, and produces a breakeven further from the current price.</p>
+<p>| Long Strike | Delta | Cost | Breakeven | Probability of Profit |</p>
+<p>|---|---|---|---|---|</p>
+<p>| At the money | 0.50 | $4.00 | $104.00 | 50% |</p>
+<p>| $2 OTM | 0.40 | $3.50 | $104.50 | 45% |</p>
+<p>| $5 OTM | 0.30 | $2.50 | $107.50 | 35% |</p>
+<p>| $10 OTM | 0.15 | $1.20 | $111.20 | 20% |</p>
+<p>A useful rule: choose the long strike so that the breakeven is at or below the target price. If you expect the stock to reach $107, the long strike plus the debit should be ≤ $107. In the example above, a $102 long strike with $2.50 debit gives a breakeven of $104.50, which is below the $107 target — there is a $2.50 buffer before the trade is at risk.</p>
+<p>If the breakeven is above the target price, the position needs the stock to overshoot the target to be profitable. This is a more aggressive trade and usually requires a stronger directional view.</p>
+<h2>The Short Call Strike</h2>
+<p>The short call strike determines the max profit and the cost reduction. A strike closer to the long strike produces a smaller credit, a higher max profit, and a higher breakeven. A strike further from the long strike produces a larger credit, a lower max profit, and a lower breakeven.</p>
+<p>| Short Strike | Distance from Long | Credit | Max Profit | Breakeven |</p>
+<p>|---|---|---|---|---|</p>
+<p>| $5 above long | Tight | $0.30 | $4.70 | $104.50 |</p>
+<p>| $10 above long | Standard | $1.00 | $7.50 | $104.50 |</p>
+<p>| $15 above long | Wide | $1.80 | $10.30 | $104.50 |</p>
+<p>| $20 above long | Very wide | $2.50 | $13.50 | $104.50 |</p>
+<p>The short strike should be placed above the target price. If the target is $107, a short strike at $110 gives the position a $3 buffer above the target before the max profit is capped. A short strike at $115 gives the position more upside participation but reduces the credit collected and raises the breakeven risk.</p>
+<p>A useful rule: place the short strike at or above the target price plus 1.0 standard deviation. This gives the position room to overshoot the target before the max profit cap kicks in.</p>
+<h2>The Spread Width</h2>
+<p>The spread width is the difference between the long and short strikes. The width determines:</p>
+<ul>
+  <li><strong>Max profit</strong> = spread width minus debit</li>
+  <li><strong>Debit as % of width</strong> = the cost efficiency of the trade</li>
+  <li><strong>Capital at risk per contract</strong> = debit × 100 (for stocks) or debit × $100 (for SPX)</li>
+</ul>
+<p>Standard spread widths:</p>
+<p>| Spread Width | Typical Use | Cost Efficiency |</p>
+<p>|---|---|---|</p>
+<p>| $2 - $5 | Tight spread, high-probability trade | 30-50% of width as debit |</p>
+<p>| $5 - $10 | Standard spread, balanced | 25-40% of width as debit |</p>
+<p>| $10 - $20 | Wide spread, larger upside | 20-35% of width as debit |</p>
+<p>| $20+ | Very wide, used for long-dated positions | 15-30% of width as debit |</p>
+<p>The cost efficiency (debit as % of width) is higher in tight spreads. A $5-wide spread with a $2.00 debit is 40% cost-efficient; a $15-wide spread with a $2.00 debit is 13% cost-efficient. The tighter spread has more profit per dollar of width at risk, but the max profit in absolute terms is smaller.</p>
+<h2>Target Move vs Expected Move</h2>
+<p>The strike selection should be driven by the target move (where the trader expects the stock to be at expiration) and the expected move (the standard deviation of the stock's price over the holding period).</p>
+<p><strong>Target move:</strong> The trader's specific view. Based on technical analysis, fundamental catalyst, or market view. For example: "I expect AAPL to reach $220 in 30 days based on the upcoming earnings catalyst."</p>
+<p><strong>Expected move:</strong> The market's view of the stock's volatility. Calculated as the underlying's straddle price (the ATM call + ATM put) divided by the underlying's price. For AAPL at $200 with a 30-day straddle price of $12, the expected move is 6% (or $12 over 30 days).</p>
+<p>A useful framework: choose strikes so that the breakeven is between the current price and the target price, and the max profit (top of the spread) is at or above the target price. The breakeven's probability of being reached by expiration should be higher than the historical base rate of the trader's other trades.</p>
+<h2>Strike Selection Examples</h2>
+<p><strong>Example 1: Earnings trade on a high-IV stock</strong></p>
+<p>Stock at $150, earnings in 14 days, IV rank 75%, expected move $10. The trader expects the stock to move $8-10 in either direction.</p>
+<p>Long strike: $155 (just above current price, low delta, low cost)</p>
+<p>Short strike: $160 (above the target move, gives $5 of upside beyond the long strike)</p>
+<p>Net debit: $1.20</p>
+<p>Breakeven: $156.20</p>
+<p>Max profit: $3.80</p>
+<p>Max loss: $1.20</p>
+<p>This is a low-cost, high-leverage trade. The breakeven requires the stock to move $6.20, which is within the expected move of $10. The max profit is $3.80 if the stock reaches $160 at expiration.</p>
+<p><strong>Example 2: Swing trade on a stable stock</strong></p>
+<p>Stock at $100, no catalyst, 45 DTE, IV rank 40%, expected move $7. The trader expects a moderate bullish move based on technical breakout.</p>
+<p>Long strike: $102 (slightly OTM, higher probability of being reached)</p>
+<p>Short strike: $110 (well above the target, gives $8 of upside)</p>
+<p>Net debit: $2.50</p>
+<p>Breakeven: $104.50</p>
+<p>Max profit: $5.50</p>
+<p>Max loss: $2.50</p>
+<p>This is a moderate-cost, moderate-probability trade. The breakeven is $4.50 above the current price, and the max profit is $5.50 if the stock reaches $110.</p>
+<h2>The Decision Rule</h2>
+<p>A practical algorithm for strike selection:</p>
+<ol>
+  <li><strong>Set the target price.</strong> This is the trader's specific view of where the stock will be at expiration.</li>
+  <li><strong>Set the breakeven below the target.</strong> Choose the long strike so that long strike + debit ≤ target price.</li>
+  <li><strong>Set the short strike above the target.</strong> Choose the short strike so that short strike ≥ target price + 1 standard deviation of the underlying's daily move.</li>
+  <li><strong>Check the debit as % of width.</strong> The debit should be 20-40% of the width for a standard trade. Higher than 40% means the long strike is too close to the short strike; lower than 20% means the long strike is too far from the short strike.</li>
+  <li><strong>Check the probability of profit.</strong> The breakeven should be within 1.0 standard deviation of the current price for a moderate-probability trade, or within 1.5 standard deviations for a low-probability, high-payoff trade.</li>
+</ol>
+<p>If any of these conditions is not met, adjust the strikes or the expiration until they are.</p>
+<h2>Common Mistakes</h2>
+<p><strong>Buying the long strike too far OTM.</strong> A $5 OTM long call costs less but the breakeven is further from the current price. The trade has a lower probability of profit and a higher required move. The lower cost is not a benefit if the position is unlikely to be profitable.</p>
+<p><strong>Selling the short strike too close to the long strike.</strong> A $2-wide spread has a very low max profit. The position is essentially a long call with slightly less cost, and the limited upside is rarely worth the trade-off.</p>
+<p><strong>Ignoring the IV environment.</strong> In high-IV environments, OTM strikes are expensive. The debit as % of width can exceed 50%, which makes the trade inefficient. In low-IV environments, the same strikes are cheap, and the trade is more cost-efficient.</p>
+<p><strong>Failing to adjust for time decay.</strong> A bull call spread with 60 DTE has more time value than the same spread with 14 DTE. The breakeven for the 14 DTE spread is higher than the breakeven for the 60 DTE spread, because the long call has less extrinsic value at entry. Strike selection should be paired with DTE selection.</p>
+<h2>Modeling the Position</h2>
+<p>We use [OptionsStrat](https://optionstrat.com/ventureprise) to model the bull call spread before entry. The platform shows the payoff diagram, breakeven, probability of profit, and Greeks for any combination of long strike, short strike, and expiration, which makes the strike selection decision visible at a glance.</p>
+<p><strong>Parent:</strong> [Bull Call Spreads: Complete Strategy Guide for Moderate Bullish Moves](/articles/bull-call-spreads-defined-risk/)</p>
+<p><strong>Next:</strong> [Bull Call Spread vs Naked Calls: IV Comparison, Breakeven, and Why Spreads Win in High IV](/articles/bull-call-spread-vs-naked-calls/)</p>
+<p><em>This content is for informational purposes only. Options trading involves substantial risk of loss. Dependability Holdings LLC has no positions in the securities mentioned. Past performance is not indicative of future results.</em></p>
+
+    </div>
+
+
+    <div class="disclaimer">
+     <strong>Disclaimer:</strong> This research is for informational purposes only and does not constitute investment advice. Options trading involves substantial risk of loss. Dependability Holdings LLC has no positions in the securities mentioned. Past performance is not indicative of future results.
+    </div>
+
+
+<div class="share-bar">
+  <span class="share-label">Share</span>
+  <a class="share-btn share-x" href="#" target="_blank" rel="noopener" aria-label="Share on X">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+  </a>
+  <a class="share-btn share-facebook" href="#" target="_blank" rel="noopener" aria-label="Share on Facebook">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+  </a>
+  <a class="share-btn share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+  </a>
+  <button class="share-btn share-copy" aria-label="Copy link" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.querySelector('.copy-label').textContent='Copied!';setTimeout(()=>{this.querySelector('.copy-label').textContent='Copy'},2000)})">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+    <span class="copy-label">Copy</span>
+  </button>
+</div>
+
+
+<script>
+document.querySelectorAll('.share-x, .share-facebook, .share-linkedin').forEach(function(el) {
+  var url = encodeURIComponent(window.location.href);
+  var title = encodeURIComponent(document.title);
+  if (el.classList.contains('share-x')) el.href = 'https://x.com/intent/tweet?url=' + url + '&text=' + title;
+  if (el.classList.contains('share-facebook')) el.href = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
+  if (el.classList.contains('share-linkedin')) el.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + url;
+});
+</script>
+
+   </div>
+
+ </main>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+ <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+ <script src="/nav.js"></script>
+ <script src="/footer.js"></script>
+
+<div id="site-footer"></div>
+
+</body>
+</html>

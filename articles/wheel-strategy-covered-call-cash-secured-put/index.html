@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>The Wheel Strategy: Covered Calls and Cash-Secured Puts in Sequence | Dependability Holdings LLC</title>
+ <meta name="description" content="The wheel strategy — sell cash-secured put, get assigned, sell covered call, repeat. The full sequence, the cost basis tracking, the premium stacking, and the risk profile of running the wheel on a single stock.">
+ <link rel="stylesheet" href="/style.css">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <style>
+ .share-bar { display: flex; align-items: center; gap: 10px; margin: 40px 0 32px; padding: 16px 0; border-top: 1px solid #e8e4dd; border-bottom: 1px solid #e8e4dd; }
+ .share-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #999; margin-right: 4px; }
+ .share-btn { display: inline-flex; align-items: center; gap: 5px; padding: 7px 12px; border-radius: 4px; font-size: 12px; text-decoration: none; border: 1px solid #cc0000; background: transparent; cursor: pointer; font-family: inherit; color: #cc0000; transition: opacity 0.15s; }
+ .share-btn:hover { opacity: 0.7; }
+ .disclaimer { margin: 2.5rem 0; padding: 1rem 1.25rem; background: #f5f0e8; border-left: 4px solid #cc0000; font-size: 0.875rem; line-height: 1.6; color: #555; }
+ </style>
+<link rel="canonical" href="/articles/wheel-strategy-covered-call-cash-secured-put/"> <meta property="og:title" content="The Wheel Strategy: Covered Calls and Cash-Secured Puts in Sequence | Dependability Holdings LLC">
+ <meta property="og:description" content="The wheel strategy — sell cash-secured put, get assigned, sell covered call, repeat. The full sequence, the cost basis tracking, the premium stacking, and the risk profile of running the wheel on a single stock.">
+ <meta property="og:image" content="https://dependability.us/og-image.jpg">
+ <meta property="og:type" content="article">
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+
+   <div class="article-page">
+
+    <div class="article-header">
+     <div class="category-label">FORECASTS & OPTIONS STRATEGIES</div>
+     <h1>The Wheel Strategy: Covered Calls and Cash-Secured Puts in Sequence</h1>
+     <div class="article-meta">June 04, 2026 &nbsp;|&nbsp; Dependability Research Desk</div>
+    </div>
+    <div class="article-header-image">
+     <img src="" alt="The Wheel Strategy: Covered Calls and Cash-Secured Puts in Sequence" style="width:100%;display:block;">
+    </div>
+    <div class="article-body">
+
+<p>The wheel strategy is a systematic approach to generating income from a single stock by alternating between cash-secured puts and covered calls. The trader sells a put, gets assigned (or buys the shares if the put goes ITM), sells a covered call against the assigned shares, gets the shares called away (or buys back the call), and repeats. The strategy produces a continuous stream of premium income and a target cost basis on the stock.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<p>The wheel is not a single trade; it is a process. Each "cycle" of the wheel produces 1-2 premiums, and the cycles repeat as long as the trader is willing to hold the underlying stock.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="7590828986" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<p>This article covers the full wheel sequence, the cost basis tracking, the premium stacking, the assignment management, and the practical decision rule for running the wheel on a single stock.</p>
+<h2>The Wheel Sequence</h2>
+<p>The wheel strategy has three main phases:</p>
+<ol>
+  <li><strong>Phase 1: Sell a cash-secured put.</strong> The trader sells a put at a strike below the current price. The put is either expires worthless (premium is kept) or is assigned (trader buys the shares at the strike).</li>
+</ol>
+<ol>
+  <li><strong>Phase 2: Get assigned (or not).</strong> If the put expires worthless, the trader repeats Phase 1 with a new put. If the put is assigned, the trader moves to Phase 3.</li>
+</ol>
+<ol>
+  <li><strong>Phase 3: Sell a covered call.</strong> The trader sells a call at a strike above the current cost basis. The call is either expires worthless (premium is kept) or is assigned (trader sells the shares at the strike, ending the cycle).</li>
+</ol>
+<p>The wheel then repeats: the trader sells a new put at the original strike, and the cycle continues.</p>
+<h2>A Concrete Example</h2>
+<p>Stock XYZ at $100. Trader decides to run the wheel with a $95 put strike and a $105 call strike.</p>
+<p><strong>Cycle 1, Phase 1: Sell the $95 put</strong></p>
+<ul>
+  <li>Sell $95 put for $1.50 premium</li>
+  <li>Hold for 30 days</li>
+  <li>Outcome: Put expires worthless (stock stays above $95)</li>
+  <li>Net: +$1.50 premium</li>
+</ul>
+<p><strong>Cycle 1, Phase 2: Repeat Phase 1</strong></p>
+<ul>
+  <li>Sell $95 put for $1.50 premium (new expiration)</li>
+  <li>Hold for 30 days</li>
+  <li>Outcome: Put expires worthless</li>
+  <li>Net: +$1.50 premium (cumulative +$3.00)</li>
+</ul>
+<p><strong>Cycle 1, Phase 3: Get assigned</strong></p>
+<ul>
+  <li>Sell $95 put for $1.50 premium</li>
+  <li>Hold for 30 days</li>
+  <li>Outcome: Stock drops to $94, put is assigned</li>
+  <li>Trader buys 100 shares at $95 ($9,500), minus the $1.50 premium received</li>
+  <li>Effective cost basis: $93.50 per share</li>
+</ul>
+<p><strong>Cycle 2, Phase 1: Sell the $105 call</strong></p>
+<ul>
+  <li>Sell $105 call against the 100 shares for $2.00 premium</li>
+  <li>Hold for 30 days</li>
+  <li>Outcome: Stock rises to $106, call is assigned</li>
+  <li>Trader sells 100 shares at $105 ($10,500), keeps the $2.00 premium</li>
+  <li>Net profit on the stock: $105 - $93.50 = $11.50 per share = $1,150</li>
+</ul>
+<p><strong>Cycle 2, Phase 2: Return to Phase 1 of Cycle 1</strong></p>
+<ul>
+  <li>Sell $95 put for $1.50 premium</li>
+  <li>The wheel repeats</li>
+</ul>
+<p><strong>Total profit from Cycle 1 and 2:</strong></p>
+<ul>
+  <li>Put premiums: $4.50 (3 puts × $1.50)</li>
+  <li>Call premium: $2.00</li>
+  <li>Stock gain: $11.50</li>
+  <li>Total: $18.00 per share over 4 months</li>
+</ul>
+<p>This is a simplified example. Real wheel cycles may have different premium amounts, different assignment outcomes, and different holding periods. But the basic structure is the same.</p>
+<h2>The Cost Basis Tracking</h2>
+<p>The cost basis is the key metric for the wheel. It is the effective price the trader has paid for the shares, after accounting for all premiums received.</p>
+<p>For the example above:</p>
+<ul>
+  <li>Initial cost basis (if assigned at $95): $95</li>
+  <li>Premium received from puts (before assignment): $4.50</li>
+  <li>Premium received from calls (after assignment): $2.00</li>
+  <li>Effective cost basis: $95 - $4.50 - $2.00 = $88.50</li>
+</ul>
+<p>The trader's effective cost basis is $88.50 per share, which is $6.50 below the original strike of $95. The $6.50 discount is the cumulative premium collected during the wheel cycles.</p>
+<h2>The Premium Stacking</h2>
+<p>The wheel strategy stacks premiums from multiple cycles. Each cycle produces 1-2 premiums (the put premium and, if assigned, the call premium). Over many cycles, the cumulative premium can produce a meaningful discount to the stock price.</p>
+<p>| Cycles Completed | Put Premiums | Call Premiums | Total Premium | Effective Cost Basis |</p>
+<p>|---|---|---|---|---|</p>
+<p>| 0 | $0 | $0 | $0 | $95.00 |</p>
+<p>| 1 (put only) | $1.50 | $0 | $1.50 | $93.50 |</p>
+<p>| 2 (puts only) | $3.00 | $0 | $3.00 | $92.00 |</p>
+<p>| 3 (puts, then assigned + call) | $4.50 | $2.00 | $6.50 | $88.50 |</p>
+<p>| 4 (puts, call, then new puts) | $6.00 | $2.00 | $8.00 | $87.00 |</p>
+<p>| 6 (mixed cycles) | $9.00 | $4.00 | $13.00 | $82.00 |</p>
+<p>| 12 (1 year of cycles) | $18.00 | $8.00 | $26.00 | $69.00 |</p>
+<p>The cumulative premium grows with each cycle. After 12 cycles (roughly a year of monthly puts and calls), the effective cost basis is $26 below the original strike. This is the power of the wheel: the repeated premium collection produces a meaningful discount to the stock price.</p>
+<h2>The Strike Selection</h2>
+<p>The strike selection for the wheel is critical. The standard approach:</p>
+<ul>
+  <li><strong>Put strike:</strong> 3-10% below the current price. The put is OTM and is unlikely to be assigned unless the stock drops significantly.</li>
+  <li><strong>Call strike:</strong> 3-10% above the cost basis (not the current price). The call is OTM relative to the cost basis, which means the trader is selling at a profit.</li>
+</ul>
+<p>| Strike Selection | Put Premium | Call Premium | Assignment Probability (per cycle) |</p>
+<p>|---|---|---|---|</p>
+<p>| 3% OTM (tight) | $0.80 | $0.80 | 25-35% |</p>
+<p>| 5% OTM (standard) | $1.50 | $1.50 | 15-20% |</p>
+<p>| 10% OTM (loose) | $0.50 | $0.50 | 5-10% |</p>
+<p>The 5% OTM strikes are the standard for the wheel. They balance premium collection against assignment probability. The 3% OTM strikes collect more premium but have a higher assignment probability. The 10% OTM strikes collect less premium but are rarely assigned.</p>
+<h2>The Assignment Management</h2>
+<p>The wheel requires the trader to manage the assignment. The two types of assignment:</p>
+<p><strong>Put assignment:</strong> The trader is assigned 100 shares of the stock at the strike. The trader must have the cash available (cash-secured put) or the margin (naked put). The trader now owns the shares and can sell a covered call.</p>
+<p><strong>Call assignment:</strong> The trader's covered call is assigned, and the trader sells the 100 shares at the strike. The trader no longer owns the shares and can sell a new cash-secured put.</p>
+<p>The assignment is a feature of the wheel, not a bug. The trader who runs the wheel is willing to be assigned, because the assignment enables the next phase of the wheel (covered call or new put).</p>
+<h2>The Cost Basis at Assignment</h2>
+<p>When the put is assigned, the trader's cost basis is the strike minus the premiums received. The trader then sells a covered call at a strike above the cost basis.</p>
+<p>For a $95 strike put assigned, with $3.00 in cumulative premiums:</p>
+<ul>
+  <li>Cost basis: $95 - $3.00 = $92.00</li>
+  <li>Covered call strike (5% above cost basis): $92.00 × 1.05 = $96.60</li>
+  <li>Covered call premium: $1.50 (typical for 5% OTM call)</li>
+</ul>
+<p>The covered call at $96.60 is above the cost basis, so the trader is selling at a profit if assigned. The premium is collected in addition to the profit.</p>
+<h2>The Wheel on a Declining Stock</h2>
+<p>The wheel performs poorly on a stock that is in a sustained decline. The trader sells a put, gets assigned, sells a covered call, the call expires worthless (stock doesn't recover), the trader sells another put, gets assigned at a lower strike, and so on. The cost basis drops, but the stock is also dropping. The trader ends up with a large position in a declining stock.</p>
+<p>The wheel is appropriate for stocks that are:</p>
+<ul>
+  <li>Range-bound (no clear trend)</li>
+  <li>Slowly appreciating (the puts rarely get assigned, the calls occasionally get assigned)</li>
+  <li>High IV (premiums are meaningful)</li>
+</ul>
+<p>The wheel is not appropriate for stocks that are in a sustained downtrend. The trader who runs the wheel on a declining stock will accumulate shares at higher and higher cost bases, while the stock continues to drop.</p>
+<h2>The Wheel on an Appreciating Stock</h2>
+<p>The wheel performs well on a stock that is slowly appreciating. The trader sells a put, the put expires worthless (stock stays above strike), the trader sells another put, and so on. The cumulative premium is collected without any assignment. Eventually, the stock may rise enough to make a covered call attractive, and the trader can switch to selling calls.</p>
+<p>The appreciating-stock wheel is essentially a "premium collection" strategy with no assignment risk. The trader collects premium for as long as the stock stays above the strike.</p>
+<h2>The Wheel on a Choppy Stock</h2>
+<p>The wheel performs well on a stock that is choppy (moving sideways with periodic spikes). The trader sells a put, gets assigned on a down move, sells a covered call, gets the shares called away on an up move, and repeats. Each cycle produces 1-2 premiums, and the trader participates in the stock's range.</p>
+<p>The choppy-stock wheel is the ideal environment. The trader is exposed to the full range of the stock and collects premium at both ends.</p>
+<h2>The Risk Profile</h2>
+<p>The wheel has a similar risk profile to owning the stock. The trader is exposed to:</p>
+<ul>
+  <li><strong>Downside risk:</strong> The stock can drop, and the trader's cost basis (while discounted by premiums) is still above zero. A 50% drop in the stock is a 50% loss on the position.</li>
+  <li><strong>Opportunity cost:</strong> The trader is restricted from selling the stock at a higher price (the covered call caps the upside).</li>
+  <li><strong>Capital intensity:</strong> The cash-secured put requires a large cash reserve, and the covered call requires holding 100 shares per contract.</li>
+</ul>
+<p>The wheel is not a low-risk strategy. It is a strategy that generates income while accepting the risk of owning the stock. The trader who is not comfortable owning the stock at the strike should not run the wheel on that stock.</p>
+<h2>The Tax Implications</h2>
+<p>The wheel has specific tax implications. Each put premium is a short-term capital gain (if the put is held for less than a year) or a long-term capital gain (if held for more than a year). Each call premium is also a capital gain. The stock sale at the call strike is a capital gain or loss based on the cost basis.</p>
+<p>The wheel trader should track:</p>
+<ul>
+  <li>Each put premium (date, amount)</li>
+  <li>Each call premium (date, amount)</li>
+  <li>Each stock purchase (date, price, cost basis)</li>
+  <li>Each stock sale (date, price, gain/loss)</li>
+</ul>
+<p>The accounting can be complex, especially for traders running the wheel on multiple stocks. Most brokers provide the necessary tracking, but the trader should review the tax implications with a tax professional.</p>
+<h2>The Decision Rule</h2>
+<p>A practical algorithm for running the wheel:</p>
+<ol>
+  <li><strong>Choose a stock that is appropriate for the wheel:</strong> range-bound, slowly appreciating, or high IV.</li>
+  <li><strong>Set the put strike and the call strike</strong> (typically 5% OTM for both).</li>
+  <li><strong>Sell the put</strong> with 30-45 DTE.</li>
+  <li><strong>If the put expires worthless:</strong> sell a new put at the same strike.</li>
+  <li><strong>If the put is assigned:</strong> sell a covered call at the call strike (5% above cost basis).</li>
+  <li><strong>If the call expires worthless:</strong> sell a new covered call at the same strike.</li>
+  <li><strong>If the call is assigned:</strong> return to step 3 (sell a new put).</li>
+  <li><strong>Track the cost basis</strong> and the cumulative premium at each step.</li>
+</ol>
+<p>The wheel is a process, not a single trade. The trader who follows the process consistently will produce a steady stream of premium income and a discounted cost basis on the stock.</p>
+<h2>The Common Mistakes</h2>
+<p><strong>Running the wheel on a stock in a sustained downtrend.</strong> The trader accumulates shares at higher cost bases while the stock drops. The "discount" from premiums is not enough to offset the decline.</p>
+<p><strong>Selling calls too close to the cost basis.</strong> The trader sells a covered call at a strike that is below the current price. The call is likely to be assigned, and the trader sells the shares at a loss. The call strike should be above the cost basis (including premiums).</p>
+<p><strong>Failing to track the cost basis.</strong> The trader runs the wheel for several cycles without tracking the cumulative premium. The cost basis is not updated, and the trader does not know when the position is profitable.</p>
+<p><strong>Holding the shares through a major decline.</strong> The trader is assigned on a put, sells a covered call, the call expires worthless, and the stock continues to drop. The trader should consider closing the position if the stock drops more than 20-30% from the cost basis.</p>
+<h2>Modeling the Wheel</h2>
+<p>We use [OptionsStrat](https://optionstrat.com/ventureprise) to model the wheel cycles on a specific stock. The platform shows the premium for each put and call, the assignment probability, and the projected cost basis over multiple cycles, which makes the long-term wheel performance visible at a glance.</p>
+<p><strong>Parent:</strong> [Covered Calls and Cash-Secured Puts: Complete Income Strategy Guide](/articles/covered-calls-cash-secured-puts-income/)</p>
+<p><strong>Previous:</strong> [Cash-Secured Put Roll Down Guide: Rolling When the Stock Drops Below Your Strike](/articles/cash-secured-put-roll-down-guide/)</p>
+<p><strong>Next:</strong> [Covered Call vs Cash-Secured Put Comparison: When to Use Each](/articles/covered-call-vs-cash-secured-put-comparison/)</p>
+<p><em>This content is for informational purposes only. Options trading involves substantial risk of loss. Dependability Holdings LLC has no positions in the securities mentioned. Past performance is not indicative of future results.</em></p>
+
+    </div>
+
+
+    <div class="disclaimer">
+     <strong>Disclaimer:</strong> This research is for informational purposes only and does not constitute investment advice. Options trading involves substantial risk of loss. Dependability Holdings LLC has no positions in the securities mentioned. Past performance is not indicative of future results.
+    </div>
+
+
+<div class="share-bar">
+  <span class="share-label">Share</span>
+  <a class="share-btn share-x" href="#" target="_blank" rel="noopener" aria-label="Share on X">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+  </a>
+  <a class="share-btn share-facebook" href="#" target="_blank" rel="noopener" aria-label="Share on Facebook">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+  </a>
+  <a class="share-btn share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+  </a>
+  <button class="share-btn share-copy" aria-label="Copy link" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.querySelector('.copy-label').textContent='Copied!';setTimeout(()=>{this.querySelector('.copy-label').textContent='Copy'},2000)})">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+    <span class="copy-label">Copy</span>
+  </button>
+</div>
+
+
+<script>
+document.querySelectorAll('.share-x, .share-facebook, .share-linkedin').forEach(function(el) {
+  var url = encodeURIComponent(window.location.href);
+  var title = encodeURIComponent(document.title);
+  if (el.classList.contains('share-x')) el.href = 'https://x.com/intent/tweet?url=' + url + '&text=' + title;
+  if (el.classList.contains('share-facebook')) el.href = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
+  if (el.classList.contains('share-linkedin')) el.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + url;
+});
+</script>
+
+   </div>
+
+ </main>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+ <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+ <script src="/nav.js"></script>
+ <script src="/footer.js"></script>
+
+<div id="site-footer"></div>
+
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Calendar Spread Greeks: Theta, Vega, and Delta Time Decay Shifts | Dependability Holdings LLC</title>
+ <meta name="description" content="Calendar spread Greeks explained — theta shifts from negative to positive as the near-term option decays faster, vega is positive, and delta is near zero. How the Greeks evolve from entry through near-term expiration.">
+ <link rel="stylesheet" href="/style.css">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <style>
+ .share-bar { display: flex; align-items: center; gap: 10px; margin: 40px 0 32px; padding: 16px 0; border-top: 1px solid #e8e4dd; border-bottom: 1px solid #e8e4dd; }
+ .share-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #999; margin-right: 4px; }
+ .share-btn { display: inline-flex; align-items: center; gap: 5px; padding: 7px 12px; border-radius: 4px; font-size: 12px; text-decoration: none; border: 1px solid #cc0000; background: transparent; cursor: pointer; font-family: inherit; color: #cc0000; transition: opacity 0.15s; }
+ .share-btn:hover { opacity: 0.7; }
+ .disclaimer { margin: 2.5rem 0; padding: 1rem 1.25rem; background: #f5f0e8; border-left: 4px solid #cc0000; font-size: 0.875rem; line-height: 1.6; color: #555; }
+ </style>
+<link rel="canonical" href="/articles/calendar-spread-greeks-time-decay/"> <meta property="og:title" content="Calendar Spread Greeks: Theta, Vega, and Delta Time Decay Shifts | Dependability Holdings LLC">
+ <meta property="og:description" content="Calendar spread Greeks explained — theta shifts from negative to positive as the near-term option decays faster, vega is positive, and delta is near zero. How the Greeks evolve from entry through near-term expiration.">
+ <meta property="og:image" content="https://dependability.us/og-image.jpg">
+ <meta property="og:type" content="article">
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+
+   <div class="article-page">
+
+    <div class="article-header">
+     <div class="category-label">FORECASTS & OPTIONS STRATEGIES</div>
+     <h1>Calendar Spread Greeks: Theta, Vega, and Delta Time Decay Shifts</h1>
+     <div class="article-meta">June 04, 2026 &nbsp;|&nbsp; Dependability Research Desk</div>
+    </div>
+    <div class="article-header-image">
+     <img src="" alt="Calendar Spread Greeks: Theta, Vega, and Delta Time Decay Shifts" style="width:100%;display:block;">
+    </div>
+    <div class="article-body">
+
+<p>A calendar spread is a complex position with Greeks that shift significantly across its lifecycle. At entry, theta is negative (the position loses value to time decay). As the near-term option's time value collapses, theta can become positive (the position gains value as the longer-dated option retains more value). Vega is positive throughout, and delta is near zero (the position is directionally neutral). Understanding these shifts is what allows the trader to manage the position through its lifecycle and avoid the common errors that come from misreading the Greeks.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<p>This article covers the Greeks for a standard calendar spread at each stage of the trade, from entry to near-term expiration.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="7590828986" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<h2>The Greeks at a Glance</h2>
+<p><strong>Delta:</strong> The change in spread value for a $1 change in the underlying. For a calendar spread, delta is near zero at entry (the position is delta-neutral). Delta can become positive or negative as the underlying moves and the time decay differential shifts.</p>
+<p><strong>Theta:</strong> The change in spread value for a one-day decrease in time to expiration. For a calendar spread, theta can be negative or positive depending on the time to expiration of the near-term option. The position often starts with negative theta and shifts to positive theta as the near-term option's time value collapses.</p>
+<p><strong>Vega:</strong> The change in spread value for a 1-point change in implied volatility. For a calendar spread, vega is positive (the position benefits from a rise in IV). The vega exposure is concentrated in the longer-dated option.</p>
+<p><strong>Gamma:</strong> The change in delta for a $1 change in the underlying. For a calendar spread, gamma is positive but small. The position is not as sensitive to small moves as a single option would be.</p>
+<h2>Greeks at Entry (30 Days to Event)</h2>
+<p>For a calendar spread with the strike at $150, the near-term option at 14 DTE, and the longer-dated option at 45 DTE, on a stock at $150 with 60% IV:</p>
+<p>| Greek | Per Spread | Notes |</p>
+<p>|---|---|---|</p>
+<p>| Delta | +0.05 | Near zero; position is directionally neutral |</p>
+<p>| Theta | -0.05 per day | Negative; position loses $5 per day to time decay |</p>
+<p>| Vega | +0.10 per IV point | Positive; position benefits from a 1-point IV rise |</p>
+<p>| Gamma | +0.005 per $1 move | Low; delta is not very sensitive |</p>
+<p>At entry, the calendar spread has negative theta. The position is losing $5 per day to time decay, and this loss is dominated by the faster time decay of the near-term option. The trader who enters the position 30 days before the event is "paying" for the IV crush that will come later.</p>
+<h2>Greeks at 14 Days to Event (Event in 14 Days)</h2>
+<p>Two weeks before the event, the Greeks have shifted:</p>
+<p>| Greek | Per Spread | Change from Entry |</p>
+<p>|---|---|---|</p>
+<p>| Delta | +0.08 | Slightly higher; some directional bias from time decay |</p>
+<p>| Theta | -0.03 per day | Less negative; time decay is slowing on the near-term option |</p>
+<p>| Vega | +0.12 per IV point | Higher; IV is rising into the event |</p>
+<p>| Gamma | +0.008 per $1 move | Slightly higher |</p>
+<p>The theta is less negative because the near-term option is approaching its event, and its time value is starting to compress. The vega is higher because IV is rising in anticipation of the event. The position is becoming more sensitive to IV changes and less sensitive to time decay.</p>
+<h2>Greeks on the Event Day</h2>
+<p>On the event day, the Greeks shift dramatically:</p>
+<p>| Greek | Per Spread | Notes |</p>
+<p>|---|---|---|</p>
+<p>| Delta | -0.10 to +0.10 (depending on the move) | Wide range; delta is volatile on the event day |</p>
+<p>| Theta | -0.01 to +0.05 per day | Near zero or positive; the near-term option is mostly intrinsic |</p>
+<p>| Vega | +0.05 to +0.15 per IV point | High; IV is collapsing rapidly |</p>
+<p>| Gamma | +0.020 to +0.040 per $1 move | High; the position is sensitive to small moves |</p>
+<p>The vega is high because the IV crush is happening. The position's value is moving in response to the IV collapse, and a 10-point IV drop in the near-term option can move the position by $1.00-$1.50 per spread. The trader who is long vega benefits from this move.</p>
+<p>The theta can be positive if the near-term option's time value has collapsed faster than the longer-dated option's time value. In this case, the position is gaining time value daily even though both options are losing time value.</p>
+<h2>Greeks at T+1 (1 Day After Event)</h2>
+<p>The day after the event, the IV crush is partially complete:</p>
+<p>| Greek | Per Spread | Notes |</p>
+<p>|---|---|---|</p>
+<p>| Delta | -0.15 to +0.15 (depending on the move) | Wide range; position is sensitive to follow-through |</p>
+<p>| Theta | +0.02 to +0.08 per day | Positive; the near-term option's time value is collapsing |</p>
+<p>| Vega | +0.05 to +0.10 per IV point | Lower than event day; IV crush is slowing |</p>
+<p>| Gamma | +0.020 to +0.030 per $1 move | Still elevated |</p>
+<p>The theta is positive, which means the position is gaining value from time decay. This is the "sweet spot" of the calendar trade — the near-term option is rapidly losing time value, and the longer-dated option is retaining more value. The position is gaining $2-$8 per day from the time decay differential.</p>
+<h2>Greeks at T+3 (3 Days After Event)</h2>
+<p>The IV crush is essentially complete:</p>
+<p>| Greek | Per Spread | Notes |</p>
+<p>|---|---|---|</p>
+<p>| Delta | -0.20 to +0.20 (depending on the move) | Wide range; position is exposed to the underlying's move |</p>
+<p>| Theta | +0.01 to +0.03 per day | Smaller; the differential is shrinking as both options lose value |</p>
+<p>| Vega | +0.02 to +0.05 per IV point | Low; IV is stable |</p>
+<p>| Gamma | +0.015 to +0.025 per $1 move | Moderate; position is still sensitive |</p>
+<p>The theta is still positive but smaller. The time decay differential is shrinking as the near-term option approaches expiration. The trader should close the position around T+2 to T+3 to capture the remaining theta and avoid the directional risk that builds up after the event.</p>
+<h2>Theta Sign Flip: The Key Insight</h2>
+<p>The most important Greek dynamic in a calendar spread is the theta sign flip. The position enters with negative theta (the trader is paying for the IV crush that will come later) and shifts to positive theta after the event (the trader is now collecting the time decay differential).</p>
+<p>| Stage | Theta Sign | Interpretation |</p>
+<p>|---|---|---|</p>
+<p>| Entry to T-1 | Negative | Trader is paying for the IV crush |</p>
+<p>| T-1 to T+0 | Near zero | Transition; IV is peaking |</p>
+<p>| T+0 to T+1 | Slightly positive | IV crush begins |</p>
+<p>| T+1 to T+2 | Strongly positive | Peak theta; time decay differential is largest |</p>
+<p>| T+2 to T+3 | Positive but declining | Differential is shrinking |</p>
+<p>| T+3 to near-term expiration | Near zero or negative | Both options are losing value similarly |</p>
+<p>The trader who understands this dynamic can manage the position through the theta sign flip. The position is "working" when theta is positive, and it is "carrying cost" when theta is negative. The flip happens around the event day.</p>
+<h2>Vega Sign and Magnitude</h2>
+<p>The calendar spread is long vega throughout its lifecycle. The position benefits from a rise in IV and loses value from a decline. The vega magnitude changes:</p>
+<p>| Stage | Vega | IV Sensitivity |</p>
+<p>|---|---|---|</p>
+<p>| Entry to T-7 | +0.10 to +0.15 | High; IV is rising into the event |</p>
+<p>| T-7 to T+0 | +0.15 to +0.20 | Peak; IV is at its highest |</p>
+<p>| T+0 to T+2 | +0.10 to +0.15 | Declining; IV crush is in progress |</p>
+<p>| T+2 to T+3 | +0.05 to +0.10 | Lower; IV crush is mostly complete |</p>
+<p>| T+3 to near-term expiration | +0.02 to +0.05 | Low; IV is stable |</p>
+<p>The peak vega is around the event day. The position is most sensitive to IV changes when IV is changing the most. The trader who closes the position on T+2 captures the vega benefit before it declines.</p>
+<h2>Delta Profile Around the Event</h2>
+<p>The delta of a calendar spread is near zero at entry but can become meaningful if the underlying moves sharply. The position's delta depends on whether the underlying is above or below the strike at any point.</p>
+<p>| Underlying vs Strike | Delta (per spread) | Interpretation |</p>
+<p>|---|---|---|</p>
+<p>| Well below strike | -0.20 | Position is short delta; benefits from a fall |</p>
+<p>| At strike | +0.00 | Position is delta-neutral |</p>
+<p>| Well above strike | +0.20 | Position is long delta; benefits from a rise |</p>
+<p>The delta is most sensitive around the strike. The trader who has a directional view can shift the strike (to OTM for a directional bias) or use a different structure (debit spread for a strong directional view).</p>
+<h2>Gamma Profile</h2>
+<p>Gamma is positive but small for a calendar spread. The position is not as gamma-sensitive as a single option or a debit spread. The gamma is concentrated near the strike, but the magnitude is lower than for a long option.</p>
+<p>| Underlying vs Strike | Gamma (per spread) | Delta Sensitivity |</p>
+<p>|---|---|---|</p>
+<p>| Well below strike | +0.005 | Low |</p>
+<p>| Near strike | +0.020 | Moderate |</p>
+<p>| Well above strike | +0.005 | Low |</p>
+<p>The position's gamma is meaningful only near the strike. The trader who expects the underlying to stay near the strike should expect moderate gamma exposure; the trader who expects a large move should expect the position to behave more like a directional trade.</p>
+<h2>The Greeks at Near-Term Expiration</h2>
+<p>On the day of the near-term option's expiration, the position's profile has shifted significantly:</p>
+<p>| Greek | Per Spread | Notes |</p>
+<p>|---|---|---|</p>
+<p>| Delta | -0.30 to +0.30 (depending on the move) | Wide range; position is exposed to the move |</p>
+<p>| Theta | Near zero | Both options have similar time decay |</p>
+<p>| Vega | +0.05 to +0.10 | Moderate; the longer-dated option retains vega |</p>
+<p>| Gamma | +0.025 | High; position is sensitive to small moves |</p>
+<p>The position is essentially a long position in the longer-dated option, with the near-term option expiring. The trader who has not closed the position by near-term expiration should either close it or be prepared to hold a long option position for the remaining time.</p>
+<h2>The Decision Framework</h2>
+<p>The Greeks tell the story of the position:</p>
+<ul>
+  <li><strong>At entry:</strong> Negative theta, positive vega, near-zero delta. Position is "carrying cost" with IV crush potential.</li>
+  <li><strong>At T-1:</strong> Theta is near zero, vega is peak. Position is at maximum IV sensitivity.</li>
+  <li><strong>At T+0 to T+1:</strong> Theta flips positive, vega is high. Position is starting to profit from the time decay differential.</li>
+  <li><strong>At T+1 to T+2:</strong> Theta is peak, vega is declining. Position is in the "sweet spot" of the trade.</li>
+  <li><strong>At T+2 to T+3:</strong> Theta is declining, position should be closed. The remaining profit potential is small.</li>
+  <li><strong>At near-term expiration:</strong> Position is essentially a long option. Should have been closed earlier.</li>
+</ul>
+<p>The trader who follows this framework closes the position at T+2 to T+3, capturing the peak theta and avoiding the directional risk.</p>
+<h2>Visualizing the Greeks</h2>
+<p>We use [OptionsStrat](https://optionstrat.com/ventureprise) to display the Greeks for the calendar spread at each DTE. The platform shows delta, theta, vega, and gamma for the full position at any DTE, which makes the lifecycle profile visible at a glance.</p>
+<p><strong>Parent:</strong> [Calendar Spreads: Profiting from IV Crush Around Known Events](/articles/calendar-spreads-earnings-iv-crush/)</p>
+<p><strong>Previous:</strong> [Calendar Spread Exit Timing: Close 1-3 Days Post-Event, IV Crush Completion Rules](/articles/calendar-spread-exit-timing/)</p>
+<p><strong>Next:</strong> [Calendar Spread vs Long Straddle: Cost Comparison, IV Crush Advantage, and Directional Bias](/articles/calendar-spread-vs-long-straddle/)</p>
+<p><em>This content is for informational purposes only. Options trading involves substantial risk of loss. Dependability Holdings LLC has no positions in the securities mentioned. Past performance is not indicative of future results.</em></p>
+
+    </div>
+
+
+    <div class="disclaimer">
+     <strong>Disclaimer:</strong> This research is for informational purposes only and does not constitute investment advice. Options trading involves substantial risk of loss. Dependability Holdings LLC has no positions in the securities mentioned. Past performance is not indicative of future results.
+    </div>
+
+
+<div class="share-bar">
+  <span class="share-label">Share</span>
+  <a class="share-btn share-x" href="#" target="_blank" rel="noopener" aria-label="Share on X">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+  </a>
+  <a class="share-btn share-facebook" href="#" target="_blank" rel="noopener" aria-label="Share on Facebook">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+  </a>
+  <a class="share-btn share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+  </a>
+  <button class="share-btn share-copy" aria-label="Copy link" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.querySelector('.copy-label').textContent='Copied!';setTimeout(()=>{this.querySelector('.copy-label').textContent='Copy'},2000)})">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+    <span class="copy-label">Copy</span>
+  </button>
+</div>
+
+
+<script>
+document.querySelectorAll('.share-x, .share-facebook, .share-linkedin').forEach(function(el) {
+  var url = encodeURIComponent(window.location.href);
+  var title = encodeURIComponent(document.title);
+  if (el.classList.contains('share-x')) el.href = 'https://x.com/intent/tweet?url=' + url + '&text=' + title;
+  if (el.classList.contains('share-facebook')) el.href = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
+  if (el.classList.contains('share-linkedin')) el.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + url;
+});
+</script>
+
+   </div>
+
+ </main>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+ <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+ <script src="/nav.js"></script>
+ <script src="/footer.js"></script>
+
+<div id="site-footer"></div>
+
+</body>
+</html>

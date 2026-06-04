@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Covered Call Roll Up and Out Guide: When the Stock Runs to Your Short Strike | Dependability Holdings LLC</title>
+ <meta name="description" content="Covered call roll-up and roll-out procedures — when to roll the short strike higher, when to roll forward in time, the cost, and the breakeven. The decision framework for managing a covered call as the stock approaches the strike.">
+ <link rel="stylesheet" href="/style.css">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <style>
+ .share-bar { display: flex; align-items: center; gap: 10px; margin: 40px 0 32px; padding: 16px 0; border-top: 1px solid #e8e4dd; border-bottom: 1px solid #e8e4dd; }
+ .share-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #999; margin-right: 4px; }
+ .share-btn { display: inline-flex; align-items: center; gap: 5px; padding: 7px 12px; border-radius: 4px; font-size: 12px; text-decoration: none; border: 1px solid #cc0000; background: transparent; cursor: pointer; font-family: inherit; color: #cc0000; transition: opacity 0.15s; }
+ .share-btn:hover { opacity: 0.7; }
+ .disclaimer { margin: 2.5rem 0; padding: 1rem 1.25rem; background: #f5f0e8; border-left: 4px solid #cc0000; font-size: 0.875rem; line-height: 1.6; color: #555; }
+ </style>
+<link rel="canonical" href="/articles/covered-call-roll-up-out-guide/"> <meta property="og:title" content="Covered Call Roll Up and Out Guide: When the Stock Runs to Your Short Strike | Dependability Holdings LLC">
+ <meta property="og:description" content="Covered call roll-up and roll-out procedures — when to roll the short strike higher, when to roll forward in time, the cost, and the breakeven. The decision framework for managing a covered call as the stock approaches the strike.">
+ <meta property="og:image" content="https://dependability.us/og-image.jpg">
+ <meta property="og:type" content="article">
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+
+   <div class="article-page">
+
+    <div class="article-header">
+     <div class="category-label">FORECASTS & OPTIONS STRATEGIES</div>
+     <h1>Covered Call Roll Up and Out Guide: When the Stock Runs to Your Short Strike</h1>
+     <div class="article-meta">June 04, 2026 &nbsp;|&nbsp; Dependability Research Desk</div>
+    </div>
+    <div class="article-header-image">
+     <img src="" alt="Covered Call Roll Up and Out Guide: When the Stock Runs to Your Short Strike" style="width:100%;display:block;">
+    </div>
+    <div class="article-body">
+
+<p>A covered call is a covered position that collects premium in exchange for capping the upside at the short strike. When the underlying stock rises and approaches the short strike, the covered call seller faces a decision: hold and let the shares be called away, close the call and keep the shares, or roll the call up and/or out to extend the position's upside.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<p>Rolling up means closing the current call and opening a new call at a higher strike. Rolling out means closing the current call and opening a new call at a later expiration. Rolling up and out means doing both at the same time.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="7590828986" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<p>This article covers the roll-up decision, the roll-out decision, the cost, and the practical decision rule for managing a covered call as the stock approaches the strike.</p>
+<h2>When to Roll Up</h2>
+<p>A roll-up is appropriate when:</p>
+<ol>
+  <li>The underlying has risen close to the short strike (typically within 2-3%).</li>
+  <li>The trader wants to keep the shares (rather than let them be called away).</li>
+  <li>The trader has a view that the stock will continue higher.</li>
+  <li>The cost of the roll-up is reasonable (typically less than 50% of the original premium).</li>
+</ol>
+<p>A roll-up is not appropriate when:</p>
+<ul>
+  <li>The underlying is below the short strike (the position is not threatened).</li>
+  <li>The trader is comfortable with the shares being called away (the original plan was to exit at the strike).</li>
+  <li>The cost of the roll-up exceeds 50% of the original premium.</li>
+  <li>The trader has a neutral or bearish view on the stock.</li>
+</ul>
+<h2>When to Roll Out</h2>
+<p>A roll-out (rolling forward in time) is appropriate when:</p>
+<ol>
+  <li>The underlying has not moved significantly (the position is not threatened by assignment).</li>
+  <li>The trader wants to collect additional premium over a longer time period.</li>
+  <li>The time decay in the current expiration is slowing (the trader wants to extend the theta capture window).</li>
+  <li>The cost of the roll-out is reasonable (typically a credit or small debit).</li>
+</ol>
+<p>A roll-out is not appropriate when:</p>
+<ul>
+  <li>The underlying has moved significantly against the position (the roll-out is too late).</li>
+  <li>The IV has declined sharply (the new call will collect less premium).</li>
+  <li>The trader wants to exit the position (closing is better than rolling).</li>
+</ul>
+<h2>The Roll-Up Mechanics</h2>
+<p>A roll-up involves closing the current call and opening a new call at a higher strike. The mechanics:</p>
+<ol>
+  <li><strong>Buy back the current call</strong> at the current market price. The cost is the call's current value (which includes intrinsic value if the call is ITM).</li>
+  <li><strong>Sell a new call</strong> at a higher strike (typically 1-2 strikes above the current short strike) for the same or later expiration.</li>
+  <li><strong>Net cost or credit</strong> is the difference between the buy-back cost and the new call's premium.</li>
+</ol>
+<p>For a covered call with a $100 short strike on a $98 stock:</p>
+<ul>
+  <li>Current call value: $2.00 (intrinsic $0 + time value $2.00, since the call is OTM but close)</li>
+  <li>New call at $105 strike: $0.50 (premium for the new call)</li>
+  <li>Net credit of roll-up: $0.50 - $2.00 = -$1.50 (debit)</li>
+</ul>
+<p>The roll-up costs $1.50 per contract. The new covered call has a short strike at $105, which gives the position more upside.</p>
+<h2>The Roll-Up Cost Considerations</h2>
+<p>The roll-up cost depends on the relationship between the current and new strikes. A roll-up to a strike 1 notch above the current strike costs less than a roll-up to a strike 3 notches above.</p>
+<p>| Current Strike | New Strike | Cost of Roll-Up (per contract) |</p>
+<p>|---|---|---|</p>
+<p>| $100 (ATM) | $102.5 | $0.30 - $0.50 |</p>
+<p>| $100 (ATM) | $105 | $0.80 - $1.20 |</p>
+<p>| $100 (ATM) | $110 | $2.00 - $2.80 |</p>
+<p>| $105 (5% OTM) | $110 | $0.50 - $0.80 |</p>
+<p>| $105 (5% OTM) | $115 | $1.50 - $2.20 |</p>
+<p>The roll-up cost is the difference in premium between the current and new strikes. A roll-up to a nearby strike (1-2 notches) costs less and is more common.</p>
+<h2>The Roll-Out Mechanics</h2>
+<p>A roll-out involves closing the current call and opening a new call at the same or different strike for a later expiration. The mechanics:</p>
+<ol>
+  <li><strong>Buy back the current call</strong> at the current market price.</li>
+  <li><strong>Sell a new call</strong> at the same or different strike for a later expiration (typically 30-45 days).</li>
+  <li><strong>Net credit</strong> is the difference between the buy-back cost and the new call's premium (the new call has more time value, so it typically produces a credit).</li>
+</ol>
+<p>For a covered call with a $100 short strike, 14 DTE remaining:</p>
+<ul>
+  <li>Current call value: $1.50 (mostly time value)</li>
+  <li>New call at $100 strike, 45 DTE: $3.00 (more time value)</li>
+  <li>Net credit of roll-out: $3.00 - $1.50 = $1.50 (credit)</li>
+</ul>
+<p>The roll-out produces a $1.50 credit per contract. The new covered call has more time to expiration and a higher short strike capacity.</p>
+<h2>The Roll-Up and Out Combination</h2>
+<p>The most common adjustment is the roll-up and out: close the current call, sell a new call at a higher strike AND a later expiration. The combination gives the position more upside and more time.</p>
+<p>For a covered call with a $100 short strike, 14 DTE remaining, on a $98 stock:</p>
+<ul>
+  <li>Current call value: $1.80</li>
+  <li>New call at $102.5 strike, 45 DTE: $1.00</li>
+  <li>Net cost of roll-up and out: $1.00 - $1.80 = -$0.80 (credit)</li>
+</ul>
+<p>The roll-up and out produces a $0.80 credit per contract. The new position has a higher short strike ($102.5) and more time (45 DTE). The cost is the lost time value from the current call.</p>
+<h2>The Breakeven Analysis</h2>
+<p>The roll-up changes the position's breakeven. The new breakeven is the original cost basis of the shares plus the net premium received (original premium minus the roll-up cost).</p>
+<p>For shares purchased at $100, with a $2.00 original call premium and a $0.80 roll-up cost:</p>
+<ul>
+  <li>Original effective cost basis: $100 - $2.00 = $98.00</li>
+  <li>New effective cost basis: $98.00 + $0.80 = $98.80</li>
+  <li>Breakeven for the position: $98.80</li>
+</ul>
+<p>If the stock is at $98, the position is at breakeven. If the stock is below $98.80, the position is at a loss. If the stock is above $98.80, the position is at a gain.</p>
+<p>The roll-up increases the breakeven (because the roll-up cost is added to the cost basis). The trade-off is the higher short strike, which gives the position more upside.</p>
+<h2>The Roll-Up Decision Rule</h2>
+<p>A practical algorithm for deciding whether to roll up:</p>
+<ol>
+  <li><strong>Is the underlying within 2-3% of the short strike?</strong> If yes, consider rolling. If no, the position is not threatened.</li>
+  <li><strong>Does the trader want to keep the shares?</strong> If yes, roll up. If no, let the shares be called away.</li>
+  <li><strong>Is the cost of the roll-up less than 50% of the original premium?</strong> If yes, the roll-up is reasonable. If no, the roll-up is too expensive.</li>
+  <li><strong>Does the new short strike give the position meaningful upside?</strong> If yes, the roll-up is worthwhile. If no, the roll-up is too tight.</li>
+</ol>
+<p>If all four conditions are met, roll up. If any one is not, close or let the position be assigned.</p>
+<h2>The Roll-Out Decision Rule</h2>
+<p>A practical algorithm for deciding whether to roll out:</p>
+<ol>
+  <li><strong>Is the underlying far from the short strike (more than 5% OTM)?</strong> If yes, consider rolling out. If no, the position is not threatened.</li>
+  <li><strong>Does the trader want to collect more premium?</strong> If yes, roll out. If no, close the position.</li>
+  <li><strong>Is the new call's premium meaningful (at least 1.5x the current call's premium)?</strong> If yes, the roll-out is worthwhile. If no, the roll-out is not worth the added time.</li>
+  <li><strong>Is the IV elevated (rank > 50)?</strong> If yes, the roll-out will collect more premium. If no, the roll-out is not as attractive.</li>
+</ol>
+<p>If all four conditions are met, roll out. If any one is not, hold or close.</p>
+<h2>The Multi-Roll Position</h2>
+<p>Some covered call traders roll up multiple times as the stock continues higher. A position that is rolled from $100 to $102.5 can be rolled from $102.5 to $105, and so on. Each roll-up extends the position's upside, but each roll-up also costs money.</p>
+<p>The multi-roll position is appropriate for stocks in sustained uptrends. The trader who has a $50 stock that has risen to $55, then $60, then $65, can roll up the short strike at each level and continue collecting premium.</p>
+<p>The multi-roll position is not appropriate for choppy markets. The stock that rises to $55, drops to $50, rises to $58, drops to $52, etc., is a poor candidate for multiple roll-ups. The trader who rolls up at each peak gives back premium on each pullback.</p>
+<h2>The "Run to the Strike" Rule</h2>
+<p>A useful rule: when the stock is within 2-3% of the short strike, decide whether to roll or let the shares be called away. The decision should be made before the stock reaches the strike, not after.</p>
+<p>| Stock Price vs Strike | Action |</p>
+<p>|---|---|</p>
+<p>| Below strike (3%+ OTM) | Hold; position is not threatened |</p>
+<p>| 0-3% above strike (ITM) | Decide: roll up or let be assigned |</p>
+<p>| Above strike (called away likely) | Position will be assigned at expiration |</p>
+<p>The "run to the strike" rule gives the trader time to make the decision. The trader who waits until the stock is at the strike has less time and fewer roll-up options.</p>
+<h2>The Common Mistakes</h2>
+<p><strong>Rolling up too late.</strong> The trader waits until the stock is at or above the short strike to consider rolling. At that point, the call is deep ITM, and the roll-up cost is high. The decision should be made when the stock is 2-3% below the strike.</p>
+<p><strong>Rolling up too aggressively.</strong> The trader rolls the short strike from $100 to $110 (a 10% jump) when the stock is at $98. The new short strike is well above the current price, and the roll-up cost is high. A more measured roll-up (to $102.5 or $105) is more appropriate.</p>
+<p><strong>Rolling out unnecessarily.</strong> The trader rolls out the call when the stock is far OTM and the call has 30+ DTE remaining. The roll-out adds cost without meaningful benefit. The position should be held until the call is closer to expiration.</p>
+<p><strong>Failing to track the cost basis.</strong> The trader rolls up the call multiple times without tracking the cumulative cost. The cost basis of the position increases with each roll, and the breakeven rises. The trader who tracks the cost basis knows when the position is no longer profitable.</p>
+<h2>Modeling the Roll-Up</h2>
+<p>We use [OptionsStrat](https://optionstrat.com/ventureprise) to model the roll-up before execution. The platform shows the current call value, the new call's premium, the roll-up cost, and the new breakeven, which makes the roll-up decision visible at a glance.</p>
+<p><strong>Parent:</strong> [Covered Calls and Cash-Secured Puts: Complete Income Strategy Guide](/articles/covered-calls-cash-secured-puts-income/)</p>
+<p><strong>Previous:</strong> [Cash-Secured Put Reserve Cash Sizing: How Much Cash to Set Aside](/articles/cash-secured-put-reserve-cash-sizing/)</p>
+<p><strong>Next:</strong> [Cash-Secured Put Roll Down Guide: Rolling When the Stock Drops Below Your Strike](/articles/cash-secured-put-roll-down-guide/)</p>
+<p><em>This content is for informational purposes only. Options trading involves substantial risk of loss. Dependability Holdings LLC has no positions in the securities mentioned. Past performance is not indicative of future results.</em></p>
+
+    </div>
+
+
+    <div class="disclaimer">
+     <strong>Disclaimer:</strong> This research is for informational purposes only and does not constitute investment advice. Options trading involves substantial risk of loss. Dependability Holdings LLC has no positions in the securities mentioned. Past performance is not indicative of future results.
+    </div>
+
+
+<div class="share-bar">
+  <span class="share-label">Share</span>
+  <a class="share-btn share-x" href="#" target="_blank" rel="noopener" aria-label="Share on X">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+  </a>
+  <a class="share-btn share-facebook" href="#" target="_blank" rel="noopener" aria-label="Share on Facebook">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+  </a>
+  <a class="share-btn share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+  </a>
+  <button class="share-btn share-copy" aria-label="Copy link" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.querySelector('.copy-label').textContent='Copied!';setTimeout(()=>{this.querySelector('.copy-label').textContent='Copy'},2000)})">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+    <span class="copy-label">Copy</span>
+  </button>
+</div>
+
+
+<script>
+document.querySelectorAll('.share-x, .share-facebook, .share-linkedin').forEach(function(el) {
+  var url = encodeURIComponent(window.location.href);
+  var title = encodeURIComponent(document.title);
+  if (el.classList.contains('share-x')) el.href = 'https://x.com/intent/tweet?url=' + url + '&text=' + title;
+  if (el.classList.contains('share-facebook')) el.href = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
+  if (el.classList.contains('share-linkedin')) el.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + url;
+});
+</script>
+
+   </div>
+
+ </main>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+ <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+ <script src="/nav.js"></script>
+ <script src="/footer.js"></script>
+
+<div id="site-footer"></div>
+
+</body>
+</html>

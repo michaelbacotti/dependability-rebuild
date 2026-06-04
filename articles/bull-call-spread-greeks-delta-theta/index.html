@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Bull Call Spread Greeks: Delta, Theta, Gamma, and Vega Across the Lifecycle | Dependability Holdings LLC</title>
+ <meta name="description" content="Bull call spread Greeks explained — delta is positive and increases as the stock rises, theta is negative, gamma shifts sign, and vega is positive. How the Greeks evolve across the trade lifecycle and what to watch at each stage.">
+ <link rel="stylesheet" href="/style.css">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <style>
+ .share-bar { display: flex; align-items: center; gap: 10px; margin: 40px 0 32px; padding: 16px 0; border-top: 1px solid #e8e4dd; border-bottom: 1px solid #e8e4dd; }
+ .share-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #999; margin-right: 4px; }
+ .share-btn { display: inline-flex; align-items: center; gap: 5px; padding: 7px 12px; border-radius: 4px; font-size: 12px; text-decoration: none; border: 1px solid #cc0000; background: transparent; cursor: pointer; font-family: inherit; color: #cc0000; transition: opacity 0.15s; }
+ .share-btn:hover { opacity: 0.7; }
+ .disclaimer { margin: 2.5rem 0; padding: 1rem 1.25rem; background: #f5f0e8; border-left: 4px solid #cc0000; font-size: 0.875rem; line-height: 1.6; color: #555; }
+ </style>
+<link rel="canonical" href="/articles/bull-call-spread-greeks-delta-theta/"> <meta property="og:title" content="Bull Call Spread Greeks: Delta, Theta, Gamma, and Vega Across the Lifecycle | Dependability Holdings LLC">
+ <meta property="og:description" content="Bull call spread Greeks explained — delta is positive and increases as the stock rises, theta is negative, gamma shifts sign, and vega is positive. How the Greeks evolve across the trade lifecycle and what to watch at each stage.">
+ <meta property="og:image" content="https://dependability.us/og-image.jpg">
+ <meta property="og:type" content="article">
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+
+   <div class="article-page">
+
+    <div class="article-header">
+     <div class="category-label">FORECASTS & OPTIONS STRATEGIES</div>
+     <h1>Bull Call Spread Greeks: Delta, Theta, Gamma, and Vega Across the Lifecycle</h1>
+     <div class="article-meta">June 04, 2026 &nbsp;|&nbsp; Dependability Research Desk</div>
+    </div>
+    <div class="article-header-image">
+     <img src="" alt="Bull Call Spread Greeks: Delta, Theta, Gamma, and Vega Across the Lifecycle" style="width:100%;display:block;">
+    </div>
+    <div class="article-body">
+
+<p>A bull call spread is a defined-risk directional position with a positive delta (the position benefits when the stock rises), a negative theta (the position loses value to time decay), a positive vega (the position benefits when IV rises), and a gamma that shifts depending on whether the stock is below or above the long strike. Understanding the Greeks at each stage of the trade is what allows the trader to manage the position through its lifecycle and avoid the common errors that come from treating the spread as a single Greek at entry.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<p>This article covers each Greek for a standard bull call spread, shows how the Greeks evolve from entry to expiration, and identifies the inflection points that require management attention.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="7590828986" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<h2>The Four Greeks for a Bull Call Spread</h2>
+<p><strong>Delta:</strong> The change in spread value for a $1 change in the underlying. For a bull call spread, delta is positive — the position gains value when the stock rises and loses value when the stock falls. The delta is highest near the long strike and declines as the stock rises above the short strike.</p>
+<p><strong>Theta:</strong> The change in spread value for a one-day decrease in time to expiration. For a bull call spread, theta is negative — the position loses value as time passes. The theta is largest in the final 30-45 days before expiration.</p>
+<p><strong>Vega:</strong> The change in spread value for a 1-point change in implied volatility. For a bull call spread, vega is positive — the position benefits when IV rises and loses value when IV falls. The vega exposure is highest at entry and declines as expiration approaches.</p>
+<p><strong>Gamma:</strong> The change in delta for a $1 change in the underlying. For a bull call spread, gamma is positive below the short strike and approaches zero above the short strike. The position is "accelerating" in delta as the stock rises toward the short strike.</p>
+<h2>Greeks at Entry (45 DTE)</h2>
+<p>For a bull call spread with the long strike at $102 and the short strike at $110, on a stock at $100 with 45 DTE and 40% IV rank:</p>
+<p>| Greek | Per Spread | Notes |</p>
+<p>|---|---|---|</p>
+<p>| Delta | +0.35 | Positive; position benefits from a $1 move to $35 |</p>
+<p>| Theta | -0.04 per day | Negative; position loses $4 per day to time decay |</p>
+<p>| Vega | +0.10 per IV point | Positive; position benefits $10 per 1-point IV rise |</p>
+<p>| Gamma | +0.015 per $1 move | Positive; delta increases by 0.015 per $1 up move |</p>
+<p>The position at entry is moderately bullish. The delta of 0.35 means the position benefits from a $1 rise in the underlying, but the benefit is capped (delta declines as the stock approaches the short strike). The theta is negative but small at 45 DTE, and the position has more time value to lose than at later stages of the trade.</p>
+<h2>Greeks at 30 DTE</h2>
+<p>After 15 days, the position's profile has shifted:</p>
+<p>| Greek | Per Spread | Change from Entry |</p>
+<p>|---|---|---|</p>
+<p>| Delta | +0.40 (if stock unchanged) | Slightly higher; time decay has eroded some of the long call's premium |</p>
+<p>| Theta | -0.06 per day | Higher in absolute terms; the position is losing more per day |</p>
+<p>| Vega | +0.08 per IV point | Lower; the position is less sensitive to IV changes |</p>
+<p>| Gamma | +0.020 per $1 move | Higher; delta is more sensitive to moves |</p>
+<p>The theta has increased, which is the most important change. The position is now losing $6 per day to time decay, and this loss accelerates in the next 15-30 days. The trader who entered at 45 DTE should be aware that the position's mark-to-market will decline even if the stock does not move.</p>
+<h2>Greeks at 21 DTE</h2>
+<p>At 21 DTE, the position is at the decision point. The theta is at or near its maximum:</p>
+<p>| Greek | Per Spread | Change from 30 DTE |</p>
+<p>|---|---|---|</p>
+<p>| Delta | +0.45 (if stock unchanged) | Higher; time decay is concentrating the value in the intrinsic component |</p>
+<p>| Theta | -0.08 per day | Near peak; position is losing $8 per day |</p>
+<p>| Vega | +0.06 per IV point | Lower; less IV sensitivity |</p>
+<p>| Gamma | +0.025 per $1 move | Higher; delta is more sensitive |</p>
+<p>The 21 DTE mark is the standard decision point for bull call spreads. The position's value is most sensitive to the underlying's move and most affected by time decay. The trader should apply the 21 DTE decision tree: close at 50%+ profit, close at 50%+ loss, hold otherwise.</p>
+<h2>Greeks at 14 DTE</h2>
+<p>The 2-week rule applies. The position is dominated by intrinsic value and gamma:</p>
+<p>| Greek | Per Spread | Notes |</p>
+<p>|---|---|---|</p>
+<p>| Delta | +0.55 to +0.95 (depending on stock) | High; the position is essentially equivalent to long stock above the long strike |</p>
+<p>| Theta | -0.05 per day | Lower in absolute terms; most of the time value has been lost |</p>
+<p>| Vega | +0.03 per IV point | Low; IV changes have minimal impact on the remaining premium |</p>
+<p>| Gamma | +0.030 per $1 move | High; the position is sensitive to small moves |</p>
+<p>At 14 DTE, the position is no longer a "spread" in the traditional sense. The time value is small, and the position's value is essentially the intrinsic value of the long call minus the intrinsic value of the short call. The position should be closed unless the trader is committed to holding to expiration.</p>
+<h2>Greeks at 7 DTE</h2>
+<p>The final week. The position is close to its terminal value:</p>
+<p>| Greek | Per Spread | Notes |</p>
+<p>|---|---|---|</p>
+<p>| Delta | +0.90 to +1.00 (if stock above long strike) | Near 1.00; position moves dollar-for-dollar with the stock |</p>
+<p>| Theta | -0.02 per day | Low; little time value remaining |</p>
+<p>| Vega | +0.01 per IV point | Negligible |</p>
+<p>| Gamma | +0.020 per $1 move | Moderate; declining as expiration approaches |</p>
+<p>The position is essentially a long call at this point, capped at the short strike. The trader who has held through the final week is exposed to a small move that can flip the position from profitable to unprofitable, but the absolute move required to produce a large loss is small.</p>
+<h2>Delta Profile Across the Lifecycle</h2>
+<p>The delta of a bull call spread is not constant. It varies depending on the underlying's price relative to the long and short strikes:</p>
+<p>| Stock Price vs Strikes | Delta (per spread) | Interpretation |</p>
+<p>|---|---|---|</p>
+<p>| Below long strike | 0.00 to +0.10 | Position is essentially a long call that is far OTM; small positive delta |</p>
+<p>| At long strike | +0.40 to +0.50 | Delta is at the money call value; position has its highest sensitivity to small moves |</p>
+<p>| Between strikes | +0.40 to +0.60 | Position is "in the spread"; delta is concentrated in this region |</p>
+<p>| At short strike | +0.45 to +0.50 | Delta declines as the short call becomes more in the money |</p>
+<p>| Above short strike | +0.05 to +0.10 | Position is max profit; both legs move together, leaving small net delta |</p>
+<p>The peak delta is in the region between the long and short strikes. This is where the position has the most sensitivity to small moves in the underlying. The trader who wants to manage the position actively should watch for the stock to enter this region, because that is when the position is responding most to the underlying's movement.</p>
+<h2>Theta Profile Across the Lifecycle</h2>
+<p>Theta is the most consistent Greek. The position is always losing time value, and the loss accelerates in the final 30-45 days:</p>
+<p>| DTE | Daily Theta (per spread) | Cumulative Loss to Theta |</p>
+<p>|---|---|---|</p>
+<p>| 60 (entry) | -0.02 | $0 |</p>
+<p>| 45 | -0.04 | $0.60 |</p>
+<p>| 30 | -0.06 | $1.50 |</p>
+<p>| 21 | -0.08 | $2.10 |</p>
+<p>| 14 | -0.05 | $2.70 |</p>
+<p>| 7 | -0.02 | $3.10 |</p>
+<p>| 0 | -0.00 | $3.30 |</p>
+<p>The theta peaks at 21-30 DTE and then declines. The total theta loss over the life of the trade is roughly the original time value of the position, which is the difference between the debit paid and the spread's intrinsic value at entry.</p>
+<h2>Vega Profile Across the Lifecycle</h2>
+<p>Vega is highest at entry and declines as expiration approaches. The position is long vega, which means it benefits from an IV rise and loses value from an IV decline. For an event-driven trade (earnings, FOMC), the long vega is a benefit before the event and a cost after the IV crush.</p>
+<p>| DTE | Vega (per spread) | IV Sensitivity |</p>
+<p>|---|---|---|</p>
+<p>| 60 | +0.12 | High |</p>
+<p>| 45 | +0.10 | Moderate |</p>
+<p>| 30 | +0.08 | Moderate |</p>
+<p>| 21 | +0.06 | Lower |</p>
+<p>| 14 | +0.03 | Low |</p>
+<p>| 7 | +0.01 | Negligible |</p>
+<p>| 0 | +0.00 | None |</p>
+<p>The vega exposure is concentrated in the first 30-45 days of the trade. The trader who holds through an event that crushes IV will see the position's value decline from the IV crush, even if the underlying moves in the expected direction.</p>
+<h2>Gamma Profile Across the Lifecycle</h2>
+<p>Gamma is the most variable Greek. It is positive and meaningful between the long and short strikes, and it declines to near zero outside that region:</p>
+<p>| Stock Price vs Strikes | Gamma (per spread) | Delta Sensitivity |</p>
+<p>|---|---|---|</p>
+<p>| Far below long strike | +0.005 | Low; delta barely moves |</p>
+<p>| Near long strike | +0.020 | High; delta changes meaningfully |</p>
+<p>| Between strikes | +0.015 to +0.020 | Moderate to high; position is "in the spread" |</p>
+<p>| Near short strike | +0.010 | Declining; short call is gaining delta |</p>
+<p>| Above short strike | +0.002 | Low; both legs move together |</p>
+<p>The peak gamma is near the long strike, which is the strike the stock is most likely to interact with as it moves up from the current price. The trader who manages the position actively should watch the stock's approach to the long strike, because that is when the position is most sensitive to small moves.</p>
+<h2>Putting the Greeks Together</h2>
+<p>The bull call spread is a positive delta, negative theta, positive vega, positive gamma position. The Greeks evolve across the lifecycle:</p>
+<ul>
+  <li><strong>At entry:</strong> Delta is moderate, theta is small, vega is high, gamma is moderate.</li>
+  <li><strong>At 30 DTE:</strong> Delta is increasing, theta is rising, vega is declining, gamma is rising.</li>
+  <li><strong>At 21 DTE:</strong> Decision point. Theta is at peak, gamma is high. The 21 DTE decision tree applies.</li>
+  <li><strong>At 14 DTE:</strong> The 2-week rule applies. Delta is high, theta is declining, gamma is meaningful. Close unless committed to expiration.</li>
+  <li><strong>At 7 DTE:</strong> Final week. Position is close to terminal value. Hold to expiration if committed; close otherwise.</li>
+  <li><strong>At expiration:</strong> Position settles at intrinsic value. No further Greeks.</li>
+</ul>
+<p>The trader's job is to manage the position through these stages and exit at the appropriate point. The Greeks tell the story of where the position is in its lifecycle and what to expect next.</p>
+<h2>Visualizing the Greeks</h2>
+<p>We use [OptionsStrat](https://optionstrat.com/ventureprise) to display the Greeks for the bull call spread at each DTE. The platform shows delta, theta, vega, and gamma for the full position at any DTE, which makes the lifecycle profile visible at a glance.</p>
+<p><strong>Parent:</strong> [Bull Call Spreads: Complete Strategy Guide for Moderate Bullish Moves](/articles/bull-call-spreads-defined-risk/)</p>
+<p><strong>Previous:</strong> [Bull Call Spread Expiration Management: When to Close, the 2-Week Rule, and Rolling](/articles/bull-call-spread-expiration-management/)</p>
+<p><strong>Next:</strong> [Bull Call Spread IV Regime Guide: Which IV Environments Suit Spreads](/articles/bull-call-spread-iv-regime-guide/)</p>
+<p><em>This content is for informational purposes only. Options trading involves substantial risk of loss. Dependability Holdings LLC has no positions in the securities mentioned. Past performance is not indicative of future results.</em></p>
+
+    </div>
+
+
+    <div class="disclaimer">
+     <strong>Disclaimer:</strong> This research is for informational purposes only and does not constitute investment advice. Options trading involves substantial risk of loss. Dependability Holdings LLC has no positions in the securities mentioned. Past performance is not indicative of future results.
+    </div>
+
+
+<div class="share-bar">
+  <span class="share-label">Share</span>
+  <a class="share-btn share-x" href="#" target="_blank" rel="noopener" aria-label="Share on X">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+  </a>
+  <a class="share-btn share-facebook" href="#" target="_blank" rel="noopener" aria-label="Share on Facebook">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+  </a>
+  <a class="share-btn share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+  </a>
+  <button class="share-btn share-copy" aria-label="Copy link" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.querySelector('.copy-label').textContent='Copied!';setTimeout(()=>{this.querySelector('.copy-label').textContent='Copy'},2000)})">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+    <span class="copy-label">Copy</span>
+  </button>
+</div>
+
+
+<script>
+document.querySelectorAll('.share-x, .share-facebook, .share-linkedin').forEach(function(el) {
+  var url = encodeURIComponent(window.location.href);
+  var title = encodeURIComponent(document.title);
+  if (el.classList.contains('share-x')) el.href = 'https://x.com/intent/tweet?url=' + url + '&text=' + title;
+  if (el.classList.contains('share-facebook')) el.href = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
+  if (el.classList.contains('share-linkedin')) el.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + url;
+});
+</script>
+
+   </div>
+
+ </main>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+ <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+ <script src="/nav.js"></script>
+ <script src="/footer.js"></script>
+
+<div id="site-footer"></div>
+
+</body>
+</html>

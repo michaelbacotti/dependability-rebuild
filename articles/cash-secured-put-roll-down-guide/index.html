@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Cash-Secured Put Roll Down Guide: Rolling When the Stock Drops Below Your Strike | Dependability Holdings LLC</title>
+ <meta name="description" content="Cash-secured put roll-down procedure — when to roll the put strike lower, when to accept assignment, and the cost-vs-acquisition trade-off. The decision framework for managing a CSP as the stock approaches the strike.">
+ <link rel="stylesheet" href="/style.css">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <style>
+ .share-bar { display: flex; align-items: center; gap: 10px; margin: 40px 0 32px; padding: 16px 0; border-top: 1px solid #e8e4dd; border-bottom: 1px solid #e8e4dd; }
+ .share-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #999; margin-right: 4px; }
+ .share-btn { display: inline-flex; align-items: center; gap: 5px; padding: 7px 12px; border-radius: 4px; font-size: 12px; text-decoration: none; border: 1px solid #cc0000; background: transparent; cursor: pointer; font-family: inherit; color: #cc0000; transition: opacity 0.15s; }
+ .share-btn:hover { opacity: 0.7; }
+ .disclaimer { margin: 2.5rem 0; padding: 1rem 1.25rem; background: #f5f0e8; border-left: 4px solid #cc0000; font-size: 0.875rem; line-height: 1.6; color: #555; }
+ </style>
+<link rel="canonical" href="/articles/cash-secured-put-roll-down-guide/"> <meta property="og:title" content="Cash-Secured Put Roll Down Guide: Rolling When the Stock Drops Below Your Strike | Dependability Holdings LLC">
+ <meta property="og:description" content="Cash-secured put roll-down procedure — when to roll the put strike lower, when to accept assignment, and the cost-vs-acquisition trade-off. The decision framework for managing a CSP as the stock approaches the strike.">
+ <meta property="og:image" content="https://dependability.us/og-image.jpg">
+ <meta property="og:type" content="article">
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+
+   <div class="article-page">
+
+    <div class="article-header">
+     <div class="category-label">FORECASTS & OPTIONS STRATEGIES</div>
+     <h1>Cash-Secured Put Roll Down Guide: Rolling When the Stock Drops Below Your Strike</h1>
+     <div class="article-meta">June 04, 2026 &nbsp;|&nbsp; Dependability Research Desk</div>
+    </div>
+    <div class="article-header-image">
+     <img src="" alt="Cash-Secured Put Roll Down Guide: Rolling When the Stock Drops Below Your Strike" style="width:100%;display:block;">
+    </div>
+    <div class="article-body">
+
+<p>A cash-secured put (CSP) is sold with the expectation that the stock will stay above the strike and the put will expire worthless. When the stock drops and approaches the strike, the seller faces a decision: roll the put down to a lower strike (and accept a different cost basis if assigned), accept the assignment and buy the shares, or close the put at a loss.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<p>Rolling down is appropriate when the trader wants to avoid assignment at the current strike but is willing to be assigned at a lower strike. The roll-down produces a different cost basis and a different assignment outcome.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="7590828986" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<p>This article covers the roll-down decision, the mechanics, the cost, and the practical decision rule for managing a CSP as the stock approaches the strike.</p>
+<h2>When to Roll Down</h2>
+<p>A roll-down is appropriate when:</p>
+<ol>
+  <li>The underlying has dropped close to the short strike (typically within 2-3%).</li>
+  <li>The trader wants to avoid being assigned at the current strike (perhaps the trader has changed view on the stock).</li>
+  <li>The trader is willing to be assigned at a lower strike (perhaps the lower strike is a more attractive entry point).</li>
+  <li>The cost of the roll-down is reasonable (typically a credit or small debit).</li>
+</ol>
+<p>A roll-down is not appropriate when:</p>
+<ul>
+  <li>The underlying is well above the strike (the position is not threatened).</li>
+  <li>The trader wants to be assigned at the current strike (the original entry plan was to buy at this price).</li>
+  <li>The cost of the roll-down exceeds the premium received.</li>
+  <li>The trader has a strong bearish view (closing or accepting assignment is more appropriate).</li>
+</ul>
+<h2>The Roll-Down Mechanics</h2>
+<p>A roll-down involves closing the current put and opening a new put at a lower strike. The mechanics:</p>
+<ol>
+  <li><strong>Buy back the current put</strong> at the current market price. The cost is the put's current value (which includes intrinsic value if the put is ITM).</li>
+  <li><strong>Sell a new put</strong> at a lower strike (typically 1-2 strikes below the current short strike) for the same or later expiration.</li>
+  <li><strong>Net cost or credit</strong> is the difference between the buy-back cost and the new put's premium.</li>
+</ol>
+<p>For a CSP with a $95 short put on a $97 stock:</p>
+<ul>
+  <li>Current put value: $0.50 (intrinsic $0 + time value $0.50, since the put is OTM but close)</li>
+  <li>New put at $90 strike: $0.20 (premium for the new put)</li>
+  <li>Net credit of roll-down: $0.20 - $0.50 = -$0.30 (debit)</li>
+</ul>
+<p>The roll-down costs $0.30 per contract. The new CSP has a short strike at $90, which is more OTM and less likely to be assigned. The trade-off is the lower premium and the lower effective cost basis if assigned.</p>
+<h2>The Roll-Down vs Assignment Trade-Off</h2>
+<p>The roll-down decision is fundamentally a trade-off between avoiding assignment and accepting a different entry price.</p>
+<p>| Outcome | Stock at $97 | Stock at $90 (roll-down strike) |</p>
+<p>|---|---|---|</p>
+<p>| Hold current $95 put | May be assigned at $95 (lose $2 vs current) | Would be assigned at $95 (lose $7 vs current) |</p>
+<p>| Roll down to $90 put | Likely not assigned (put is OTM) | May be assigned at $90 (lose $7 vs current, but the entry is at $90) |</p>
+<p>| Accept assignment at $95 | Buy at $95 (lose $2 vs current) | Buy at $95 (lose $7 vs current) |</p>
+<p>| Close the put | Lose the premium (small loss if OTM) | Lose the premium (larger loss if ITM) |</p>
+<p>The roll-down allows the trader to:</p>
+<ul>
+  <li>Avoid assignment at $95 (if the trader does not want to buy at $95)</li>
+  <li>Accept assignment at $90 (if the trader is willing to buy at $90)</li>
+  <li>Collect additional premium in the meantime</li>
+</ul>
+<p>The cost of the roll-down is the net debit, which reduces the effective premium collected.</p>
+<h2>The Cost Basis Analysis</h2>
+<p>The roll-down changes the position's effective cost basis if assigned. The new cost basis is the new strike plus the net premium received (or minus the net premium paid).</p>
+<p>For a CSP entered at $95 strike with $1.50 premium, rolled down to $90 strike at $0.20 credit:</p>
+<ul>
+  <li>Original cost basis if assigned: $95 - $1.50 = $93.50</li>
+  <li>Roll-down cost: $0.30</li>
+  <li>New cost basis if assigned at $90: $90 + $0.30 = $90.30 (since the roll-down cost is added to the cost basis)</li>
+</ul>
+<p>The new cost basis is $90.30, which is below the original cost basis of $93.50. The roll-down produces a more attractive entry price if the trader is willing to be assigned at $90.</p>
+<h2>The Breakeven Analysis</h2>
+<p>The roll-down changes the position's breakeven. The new breakeven is the new cost basis.</p>
+<p>| Scenario | Breakeven |</p>
+<p>|---|---|</p>
+<p>| Original position | $93.50 |</p>
+<p>| After roll-down to $90 | $90.30 |</p>
+<p>The new breakeven is $3.20 lower than the original. The roll-down reduces the breakeven, which means the position is profitable at a lower stock price. The trade-off is the higher risk of being assigned (the new put is closer to the current price).</p>
+<h2>The Roll-Down Cost Considerations</h2>
+<p>The roll-down cost depends on the relationship between the current and new strikes. A roll-down to a strike 1 notch below the current strike costs less than a roll-down to a strike 3 notches below.</p>
+<p>| Current Strike | New Strike | Cost of Roll-Down (per contract) |</p>
+<p>|---|---|---|</p>
+<p>| $95 (3% OTM) | $92.5 | $0.10 - $0.30 |</p>
+<p>| $95 (3% OTM) | $90 | $0.30 - $0.50 |</p>
+<p>| $95 (3% OTM) | $85 | $0.80 - $1.20 |</p>
+<p>| $90 (10% OTM) | $85 | $0.10 - $0.30 |</p>
+<p>| $90 (10% OTM) | $80 | $0.30 - $0.50 |</p>
+<p>The roll-down cost is the difference in premium between the current and new strikes. A roll-down to a nearby strike (1-2 notches) costs less and is more common.</p>
+<h2>The Roll-Out Component</h2>
+<p>A roll-down is often combined with a roll-out (rolling forward in time) to give the position more time to work. The combination is a "roll-down and out."</p>
+<p>For a CSP with a $95 short put, 14 DTE remaining, on a $97 stock:</p>
+<ul>
+  <li>Current put value: $0.50</li>
+  <li>New put at $90 strike, 45 DTE: $0.80 (more time value)</li>
+  <li>Net credit of roll-down and out: $0.80 - $0.50 = $0.30 (credit)</li>
+</ul>
+<p>The roll-down and out produces a $0.30 credit per contract. The new position has a lower short strike ($90) and more time (45 DTE). The cost is the lost time value from the current put.</p>
+<h2>The Roll-Down Decision Rule</h2>
+<p>A practical algorithm for deciding whether to roll down:</p>
+<ol>
+  <li><strong>Is the underlying within 2-3% of the short strike?</strong> If yes, consider rolling. If no, the position is not threatened.</li>
+  <li><strong>Does the trader want to avoid assignment at the current strike?</strong> If yes, roll down. If no, hold or accept assignment.</li>
+  <li><strong>Is the new strike a more attractive entry point?</strong> If yes, roll down. If no, closing is more appropriate.</li>
+  <li><strong>Is the cost of the roll-down less than $0.50 per contract?</strong> If yes, the roll-down is reasonable. If no, the roll-down is too expensive.</li>
+</ol>
+<p>If all four conditions are met, roll down. If any one is not, hold, close, or accept assignment.</p>
+<h2>When to Accept Assignment Instead</h2>
+<p>Accepting assignment (buying the shares at the strike) is appropriate when:</p>
+<ul>
+  <li>The trader wants to own the shares at the strike price</li>
+  <li>The strike price is a good entry point for the long-term thesis</li>
+  <li>The premium received provides a meaningful discount to the entry</li>
+  <li>The trader has the cash available and is willing to hold the shares</li>
+</ul>
+<p>For a CSP entered at $95 strike with $1.50 premium, the effective entry price is $93.50. If the trader wants to own the stock at $93.50, accepting assignment is the right move. The trader can then hold the stock long-term or sell a covered call against the position.</p>
+<h2>When to Close Instead</h2>
+<p>Closing the put (buying it back) is appropriate when:</p>
+<ul>
+  <li>The trader does not want to be assigned at any strike</li>
+  <li>The trader has changed view on the stock (bearish)</li>
+  <li>The cost of the roll-down is too high</li>
+  <li>The trader wants to exit the position and redeploy the capital</li>
+</ul>
+<p>The close-out cost is the current value of the put. For a $0.50 put, the close-out cost is $50 per contract. The trader who closes has a realized loss of $50 - $150 (premium received) = -$100 per contract.</p>
+<h2>The Wheel Strategy Connection</h2>
+<p>The roll-down decision is connected to the wheel strategy. The wheel strategy involves selling a CSP, accepting assignment if the stock drops, then selling a covered call against the assigned shares, and repeating.</p>
+<p>If the trader is running the wheel and the stock drops toward the CSP strike, the roll-down is not appropriate. The trader should accept the assignment (buy the shares at the strike) and then sell a covered call against the shares. The wheel strategy uses the assignment as a feature, not a bug.</p>
+<p>The roll-down is appropriate for traders who are NOT running the wheel and want to avoid assignment. The roll-down changes the entry point and the assignment outcome.</p>
+<h2>The Multi-Roll Position</h2>
+<p>Some CSP traders roll down multiple times as the stock continues to drop. A position that is rolled from $95 to $90 can be rolled from $90 to $85, and so on. Each roll-down reduces the strike and the cost basis, but each roll-down also costs money.</p>
+<p>The multi-roll is appropriate for stocks in sustained downtrends. The trader who has a $100 stock that has dropped to $90, then $85, then $80 can roll down the strike at each level and continue collecting premium.</p>
+<p>The multi-roll is not appropriate for choppy markets. The stock that drops to $90, rallies to $95, drops to $88, rallies to $93, etc., is a poor candidate for multiple roll-downs. The trader who rolls down at each trough misses the rallies.</p>
+<h2>The Common Mistakes</h2>
+<p><strong>Rolling down too late.</strong> The trader waits until the stock is at or below the short strike to consider rolling. At that point, the put is deep ITM, and the roll-down cost is high. The decision should be made when the stock is 2-3% above the strike.</p>
+<p><strong>Rolling down to a strike that's too far below.</strong> The trader rolls from $95 to $85 (a 10-point drop) when the stock is at $97. The new strike is well below the current price, and the roll-down cost is high. A more measured roll-down (to $92.5 or $90) is more appropriate.</p>
+<p><strong>Failing to track the cost basis.</strong> The trader rolls down the put multiple times without tracking the cumulative cost. The cost basis of the position decreases with each roll, but the premium received also decreases. The trader who tracks the cost basis knows when the position is no longer attractive.</p>
+<p><strong>Rolling down when the original entry plan was to be assigned.</strong> The trader originally wanted to buy the stock at $95. When the stock drops to $97, the trader rolls down to $90, missing the opportunity to buy at $95. The roll-down contradicts the original thesis.</p>
+<h2>Modeling the Roll-Down</h2>
+<p>We use [OptionsStrat](https://optionstrat.com/ventureprise) to model the roll-down before execution. The platform shows the current put value, the new put's premium, the roll-down cost, and the new cost basis, which makes the roll-down decision visible at a glance.</p>
+<p><strong>Parent:</strong> [Covered Calls and Cash-Secured Puts: Complete Income Strategy Guide](/articles/covered-calls-cash-secured-puts-income/)</p>
+<p><strong>Previous:</strong> [Covered Call Roll Up and Out Guide: When the Stock Runs to Your Short Strike](/articles/covered-call-roll-up-out-guide/)</p>
+<p><strong>Next:</strong> [The Wheel Strategy: Covered Calls and Cash-Secured Puts in Sequence](/articles/wheel-strategy-covered-call-cash-secured-put/)</p>
+<p><em>This content is for informational purposes only. Options trading involves substantial risk of loss. Dependability Holdings LLC has no positions in the securities mentioned. Past performance is not indicative of future results.</em></p>
+
+    </div>
+
+
+    <div class="disclaimer">
+     <strong>Disclaimer:</strong> This research is for informational purposes only and does not constitute investment advice. Options trading involves substantial risk of loss. Dependability Holdings LLC has no positions in the securities mentioned. Past performance is not indicative of future results.
+    </div>
+
+
+<div class="share-bar">
+  <span class="share-label">Share</span>
+  <a class="share-btn share-x" href="#" target="_blank" rel="noopener" aria-label="Share on X">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+  </a>
+  <a class="share-btn share-facebook" href="#" target="_blank" rel="noopener" aria-label="Share on Facebook">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+  </a>
+  <a class="share-btn share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+  </a>
+  <button class="share-btn share-copy" aria-label="Copy link" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.querySelector('.copy-label').textContent='Copied!';setTimeout(()=>{this.querySelector('.copy-label').textContent='Copy'},2000)})">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+    <span class="copy-label">Copy</span>
+  </button>
+</div>
+
+
+<script>
+document.querySelectorAll('.share-x, .share-facebook, .share-linkedin').forEach(function(el) {
+  var url = encodeURIComponent(window.location.href);
+  var title = encodeURIComponent(document.title);
+  if (el.classList.contains('share-x')) el.href = 'https://x.com/intent/tweet?url=' + url + '&text=' + title;
+  if (el.classList.contains('share-facebook')) el.href = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
+  if (el.classList.contains('share-linkedin')) el.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + url;
+});
+</script>
+
+   </div>
+
+ </main>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+ <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+ <script src="/nav.js"></script>
+ <script src="/footer.js"></script>
+
+<div id="site-footer"></div>
+
+</body>
+</html>

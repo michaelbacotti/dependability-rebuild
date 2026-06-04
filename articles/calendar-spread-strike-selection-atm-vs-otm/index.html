@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Calendar Spread Strike Selection: ATM for Neutral, OTM for Directional Lean | Dependability Holdings LLC</title>
+ <meta name="description" content="Calendar spread strike selection — at-the-money for a neutral trade, slightly out-of-the-money for a directional lean, and the breakeven implications. Which strike gives the best IV crush capture for a given view.">
+ <link rel="stylesheet" href="/style.css">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <style>
+ .share-bar { display: flex; align-items: center; gap: 10px; margin: 40px 0 32px; padding: 16px 0; border-top: 1px solid #e8e4dd; border-bottom: 1px solid #e8e4dd; }
+ .share-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #999; margin-right: 4px; }
+ .share-btn { display: inline-flex; align-items: center; gap: 5px; padding: 7px 12px; border-radius: 4px; font-size: 12px; text-decoration: none; border: 1px solid #cc0000; background: transparent; cursor: pointer; font-family: inherit; color: #cc0000; transition: opacity 0.15s; }
+ .share-btn:hover { opacity: 0.7; }
+ .disclaimer { margin: 2.5rem 0; padding: 1rem 1.25rem; background: #f5f0e8; border-left: 4px solid #cc0000; font-size: 0.875rem; line-height: 1.6; color: #555; }
+ </style>
+<link rel="canonical" href="/articles/calendar-spread-strike-selection-atm-vs-otm/"> <meta property="og:title" content="Calendar Spread Strike Selection: ATM for Neutral, OTM for Directional Lean | Dependability Holdings LLC">
+ <meta property="og:description" content="Calendar spread strike selection — at-the-money for a neutral trade, slightly out-of-the-money for a directional lean, and the breakeven implications. Which strike gives the best IV crush capture for a given view.">
+ <meta property="og:image" content="https://dependability.us/og-image.jpg">
+ <meta property="og:type" content="article">
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+
+   <div class="article-page">
+
+    <div class="article-header">
+     <div class="category-label">FORECASTS & OPTIONS STRATEGIES</div>
+     <h1>Calendar Spread Strike Selection: ATM for Neutral, OTM for Directional Lean</h1>
+     <div class="article-meta">June 04, 2026 &nbsp;|&nbsp; Dependability Research Desk</div>
+    </div>
+    <div class="article-header-image">
+     <img src="" alt="Calendar Spread Strike Selection: ATM for Neutral, OTM for Directional Lean" style="width:100%;display:block;">
+    </div>
+    <div class="article-body">
+
+<p>The strike selection for a calendar spread determines the position's directional exposure, vega, and breakeven range. An at-the-money (ATM) calendar spread is a neutral trade that profits from the IV crush without a strong directional view. A slightly out-of-the-money (OTM) calendar spread is a directional trade that adds a bullish or bearish bias to the IV crush. The choice between them depends on the trader's view on the underlying and the IV environment.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<p>This article covers the strike selection options, the directional implications, the breakeven range, and the practical decision rule for selecting the strike.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="7590828986" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<h2>The Three Strike Categories</h2>
+<p>For a calendar spread, the strike of both legs (the long and short) is the same. The choice is which strike to use:</p>
+<p>| Strike Category | Position vs Current Price | Directional Bias | Vega |</p>
+<p>|---|---|---|---|</p>
+<p>| At the money (ATM) | At the current price | Neutral | Highest |</p>
+<p>| Slightly OTM (1-3%) | Above (for calls) or below (for puts) the current price | Slight directional lean | High |</p>
+<p>| Deep OTM (5%+) | Well above (for calls) or well below (for puts) | Strong directional bias | Low |</p>
+<p>The default for an IV crush trade is ATM. The strike should be adjusted to OTM only when the trader has a specific directional view.</p>
+<h2>The ATM Calendar Spread</h2>
+<p>An ATM calendar spread has both legs at the current underlying price. The position is delta-neutral at entry (delta of the near-term leg roughly offsets the delta of the longer-dated leg, both of which are near zero for ATM options).</p>
+<p>| Parameter | ATM Calendar |</p>
+<p>|---|---|</p>
+<p>| Delta at entry | Near zero (delta-neutral) |</p>
+<p>| Vega | Highest (most sensitive to IV changes) |</p>
+<p>| Breakeven range | Symmetric around the strike |</p>
+<p>| Profit zone | Widest in percentage terms |</p>
+<p>| Directional risk | Lowest |</p>
+<p>The ATM calendar is the purest IV crush trade. The position profits from the differential between the near-term and longer-dated IV declines, and the directional risk is minimal.</p>
+<p>Example: Stock at $150, ATM calendar spread (sell $150 call 14 DTE, buy $150 call 45 DTE).</p>
+<ul>
+  <li>Stock stays at $150: near-term expires worthless, longer-dated retains time value → maximum profit</li>
+  <li>Stock moves to $155: near-term has $5 intrinsic, longer-dated has $5+ intrinsic but more time value → small profit or breakeven</li>
+  <li>Stock moves to $160: near-term has $10 intrinsic, longer-dated has $10 intrinsic but less time value → loss</li>
+</ul>
+<p>The ATM calendar is profitable as long as the stock stays within roughly $5 of the strike at expiration of the near-term option. Beyond that range, the position is at a loss.</p>
+<h2>The Slightly OTM Calendar Spread</h2>
+<p>A slightly OTM calendar spread has both legs 1-3% above (for calls) or below (for puts) the current underlying price. The position is delta-positive (for calls) or delta-negative (for puts), which adds a directional bias to the IV crush.</p>
+<p>| Parameter | Slightly OTM Calendar |</p>
+<p>|---|---|</p>
+<p>| Delta at entry | Positive (for calls) or negative (for puts) |</p>
+<p>| Vega | High but lower than ATM |</p>
+<p>| Breakeven range | Shifted in the direction of the bias |</p>
+<p>| Profit zone | Narrower than ATM but shifted |</p>
+<p>| Directional risk | Moderate |</p>
+<p>The OTM calendar is appropriate when the trader has a directional view and wants to combine the IV crush with a bullish or bearish position.</p>
+<p>Example: Stock at $150, slightly OTM call calendar (sell $152 call 14 DTE, buy $152 call 45 DTE).</p>
+<ul>
+  <li>Stock stays at $150: near-term expires worthless, longer-dated has small time value → smaller profit than ATM</li>
+  <li>Stock moves to $152: near-term expires worthless, longer-dated has $0 intrinsic + time value → moderate profit</li>
+  <li>Stock moves to $155: near-term has $3 intrinsic, longer-dated has $3 intrinsic + time value → moderate profit</li>
+  <li>Stock moves to $160: near-term has $8 intrinsic, longer-dated has $8 intrinsic but less time value → loss</li>
+</ul>
+<p>The OTM calendar is profitable as long as the stock moves toward the strike (in the direction of the bias). The position has a directional sweet spot around the strike.</p>
+<h2>The Deep OTM Calendar Spread</h2>
+<p>A deep OTM calendar spread has both legs 5%+ above (for calls) or below (for puts) the current underlying price. The position is strongly delta-positive (or negative) but has low vega. The position is essentially a directional bet with a small IV crush component.</p>
+<p>| Parameter | Deep OTM Calendar |</p>
+<p>|---|---|</p>
+<p>| Delta at entry | High (positive for calls) |</p>
+<p>| Vega | Low (limited IV sensitivity) |</p>
+<p>| Breakeven range | Far from the current price |</p>
+<p>| Profit zone | Narrow, requires a large move |</p>
+<p>| Directional risk | High |</p>
+<p>The deep OTM calendar is rarely used. The low vega means the IV crush component is too small to be meaningful, and the high delta means the position is essentially a long call (or long put) with extra cost. A naked long call would be more cost-efficient.</p>
+<h2>The IV Crush Size by Strike</h2>
+<p>The IV crush is not the same for all strikes. ATM options have the largest absolute IV change because their pre-event IV is highest. OTM options have smaller IV changes because their pre-event IV is lower.</p>
+<p>| Strike | Pre-Event IV | Post-Event IV | IV Change |</p>
+<p>|---|---|---|---|</p>
+<p>| ATM | 90% | 40% | -50 pts |</p>
+<p>| 2% OTM (calls) | 75% | 35% | -40 pts |</p>
+<p>| 5% OTM (calls) | 55% | 30% | -25 pts |</p>
+<p>| 10% OTM (calls) | 35% | 25% | -10 pts |</p>
+<p>The ATM strike has the largest IV crush. The OTM strikes have progressively smaller IV crushes, and the deep OTM strikes have almost no IV crush.</p>
+<p>For an IV crush trade, the ATM strike is the most efficient because the IV crush is largest. For a directional trade, the OTM strike is appropriate because the position has a directional bias.</p>
+<h2>The Directional Trade-Off</h2>
+<p>The choice between ATM and OTM is a trade-off between the IV crush capture and the directional exposure.</p>
+<p>| Strike | IV Crush Capture | Directional Exposure | Best For |</p>
+<p>|---|---|---|---|</p>
+<p>| ATM | Maximum | None | Pure IV crush trade |</p>
+<p>| Slightly OTM (1-3%) | Large | Moderate | IV crush with directional bias |</p>
+<p>| Deep OTM (5%+) | Small | High | Directional bet (use naked call instead) |</p>
+<p>The default for an earnings trade is ATM. The trader who has a specific directional view (e.g., "I think the stock will move up after earnings") may shift to slightly OTM to add the directional bias.</p>
+<h2>The Breakeven Implications</h2>
+<p>The breakeven range of a calendar spread depends on the strike selection. The ATM calendar has a symmetric breakeven around the strike; the OTM calendar has an asymmetric breakeven.</p>
+<p>| Strike | Breakeven Range (10% IV Crush) | Profit Zone Width |</p>
+<p>|---|---|---|</p>
+<p>| ATM | $145 to $155 (10% of $150) | $10 |</p>
+<p>| 2% OTM (call, $152 strike) | $148 to $158 | $10 (shifted up) |</p>
+<p>| 5% OTM (call, $158 strike) | $152 to $168 | $16 (shifted up, but smaller IV crush) |</p>
+<p>The OTM calendar has a wider profit zone in absolute terms (because the strike is higher) but a smaller IV crush. The ATM calendar has a smaller profit zone in absolute terms but a larger IV crush. The choice depends on the trader's view.</p>
+<h2>The Decision Rule</h2>
+<p>A practical algorithm for strike selection:</p>
+<ol>
+  <li><strong>No directional view:</strong> Use ATM. The position is a pure IV crush trade, and the breakeven range is symmetric.</li>
+  <li><strong>Slight bullish view (stock expected to drift up):</strong> Use 1-2% OTM call calendar. The position adds a bullish bias to the IV crush.</li>
+  <li><strong>Slight bearish view (stock expected to drift down):</strong> Use 1-2% OTM put calendar. The position adds a bearish bias to the IV crush.</li>
+  <li><strong>Strong directional view:</strong> Skip the calendar spread. Use a debit spread or a naked call/put. The calendar spread's capped directional exposure does not match a strong directional view.</li>
+  <li><strong>Earnings trade (default):</strong> Use ATM. The IV crush is largest at the strike, and the position is directionally neutral.</li>
+</ol>
+<p>The decision is view-driven. The trader who has no view uses ATM; the trader who has a view shifts to OTM in the direction of the view.</p>
+<h2>The Striking Distance Rule</h2>
+<p>A useful rule: the strike should be within 1.0 standard deviation of the current underlying price at the time of the event. The expected move of the stock over the holding period is the standard deviation; the strike should be within that range.</p>
+<p>For a stock at $150 with 20% annualized volatility and a 14-day event:</p>
+<ul>
+  <li>Daily volatility: 20% / sqrt(252) = 1.26%</li>
+  <li>14-day volatility: 1.26% × sqrt(14) = 4.7%</li>
+  <li>1 standard deviation: $150 × 4.7% = $7</li>
+</ul>
+<p>The strike should be within $7 of $150, which means strikes from $143 to $157 are within 1 standard deviation. The ATM strike ($150) is the center of the range.</p>
+<h2>The Volatility Smile</h2>
+<p>The volatility smile (or skew) affects the strike selection. For most equities, the put skew is steeper than the call skew, which means OTM puts have higher IV than OTM calls at the same distance from the money. The implication:</p>
+<ul>
+  <li>For a put calendar (bearish bias), the IV crush is larger for OTM strikes than for ATM strikes.</li>
+  <li>For a call calendar (bullish bias), the IV crush is smaller for OTM strikes than for ATM strikes.</li>
+</ul>
+<p>A put calendar at the same percentage OTM as a call calendar will have a larger IV crush. The trader who is bearish should consider a put calendar; the trader who is bullish should consider a call calendar but expect a smaller IV crush per percentage OTM.</p>
+<h2>The Earnings Volatility Pattern</h2>
+<p>The pre-earnings volatility is not flat across strikes. The at-the-money IV is highest, and the OTM IV is lower. After earnings, the IV crush is largest at the ATM strike and smaller at the OTM strikes. The result is that the ATM strike is the most efficient for capturing the IV crush.</p>
+<p>| Strike | Pre-Earnings IV | Post-Earnings IV | IV Crush | Dollar Impact (per spread) |</p>
+<p>|---|---|---|---|---|</p>
+<p>| ATM ($150) | 90% | 40% | -50 pts | $3.00 (50 × 0.06 vega) |</p>
+<p>| 2% OTM ($153) | 78% | 38% | -40 pts | $2.40 (40 × 0.06 vega) |</p>
+<p>| 5% OTM ($158) | 58% | 33% | -25 pts | $1.50 (25 × 0.06 vega) |</p>
+<p>The ATM strike captures the largest dollar amount of the IV crush. The OTM strikes capture less. The trade-off is the directional exposure: the OTM strikes have a directional bias that the ATM strike does not.</p>
+<h2>Modeling the Strike Selection</h2>
+<p>We use [OptionsStrat](https://optionstrat.com/ventureprise) to model the calendar spread at each strike before entry. The platform shows the IV crush impact, the breakeven range, the directional exposure, and the profit zone for each strike, which makes the trade-off visible at a glance.</p>
+<p><strong>Parent:</strong> [Calendar Spreads: Profiting from IV Crush Around Known Events](/articles/calendar-spreads-earnings-iv-crush/)</p>
+<p><strong>Previous:</strong> [Calendar Spread IV Crush Math: Why the Near-Term Option Collapses Faster](/articles/calendar-spread-iv-crush-math/)</p>
+<p><strong>Next:</strong> [Calendar Spread Exit Timing: Close 1-3 Days Post-Event, IV Crush Completion Rules](/articles/calendar-spread-exit-timing/)</p>
+<p><em>This content is for informational purposes only. Options trading involves substantial risk of loss. Dependability Holdings LLC has no positions in the securities mentioned. Past performance is not indicative of future results.</em></p>
+
+    </div>
+
+
+    <div class="disclaimer">
+     <strong>Disclaimer:</strong> This research is for informational purposes only and does not constitute investment advice. Options trading involves substantial risk of loss. Dependability Holdings LLC has no positions in the securities mentioned. Past performance is not indicative of future results.
+    </div>
+
+
+<div class="share-bar">
+  <span class="share-label">Share</span>
+  <a class="share-btn share-x" href="#" target="_blank" rel="noopener" aria-label="Share on X">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+  </a>
+  <a class="share-btn share-facebook" href="#" target="_blank" rel="noopener" aria-label="Share on Facebook">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+  </a>
+  <a class="share-btn share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+  </a>
+  <button class="share-btn share-copy" aria-label="Copy link" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.querySelector('.copy-label').textContent='Copied!';setTimeout(()=>{this.querySelector('.copy-label').textContent='Copy'},2000)})">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+    <span class="copy-label">Copy</span>
+  </button>
+</div>
+
+
+<script>
+document.querySelectorAll('.share-x, .share-facebook, .share-linkedin').forEach(function(el) {
+  var url = encodeURIComponent(window.location.href);
+  var title = encodeURIComponent(document.title);
+  if (el.classList.contains('share-x')) el.href = 'https://x.com/intent/tweet?url=' + url + '&text=' + title;
+  if (el.classList.contains('share-facebook')) el.href = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
+  if (el.classList.contains('share-linkedin')) el.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + url;
+});
+</script>
+
+   </div>
+
+ </main>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+ <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+ <script src="/nav.js"></script>
+ <script src="/footer.js"></script>
+
+<div id="site-footer"></div>
+
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Iron Condor Greeks Explained: Delta, Theta, Vega, Gamma at Each Stage | Dependability Holdings LLC</title>
+ <meta name="description" content="Iron condor Greeks at entry, mid-life, and near expiration — delta, theta, vega, and gamma behavior. How each Greek evolves as DTE decreases, why the position is a positive theta/negative vega trade, and what to watch as gamma rises.">
+ <link rel="stylesheet" href="/style.css">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <style>
+ .share-bar { display: flex; align-items: center; gap: 10px; margin: 40px 0 32px; padding: 16px 0; border-top: 1px solid #e8e4dd; border-bottom: 1px solid #e8e4dd; }
+ .share-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #999; margin-right: 4px; }
+ .share-btn { display: inline-flex; align-items: center; gap: 5px; padding: 7px 12px; border-radius: 4px; font-size: 12px; text-decoration: none; border: 1px solid #cc0000; background: transparent; cursor: pointer; font-family: inherit; color: #cc0000; transition: opacity 0.15s; }
+ .share-btn:hover { opacity: 0.7; }
+ .disclaimer { margin: 2.5rem 0; padding: 1rem 1.25rem; background: #f5f0e8; border-left: 4px solid #cc0000; font-size: 0.875rem; line-height: 1.6; color: #555; }
+ </style>
+<link rel="canonical" href="/articles/iron-condor-greeks-explained/"> <meta property="og:title" content="Iron Condor Greeks Explained: Delta, Theta, Vega, Gamma at Each Stage | Dependability Holdings LLC">
+ <meta property="og:description" content="Iron condor Greeks at entry, mid-life, and near expiration — delta, theta, vega, and gamma behavior. How each Greek evolves as DTE decreases, why the position is a positive theta/negative vega trade, and what to watch as gamma rises.">
+ <meta property="og:image" content="https://dependability.us/og-image.jpg">
+ <meta property="og:type" content="article">
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+
+   <div class="article-page">
+
+    <div class="article-header">
+     <div class="category-label">FORECASTS & OPTIONS STRATEGIES</div>
+     <h1>Iron Condor Greeks Explained: Delta, Theta, Vega, Gamma at Each Stage</h1>
+     <div class="article-meta">June 04, 2026 &nbsp;|&nbsp; Dependability Research Desk</div>
+    </div>
+    <div class="article-header-image">
+     <img src="" alt="Iron Condor Greeks Explained: Delta, Theta, Vega, Gamma at Each Stage" style="width:100%;display:block;">
+    </div>
+    <div class="article-body">
+
+<p>An iron condor is a positive theta, negative vega trade. The position collects time decay daily while losing money if implied volatility rises. The Greeks describe exactly how the position will respond to changes in the underlying price, time, and volatility. Understanding the Greeks at each stage of the trade — entry, mid-life, and near expiration — is what separates a trader who manages the position from one who is managed by it.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<p>This article walks through the Greeks for a standard SPX iron condor at 45 DTE entry, with the Greeks shown at entry, at 21 DTE, and at 7 DTE.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="7590828986" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<h2>The Four Greeks</h2>
+<p><strong>Delta</strong> measures the change in option price for a $1 change in the underlying. For an iron condor, delta at entry is near zero (the short call spread and short put spread offset each other). As the underlying moves, delta becomes positive or negative depending on the direction.</p>
+<p><strong>Theta</strong> measures the change in option price for a one-day decrease in time to expiration. For an iron condor, theta is positive — the position gains value as time passes. Theta is the primary profit source for the position.</p>
+<p><strong>Vega</strong> measures the change in option price for a 1-point change in implied volatility. For an iron condor, vega is negative — the position loses value if IV rises and gains value if IV falls. Vega is the secondary risk for the position (after the underlying moving beyond a short strike).</p>
+<p><strong>Gamma</strong> measures the change in delta for a $1 change in the underlying. For an iron condor, gamma is positive on the threatened side — delta accelerates as the underlying approaches the short strike. Gamma is the reason the position needs to be managed as expiration approaches.</p>
+<h2>Greeks at Entry (45 DTE)</h2>
+<p>For a 15-point SPX condor with short strikes 1.0 standard deviation out of the money:</p>
+<p>| Greek | Per Spread | Notes |</p>
+<p>|---|---|---|</p>
+<p>| Delta | 0.02 to -0.02 | Near zero; the two short spreads offset |</p>
+<p>| Theta | +0.04 to +0.06 per day | Strong positive; position gains $4-6 per day per spread on time decay |</p>
+<p>| Vega | -0.08 to -0.12 per IV point | Negative; a 1-point rise in IV costs the position $8-12 per spread |</p>
+<p>| Gamma | +0.002 to +0.004 per $1 move | Low; delta is not very sensitive to small moves |</p>
+<p>At entry, the position is "balanced" — delta near zero, theta strongly positive, vega moderately negative, gamma low. The trade is essentially a bet on time passing and IV staying flat or declining. The expected value of holding the position to expiration is positive as long as the probability of touch on either short strike is less than the credit collected.</p>
+<h2>Greeks at 21 DTE</h2>
+<p>After half the time has passed, the position's profile has shifted. Theta has done some work, the remaining time value is smaller, and gamma is starting to rise.</p>
+<p>| Greek | Per Spread | Change from Entry |</p>
+<p>|---|---|---|</p>
+<p>| Delta | 0.05 to -0.05 (depending on drift) | Slightly more positive or negative as underlying drifts |</p>
+<p>| Theta | +0.03 to +0.05 per day | Lower in absolute terms but still positive; theta acceleration has tapered |</p>
+<p>| Vega | -0.06 to -0.10 per IV point | Lower in absolute terms; less sensitivity to IV changes |</p>
+<p>| Gamma | +0.005 to +0.010 per $1 move | Higher; delta is now meaningfully sensitive to moves |</p>
+<p>At 21 DTE, the position is "in the meat" of the trade. Theta is still positive and working, but the position has lost some of its initial premium. Vega sensitivity is lower, which means a sudden IV spike is less damaging. Gamma has risen but is still manageable for positions that are still in the profit zone.</p>
+<p>The decisions at 21 DTE:</p>
+<ul>
+  <li>If the position is in the profit zone (underlying between the short strikes), the right move is usually to hold.</li>
+  <li>If the underlying is at or near a short strike, the right move is to roll the untested side forward or close the position.</li>
+  <li>If the position is well in the money on one side, the right move is usually to close.</li>
+</ul>
+<h2>Greeks at 7 DTE</h2>
+<p>The final week of the trade is when gamma dominates and theta has tapered. The position's sensitivity to small moves is now much higher, and the remaining premium is small.</p>
+<p>| Greek | Per Spread | Change from 21 DTE |</p>
+<p>|---|---|---|</p>
+<p>| Delta | -0.10 to +0.10 (depending on drift) | Wide range; delta has moved meaningfully with the underlying |</p>
+<p>| Theta | +0.01 to +0.03 per day | Low; most of the time decay has already happened |</p>
+<p>| Vega | -0.02 to -0.04 per IV point | Low; IV changes have minimal impact on remaining premium |</p>
+<p>| Gamma | +0.020 to +0.050 per $1 move | High; a $1 move can change delta by several cents |</p>
+<p>At 7 DTE, the position is "close to binary." The remaining premium is small, the gamma is high, and a small move in the underlying can flip the position from profitable to losing. Most decisions at 7 DTE are about closing the position, not adjusting it.</p>
+<p>The standard practice at 7 DTE is to close the position for a debit equal to the remaining premium. This converts the position to cash and frees up buying power. Holding through the final week in the hope of collecting the last few dollars of premium is a low-EV trade because of the gamma risk.</p>
+<h2>Theta Curve Visualization</h2>
+<p>Theta is not linear. It accelerates from 60 DTE to 30 DTE, peaks around 30-21 DTE, then decelerates as expiration approaches. For a 45 DTE condor:</p>
+<p>| DTE | Cumulative Premium Captured | Remaining Premium |</p>
+<p>|---|---|---|</p>
+<p>| 45 (entry) | $0 | $1.80 (full credit) |</p>
+<p>| 35 | $0.45 (25%) | $1.35 |</p>
+<p>| 25 | $0.95 (53%) | $0.85 |</p>
+<p>| 15 | $1.40 (78%) | $0.40 |</p>
+<p>| 7 | $1.65 (92%) | $0.15 |</p>
+<p>| 0 | $1.80 (100%) | $0 |</p>
+<p>The position captures roughly half of its total premium in the first 20 days (45 DTE to 25 DTE) and the other half in the last 25 days (25 DTE to 0 DTE). This is why the 45 DTE entry is the standard — it gives the position the maximum time in the theta-acceleration phase.</p>
+<h2>Vega Sensitivity and IV Crush</h2>
+<p>The negative vega of an iron condor means that the position is short volatility. This is the source of profit in event-driven trades: a spike in IV before the event followed by a crush after the event is a vega-positive move for the position.</p>
+<p>The vega exposure is highest at entry and decreases as expiration approaches. A 1-point rise in VIX at 45 DTE can cost the position 8-12% of the credit collected. A 1-point rise at 7 DTE costs only 1-2% of the remaining premium.</p>
+<p>This is why event-driven condors are best entered 30-45 days before the event: the position has enough time for IV to crush, and the vega exposure is high enough for the crush to produce a meaningful gain.</p>
+<h2>Gamma Risk in the Final Week</h2>
+<p>The single most common mistake in iron condor management is holding the position through the final week hoping to collect the last few dollars of premium. The gamma at 7 DTE is 5-10x the gamma at 21 DTE, and a small adverse move in the final week can erase the entire profit from the position.</p>
+<p>The standard practice: close the position at 21 DTE if it has captured 50% of max profit, or at 14 DTE if the position is at risk of being tested. Do not hold into the final week for the last 15% of premium.</p>
+<h2>Putting the Greeks Together</h2>
+<p>The Greeks tell the story of the position:</p>
+<ul>
+  <li><strong>At entry:</strong> Theta is doing the work, vega is the secondary risk, gamma is low.</li>
+  <li><strong>At mid-life (21 DTE):</strong> Theta is still positive, gamma is rising, vega is less of a concern.</li>
+  <li><strong>At near-expiration (7 DTE):</strong> Gamma dominates, theta is small, and the position is close to binary.</li>
+</ul>
+<p>The trader's job is to manage the position through these three stages: enter when theta and vega are favorable, manage mid-life decisions about whether to roll or hold, and close before gamma risk dominates.</p>
+<h2>Visualizing the Greeks</h2>
+<p>We use [OptionsStrat](https://optionstrat.com/ventureprise) to display the Greeks at each stage of the trade. The platform shows delta, theta, vega, and gamma for the full position at any DTE, which makes the trade-off between holding and closing visible before execution.</p>
+<p><strong>Parent:</strong> [Iron Condors: Complete Strategy Guide for Range-Bound Markets](/articles/iron-condors-range-bound-markets/)</p>
+<p><strong>Previous:</strong> [Iron Condor vs Iron Butterfly: Structure, Win Rate, and When to Use Each](/articles/iron-condor-vs-iron-butterfly/)</p>
+<p><strong>Next:</strong> [Iron Condor Max Loss Calculation: Wing Width, Sizing, and Correlation](/articles/iron-condor-max-loss-calculation/)</p>
+<p><em>This content is for informational purposes only. Options trading involves substantial risk of loss. Dependability Holdings LLC has no positions in the securities mentioned. Past performance is not indicative of future results.</em></p>
+
+    </div>
+
+
+    <div class="disclaimer">
+     <strong>Disclaimer:</strong> This research is for informational purposes only and does not constitute investment advice. Options trading involves substantial risk of loss. Dependability Holdings LLC has no positions in the securities mentioned. Past performance is not indicative of future results.
+    </div>
+
+
+<div class="share-bar">
+  <span class="share-label">Share</span>
+  <a class="share-btn share-x" href="#" target="_blank" rel="noopener" aria-label="Share on X">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+  </a>
+  <a class="share-btn share-facebook" href="#" target="_blank" rel="noopener" aria-label="Share on Facebook">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+  </a>
+  <a class="share-btn share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+  </a>
+  <button class="share-btn share-copy" aria-label="Copy link" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.querySelector('.copy-label').textContent='Copied!';setTimeout(()=>{this.querySelector('.copy-label').textContent='Copy'},2000)})">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+    <span class="copy-label">Copy</span>
+  </button>
+</div>
+
+
+<script>
+document.querySelectorAll('.share-x, .share-facebook, .share-linkedin').forEach(function(el) {
+  var url = encodeURIComponent(window.location.href);
+  var title = encodeURIComponent(document.title);
+  if (el.classList.contains('share-x')) el.href = 'https://x.com/intent/tweet?url=' + url + '&text=' + title;
+  if (el.classList.contains('share-facebook')) el.href = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
+  if (el.classList.contains('share-linkedin')) el.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + url;
+});
+</script>
+
+   </div>
+
+ </main>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+ <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+ <script src="/nav.js"></script>
+ <script src="/footer.js"></script>
+
+<div id="site-footer"></div>
+
+</body>
+</html>

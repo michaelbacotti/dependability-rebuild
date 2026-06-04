@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Bull Call Spread Position Sizing: 2% Rule, Portfolio Allocation, and Correlation | Dependability Holdings LLC</title>
+ <meta name="description" content="Bull call spread position sizing — the 2% rule applied to the debit, the portfolio-level allocation across multiple spreads, and the correlation problem when running many spreads on related underlyings.">
+ <link rel="stylesheet" href="/style.css">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <style>
+ .share-bar { display: flex; align-items: center; gap: 10px; margin: 40px 0 32px; padding: 16px 0; border-top: 1px solid #e8e4dd; border-bottom: 1px solid #e8e4dd; }
+ .share-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #999; margin-right: 4px; }
+ .share-btn { display: inline-flex; align-items: center; gap: 5px; padding: 7px 12px; border-radius: 4px; font-size: 12px; text-decoration: none; border: 1px solid #cc0000; background: transparent; cursor: pointer; font-family: inherit; color: #cc0000; transition: opacity 0.15s; }
+ .share-btn:hover { opacity: 0.7; }
+ .disclaimer { margin: 2.5rem 0; padding: 1rem 1.25rem; background: #f5f0e8; border-left: 4px solid #cc0000; font-size: 0.875rem; line-height: 1.6; color: #555; }
+ </style>
+<link rel="canonical" href="/articles/bull-call-spread-position-sizing/"> <meta property="og:title" content="Bull Call Spread Position Sizing: 2% Rule, Portfolio Allocation, and Correlation | Dependability Holdings LLC">
+ <meta property="og:description" content="Bull call spread position sizing — the 2% rule applied to the debit, the portfolio-level allocation across multiple spreads, and the correlation problem when running many spreads on related underlyings.">
+ <meta property="og:image" content="https://dependability.us/og-image.jpg">
+ <meta property="og:type" content="article">
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+
+   <div class="article-page">
+
+    <div class="article-header">
+     <div class="category-label">FORECASTS & OPTIONS STRATEGIES</div>
+     <h1>Bull Call Spread Position Sizing: 2% Rule, Portfolio Allocation, and Correlation</h1>
+     <div class="article-meta">June 04, 2026 &nbsp;|&nbsp; Dependability Research Desk</div>
+    </div>
+    <div class="article-header-image">
+     <img src="" alt="Bull Call Spread Position Sizing: 2% Rule, Portfolio Allocation, and Correlation" style="width:100%;display:block;">
+    </div>
+    <div class="article-body">
+
+<p>A bull call spread has defined risk: the max loss is the debit paid. But "defined risk" is not the same as "manageable risk." A spread that is too large for the portfolio, or one of many correlated spreads that all hit max loss at the same time, can produce a drawdown that forces the trader to exit the program. The position sizing rules — the 2% rule, the portfolio-level allocation, and the correlation budget — are what keep a defined-risk strategy from becoming an uncontrolled-risk strategy in practice.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<p>This article covers the position sizing math, the portfolio-level allocation, the correlation problem, and the practical decision rule for sizing bull call spread positions.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="7590828986" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<h2>The 2% Rule</h2>
+<p>The standard position sizing rule for bull call spreads: <strong>risk no more than 2% of total portfolio capital on a single spread</strong>. The 2% is calculated on the debit paid (the max loss), not on the buying power or the notional value.</p>
+<p>For a $100,000 portfolio:</p>
+<p>Max risk per spread = $100,000 × 0.02 = <strong>$2,000</strong></p>
+<p>If the spread costs $2.50 ($250 per contract), the position can be 8 contracts ($2,000 risk). If the spread costs $5.00 ($500 per contract), the position can be 4 contracts ($2,000 risk).</p>
+<p>The 2% rule has two purposes:</p>
+<ol>
+  <li><strong>Survive a bad streak.</strong> A trader who risks 2% per position can have 10 consecutive max-loss trades before losing 20% of capital. A trader who risks 10% per position is out of the game after 3 consecutive losses.</li>
+  <li><strong>Allow the strategy to work.</strong> Bull call spreads have a 30-50% win rate (lower than iron condors), which means 50-70% of trades will be losers. The 2% rule gives the strategy enough room to absorb the losers without forcing the trader to reduce size or exit the program.</li>
+</ol>
+<h2>Sizing by Debit, Not by Notional Value</h2>
+<p>A common mistake is sizing the position based on the notional value of the spread. For a $5-wide SPX spread, the notional value is $500 ($5 × $100 multiplier). The notional value is not the risk; the risk is the debit paid.</p>
+<p>Example: SPX bull call spread with long $5,800 strike, short $5,810 strike, 30 DTE, debit $3.00.</p>
+<ul>
+  <li>Notional value: $10 × $100 = $1,000 per contract</li>
+  <li>Debit: $3.00 × $100 = $300 per contract</li>
+  <li>Max loss: $300 per contract</li>
+</ul>
+<p>The position size is determined by the debit ($300), not the notional value ($1,000). A $100,000 portfolio with 2% risk ($2,000) can run 6-7 contracts of this spread.</p>
+<h2>Buying Power Reduction</h2>
+<p>Bull call spreads have a defined risk that is fully covered by the debit paid. Most brokers do not require additional margin for a long call spread, but the buying power reduction (BPR) is typically the debit paid plus a small buffer.</p>
+<p>| Broker Type | BPR for Bull Call Spread |</p>
+<p>|---|---|</p>
+<p>| Cash account | Full debit (e.g., $300 per contract) |</p>
+<p>| Reg-T margin | Debit + small buffer (typically 100% of debit) |</p>
+<p>| Portfolio margin | Debit × 0.20-0.40 (stress-loss-based) |</p>
+<p>The BPR is not the risk metric. The risk metric is the debit. The 2% rule is applied to the debit, and the BPR determines how much of the portfolio's buying power is consumed.</p>
+<h2>Portfolio-Level Allocation</h2>
+<p>A portfolio running 5-10 simultaneous bull call spreads should size each position so that the total portfolio risk (the sum of debits paid) does not exceed 10-20% of capital. This means each individual position is sized at 1-2% of capital, and the positions are selected to be uncorrelated or low-correlation.</p>
+<p>For a $100,000 portfolio running 5 spreads:</p>
+<ul>
+  <li>Total portfolio risk budget: 10-20% = $10,000 - $20,000</li>
+  <li>Per-position risk: 2-4% = $2,000 - $4,000</li>
+  <li>Per-position size: variable, based on the debit of each spread</li>
+</ul>
+<p>If any single spread goes to max loss, the portfolio loses 2-4% of capital. If three spreads go to max loss simultaneously (a correlated event), the portfolio loses 6-12% of capital. That is a survivable drawdown.</p>
+<h2>Correlation: The Hidden Risk</h2>
+<p>The single biggest risk in a multi-spread portfolio is correlation. If all 5 spreads are on tech stocks, they will all move together during a sector rotation. A 5-position portfolio with correlated underlyings is effectively a 5x leveraged single-position bet.</p>
+<p>The fix: diversify across underlyings with low correlation in their short-term price movements.</p>
+<p>| Correlation Tier | Examples | Suitability for Multi-Spread Portfolio |</p>
+<p>|---|---|---|</p>
+<p>| High (>0.7) | AAPL, MSFT, GOOGL, NVDA | Use 1-2 maximum |</p>
+<p>| Moderate (0.4-0.7) | Tech ETFs (XLK, QQQ), sector peers (XLF components) | Use 1-2 maximum |</p>
+<p>| Low (0.1-0.4) | Unrelated sectors (XLV vs XLE), bonds (TLT), commodities (GLD) | Use freely |</p>
+<p>| Very low (<0.1) | International ETFs, currencies, unrelated industries | Use freely |</p>
+<p>A balanced portfolio might include 1 spread on a tech stock, 1 spread on a sector ETF, 1 spread on a non-tech sector, 1 spread on a bond or commodity ETF, and 1 spread on a low-correlation industry. The correlations between these positions are low enough that a market event that hits one is unlikely to hit all.</p>
+<h2>The Sector Concentration Limit</h2>
+<p>Beyond correlation, sector concentration is a separate risk. A portfolio with 3 spreads on tech stocks, 1 spread on a healthcare stock, and 1 spread on a financial stock is sector-concentrated in tech. A sector rotation out of tech can produce large losses on the 3 tech spreads while the other 2 are unaffected.</p>
+<p>The fix: limit sector exposure to 30-40% of the portfolio's total risk. A portfolio with $20,000 in total risk can have at most $6,000-$8,000 in tech-sector risk (3 spreads of $2,000 each, capped at $6,000-$8,000).</p>
+<h2>Sizing for Event Trades</h2>
+<p>Event-driven trades (earnings, FDA, merger) have higher risk than directional trades. The IV crush and the event-day gap can produce larger losses than the standard 2% rule anticipates. A common adjustment: <strong>reduce event-trade size to 1% of capital</strong>.</p>
+<p>For a $100,000 portfolio:</p>
+<ul>
+  <li>Standard directional trade: 2% = $2,000 risk</li>
+  <li>Event trade: 1% = $1,000 risk</li>
+</ul>
+<p>The smaller size accounts for the higher volatility of event-driven trades. The trader who risks 2% on event trades will have larger drawdowns than the trader who reduces size for events.</p>
+<h2>Sizing for Earnings Iron Condors and Spreads</h2>
+<p>Some traders run bull call spreads around earnings (rather than before earnings, with a defined exit). The size of these trades should be reduced to 0.5-1% of capital because the earnings-day gap can produce a larger loss than the spread's debit.</p>
+<p>For a $100,000 portfolio:</p>
+<ul>
+  <li>Earnings-day spread: 0.5-1% = $500 - $1,000 risk</li>
+</ul>
+<p>The reduced size accounts for the tail risk of a large earnings surprise. The trader who has survived 10 earnings trades at 0.5% has had 5% of capital at risk over the period, and the expected return is positive if the strategy is well-implemented.</p>
+<h2>Adjusting Size for Win Rate</h2>
+<p>The 2% rule assumes a base win rate. For a strategy with a lower win rate (e.g., earnings spreads with a 30% win rate), the size should be reduced to compensate. A common rule: <strong>size inversely proportional to the win rate squared</strong>.</p>
+<ul>
+  <li>70% win rate: 2% per trade</li>
+  <li>50% win rate: 1% per trade</li>
+  <li>30% win rate: 0.5% per trade</li>
+  <li>20% win rate: 0.3% per trade</li>
+</ul>
+<p>This rule reduces size for lower-probability strategies, which protects the portfolio from the higher variance of those strategies.</p>
+<h2>Sizing for Portfolio Volatility</h2>
+<p>The 2% rule is a starting point. The actual size should be adjusted for the portfolio's current volatility:</p>
+<ul>
+  <li><strong>Low-volatility portfolio (Sharpe > 1.5):</strong> Standard 2% per trade</li>
+  <li><strong>Medium-volatility portfolio (Sharpe 1.0-1.5):</strong> 1.5% per trade</li>
+  <li><strong>High-volatility portfolio (Sharpe < 1.0):</strong> 1% per trade</li>
+</ul>
+<p>A high-volatility portfolio is one that has had a string of losses or has positions with high correlation. Reducing size during high-volatility periods is a defensive measure that protects the portfolio from a deeper drawdown.</p>
+<h2>The Decision Rule</h2>
+<p>A practical algorithm for sizing a bull call spread:</p>
+<ol>
+  <li><strong>Calculate the debit</strong> of the spread (the max loss per contract).</li>
+  <li><strong>Apply the 2% rule:</strong> max position size = 2% of capital / debit per contract.</li>
+  <li><strong>Adjust for the IV regime:</strong> in low-IV environments, reduce to 1.5%; in elevated-IV environments, use 2%.</li>
+  <li><strong>Adjust for event risk:</strong> for earnings trades, reduce to 0.5-1%.</li>
+  <li><strong>Check portfolio correlation:</strong> if the underlying is correlated to existing positions, reduce size or skip the trade.</li>
+  <li><strong>Check sector concentration:</strong> if the sector is over-allocated, reduce size or skip the trade.</li>
+</ol>
+<p>The algorithm is mechanical. The trader who follows it consistently will have a more stable return than a trader who sizes based on conviction alone.</p>
+<h2>Modeling the Position</h2>
+<p>We use [OptionsStrat](https://optionstrat.com/ventureprise) to model the spread's debit, max loss, and probability of profit before entry. The platform also shows the portfolio-level position size based on the 2% rule, which makes the sizing decision visible at a glance.</p>
+<p><strong>Parent:</strong> [Bull Call Spreads: Complete Strategy Guide for Moderate Bullish Moves](/articles/bull-call-spreads-defined-risk/)</p>
+<p><strong>Previous:</strong> [Bull Call Spread IV Regime Guide: Which IV Environments Suit Spreads](/articles/bull-call-spread-iv-regime-guide/)</p>
+<p><strong>Next:</strong> [Bull Call Spread Profit Targets: The 2x Debit Rule, Partial Profits, and Scaling Out](/articles/bull-call-spread-profit-targets/)</p>
+<p><em>This content is for informational purposes only. Options trading involves substantial risk of loss. Dependability Holdings LLC has no positions in the securities mentioned. Past performance is not indicative of future results.</em></p>
+
+    </div>
+
+
+    <div class="disclaimer">
+     <strong>Disclaimer:</strong> This research is for informational purposes only and does not constitute investment advice. Options trading involves substantial risk of loss. Dependability Holdings LLC has no positions in the securities mentioned. Past performance is not indicative of future results.
+    </div>
+
+
+<div class="share-bar">
+  <span class="share-label">Share</span>
+  <a class="share-btn share-x" href="#" target="_blank" rel="noopener" aria-label="Share on X">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+  </a>
+  <a class="share-btn share-facebook" href="#" target="_blank" rel="noopener" aria-label="Share on Facebook">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+  </a>
+  <a class="share-btn share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+  </a>
+  <button class="share-btn share-copy" aria-label="Copy link" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.querySelector('.copy-label').textContent='Copied!';setTimeout(()=>{this.querySelector('.copy-label').textContent='Copy'},2000)})">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+    <span class="copy-label">Copy</span>
+  </button>
+</div>
+
+
+<script>
+document.querySelectorAll('.share-x, .share-facebook, .share-linkedin').forEach(function(el) {
+  var url = encodeURIComponent(window.location.href);
+  var title = encodeURIComponent(document.title);
+  if (el.classList.contains('share-x')) el.href = 'https://x.com/intent/tweet?url=' + url + '&text=' + title;
+  if (el.classList.contains('share-facebook')) el.href = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
+  if (el.classList.contains('share-linkedin')) el.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + url;
+});
+</script>
+
+   </div>
+
+ </main>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+ <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+ <script src="/nav.js"></script>
+ <script src="/footer.js"></script>
+
+<div id="site-footer"></div>
+
+</body>
+</html>
