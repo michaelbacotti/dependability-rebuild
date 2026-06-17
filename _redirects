@@ -48,5 +48,5 @@
 # ── www → bare canonical redirect ──
 # Google is indexing www variant; user canonical = bare.
 # 301 ensures www URLs redirect to bare, resolving the canonical conflict.
-/www/ https://dependability.us/:splat 301
-www.dependability.us/* https://dependability.us/:splat 301
+www.dependability.us/ https://dependability.us/ 301
+www.dependability.us/* https://dependability.us/$1 301
