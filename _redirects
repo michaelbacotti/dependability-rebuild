@@ -17,6 +17,7 @@ https://www.dependability.us/* https://dependability.us/:splat 301!
 
 # Static pages
 /about.html /about/ 301
+/about-strategy/ /about/ 301
 /contact.html /contact/ 301
 /disclaimer.html /disclaimer/ 301
 /privacy.html /privacy/ 301
