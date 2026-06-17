@@ -2,6 +2,13 @@
 # DEPENDABILITY — Legacy .html → Clean URL Redirects
 # ============================================================
 
+# ── Host normalization: force www → bare (canonical host) ──
+# Canonical tags and sitemap both point at https://dependability.us/ (bare).
+# Without this, Google sees www.dependability.us as a duplicate and picks it as
+# the canonical, mismatching our declared canonical. 301 the www version
+# to bare on every URL.
+https://www.dependability.us/* https://dependability.us/:splat 301!
+
 # Root index
 /index.html / 301
 
@@ -44,9 +51,3 @@
 /articles/bull-call-spreads-defined-risk.html /articles/bull-call-spreads-defined-risk/ 301
 /articles/forecast-methodology-2026.html /articles/forecast-methodology-2026/ 301
 /articles/iron-condors-range-bound-markets.html /articles/iron-condors-range-bound-markets/ 301
-
-# ── www → bare canonical redirect ──
-# Google is indexing www variant; user canonical = bare.
-# 301 ensures www URLs redirect to bare, resolving the canonical conflict.
-www.dependability.us/ https://dependability.us/ 301
-www.dependability.us/* https://dependability.us/$1 301
