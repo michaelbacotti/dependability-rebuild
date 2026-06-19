@@ -64,15 +64,50 @@
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 <h2>The IV Crush Completion Curve</h2>
 <p>The IV crush does not happen all at once. It begins 1-2 days before the event (as some traders close their positions pre-event) and completes 1-3 days after the event (as the remaining uncertainty is resolved).</p>
-<p>| Day | Typical IV Level (% of pre-event) | Cumulative IV Crush |</p>
-<p>|---|---|---|</p>
-<p>| T-2 (2 days before) | 95% | 5% |</p>
-<p>| T-1 (1 day before) | 100% (peak) | 0% |</p>
-<p>| T (event day) | 60-70% | 30-40% |</p>
-<p>| T+1 (1 day after) | 45-55% | 45-55% |</p>
-<p>| T+2 (2 days after) | 40-50% | 50-60% |</p>
-<p>| T+3 (3 days after) | 40-50% | 50-60% (essentially complete) |</p>
-<p>| T+5 (5 days after) | 40-50% | 50-60% (stable) |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Day</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Typical IV Level (% of pre-event)</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Cumulative IV Crush</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">T-2 (2 days before)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">95%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">5%</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">T-1 (1 day before)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">100% (peak)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">0%</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">T (event day)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">60-70%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">30-40%</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">T+1 (1 day after)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">45-55%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">45-55%</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">T+2 (2 days after)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">40-50%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">50-60%</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">T+3 (3 days after)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">40-50%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">50-60% (essentially complete)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">T+5 (5 days after)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">40-50%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">50-60% (stable)</td>
+</tr>
+</tbody></table></div>
 <p>The IV crush is 30-40% complete on the event day and 50-60% complete by T+2. The remaining 40-50% of the IV crush is small and happens over the next 2-3 days as the market fully digests the event.</p>
 <h2>The 1-3 Day Post-Event Window</h2>
 <p>The standard exit window for a calendar spread is 1-3 trading days after the event. The reasons:</p>
@@ -97,22 +132,83 @@
   <li>The trader is comfortable with the event-day gap risk</li>
 </ul>
 <p>A useful comparison:</p>
-<p>| Exit Timing | IV Captured | Move Risk | Capital Tied Up |</p>
-<p>|---|---|---|---|</p>
-<p>| Pre-event (T-1) | 80-90% of full crush | None | 1-2 days less |</p>
-<p>| Post-event (T+2) | 100% of full crush | Moderate (2 days) | Standard |</p>
-<p>| Post-event (T+5) | 105-110% of full crush | High (5 days) | 3-4 days more |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Exit Timing</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">IV Captured</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Move Risk</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Capital Tied Up</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Pre-event (T-1)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">80-90% of full crush</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">None</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">1-2 days less</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Post-event (T+2)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">100% of full crush</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Moderate (2 days)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Standard</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Post-event (T+5)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">105-110% of full crush</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">High (5 days)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">3-4 days more</td>
+</tr>
+</tbody></table></div>
 <p>The pre-event exit captures most of the IV crush and avoids the event-day risk. The post-event exit captures the full IV crush and accepts the event-day risk.</p>
 <h2>The IV Crush Completion Indicator</h2>
 <p>A practical indicator for the IV crush completion: track the IV of the near-term option daily after the event. When the IV stops declining (or declines by less than 1 point per day), the crush is essentially complete.</p>
-<p>| Day | Near-Term IV | Daily Change | Crush Status |</p>
-<p>|---|---|---|---|</p>
-<p>| T-1 | 90% | +2 pts | Pre-peak |</p>
-<p>| T | 65% | -25 pts | Major crush |</p>
-<p>| T+1 | 50% | -15 pts | Continued crush |</p>
-<p>| T+2 | 45% | -5 pts | Crush slowing |</p>
-<p>| T+3 | 43% | -2 pts | Crush nearly complete |</p>
-<p>| T+5 | 42% | -1 pt | Crush complete |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Day</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Near-Term IV</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Daily Change</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Crush Status</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">T-1</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">90%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+2 pts</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Pre-peak</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">T</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">65%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-25 pts</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Major crush</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">T+1</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">50%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-15 pts</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Continued crush</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">T+2</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">45%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-5 pts</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Crush slowing</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">T+3</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">43%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-2 pts</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Crush nearly complete</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">T+5</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">42%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-1 pt</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Crush complete</td>
+</tr>
+</tbody></table></div>
 <p>When the daily IV change drops below 2 points, the crush is essentially complete. The trader can close the position with confidence that the remaining IV crush will be small.</p>
 <h2>The Move-Adjusted Exit</h2>
 <p>The calendar spread's exit is not solely based on time. The position's value also depends on the underlying's move. The trader should close the position when:</p>
@@ -123,20 +219,66 @@
   <li>The underlying has moved beyond the breakeven range</li>
 </ol>
 <p>The earliest of these conditions triggers the exit.</p>
-<p>| Exit Condition | Typical Timing | Action |</p>
-<p>|---|---|---|</p>
-<p>| T+2 reached, position in profit | T+2 | Close at market |</p>
-<p>| Profit target reached (100% of debit) | Anytime | Close immediately |</p>
-<p>| Stop loss triggered (50% of debit) | Anytime | Close immediately |</p>
-<p>| Underlying outside breakeven range | Anytime | Close immediately |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Exit Condition</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Typical Timing</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Action</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">T+2 reached, position in profit</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">T+2</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Close at market</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Profit target reached (100% of debit)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Anytime</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Close immediately</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Stop loss triggered (50% of debit)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Anytime</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Close immediately</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Underlying outside breakeven range</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Anytime</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Close immediately</td>
+</tr>
+</tbody></table></div>
 <h2>The Profit Target Rules</h2>
 <p>Calendar spread profit targets are different from directional spread targets. The position is not held for max profit (which is capped at the spread width minus the debit); it is held for the IV crush.</p>
-<p>| Target | When to Use | Notes |</p>
-<p>|---|---|---|</p>
-<p>| 50% of debit | Conservative | Lock in a small gain early; common for low-IV events |</p>
-<p>| 100% of debit (2x) | Standard | Capture a meaningful gain; common for earnings events |</p>
-<p>| 200% of debit (3x) | Aggressive | Capture a large gain; requires a small underlying move and large IV crush |</p>
-<p>| 300% of debit (4x) | Maximum | Rare; requires a perfect setup (large IV crush + small move) |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Target</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">When to Use</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Notes</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">50% of debit</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Conservative</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Lock in a small gain early; common for low-IV events</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">100% of debit (2x)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Standard</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Capture a meaningful gain; common for earnings events</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">200% of debit (3x)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Aggressive</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Capture a large gain; requires a small underlying move and large IV crush</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">300% of debit (4x)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Maximum</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Rare; requires a perfect setup (large IV crush + small move)</td>
+</tr>
+</tbody></table></div>
 <p>The 100% target is the most common. The position is closed when the spread's value reaches 2x the debit paid.</p>
 <p>For a $3.00 debit calendar spread:</p>
 <ul>
@@ -148,21 +290,62 @@
 <p>The 100% target is reached in the typical earnings trade. The 200% and 300% targets require a combination of large IV crush and small move, which is rare.</p>
 <h2>The Stop Loss Rules</h2>
 <p>Calendar spread stop losses are critical because the position can lose more than expected if the underlying moves sharply.</p>
-<p>| Stop | When to Use | Notes |</p>
-<p>|---|---|---|</p>
-<p>| 25% of debit | Tight | Common for small accounts; produces more whipsaws |</p>
-<p>| 50% of debit | Standard | Balanced; appropriate for most accounts |</p>
-<p>| 75% of debit | Wide | Gives the position room; appropriate for high-vol underlyings |</p>
-<p>| 100% of debit | Maximum | Holds to expiration; only for high-conviction trades |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Stop</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">When to Use</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Notes</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">25% of debit</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Tight</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Common for small accounts; produces more whipsaws</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">50% of debit</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Standard</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Balanced; appropriate for most accounts</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">75% of debit</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Wide</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Gives the position room; appropriate for high-vol underlyings</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">100% of debit</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Maximum</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Holds to expiration; only for high-conviction trades</td>
+</tr>
+</tbody></table></div>
 <p>The 50% stop is the most common. The position is closed if it loses 50% of the debit paid. For a $3.00 debit calendar spread, the 50% stop is triggered when the spread is worth $1.50 (50% loss on the debit).</p>
 <h2>The Underlying's Move Impact</h2>
 <p>The move in the underlying affects the calendar spread's value. A large move in either direction can damage the position.</p>
-<p>| Underlying Move | Calendar Spread Impact |</p>
-<p>|---|---|</p>
-<p>| 0-2% | Positive or neutral; position captures IV crush |</p>
-<p>| 2-5% | Mixed; position may profit or lose depending on direction |</p>
-<p>| 5-10% | Negative; position is likely at a loss |</p>
-<p>| 10%+ | Significantly negative; position is likely at max loss |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Underlying Move</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Calendar Spread Impact</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">0-2%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Positive or neutral; position captures IV crush</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">2-5%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Mixed; position may profit or lose depending on direction</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">5-10%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Negative; position is likely at a loss</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">10%+</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Significantly negative; position is likely at max loss</td>
+</tr>
+</tbody></table></div>
 <p>The 5% move is the typical threshold beyond which the calendar spread becomes a losing trade regardless of the IV crush. The trader who holds through a 5%+ move has converted an IV crush trade into a directional bet, which is a different trade with a different risk profile.</p>
 <h2>The Decision Rule for Exit</h2>
 <p>A practical algorithm for exiting a calendar spread:</p>

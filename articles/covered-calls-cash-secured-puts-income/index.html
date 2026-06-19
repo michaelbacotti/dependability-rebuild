@@ -94,15 +94,50 @@
 </ul>
 <p><strong>Key constraint:</strong> You must hold enough cash to cover the purchase. Hence "cash-secured." This isn't a margin strategy — you're using cash you've set aside to back the obligation.</p>
 <h2>Covered Call vs Cash-Secured Put — Which to Use</h2>
-<p>| Factor | Covered Call | Cash-Secured Put |</p>
-<p>|---|---|---|</p>
-<p>| Requires owning stock | Yes | No (requires cash instead) |</p>
-<p>| Best when | Stock is near your target sell price | Stock is near your target buy price |</p>
-<p>| Upside potential | Capped at strike | Unlimited (stock can go higher) |</p>
-<p>| Downside risk | Stock can drop to zero | Limited to difference between strike and stock |</p>
-<p>| Income source | Selling upside | Selling downside protection |</p>
-<p>| Assignment risk | If stock rises above strike | If stock drops below strike |</p>
-<p>| Ex-dividend concern | Must manage before ex-date | Less relevant |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Factor</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Covered Call</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Cash-Secured Put</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Requires owning stock</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Yes</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">No (requires cash instead)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Best when</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Stock is near your target sell price</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Stock is near your target buy price</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Upside potential</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Capped at strike</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Unlimited (stock can go higher)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Downside risk</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Stock can drop to zero</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Limited to difference between strike and stock</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Income source</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Selling upside</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Selling downside protection</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Assignment risk</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">If stock rises above strike</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">If stock drops below strike</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Ex-dividend concern</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Must manage before ex-date</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Less relevant</td>
+</tr>
+</tbody></table></div>
 <p><strong>Rule of thumb:</strong> Sell a covered call when you own a stock and want to generate income while setting a price at which you're willing to sell. Sell a cash-secured put when you want to buy a stock at a lower price and earn income while waiting for that opportunity.</p>
 <h2>When to Use Covered Calls</h2>
 <p><strong>Ideal conditions:</strong></p>
@@ -200,12 +235,40 @@
 <p>Selling 10 covered calls on 10 different stocks with no cash reserves is a recipe for margin calls if the market drops.</p>
 <p><strong>Fix:</strong> Treat each covered call or cash-secured put as a defined risk position. Reserve cash for put assignments, don't overcommit on covered calls in a bull market that could reverse.</p>
 <h2>Income Comparison Table</h2>
-<p>| Strategy | Monthly Income Potential | Typical Premium | Risk |</p>
-<p>|---|---|---|---|</p>
-<p>| Covered Call (5% OTM, 30 DTE) | 1.5–3% of stock value | 1-3% of stock price | Stock decline offsets premium |</p>
-<p>| Cash-Secured Put (5% OTM, 30 DTE) | 1–2% of assigned cost | 1-2% of strike price | Stock drops below strike |</p>
-<p>| Iron Condor (neutral, 30-45 DTE) | 1–2% of margin | 0.5-1.5% per spread | Defined by wing width |</p>
-<p>| Bull Put Spread (bullish, 30-45 DTE) | 1–2% of spread width | 0.3-0.8% of strike width | Spread width minus credit |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Strategy</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Monthly Income Potential</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Typical Premium</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Risk</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Covered Call (5% OTM, 30 DTE)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">1.5–3% of stock value</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">1-3% of stock price</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Stock decline offsets premium</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Cash-Secured Put (5% OTM, 30 DTE)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">1–2% of assigned cost</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">1-2% of strike price</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Stock drops below strike</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Iron Condor (neutral, 30-45 DTE)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">1–2% of margin</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">0.5-1.5% per spread</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Defined by wing width</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Bull Put Spread (bullish, 30-45 DTE)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">1–2% of spread width</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">0.3-0.8% of strike width</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Spread width minus credit</td>
+</tr>
+</tbody></table></div>
 <h2>Relationship Between Covered Calls and Cash-Secured Puts</h2>
 <p>Many experienced income traders use these strategies in combination:</p>
 <p><strong>Example — the wheel strategy:</strong></p>

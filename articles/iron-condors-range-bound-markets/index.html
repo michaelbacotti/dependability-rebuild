@@ -83,13 +83,40 @@
 </ul>
 <p>The two spreads work independently and together form the condor's profit zone.</p>
 <h2>Key Metrics</h2>
-<p>| Parameter | Target | Rationale |</p>
-<p>|---|---|---|</p>
-<p>| Days to expiration (DTE) | 30–45 days | Theta acceleration peaks 30-45 days out; earlier closing captures most decay |</p>
-<p>| Wing width | 15–20 S&P points (SPX) or 5% (stocks/ETFs) | Wide enough to absorb volatility without constant management |</p>
-<p>| Net credit collected | $1.50–$2.50 per spread (SPX) | Target 20-30% of wing width as credit |</p>
-<p>| Max risk per spread | Wing width minus credit | Define your loss before entry |</p>
-<p>| Position size | No more than 2% of capital per condor | Manage tail risk across multiple positions |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Parameter</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Target</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Rationale</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Days to expiration (DTE)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">30–45 days</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Theta acceleration peaks 30-45 days out; earlier closing captures most decay</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Wing width</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">15–20 S&P points (SPX) or 5% (stocks/ETFs)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Wide enough to absorb volatility without constant management</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Net credit collected</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$1.50–$2.50 per spread (SPX)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Target 20-30% of wing width as credit</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Max risk per spread</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Wing width minus credit</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Define your loss before entry</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Position size</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">No more than 2% of capital per condor</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Manage tail risk across multiple positions</td>
+</tr>
+</tbody></table></div>
 <h2>When to Use It</h2>
 <p>The iron condor works best when:</p>
 <ol>
@@ -161,21 +188,81 @@
 <p>Holding to expiration hoping for max profit is a loser's game — unexpected moves can strip away all gains.</p>
 <p><strong>Fix:</strong> Automate the 50% rule. Use a spread tracker and close when profit target is hit.</p>
 <h2>Exit Rules Summary</h2>
-<p>| Scenario | Action |</p>
-<p>|---|---|</p>
-<p>| Profit reaches 50% of max | Close and take profit |</p>
-<p>| Underlying touches short strike | Roll down and out (puts) or up and out (calls) |</p>
-<p>| Underlying breaks long strike | Close entire position |</p>
-<p>| Major event within 2 weeks | Adjust position or close |</p>
-<p>| 2 weeks from expiration, underperforming | Evaluate and close or roll |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Scenario</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Action</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Profit reaches 50% of max</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Close and take profit</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Underlying touches short strike</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Roll down and out (puts) or up and out (calls)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Underlying breaks long strike</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Close entire position</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Major event within 2 weeks</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Adjust position or close</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">2 weeks from expiration, underperforming</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Evaluate and close or roll</td>
+</tr>
+</tbody></table></div>
 <h2>Iron Condor vs Related Strategies</h2>
-<p>| Strategy | Best For | Max Profit | Max Loss | Complexity |</p>
-<p>|---|---|---|---|---|</p>
-<p>| <strong>Iron Condor</strong> | Range-bound, collecting premium | Credit received | Wing width - credit | Medium |</p>
-<p>| <strong>Iron Butterfly</strong> | Very tight range, high IV | Narrow credit | Wing width - credit | Medium |</p>
-<p>| <strong>Bull Put Spread</strong> | Bullish bias, income | Credit received | Strike width - credit | Low |</p>
-<p>| <strong>Bear Call Spread</strong> | Bearish bias, income | Credit received | Strike width - credit | Low |</p>
-<p>| <strong>Short Straddle</strong> | Very low volatility expectation | Credit received | Unlimited | High |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Strategy</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Best For</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Max Profit</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Max Loss</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Complexity</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Iron Condor</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Range-bound, collecting premium</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Credit received</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Wing width - credit</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Medium</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Iron Butterfly</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Very tight range, high IV</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Narrow credit</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Wing width - credit</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Medium</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Bull Put Spread</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Bullish bias, income</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Credit received</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Strike width - credit</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Low</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Bear Call Spread</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Bearish bias, income</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Credit received</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Strike width - credit</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Low</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Short Straddle</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Very low volatility expectation</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Credit received</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Unlimited</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">High</td>
+</tr>
+</tbody></table></div>
 <p>The iron condor is the most versatile of the premium-collection strategies because its wide wings let you stay in the trade longer than the tighter iron butterfly, and its directional neutrality means you don't need to pick a direction.</p>
 <h2>Greeks and Risk Characteristics</h2>
 <p>At 30-45 DTE with neutral strikes:</p>

@@ -80,21 +80,64 @@
 <p>The effective cost basis is $1.50 below the strike, which is the premium received. The trader has effectively bought the stock at a $1.50 discount to the strike.</p>
 <h2>The Cost Basis with Multiple Cycles</h2>
 <p>For a wheel trader who has sold multiple puts before assignment, the effective cost basis includes all premiums received:</p>
-<p>| Premium | Strike | Cumulative Premium | Effective Cost Basis |</p>
-<p>|---|---|---|---|</p>
-<p>| 1st put | $95 | $1.50 | $93.50 |</p>
-<p>| 2nd put (after 1st expired worthless) | $95 | $3.00 | $92.00 |</p>
-<p>| 3rd put (after 2nd expired worthless) | $95 | $4.50 | $90.50 |</p>
-<p>| 4th put (assigned) | $95 | $6.00 | $89.00 |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Premium</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Strike</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Cumulative Premium</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Effective Cost Basis</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">1st put</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$95</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$1.50</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$93.50</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">2nd put (after 1st expired worthless)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$95</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$3.00</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$92.00</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">3rd put (after 2nd expired worthless)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$95</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$4.50</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$90.50</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">4th put (assigned)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$95</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$6.00</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$89.00</td>
+</tr>
+</tbody></table></div>
 <p>The cumulative premium is $6.00 (4 puts × $1.50), and the effective cost basis is $95 - $6.00 = $89.00. The wheel trader has acquired the stock at a $6.00 discount to the strike.</p>
 <h2>The Tax Treatment of Assignment</h2>
 <p>The CSP assignment has specific tax implications. The premium received from the put is treated as a short-term capital gain (if the put was held for less than a year) or a long-term capital gain (if held for more than a year). The stock purchase at the strike is a new position with a cost basis equal to the strike minus the premium.</p>
 <p>For tax purposes:</p>
-<p>| Event | Tax Treatment |</p>
-<p>|---|---|</p>
-<p>| Put premium received | Short-term or long-term capital gain (based on holding period) |</p>
-<p>| Stock purchase at assignment | New long-term or short-term position with cost basis = strike - premium |</p>
-<p>| Future sale of stock | Capital gain or loss based on the cost basis |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Event</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Tax Treatment</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Put premium received</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Short-term or long-term capital gain (based on holding period)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Stock purchase at assignment</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">New long-term or short-term position with cost basis = strike - premium</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Future sale of stock</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Capital gain or loss based on the cost basis</td>
+</tr>
+</tbody></table></div>
 <p>The put premium is taxed in the year it is received, regardless of whether the put expires worthless or is assigned. The stock's cost basis is the strike minus the premium, and the future sale of the stock is taxed based on this cost basis.</p>
 <h2>The Post-Assignment Decisions</h2>
 <p>After the put is assigned, the trader has 100 shares of the underlying stock. The trader must decide what to do with the shares. The three main options:</p>

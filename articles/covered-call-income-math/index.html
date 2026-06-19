@@ -69,12 +69,40 @@
 <p>Premium % = ($1.50 / $100) × 100 = <strong>1.5% per month</strong> (assuming 30 DTE)</p>
 <p>This is the "headline" return on the stock position. The covered call trader collects 1.5% of the stock's value in premium over 30 days.</p>
 <p>The premium % varies with the strike, the IV, and the time to expiration:</p>
-<p>| Strike | Stock Price | Premium | Premium % (per month) |</p>
-<p>|---|---|---|---|</p>
-<p>| $102 (2% OTM) | $100 | $0.50 | 0.5% |</p>
-<p>| $105 (5% OTM) | $100 | $1.50 | 1.5% |</p>
-<p>| $110 (10% OTM) | $100 | $0.80 | 0.8% |</p>
-<p>| $115 (15% OTM) | $100 | $0.30 | 0.3% |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Strike</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Stock Price</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Premium</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Premium % (per month)</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">$102 (2% OTM)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$100</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$0.50</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">0.5%</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">$105 (5% OTM)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$100</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$1.50</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">1.5%</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">$110 (10% OTM)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$100</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$0.80</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">0.8%</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">$115 (15% OTM)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$100</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$0.30</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">0.3%</td>
+</tr>
+</tbody></table></div>
 <p>The 5% OTM strike ($105) produces the highest premium % at 1.5%. The 2% OTM strike ($102) collects less premium in absolute terms but is more likely to be assigned. The 15% OTM strike ($115) collects very little premium.</p>
 <p>The "sweet spot" for premium % is the 3-7% OTM strike, which balances premium against assignment probability.</p>
 <h2>The Monthly Return Scenarios</h2>
@@ -103,34 +131,117 @@
 <p>The covered call outperforms a buy-and-hold in Scenarios 1 and 2, and underperforms in Scenario 3 (because the premium only partially offsets the stock loss).</p>
 <h2>The 2% Monthly Target</h2>
 <p>A common target for covered call income is 2% per month. This is achievable in elevated IV environments with the right strike selection.</p>
-<p>| IV Rank | Typical 5% OTM Premium | Premium % | Achievable? |</p>
-<p>|---|---|---|---|</p>
-<p>| 0-20% | $0.50 | 0.5% | Below target |</p>
-<p>| 20-40% | $1.00 | 1.0% | Below target |</p>
-<p>| 40-60% | $1.50 | 1.5% | Below target |</p>
-<p>| 60-80% | $2.00 | 2.0% | At target |</p>
-<p>| 80-100% | $3.00 | 3.0% | Above target |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">IV Rank</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Typical 5% OTM Premium</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Premium %</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Achievable?</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">0-20%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$0.50</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">0.5%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Below target</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">20-40%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$1.00</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">1.0%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Below target</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">40-60%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$1.50</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">1.5%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Below target</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">60-80%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$2.00</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">2.0%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">At target</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">80-100%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$3.00</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">3.0%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Above target</td>
+</tr>
+</tbody></table></div>
 <p>The 2% target requires IV rank of 60+ and a 5% OTM strike. In lower IV environments, the target is not achievable, and the trader should adjust expectations.</p>
 <p>The annualized return at 2% per month is approximately 27% (compounded). This is a strong return, but it is contingent on the IV environment staying elevated and the stock not dropping significantly.</p>
 <h2>The Premium vs Upside Trade-Off</h2>
 <p>The covered call's premium comes at the cost of capping the upside. The trade-off:</p>
-<p>| Strike | Premium % | Upside Cap (per month) |</p>
-<p>|---|---|---|</p>
-<p>| $102 (2% OTM) | 0.5% | 2% (call assigned) + 0.5% (premium) = 2.5% max |</p>
-<p>| $105 (5% OTM) | 1.5% | 5% (call assigned) + 1.5% (premium) = 6.5% max |</p>
-<p>| $110 (10% OTM) | 0.8% | 10% (call assigned) + 0.8% (premium) = 10.8% max |</p>
-<p>| $115 (15% OTM) | 0.3% | 15% (call assigned) + 0.3% (premium) = 15.3% max |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Strike</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Premium %</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Upside Cap (per month)</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">$102 (2% OTM)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">0.5%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">2% (call assigned) + 0.5% (premium) = 2.5% max</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">$105 (5% OTM)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">1.5%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">5% (call assigned) + 1.5% (premium) = 6.5% max</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">$110 (10% OTM)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">0.8%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">10% (call assigned) + 0.8% (premium) = 10.8% max</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">$115 (15% OTM)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">0.3%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">15% (call assigned) + 0.3% (premium) = 15.3% max</td>
+</tr>
+</tbody></table></div>
 <p>A higher strike collects less premium but allows more upside. A lower strike collects more premium but caps the upside. The 5% OTM strike is the standard balance.</p>
 <p>The trade-off matters more in trending markets. The trader who expects a 15% upside should not use a covered call (the call caps the upside at 5-10%). The trader who expects a flat-to-slightly-up market should use a covered call (the premium is the main return).</p>
 <h2>The Annualized Return</h2>
 <p>The annualized return from a covered call is the monthly return multiplied by 12 (with some adjustment for compounding):</p>
-<p>| Monthly Return | Annualized Return (Simple) | Annualized Return (Compounded) |</p>
-<p>|---|---|---|</p>
-<p>| 0.5% | 6.0% | 6.2% |</p>
-<p>| 1.0% | 12.0% | 12.7% |</p>
-<p>| 1.5% | 18.0% | 19.6% |</p>
-<p>| 2.0% | 24.0% | 26.8% |</p>
-<p>| 3.0% | 36.0% | 42.6% |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Monthly Return</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Annualized Return (Simple)</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Annualized Return (Compounded)</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">0.5%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">6.0%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">6.2%</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">1.0%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">12.0%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">12.7%</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">1.5%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">18.0%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">19.6%</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">2.0%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">24.0%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">26.8%</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">3.0%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">36.0%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">42.6%</td>
+</tr>
+</tbody></table></div>
 <p>The compounded return is higher than the simple return because the monthly premium can be reinvested. The reinvestment is not automatic (the premium is collected as cash, not as additional shares), but the cash can be deployed in new covered calls.</p>
 <h2>The Volatility Drag</h2>
 <p>The covered call return is reduced by "volatility drag" — the tendency of volatile stocks to produce lower compounded returns than less volatile stocks, even with the same average return. The covered call's capped upside and full downside exposure means that volatile stocks produce more downside than upside over time.</p>
@@ -139,33 +250,125 @@
 <h2>The Tax-Adjusted Return</h2>
 <p>The covered call's tax-adjusted return is lower than the pre-tax return. The premium is taxed as a short-term capital gain (if held for less than a year), and the dividends (if any) are taxed as dividend income. The combination can produce a meaningful tax drag.</p>
 <p>For a covered call with $1.50 premium per share per month on a $100 stock:</p>
-<p>| Component | Pre-Tax | After-Tax (37% short-term capital gains) |</p>
-<p>|---|---|---|</p>
-<p>| Premium | 1.5% / month | 0.945% / month |</p>
-<p>| Dividend (if 2% annual) | 0.167% / month | 0.125% / month (after 25% qualified dividend) |</p>
-<p>| Stock gain (if called away) | 5% | 3.15% |</p>
-<p>| Total (flat stock) | 1.67% / month | 1.07% / month |</p>
-<p>| Total (stock up 5%) | 6.67% / month | 4.27% / month |</p>
-<p>| Total (stock down 10%) | -8.33% / month | -5.97% / month |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Component</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Pre-Tax</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">After-Tax (37% short-term capital gains)</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Premium</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">1.5% / month</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">0.945% / month</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Dividend (if 2% annual)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">0.167% / month</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">0.125% / month (after 25% qualified dividend)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Stock gain (if called away)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">5%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">3.15%</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Total (flat stock)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">1.67% / month</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">1.07% / month</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Total (stock up 5%)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">6.67% / month</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">4.27% / month</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Total (stock down 10%)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-8.33% / month</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-5.97% / month</td>
+</tr>
+</tbody></table></div>
 <p>The tax-adjusted return is roughly 60-65% of the pre-tax return for high-income traders. The tax drag is a meaningful reduction, and the trader should account for it when projecting the long-term return.</p>
 <h2>The Realistic Return Expectations</h2>
 <p>For a covered call portfolio on a diversified set of large-cap stocks in a moderate-to-elevated IV environment:</p>
-<p>| Stock Type | Typical IV Rank | Monthly Premium | Annualized Return |</p>
-<p>|---|---|---|---|</p>
-<p>| Large cap (AAPL, MSFT) | 30-50% | 0.8-1.2% | 10-15% |</p>
-<p>| Dividend payer (JNJ, PG) | 20-40% | 0.5-1.0% | 6-12% |</p>
-<p>| High IV (TSLA, NVDA) | 60-100% | 1.5-3.0% | 18-36% |</p>
-<p>| Sector ETF (XLF, XLE) | 30-50% | 0.8-1.2% | 10-15% |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Stock Type</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Typical IV Rank</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Monthly Premium</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Annualized Return</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Large cap (AAPL, MSFT)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">30-50%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">0.8-1.2%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">10-15%</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Dividend payer (JNJ, PG)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">20-40%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">0.5-1.0%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">6-12%</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">High IV (TSLA, NVDA)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">60-100%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">1.5-3.0%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">18-36%</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Sector ETF (XLF, XLE)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">30-50%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">0.8-1.2%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">10-15%</td>
+</tr>
+</tbody></table></div>
 <p>The realistic return for a covered call portfolio is 8-15% annualized, with the upper end achievable in high-IV environments and the lower end in low-IV environments. The return is sensitive to the IV environment, the strike selection, and the stock's volatility.</p>
 <h2>The Comparison to Buy-and-Hold</h2>
 <p>A covered call portfolio's return should be compared to a buy-and-hold strategy on the same stocks. The covered call adds income (the premium) but caps the upside.</p>
-<p>| Stock Performance | Buy-and-Hold Return | Covered Call Return | Difference |</p>
-<p>|---|---|---|---|</p>
-<p>| Flat (0%) | 0% | +12-18% (premium) | Covered call wins |</p>
-<p>| Modestly up (5-10%) | +5-10% | +12-18% (premium + capped gain) | Covered call wins |</p>
-<p>| Strongly up (15%+) | +15%+ | +12-18% (capped) | Buy-and-hold wins |</p>
-<p>| Down (-10%) | -10% | -2% to -4% (premium offsets) | Covered call wins |</p>
-<p>| Strongly down (-25%) | -25% | -17% to -21% | Covered call wins |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Stock Performance</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Buy-and-Hold Return</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Covered Call Return</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Difference</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Flat (0%)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">0%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+12-18% (premium)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Covered call wins</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Modestly up (5-10%)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+5-10%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+12-18% (premium + capped gain)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Covered call wins</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Strongly up (15%+)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+15%+</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+12-18% (capped)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Buy-and-hold wins</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Down (-10%)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-10%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-2% to -4% (premium offsets)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Covered call wins</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Strongly down (-25%)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-25%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-17% to -21%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Covered call wins</td>
+</tr>
+</tbody></table></div>
 <p>The covered call outperforms buy-and-hold in 4 out of 5 scenarios. The exception is a strongly up market (>15%), where the buy-and-hold's uncapped upside beats the covered call's capped upside. The covered call is appropriate for traders who expect flat-to-modest gains, not for traders who expect strong rallies.</p>
 <h2>The Decision Rule for the Income Target</h2>
 <p>A practical algorithm for the income target:</p>

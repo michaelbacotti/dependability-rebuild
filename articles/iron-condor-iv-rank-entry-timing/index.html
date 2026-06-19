@@ -75,22 +75,67 @@
   <li><strong>60-70%:</strong> Higher credit, but the position is at risk of an IV regime change. The IV is near the top of its range, and any normalization (VIX mean-reversion) will produce a vega-positive move for the position. This is acceptable for high-conviction setups, but it carries more risk.</li>
   <li><strong>Above 70%:</strong> The IV is at or near a 52-week high. The credit is large, but the position is exposed to a sudden crush. Use only for event-driven setups (FOMC, earnings) where the crush is expected and the timing is known.</li>
 </ul>
-<p>| IV Rank | Entry Decision | Rationale |</p>
-<p>|---|---|---|</p>
-<p>| 0-30% | Skip | Premium too small for the risk |</p>
-<p>| 30-40% | Selective | OK for low-vol environment traders who can size to lower credit |</p>
-<p>| 40-60% | Default entry | Standard risk-adjusted return |</p>
-<p>| 60-70% | High conviction only | Larger credit but elevated crush risk |</p>
-<p>| 70-100% | Event-driven only | Best used for known IV crush events |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">IV Rank</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Entry Decision</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Rationale</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">0-30%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Skip</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Premium too small for the risk</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">30-40%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Selective</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">OK for low-vol environment traders who can size to lower credit</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">40-60%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Default entry</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Standard risk-adjusted return</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">60-70%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">High conviction only</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Larger credit but elevated crush risk</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">70-100%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Event-driven only</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Best used for known IV crush events</td>
+</tr>
+</tbody></table></div>
 <h2>VIX vs IV Rank</h2>
 <p>VIX (the CBOE Volatility Index) is the most commonly cited volatility measure, but it is not the same as IV rank. VIX is the 30-day forward-looking implied volatility on SPX options. IV rank is a percentile of the VIX's 52-week range.</p>
 <p>VIX level tells you the current volatility regime. IV rank tells you where the current regime sits relative to the past year. Both are useful, but they answer different questions.</p>
-<p>| Question | Best Metric |</p>
-<p>|---|---|</p>
-<p>| Is the market volatile right now? | VIX level |</p>
-<p>| Is the market more or less volatile than usual? | IV rank |</p>
-<p>| Should I enter a premium-collection trade? | IV rank |</p>
-<p>| Should I expect an immediate IV crush? | VIX percentile vs VIX moving average |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Question</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Best Metric</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Is the market volatile right now?</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">VIX level</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Is the market more or less volatile than usual?</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">IV rank</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Should I enter a premium-collection trade?</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">IV rank</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Should I expect an immediate IV crush?</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">VIX percentile vs VIX moving average</td>
+</tr>
+</tbody></table></div>
 <p>A useful rule: use VIX for situational awareness and IV rank for entry decisions.</p>
 <h2>VIX Mean Reversion</h2>
 <p>VIX is mean-reverting on multi-week timescales. When VIX spikes above 30, it tends to decline back toward 15-20 over the following weeks. When VIX is below 12, it tends to rise back toward 15-20. This mean reversion is the source of profit for short-volatility strategies.</p>
@@ -115,12 +160,45 @@
   <li>A VIX level that is not at an extreme (VIX above 35 or below 12 suggests a regime change)</li>
 </ul>
 <p>A practical example:</p>
-<p>| Date | VIX | IV Rank | Days to FOMC | Decision |</p>
-<p>|---|---|---|---|---|</p>
-<p>| 2026-01-15 | 18 | 52% | 28 days | Enter — IV rank in band, FOMC is 4 weeks out |</p>
-<p>| 2026-02-01 | 24 | 78% | 7 days | Skip — too close to FOMC; would enter on Feb 5 after the event |</p>
-<p>| 2026-04-10 | 14 | 18% | 21 days | Skip — IV rank too low; premium insufficient |</p>
-<p>| 2026-06-04 | 22 | 58% | 35 days | Enter — IV rank in band, plenty of time before next event |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Date</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">VIX</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">IV Rank</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Days to FOMC</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Decision</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">2026-01-15</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">18</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">52%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">28 days</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Enter — IV rank in band, FOMC is 4 weeks out</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">2026-02-01</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">24</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">78%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">7 days</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Skip — too close to FOMC; would enter on Feb 5 after the event</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">2026-04-10</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">14</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">18%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">21 days</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Skip — IV rank too low; premium insufficient</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">2026-06-04</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">22</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">58%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">35 days</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Enter — IV rank in band, plenty of time before next event</td>
+</tr>
+</tbody></table></div>
 <p>The calendar overlay reduces the number of entries but improves the quality of each entry.</p>
 <h2>Regime Changes</h2>
 <p>The single biggest risk to a short-volatility entry is a regime change. A regime change is a structural shift in the volatility environment, typically triggered by a major event (war, financial crisis, pandemic) or a sustained policy shift (prolonged low interest rates, persistent inflation).</p>

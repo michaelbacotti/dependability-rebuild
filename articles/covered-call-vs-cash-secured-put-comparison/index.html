@@ -67,10 +67,25 @@
 <p><strong>Cash-secured put:</strong> Sell a put option at a strike below the current price and hold enough cash to buy 100 shares at the strike. The premium is collected upfront. If the stock stays above the strike at expiration, the put expires worthless and the trader keeps the premium. If the stock drops below the strike, the trader is obligated to buy the shares at the strike.</p>
 <p>The covered call obligates the trader to sell at the strike. The CSP obligates the trader to buy at the strike. The two obligations are mirror images of each other.</p>
 <h2>Capital Requirements</h2>
-<p>| Strategy | Capital Required | Liquidity |</p>
-<p>|---|---|---|</p>
-<p>| Covered call | 100 shares × current price (e.g., $10,000 for a $100 stock) | Low (shares are illiquid) |</p>
-<p>| Cash-secured put | Strike × 100 in cash (e.g., $9,500 for a $95 strike) | High (cash is liquid) |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Strategy</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Capital Required</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Liquidity</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Covered call</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">100 shares × current price (e.g., $10,000 for a $100 stock)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Low (shares are illiquid)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Cash-secured put</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Strike × 100 in cash (e.g., $9,500 for a $95 strike)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">High (cash is liquid)</td>
+</tr>
+</tbody></table></div>
 <p>The covered call requires the trader to own the stock, which is illiquid capital. The CSP requires the trader to hold cash, which is liquid but earns a low yield.</p>
 <p>The capital efficiency:</p>
 <ul>
@@ -80,10 +95,25 @@
 </ul>
 <h2>Return Comparison</h2>
 <p>Both strategies collect premium upfront, but the maximum return differs:</p>
-<p>| Strategy | Maximum Return | Realization |</p>
-<p>|---|---|---|</p>
-<p>| Covered call | Premium + (Strike - Cost Basis) per share | At call expiration if assigned |</p>
-<p>| Cash-secured put | Premium (if put expires worthless) | At put expiration if OTM |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Strategy</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Maximum Return</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Realization</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Covered call</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Premium + (Strike - Cost Basis) per share</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">At call expiration if assigned</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Cash-secured put</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Premium (if put expires worthless)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">At put expiration if OTM</td>
+</tr>
+</tbody></table></div>
 <p>For a $100 stock with a $105 call strike and a $95 put strike, both with 30 DTE and $1.50 premium:</p>
 <ul>
   <li>Covered call max return: $1.50 (premium) + $5.00 (strike - cost basis) = $6.50 per share (6.5% on $100 cost basis in 30 days)</li>
@@ -91,13 +121,40 @@
 </ul>
 <p>The covered call has a higher max return (6.5% vs 1.5%) because the trader owns the stock and participates in the upside. The CSP has a lower max return because the trader's capital is in cash, not in the stock.</p>
 <h2>Risk Comparison</h2>
-<p>| Risk Factor | Covered Call | Cash-Secured Put |</p>
-<p>|---|---|---|</p>
-<p>| Downside risk | Full stock decline (offset by premium) | Strike - stock price (offset by premium) |</p>
-<p>| Upside risk | Capped at strike | None (trader doesn't own the stock) |</p>
-<p>| Assignment risk | Stock called away if above strike | Stock assigned if below strike |</p>
-<p>| Liquidity risk | Stock is illiquid | Cash is liquid |</p>
-<p>| Ex-dividend risk | Early assignment | None (trader doesn't own stock) |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Risk Factor</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Covered Call</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Cash-Secured Put</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Downside risk</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Full stock decline (offset by premium)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Strike - stock price (offset by premium)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Upside risk</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Capped at strike</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">None (trader doesn't own the stock)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Assignment risk</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Stock called away if above strike</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Stock assigned if below strike</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Liquidity risk</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Stock is illiquid</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Cash is liquid</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Ex-dividend risk</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Early assignment</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">None (trader doesn't own stock)</td>
+</tr>
+</tbody></table></div>
 <p>The covered call has more risk than the CSP. The covered call trader is exposed to the full stock decline (minus the premium collected). The CSP trader is exposed only to the difference between the strike and the stock price (minus the premium collected).</p>
 <p>For a $100 stock that drops to $80:</p>
 <ul>
@@ -161,11 +218,30 @@
 <p>The decision is view-driven. The trader who has a bullish view and wants to acquire the stock uses the CSP. The trader who already owns the stock and has a neutral view uses the covered call.</p>
 <h2>The Equivalent Positions</h2>
 <p>A covered call at strike X on a stock at price P is economically equivalent to a CSP at strike X on a stock at price P, IF the covered call trader bought the stock at price P. The two positions have the same profit/loss profile.</p>
-<p>| Outcome | Covered Call at $105 Strike | CSP at $95 Strike (Stock at $100) |</p>
-<p>|---|---|---|</p>
-<p>| Stock at $100 (no change) | +$1.50 premium | +$1.50 premium |</p>
-<p>| Stock at $110 (up 10%) | $5.00 gain + $1.50 premium = $6.50 | $1.50 premium (put expires worthless) |</p>
-<p>| Stock at $90 (down 10%) | -$10.00 loss + $1.50 premium = -$8.50 | -$5.00 loss (assigned at $95) + $1.50 premium = -$3.50 |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Outcome</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Covered Call at $105 Strike</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">CSP at $95 Strike (Stock at $100)</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Stock at $100 (no change)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+$1.50 premium</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+$1.50 premium</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Stock at $110 (up 10%)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$5.00 gain + $1.50 premium = $6.50</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$1.50 premium (put expires worthless)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Stock at $90 (down 10%)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-$10.00 loss + $1.50 premium = -$8.50</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-$5.00 loss (assigned at $95) + $1.50 premium = -$3.50</td>
+</tr>
+</tbody></table></div>
 <p>The covered call and the CSP are not exactly equivalent in this case (because the strikes are different), but the structure is similar. A covered call at $105 and a CSP at $95 are both "income strategies" that collect premium in exchange for an obligation.</p>
 <h2>The Synthetic Equivalence</h2>
 <p>A covered call can be replicated synthetically with a CSP and a long stock position. The two strategies are equivalent in their payoff diagrams, but they have different capital requirements and different margin treatments.</p>
@@ -177,20 +253,66 @@
 <p>The synthetic covered call frees up the cash that would have been used to buy the stock. The trade-off is the obligation to buy the stock at $95 if the put is assigned.</p>
 <p>The choice between the real and synthetic versions depends on the trader's account type and preferences.</p>
 <h2>The Account Type Considerations</h2>
-<p>| Account Type | Covered Call | CSP |</p>
-<p>|---|---|---|</p>
-<p>| Cash account | Allowed (if shares are owned) | Allowed (if cash is available) |</p>
-<p>| Margin account | Allowed (shares can be held on margin) | Allowed (naked put on margin) |</p>
-<p>| IRA | Allowed (if shares are owned) | Allowed (naked put in some IRAs) |</p>
-<p>| Roth IRA | Allowed | Some restrictions (depends on broker) |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Account Type</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Covered Call</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">CSP</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Cash account</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Allowed (if shares are owned)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Allowed (if cash is available)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Margin account</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Allowed (shares can be held on margin)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Allowed (naked put on margin)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">IRA</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Allowed (if shares are owned)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Allowed (naked put in some IRAs)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Roth IRA</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Allowed</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Some restrictions (depends on broker)</td>
+</tr>
+</tbody></table></div>
 <p>The CSP is the primary strategy for IRA accounts that do not allow naked puts. The covered call is the primary strategy for taxable accounts where the trader already owns the stock.</p>
 <h2>The Portfolio Allocation</h2>
 <p>A typical income portfolio might allocate:</p>
-<p>| Component | Allocation | Strategy | Purpose |</p>
-<p>|---|---|---|---|</p>
-<p>| Stock holdings | 50-70% | Covered calls | Income on existing positions |</p>
-<p>| Cash | 20-40% | Cash-secured puts | Income on cash, potential stock acquisition |</p>
-<p>| Other | 10-20% | Other strategies | Diversification |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Component</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Allocation</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Strategy</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Purpose</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Stock holdings</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">50-70%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Covered calls</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Income on existing positions</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Cash</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">20-40%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Cash-secured puts</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Income on cash, potential stock acquisition</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Other</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">10-20%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Other strategies</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Diversification</td>
+</tr>
+</tbody></table></div>
 <p>The 50-70% in covered calls assumes the trader has a substantial stock portfolio. The 20-40% in CSPs assumes the trader has cash available for new positions. The 10-20% in other strategies provides diversification.</p>
 <h2>The Common Mistakes</h2>
 <p><strong>Using a covered call on a stock in a sustained uptrend.</strong> The trader sells a covered call on a stock that is about to make a large move. The call caps the upside, and the trader misses the move. The covered call is appropriate for neutral-to-slightly-bullish stocks, not for strong uptrends.</p>

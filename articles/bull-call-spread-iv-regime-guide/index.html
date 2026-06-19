@@ -64,12 +64,35 @@
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 <h2>IV Regime Categories</h2>
 <p>The four IV regimes, defined by IV rank:</p>
-<p>| IV Rank | Regime | Description |</p>
-<p>|---|---|---|</p>
-<p>| 0-25% | Low IV | Below the 25th percentile of the past year; options are cheap |</p>
-<p>| 25-50% | Moderate IV | Normal range; options are fairly priced |</p>
-<p>| 50-75% | Elevated IV | Above the median; options are expensive |</p>
-<p>| 75-100% | High IV | Near the top of the range; options are very expensive |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">IV Rank</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Regime</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Description</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">0-25%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Low IV</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Below the 25th percentile of the past year; options are cheap</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">25-50%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Moderate IV</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Normal range; options are fairly priced</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">50-75%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Elevated IV</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Above the median; options are expensive</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">75-100%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">High IV</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Near the top of the range; options are very expensive</td>
+</tr>
+</tbody></table></div>
 <p>Each regime has different implications for the bull call spread.</p>
 <h2>Low IV (0-25% IV Rank)</h2>
 <p>In low-IV environments, both the long call and the short call are cheap. The credit from selling the short call is small, and the net debit is therefore close to the cost of the long call alone. The spread's cost-efficiency is poor.</p>
@@ -121,13 +144,40 @@
 <p><strong>The verdict:</strong> In high-IV environments, the spread is appropriate for trades where the IV is expected to stay elevated or decline. Event-driven trades (earnings, FOMC) are well-suited to high-IV environments because the IV crush can be timed.</p>
 <h2>The IV Crush Problem</h2>
 <p>The bull call spread is long vega, which means it loses value when IV falls. In a high-IV environment, the entry is expensive, and any IV decline will reduce the position's value. The IV crush problem is most acute around scheduled events:</p>
-<p>| Event | Typical IV Crush | Effect on Bull Call Spread |</p>
-<p>|---|---|---|</p>
-<p>| Earnings (large cap) | 30-50% IV decline | Spread loses 15-25% of debit |</p>
-<p>| Earnings (small cap) | 40-70% IV decline | Spread loses 20-35% of debit |</p>
-<p>| FOMC | 10-20% IV decline | Spread loses 5-10% of debit |</p>
-<p>| CPI | 10-20% IV decline | Spread loses 5-10% of debit |</p>
-<p>| Stock-specific news | 20-50% IV decline | Spread loses 10-25% of debit |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Event</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Typical IV Crush</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Effect on Bull Call Spread</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Earnings (large cap)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">30-50% IV decline</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Spread loses 15-25% of debit</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Earnings (small cap)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">40-70% IV decline</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Spread loses 20-35% of debit</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">FOMC</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">10-20% IV decline</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Spread loses 5-10% of debit</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">CPI</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">10-20% IV decline</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Spread loses 5-10% of debit</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Stock-specific news</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">20-50% IV decline</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Spread loses 10-25% of debit</td>
+</tr>
+</tbody></table></div>
 <p>The IV crush is independent of the underlying's move. A bull call spread can be profitable on the move but still lose value from the IV crush, and vice versa.</p>
 <h2>The Event Trade Solution</h2>
 <p>For an event-driven trade (earnings, FDA, merger), the IV crush can be incorporated into the position sizing and exit rules:</p>
@@ -153,12 +203,35 @@
 <p>The decision is environment-driven. The trader who enters spreads in low-IV environments overpays for the position and under-allocates to cost-efficient trades.</p>
 <h2>Regime-Based Allocation</h2>
 <p>For a portfolio running multiple bull call spreads, the allocation should be regime-driven:</p>
-<p>| IV Regime | Allocation to Bull Call Spreads | Allocation to Other Strategies |</p>
-<p>|---|---|---|</p>
-<p>| Low IV (0-25%) | 0-20% | Naked calls, wider spreads, or skip |</p>
-<p>| Moderate IV (25-50%) | 40-60% | Mix of spreads and naked calls |</p>
-<p>| Elevated IV (50-75%) | 60-80% | Spreads are the default |</p>
-<p>| High IV (75-100%) | Event-driven only | Event trades with defined exit |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">IV Regime</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Allocation to Bull Call Spreads</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Allocation to Other Strategies</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Low IV (0-25%)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">0-20%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Naked calls, wider spreads, or skip</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Moderate IV (25-50%)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">40-60%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Mix of spreads and naked calls</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Elevated IV (50-75%)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">60-80%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Spreads are the default</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">High IV (75-100%)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Event-driven only</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Event trades with defined exit</td>
+</tr>
+</tbody></table></div>
 <p>The portfolio's allocation shifts with the IV regime. In low-IV environments, the trader shifts capital to naked calls or to non-options strategies. In elevated and high-IV environments, the trader shifts capital to spreads.</p>
 <h2>Tracking the IV Regime</h2>
 <p>We use [OptionsStrat](https://optionstrat.com/ventureprise) to track IV rank for the underlyings in the portfolio. The platform shows the current IV rank, the 52-week range, and the historical IV percentile, which makes the regime determination straightforward.</p>

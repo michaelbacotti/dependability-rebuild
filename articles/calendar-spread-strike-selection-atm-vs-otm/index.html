@@ -64,21 +64,65 @@
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 <h2>The Three Strike Categories</h2>
 <p>For a calendar spread, the strike of both legs (the long and short) is the same. The choice is which strike to use:</p>
-<p>| Strike Category | Position vs Current Price | Directional Bias | Vega |</p>
-<p>|---|---|---|---|</p>
-<p>| At the money (ATM) | At the current price | Neutral | Highest |</p>
-<p>| Slightly OTM (1-3%) | Above (for calls) or below (for puts) the current price | Slight directional lean | High |</p>
-<p>| Deep OTM (5%+) | Well above (for calls) or well below (for puts) | Strong directional bias | Low |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Strike Category</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Position vs Current Price</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Directional Bias</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Vega</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">At the money (ATM)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">At the current price</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Neutral</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Highest</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Slightly OTM (1-3%)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Above (for calls) or below (for puts) the current price</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Slight directional lean</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">High</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Deep OTM (5%+)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Well above (for calls) or well below (for puts)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Strong directional bias</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Low</td>
+</tr>
+</tbody></table></div>
 <p>The default for an IV crush trade is ATM. The strike should be adjusted to OTM only when the trader has a specific directional view.</p>
 <h2>The ATM Calendar Spread</h2>
 <p>An ATM calendar spread has both legs at the current underlying price. The position is delta-neutral at entry (delta of the near-term leg roughly offsets the delta of the longer-dated leg, both of which are near zero for ATM options).</p>
-<p>| Parameter | ATM Calendar |</p>
-<p>|---|---|</p>
-<p>| Delta at entry | Near zero (delta-neutral) |</p>
-<p>| Vega | Highest (most sensitive to IV changes) |</p>
-<p>| Breakeven range | Symmetric around the strike |</p>
-<p>| Profit zone | Widest in percentage terms |</p>
-<p>| Directional risk | Lowest |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Parameter</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">ATM Calendar</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Delta at entry</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Near zero (delta-neutral)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Vega</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Highest (most sensitive to IV changes)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Breakeven range</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Symmetric around the strike</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Profit zone</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Widest in percentage terms</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Directional risk</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Lowest</td>
+</tr>
+</tbody></table></div>
 <p>The ATM calendar is the purest IV crush trade. The position profits from the differential between the near-term and longer-dated IV declines, and the directional risk is minimal.</p>
 <p>Example: Stock at $150, ATM calendar spread (sell $150 call 14 DTE, buy $150 call 45 DTE).</p>
 <ul>
@@ -89,13 +133,34 @@
 <p>The ATM calendar is profitable as long as the stock stays within roughly $5 of the strike at expiration of the near-term option. Beyond that range, the position is at a loss.</p>
 <h2>The Slightly OTM Calendar Spread</h2>
 <p>A slightly OTM calendar spread has both legs 1-3% above (for calls) or below (for puts) the current underlying price. The position is delta-positive (for calls) or delta-negative (for puts), which adds a directional bias to the IV crush.</p>
-<p>| Parameter | Slightly OTM Calendar |</p>
-<p>|---|---|</p>
-<p>| Delta at entry | Positive (for calls) or negative (for puts) |</p>
-<p>| Vega | High but lower than ATM |</p>
-<p>| Breakeven range | Shifted in the direction of the bias |</p>
-<p>| Profit zone | Narrower than ATM but shifted |</p>
-<p>| Directional risk | Moderate |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Parameter</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Slightly OTM Calendar</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Delta at entry</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Positive (for calls) or negative (for puts)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Vega</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">High but lower than ATM</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Breakeven range</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Shifted in the direction of the bias</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Profit zone</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Narrower than ATM but shifted</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Directional risk</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Moderate</td>
+</tr>
+</tbody></table></div>
 <p>The OTM calendar is appropriate when the trader has a directional view and wants to combine the IV crush with a bullish or bearish position.</p>
 <p>Example: Stock at $150, slightly OTM call calendar (sell $152 call 14 DTE, buy $152 call 45 DTE).</p>
 <ul>
@@ -107,39 +172,130 @@
 <p>The OTM calendar is profitable as long as the stock moves toward the strike (in the direction of the bias). The position has a directional sweet spot around the strike.</p>
 <h2>The Deep OTM Calendar Spread</h2>
 <p>A deep OTM calendar spread has both legs 5%+ above (for calls) or below (for puts) the current underlying price. The position is strongly delta-positive (or negative) but has low vega. The position is essentially a directional bet with a small IV crush component.</p>
-<p>| Parameter | Deep OTM Calendar |</p>
-<p>|---|---|</p>
-<p>| Delta at entry | High (positive for calls) |</p>
-<p>| Vega | Low (limited IV sensitivity) |</p>
-<p>| Breakeven range | Far from the current price |</p>
-<p>| Profit zone | Narrow, requires a large move |</p>
-<p>| Directional risk | High |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Parameter</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Deep OTM Calendar</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Delta at entry</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">High (positive for calls)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Vega</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Low (limited IV sensitivity)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Breakeven range</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Far from the current price</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Profit zone</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Narrow, requires a large move</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Directional risk</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">High</td>
+</tr>
+</tbody></table></div>
 <p>The deep OTM calendar is rarely used. The low vega means the IV crush component is too small to be meaningful, and the high delta means the position is essentially a long call (or long put) with extra cost. A naked long call would be more cost-efficient.</p>
 <h2>The IV Crush Size by Strike</h2>
 <p>The IV crush is not the same for all strikes. ATM options have the largest absolute IV change because their pre-event IV is highest. OTM options have smaller IV changes because their pre-event IV is lower.</p>
-<p>| Strike | Pre-Event IV | Post-Event IV | IV Change |</p>
-<p>|---|---|---|---|</p>
-<p>| ATM | 90% | 40% | -50 pts |</p>
-<p>| 2% OTM (calls) | 75% | 35% | -40 pts |</p>
-<p>| 5% OTM (calls) | 55% | 30% | -25 pts |</p>
-<p>| 10% OTM (calls) | 35% | 25% | -10 pts |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Strike</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Pre-Event IV</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Post-Event IV</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">IV Change</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">ATM</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">90%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">40%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-50 pts</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">2% OTM (calls)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">75%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">35%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-40 pts</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">5% OTM (calls)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">55%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">30%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-25 pts</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">10% OTM (calls)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">35%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">25%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-10 pts</td>
+</tr>
+</tbody></table></div>
 <p>The ATM strike has the largest IV crush. The OTM strikes have progressively smaller IV crushes, and the deep OTM strikes have almost no IV crush.</p>
 <p>For an IV crush trade, the ATM strike is the most efficient because the IV crush is largest. For a directional trade, the OTM strike is appropriate because the position has a directional bias.</p>
 <h2>The Directional Trade-Off</h2>
 <p>The choice between ATM and OTM is a trade-off between the IV crush capture and the directional exposure.</p>
-<p>| Strike | IV Crush Capture | Directional Exposure | Best For |</p>
-<p>|---|---|---|---|</p>
-<p>| ATM | Maximum | None | Pure IV crush trade |</p>
-<p>| Slightly OTM (1-3%) | Large | Moderate | IV crush with directional bias |</p>
-<p>| Deep OTM (5%+) | Small | High | Directional bet (use naked call instead) |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Strike</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">IV Crush Capture</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Directional Exposure</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Best For</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">ATM</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Maximum</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">None</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Pure IV crush trade</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Slightly OTM (1-3%)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Large</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Moderate</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">IV crush with directional bias</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Deep OTM (5%+)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Small</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">High</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Directional bet (use naked call instead)</td>
+</tr>
+</tbody></table></div>
 <p>The default for an earnings trade is ATM. The trader who has a specific directional view (e.g., "I think the stock will move up after earnings") may shift to slightly OTM to add the directional bias.</p>
 <h2>The Breakeven Implications</h2>
 <p>The breakeven range of a calendar spread depends on the strike selection. The ATM calendar has a symmetric breakeven around the strike; the OTM calendar has an asymmetric breakeven.</p>
-<p>| Strike | Breakeven Range (10% IV Crush) | Profit Zone Width |</p>
-<p>|---|---|---|</p>
-<p>| ATM | $145 to $155 (10% of $150) | $10 |</p>
-<p>| 2% OTM (call, $152 strike) | $148 to $158 | $10 (shifted up) |</p>
-<p>| 5% OTM (call, $158 strike) | $152 to $168 | $16 (shifted up, but smaller IV crush) |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Strike</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Breakeven Range (10% IV Crush)</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Profit Zone Width</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">ATM</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$145 to $155 (10% of $150)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$10</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">2% OTM (call, $152 strike)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$148 to $158</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$10 (shifted up)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">5% OTM (call, $158 strike)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$152 to $168</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$16 (shifted up, but smaller IV crush)</td>
+</tr>
+</tbody></table></div>
 <p>The OTM calendar has a wider profit zone in absolute terms (because the strike is higher) but a smaller IV crush. The ATM calendar has a smaller profit zone in absolute terms but a larger IV crush. The choice depends on the trader's view.</p>
 <h2>The Decision Rule</h2>
 <p>A practical algorithm for strike selection:</p>
@@ -169,11 +325,38 @@
 <p>A put calendar at the same percentage OTM as a call calendar will have a larger IV crush. The trader who is bearish should consider a put calendar; the trader who is bullish should consider a call calendar but expect a smaller IV crush per percentage OTM.</p>
 <h2>The Earnings Volatility Pattern</h2>
 <p>The pre-earnings volatility is not flat across strikes. The at-the-money IV is highest, and the OTM IV is lower. After earnings, the IV crush is largest at the ATM strike and smaller at the OTM strikes. The result is that the ATM strike is the most efficient for capturing the IV crush.</p>
-<p>| Strike | Pre-Earnings IV | Post-Earnings IV | IV Crush | Dollar Impact (per spread) |</p>
-<p>|---|---|---|---|---|</p>
-<p>| ATM ($150) | 90% | 40% | -50 pts | $3.00 (50 × 0.06 vega) |</p>
-<p>| 2% OTM ($153) | 78% | 38% | -40 pts | $2.40 (40 × 0.06 vega) |</p>
-<p>| 5% OTM ($158) | 58% | 33% | -25 pts | $1.50 (25 × 0.06 vega) |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Strike</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Pre-Earnings IV</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Post-Earnings IV</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">IV Crush</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Dollar Impact (per spread)</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">ATM ($150)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">90%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">40%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-50 pts</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$3.00 (50 × 0.06 vega)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">2% OTM ($153)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">78%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">38%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-40 pts</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$2.40 (40 × 0.06 vega)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">5% OTM ($158)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">58%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">33%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-25 pts</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$1.50 (25 × 0.06 vega)</td>
+</tr>
+</tbody></table></div>
 <p>The ATM strike captures the largest dollar amount of the IV crush. The OTM strikes capture less. The trade-off is the directional exposure: the OTM strikes have a directional bias that the ATM strike does not.</p>
 <h2>Modeling the Strike Selection</h2>
 <p>We use [OptionsStrat](https://optionstrat.com/ventureprise) to model the calendar spread at each strike before entry. The platform shows the IV crush impact, the breakeven range, the directional exposure, and the profit zone for each strike, which makes the trade-off visible at a glance.</p>

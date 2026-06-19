@@ -64,11 +64,30 @@
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 <h2>What Happens at Near-Term Expiration</h2>
 <p>On the day of the near-term option's expiration, the position's profile has shifted dramatically:</p>
-<p>| Leg | Pre-Expiration (T+5) | At Expiration (T+0) |</p>
-<p>|---|---|---|</p>
-<p>| Short near-term option | Has small time value | Worthless (if OTM) or intrinsic (if ITM) |</p>
-<p>| Long longer-dated option | Has time value + some intrinsic | Has time value + intrinsic |</p>
-<p>| Net position | Defined value | Defined value minus near-term value |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Leg</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Pre-Expiration (T+5)</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">At Expiration (T+0)</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Short near-term option</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Has small time value</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Worthless (if OTM) or intrinsic (if ITM)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Long longer-dated option</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Has time value + some intrinsic</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Has time value + intrinsic</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Net position</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Defined value</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Defined value minus near-term value</td>
+</tr>
+</tbody></table></div>
 <p>If the underlying is at or near the strike at expiration, the near-term option expires worthless and the trader keeps the full premium received at entry. The position is now essentially a long position in the longer-dated option.</p>
 <p>If the underlying has moved beyond the strike, the near-term option has intrinsic value and the trader is assigned or buys the option back. The position's value is reduced by the intrinsic value of the near-term option.</p>
 <h2>The Three Outcomes at Expiration</h2>
@@ -101,22 +120,60 @@
 <p>The choice depends on the trader's view on the underlying and the cost of the roll.</p>
 <h2>Closing the Position</h2>
 <p>Closing the position at expiration is the standard approach for traders who entered the calendar as a one-time IV crush trade. The trader sells the longer-dated option and captures the gain (if any).</p>
-<p>| Original Debit | Longer-Dated Value at Expiration | Profit/Loss |</p>
-<p>|---|---|---|</p>
-<p>| $3.00 | $5.00 | +$2.00 |</p>
-<p>| $3.00 | $4.00 | +$1.00 |</p>
-<p>| $3.00 | $3.00 | $0.00 (breakeven) |</p>
-<p>| $3.00 | $2.00 | -$1.00 |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Original Debit</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Longer-Dated Value at Expiration</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Profit/Loss</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">$3.00</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$5.00</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+$2.00</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">$3.00</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$4.00</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+$1.00</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">$3.00</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$3.00</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$0.00 (breakeven)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">$3.00</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$2.00</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-$1.00</td>
+</tr>
+</tbody></table></div>
 <p>The longer-dated option's value at expiration depends on the time to expiration of the longer-dated option and the underlying's move. If the longer-dated option has 30 DTE remaining and the underlying is near the strike, the option is worth its time value (which is meaningful). If the longer-dated option has 7 DTE remaining and the underlying has moved, the option is worth its intrinsic value plus a small time value.</p>
 <h2>Rolling the Near-Term Option</h2>
 <p>Rolling the near-term option means closing the current near-term option (essentially worthless at expiration) and opening a new near-term option in the next expiration cycle. The result is a "double calendar" with two near-term legs and one longer-dated leg.</p>
 <p>Example: Original calendar with 14 DTE short and 45 DTE long. At the 14 DTE expiration, the trader closes the 14 DTE option (worthless) and opens a new 14 DTE option in the next cycle. The position is now a 14 DTE short, a 30 DTE short, and a 45 DTE long.</p>
 <p>The double calendar is more complex but allows the trader to maintain the position structure for a longer period. The cost of the roll is the new short option's premium.</p>
-<p>| Action | Cost |</p>
-<p>|---|---|</p>
-<p>| Close current 14 DTE option | $0 (worthless) |</p>
-<p>| Open new 14 DTE option | $2.00 (current 14 DTE premium) |</p>
-<p>| Net cost of roll | $2.00 |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Action</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Cost</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Close current 14 DTE option</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$0 (worthless)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Open new 14 DTE option</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$2.00 (current 14 DTE premium)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Net cost of roll</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$2.00</td>
+</tr>
+</tbody></table></div>
 <p>The trader is effectively selling another 14 DTE option for $2.00 and adding that to the position. The longer-dated long leg is unchanged.</p>
 <h2>Holding the Long Leg</h2>
 <p>Holding the long leg is appropriate for traders who want to maintain a long volatility position in the underlying. The trader now has a long call (or put) with a cost basis equal to the original calendar spread's debit.</p>
@@ -145,13 +202,40 @@
 </ol>
 <h2>The Time Decay After Expiration</h2>
 <p>After the near-term option expires, the position is a single longer-dated option. The time decay of the longer-dated option depends on the time to expiration:</p>
-<p>| Longer-Dated DTE | Daily Theta | Interpretation |</p>
-<p>|---|---|---|</p>
-<p>| 45+ | -0.04 to -0.06 | Moderate decay |</p>
-<p>| 30-45 | -0.06 to -0.08 | Peak decay |</p>
-<p>| 14-30 | -0.05 to -0.07 | High decay |</p>
-<p>| 7-14 | -0.03 to -0.05 | Lower decay |</p>
-<p>| 0-7 | -0.01 to -0.03 | Tail decay |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Longer-Dated DTE</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Daily Theta</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Interpretation</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">45+</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-0.04 to -0.06</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Moderate decay</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">30-45</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-0.06 to -0.08</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Peak decay</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">14-30</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-0.05 to -0.07</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">High decay</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">7-14</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-0.03 to -0.05</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Lower decay</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">0-7</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-0.01 to -0.03</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Tail decay</td>
+</tr>
+</tbody></table></div>
 <p>The position is losing time value at a rate of 4-8 cents per day. The trader who holds the long leg for more than 30 days is giving back meaningful time value.</p>
 <h2>The Risk of Holding</h2>
 <p>Holding the long leg is not risk-free. The position is exposed to:</p>
@@ -163,11 +247,30 @@
 <p>The trader who holds the long leg should monitor these risks. A sharp move in the underlying or a sharp decline in IV can produce a meaningful loss.</p>
 <h2>The Calendar at Different Strikes</h2>
 <p>A calendar spread has both legs at the same strike. At expiration of the near-term option, the position is essentially a single longer-dated option at the original strike. The behavior of the long leg depends on whether the underlying is above or below the strike:</p>
-<p>| Underlying vs Strike | Long Leg Value | Interpretation |</p>
-<p>|---|---|---|</p>
-<p>| Below strike (for call) | Time value only | Long call with no intrinsic |</p>
-<p>| At strike (for call) | Time value | Long ATM call |</p>
-<p>| Above strike (for call) | Intrinsic + time value | Long ITM call with intrinsic |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Underlying vs Strike</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Long Leg Value</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Interpretation</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Below strike (for call)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Time value only</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Long call with no intrinsic</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">At strike (for call)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Time value</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Long ATM call</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Above strike (for call)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Intrinsic + time value</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Long ITM call with intrinsic</td>
+</tr>
+</tbody></table></div>
 <p>The trader who wants a directional position can choose the strike to match the view. A call calendar with a strike above the current price has a directional bias to the upside (the long leg has positive delta).</p>
 <h2>The Double Calendar</h2>
 <p>A double calendar is created by rolling the near-term option at expiration. The structure is:</p>

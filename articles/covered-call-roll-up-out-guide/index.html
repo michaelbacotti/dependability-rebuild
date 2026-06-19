@@ -108,13 +108,40 @@
 <p>The roll-up costs $1.50 per contract. The new covered call has a short strike at $105, which gives the position more upside.</p>
 <h2>The Roll-Up Cost Considerations</h2>
 <p>The roll-up cost depends on the relationship between the current and new strikes. A roll-up to a strike 1 notch above the current strike costs less than a roll-up to a strike 3 notches above.</p>
-<p>| Current Strike | New Strike | Cost of Roll-Up (per contract) |</p>
-<p>|---|---|---|</p>
-<p>| $100 (ATM) | $102.5 | $0.30 - $0.50 |</p>
-<p>| $100 (ATM) | $105 | $0.80 - $1.20 |</p>
-<p>| $100 (ATM) | $110 | $2.00 - $2.80 |</p>
-<p>| $105 (5% OTM) | $110 | $0.50 - $0.80 |</p>
-<p>| $105 (5% OTM) | $115 | $1.50 - $2.20 |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Current Strike</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">New Strike</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Cost of Roll-Up (per contract)</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">$100 (ATM)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$102.5</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$0.30 - $0.50</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">$100 (ATM)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$105</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$0.80 - $1.20</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">$100 (ATM)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$110</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$2.00 - $2.80</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">$105 (5% OTM)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$110</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$0.50 - $0.80</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">$105 (5% OTM)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$115</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$1.50 - $2.20</td>
+</tr>
+</tbody></table></div>
 <p>The roll-up cost is the difference in premium between the current and new strikes. A roll-up to a nearby strike (1-2 notches) costs less and is more common.</p>
 <h2>The Roll-Out Mechanics</h2>
 <p>A roll-out involves closing the current call and opening a new call at the same or different strike for a later expiration. The mechanics:</p>
@@ -173,11 +200,26 @@
 <p>The multi-roll position is not appropriate for choppy markets. The stock that rises to $55, drops to $50, rises to $58, drops to $52, etc., is a poor candidate for multiple roll-ups. The trader who rolls up at each peak gives back premium on each pullback.</p>
 <h2>The "Run to the Strike" Rule</h2>
 <p>A useful rule: when the stock is within 2-3% of the short strike, decide whether to roll or let the shares be called away. The decision should be made before the stock reaches the strike, not after.</p>
-<p>| Stock Price vs Strike | Action |</p>
-<p>|---|---|</p>
-<p>| Below strike (3%+ OTM) | Hold; position is not threatened |</p>
-<p>| 0-3% above strike (ITM) | Decide: roll up or let be assigned |</p>
-<p>| Above strike (called away likely) | Position will be assigned at expiration |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Stock Price vs Strike</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Action</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Below strike (3%+ OTM)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Hold; position is not threatened</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">0-3% above strike (ITM)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Decide: roll up or let be assigned</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Above strike (called away likely)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Position will be assigned at expiration</td>
+</tr>
+</tbody></table></div>
 <p>The "run to the strike" rule gives the trader time to make the decision. The trader who waits until the stock is at the strike has less time and fewer roll-up options.</p>
 <h2>The Common Mistakes</h2>
 <p><strong>Rolling up too late.</strong> The trader waits until the stock is at or above the short strike to consider rolling. At that point, the call is deep ITM, and the roll-up cost is high. The decision should be made when the stock is 2-3% below the strike.</p>

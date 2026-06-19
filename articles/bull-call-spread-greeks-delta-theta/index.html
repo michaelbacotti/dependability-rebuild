@@ -69,92 +69,331 @@
 <p><strong>Gamma:</strong> The change in delta for a $1 change in the underlying. For a bull call spread, gamma is positive below the short strike and approaches zero above the short strike. The position is "accelerating" in delta as the stock rises toward the short strike.</p>
 <h2>Greeks at Entry (45 DTE)</h2>
 <p>For a bull call spread with the long strike at $102 and the short strike at $110, on a stock at $100 with 45 DTE and 40% IV rank:</p>
-<p>| Greek | Per Spread | Notes |</p>
-<p>|---|---|---|</p>
-<p>| Delta | +0.35 | Positive; position benefits from a $1 move to $35 |</p>
-<p>| Theta | -0.04 per day | Negative; position loses $4 per day to time decay |</p>
-<p>| Vega | +0.10 per IV point | Positive; position benefits $10 per 1-point IV rise |</p>
-<p>| Gamma | +0.015 per $1 move | Positive; delta increases by 0.015 per $1 up move |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Greek</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Per Spread</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Notes</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Delta</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.35</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Positive; position benefits from a $1 move to $35</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Theta</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-0.04 per day</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Negative; position loses $4 per day to time decay</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Vega</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.10 per IV point</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Positive; position benefits $10 per 1-point IV rise</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Gamma</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.015 per $1 move</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Positive; delta increases by 0.015 per $1 up move</td>
+</tr>
+</tbody></table></div>
 <p>The position at entry is moderately bullish. The delta of 0.35 means the position benefits from a $1 rise in the underlying, but the benefit is capped (delta declines as the stock approaches the short strike). The theta is negative but small at 45 DTE, and the position has more time value to lose than at later stages of the trade.</p>
 <h2>Greeks at 30 DTE</h2>
 <p>After 15 days, the position's profile has shifted:</p>
-<p>| Greek | Per Spread | Change from Entry |</p>
-<p>|---|---|---|</p>
-<p>| Delta | +0.40 (if stock unchanged) | Slightly higher; time decay has eroded some of the long call's premium |</p>
-<p>| Theta | -0.06 per day | Higher in absolute terms; the position is losing more per day |</p>
-<p>| Vega | +0.08 per IV point | Lower; the position is less sensitive to IV changes |</p>
-<p>| Gamma | +0.020 per $1 move | Higher; delta is more sensitive to moves |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Greek</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Per Spread</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Change from Entry</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Delta</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.40 (if stock unchanged)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Slightly higher; time decay has eroded some of the long call's premium</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Theta</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-0.06 per day</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Higher in absolute terms; the position is losing more per day</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Vega</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.08 per IV point</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Lower; the position is less sensitive to IV changes</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Gamma</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.020 per $1 move</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Higher; delta is more sensitive to moves</td>
+</tr>
+</tbody></table></div>
 <p>The theta has increased, which is the most important change. The position is now losing $6 per day to time decay, and this loss accelerates in the next 15-30 days. The trader who entered at 45 DTE should be aware that the position's mark-to-market will decline even if the stock does not move.</p>
 <h2>Greeks at 21 DTE</h2>
 <p>At 21 DTE, the position is at the decision point. The theta is at or near its maximum:</p>
-<p>| Greek | Per Spread | Change from 30 DTE |</p>
-<p>|---|---|---|</p>
-<p>| Delta | +0.45 (if stock unchanged) | Higher; time decay is concentrating the value in the intrinsic component |</p>
-<p>| Theta | -0.08 per day | Near peak; position is losing $8 per day |</p>
-<p>| Vega | +0.06 per IV point | Lower; less IV sensitivity |</p>
-<p>| Gamma | +0.025 per $1 move | Higher; delta is more sensitive |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Greek</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Per Spread</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Change from 30 DTE</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Delta</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.45 (if stock unchanged)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Higher; time decay is concentrating the value in the intrinsic component</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Theta</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-0.08 per day</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Near peak; position is losing $8 per day</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Vega</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.06 per IV point</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Lower; less IV sensitivity</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Gamma</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.025 per $1 move</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Higher; delta is more sensitive</td>
+</tr>
+</tbody></table></div>
 <p>The 21 DTE mark is the standard decision point for bull call spreads. The position's value is most sensitive to the underlying's move and most affected by time decay. The trader should apply the 21 DTE decision tree: close at 50%+ profit, close at 50%+ loss, hold otherwise.</p>
 <h2>Greeks at 14 DTE</h2>
 <p>The 2-week rule applies. The position is dominated by intrinsic value and gamma:</p>
-<p>| Greek | Per Spread | Notes |</p>
-<p>|---|---|---|</p>
-<p>| Delta | +0.55 to +0.95 (depending on stock) | High; the position is essentially equivalent to long stock above the long strike |</p>
-<p>| Theta | -0.05 per day | Lower in absolute terms; most of the time value has been lost |</p>
-<p>| Vega | +0.03 per IV point | Low; IV changes have minimal impact on the remaining premium |</p>
-<p>| Gamma | +0.030 per $1 move | High; the position is sensitive to small moves |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Greek</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Per Spread</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Notes</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Delta</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.55 to +0.95 (depending on stock)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">High; the position is essentially equivalent to long stock above the long strike</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Theta</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-0.05 per day</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Lower in absolute terms; most of the time value has been lost</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Vega</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.03 per IV point</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Low; IV changes have minimal impact on the remaining premium</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Gamma</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.030 per $1 move</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">High; the position is sensitive to small moves</td>
+</tr>
+</tbody></table></div>
 <p>At 14 DTE, the position is no longer a "spread" in the traditional sense. The time value is small, and the position's value is essentially the intrinsic value of the long call minus the intrinsic value of the short call. The position should be closed unless the trader is committed to holding to expiration.</p>
 <h2>Greeks at 7 DTE</h2>
 <p>The final week. The position is close to its terminal value:</p>
-<p>| Greek | Per Spread | Notes |</p>
-<p>|---|---|---|</p>
-<p>| Delta | +0.90 to +1.00 (if stock above long strike) | Near 1.00; position moves dollar-for-dollar with the stock |</p>
-<p>| Theta | -0.02 per day | Low; little time value remaining |</p>
-<p>| Vega | +0.01 per IV point | Negligible |</p>
-<p>| Gamma | +0.020 per $1 move | Moderate; declining as expiration approaches |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Greek</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Per Spread</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Notes</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Delta</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.90 to +1.00 (if stock above long strike)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Near 1.00; position moves dollar-for-dollar with the stock</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Theta</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-0.02 per day</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Low; little time value remaining</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Vega</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.01 per IV point</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Negligible</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Gamma</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.020 per $1 move</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Moderate; declining as expiration approaches</td>
+</tr>
+</tbody></table></div>
 <p>The position is essentially a long call at this point, capped at the short strike. The trader who has held through the final week is exposed to a small move that can flip the position from profitable to unprofitable, but the absolute move required to produce a large loss is small.</p>
 <h2>Delta Profile Across the Lifecycle</h2>
 <p>The delta of a bull call spread is not constant. It varies depending on the underlying's price relative to the long and short strikes:</p>
-<p>| Stock Price vs Strikes | Delta (per spread) | Interpretation |</p>
-<p>|---|---|---|</p>
-<p>| Below long strike | 0.00 to +0.10 | Position is essentially a long call that is far OTM; small positive delta |</p>
-<p>| At long strike | +0.40 to +0.50 | Delta is at the money call value; position has its highest sensitivity to small moves |</p>
-<p>| Between strikes | +0.40 to +0.60 | Position is "in the spread"; delta is concentrated in this region |</p>
-<p>| At short strike | +0.45 to +0.50 | Delta declines as the short call becomes more in the money |</p>
-<p>| Above short strike | +0.05 to +0.10 | Position is max profit; both legs move together, leaving small net delta |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Stock Price vs Strikes</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Delta (per spread)</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Interpretation</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Below long strike</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">0.00 to +0.10</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Position is essentially a long call that is far OTM; small positive delta</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">At long strike</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.40 to +0.50</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Delta is at the money call value; position has its highest sensitivity to small moves</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Between strikes</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.40 to +0.60</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Position is "in the spread"; delta is concentrated in this region</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">At short strike</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.45 to +0.50</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Delta declines as the short call becomes more in the money</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Above short strike</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.05 to +0.10</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Position is max profit; both legs move together, leaving small net delta</td>
+</tr>
+</tbody></table></div>
 <p>The peak delta is in the region between the long and short strikes. This is where the position has the most sensitivity to small moves in the underlying. The trader who wants to manage the position actively should watch for the stock to enter this region, because that is when the position is responding most to the underlying's movement.</p>
 <h2>Theta Profile Across the Lifecycle</h2>
 <p>Theta is the most consistent Greek. The position is always losing time value, and the loss accelerates in the final 30-45 days:</p>
-<p>| DTE | Daily Theta (per spread) | Cumulative Loss to Theta |</p>
-<p>|---|---|---|</p>
-<p>| 60 (entry) | -0.02 | $0 |</p>
-<p>| 45 | -0.04 | $0.60 |</p>
-<p>| 30 | -0.06 | $1.50 |</p>
-<p>| 21 | -0.08 | $2.10 |</p>
-<p>| 14 | -0.05 | $2.70 |</p>
-<p>| 7 | -0.02 | $3.10 |</p>
-<p>| 0 | -0.00 | $3.30 |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">DTE</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Daily Theta (per spread)</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Cumulative Loss to Theta</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">60 (entry)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-0.02</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$0</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">45</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-0.04</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$0.60</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">30</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-0.06</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$1.50</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">21</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-0.08</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$2.10</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">14</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-0.05</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$2.70</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">7</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-0.02</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$3.10</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">0</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-0.00</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$3.30</td>
+</tr>
+</tbody></table></div>
 <p>The theta peaks at 21-30 DTE and then declines. The total theta loss over the life of the trade is roughly the original time value of the position, which is the difference between the debit paid and the spread's intrinsic value at entry.</p>
 <h2>Vega Profile Across the Lifecycle</h2>
 <p>Vega is highest at entry and declines as expiration approaches. The position is long vega, which means it benefits from an IV rise and loses value from an IV decline. For an event-driven trade (earnings, FOMC), the long vega is a benefit before the event and a cost after the IV crush.</p>
-<p>| DTE | Vega (per spread) | IV Sensitivity |</p>
-<p>|---|---|---|</p>
-<p>| 60 | +0.12 | High |</p>
-<p>| 45 | +0.10 | Moderate |</p>
-<p>| 30 | +0.08 | Moderate |</p>
-<p>| 21 | +0.06 | Lower |</p>
-<p>| 14 | +0.03 | Low |</p>
-<p>| 7 | +0.01 | Negligible |</p>
-<p>| 0 | +0.00 | None |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">DTE</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Vega (per spread)</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">IV Sensitivity</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">60</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.12</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">High</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">45</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.10</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Moderate</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">30</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.08</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Moderate</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">21</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.06</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Lower</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">14</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.03</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Low</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">7</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.01</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Negligible</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">0</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.00</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">None</td>
+</tr>
+</tbody></table></div>
 <p>The vega exposure is concentrated in the first 30-45 days of the trade. The trader who holds through an event that crushes IV will see the position's value decline from the IV crush, even if the underlying moves in the expected direction.</p>
 <h2>Gamma Profile Across the Lifecycle</h2>
 <p>Gamma is the most variable Greek. It is positive and meaningful between the long and short strikes, and it declines to near zero outside that region:</p>
-<p>| Stock Price vs Strikes | Gamma (per spread) | Delta Sensitivity |</p>
-<p>|---|---|---|</p>
-<p>| Far below long strike | +0.005 | Low; delta barely moves |</p>
-<p>| Near long strike | +0.020 | High; delta changes meaningfully |</p>
-<p>| Between strikes | +0.015 to +0.020 | Moderate to high; position is "in the spread" |</p>
-<p>| Near short strike | +0.010 | Declining; short call is gaining delta |</p>
-<p>| Above short strike | +0.002 | Low; both legs move together |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Stock Price vs Strikes</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Gamma (per spread)</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Delta Sensitivity</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Far below long strike</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.005</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Low; delta barely moves</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Near long strike</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.020</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">High; delta changes meaningfully</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Between strikes</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.015 to +0.020</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Moderate to high; position is "in the spread"</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Near short strike</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.010</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Declining; short call is gaining delta</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Above short strike</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.002</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Low; both legs move together</td>
+</tr>
+</tbody></table></div>
 <p>The peak gamma is near the long strike, which is the strike the stock is most likely to interact with as it moves up from the current price. The trader who manages the position actively should watch the stock's approach to the long strike, because that is when the position is most sensitive to small moves.</p>
 <h2>Putting the Greeks Together</h2>
 <p>The bull call spread is a positive delta, negative theta, positive vega, positive gamma position. The Greeks evolve across the lifecycle:</p>

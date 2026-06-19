@@ -65,24 +65,78 @@
 <h2>Return Profile</h2>
 <p><strong>Iron condor:</strong> Income strategy. The position collects a credit up front and profits as time passes and the underlying stays in the range. The expected return per trade is 1-3% of the capital at risk, with a 65-75% win rate. The annual return, assuming 8-10 condors per year, is 8-30% of the capital at risk.</p>
 <p><strong>Directional spread (e.g., bull call spread):</strong> Alpha-generation strategy. The position pays a debit up front and profits if the underlying moves in the expected direction by a sufficient amount. The expected return per trade is highly variable — a winning trade might return 50-100% of the debit paid, while a losing trade returns 0%. The annual return depends on the trader's edge in picking direction.</p>
-<p>| Parameter | Iron Condor | Bull Call Spread |</p>
-<p>|---|---|---|</p>
-<p>| Win rate | 65-75% | 30-50% |</p>
-<p>| Average win | 50% of credit | 50-100% of debit |</p>
-<p>| Average loss | 50-100% of credit | 100% of debit |</p>
-<p>| Expected return per trade | 1-3% of capital at risk | Highly variable, depends on edge |</p>
-<p>| Annual return (8-12 trades) | 8-30% | Variable, can be higher or lower |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Parameter</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Iron Condor</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Bull Call Spread</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Win rate</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">65-75%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">30-50%</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Average win</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">50% of credit</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">50-100% of debit</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Average loss</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">50-100% of credit</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">100% of debit</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Expected return per trade</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">1-3% of capital at risk</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Highly variable, depends on edge</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Annual return (8-12 trades)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">8-30%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Variable, can be higher or lower</td>
+</tr>
+</tbody></table></div>
 <p>The iron condor has a higher win rate and a more predictable return. The directional spread has a lower win rate but a higher payoff per winner. The expected value depends on the trader's edge: a condor trader needs an edge in volatility timing; a directional spread trader needs an edge in market direction.</p>
 <h2>Risk Profile</h2>
 <p><strong>Iron condor:</strong> Defined risk. Max loss is known at entry. The position can be adjusted to reduce the realized loss, and most condors are closed before reaching max loss. The primary risk is a regime change (sudden IV spike) or a large directional move that breaches both short strikes.</p>
 <p><strong>Directional spread:</strong> Defined risk. Max loss is the debit paid. The position can be closed before expiration, and the loss is capped at the debit. The primary risk is the underlying moving in the wrong direction by more than the spread width.</p>
-<p>| Risk Factor | Iron Condor | Bull Call Spread |</p>
-<p>|---|---|---|</p>
-<p>| Max loss | Wing width minus credit | Debit paid |</p>
-<p>| Probability of max loss | 5-10% | 30-50% |</p>
-<p>| Recovery time after max loss | 6-12 months of consistent trading | 3-6 months of consistent trading |</p>
-<p>| Tail risk | High (regime change can produce large drawdown) | Moderate (single position can go to 0) |</p>
-<p>| Correlation to market | Low to moderate (position is delta-neutral) | High (position is delta-positive) |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Risk Factor</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Iron Condor</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Bull Call Spread</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Max loss</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Wing width minus credit</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Debit paid</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Probability of max loss</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">5-10%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">30-50%</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Recovery time after max loss</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">6-12 months of consistent trading</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">3-6 months of consistent trading</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Tail risk</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">High (regime change can produce large drawdown)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Moderate (single position can go to 0)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Correlation to market</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Low to moderate (position is delta-neutral)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">High (position is delta-positive)</td>
+</tr>
+</tbody></table></div>
 <p>The iron condor's risk is concentrated in volatility regime changes; the directional spread's risk is concentrated in the underlying's direction. A trader who is right about direction but wrong about volatility should run directional spreads; a trader who is right about volatility but neutral on direction should run condors.</p>
 <h2>Time Horizon</h2>
 <p><strong>Iron condor:</strong> 30-60 day holding period. The position is entered at 30-60 DTE, managed at 21 DTE, and closed by 7 DTE. The full cycle is roughly 30-50 days from entry to close.</p>
@@ -96,20 +150,71 @@
 <p>The two strategies serve different roles:</p>
 <p><strong>Iron condors:</strong> Income generation. The condor portfolio produces a steady stream of premium income that can be used for living expenses, reinvestment, or as a stable return component. The strategy is appropriate for traders who want predictable monthly or quarterly income and who are willing to accept a lower return ceiling in exchange for a higher win rate.</p>
 <p><strong>Directional spreads:</strong> Alpha generation. The directional spread portfolio produces variable returns that depend on the trader's market view. The strategy is appropriate for traders who have a view on market direction and who want to express that view with defined risk. The returns are less predictable but can be significantly higher than a condor portfolio in a strongly trending market.</p>
-<p>| Portfolio Need | Strategy | Capital Allocation |</p>
-<p>|---|---|---|</p>
-<p>| Steady monthly income | Iron condor | 60-80% |</p>
-<p>| Growth in trending markets | Directional spreads | 20-40% |</p>
-<p>| Diversification across regimes | Both | 50/50 |</p>
-<p>| Capital preservation | Iron condor (income) + cash | 70%+ in cash-secured strategies |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Portfolio Need</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Strategy</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Capital Allocation</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Steady monthly income</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Iron condor</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">60-80%</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Growth in trending markets</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Directional spreads</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">20-40%</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Diversification across regimes</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Both</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">50/50</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Capital preservation</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Iron condor (income) + cash</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">70%+ in cash-secured strategies</td>
+</tr>
+</tbody></table></div>
 <h2>Hybrid Approach: The Income + Alpha Portfolio</h2>
 <p>A common allocation for a retail or small institutional portfolio:</p>
-<p>| Component | Allocation | Strategy | Purpose |</p>
-<p>|---|---|---|---|</p>
-<p>| Income | 50-60% | Iron condors (4-6 positions) | Steady premium collection |</p>
-<p>| Alpha | 20-30% | Bull call / bear put spreads (2-4 positions) | Growth in trending markets |</p>
-<p>| Tail hedge | 5-10% | Long puts or VIX calls | Protection against regime change |</p>
-<p>| Cash | 10-20% | Cash | Optionality for new entries |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Component</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Allocation</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Strategy</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Purpose</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Income</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">50-60%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Iron condors (4-6 positions)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Steady premium collection</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Alpha</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">20-30%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Bull call / bear put spreads (2-4 positions)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Growth in trending markets</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Tail hedge</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">5-10%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Long puts or VIX calls</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Protection against regime change</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Cash</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">10-20%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Cash</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Optionality for new entries</td>
+</tr>
+</tbody></table></div>
 <p>This portfolio runs 6-10 simultaneous positions, with the income leg providing most of the return and the alpha leg providing the growth. The tail hedge protects against the regime change that would damage the income leg.</p>
 <p>The income leg uses SPX or QQQ condors with 45 DTE entries and the standard 2% risk rule. The alpha leg uses directional spreads on the same or related underlyings, with entries triggered by clear technical or fundamental signals.</p>
 <h2>When to Run More Condors</h2>

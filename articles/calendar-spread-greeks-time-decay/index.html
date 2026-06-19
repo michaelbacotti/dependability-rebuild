@@ -69,95 +69,329 @@
 <p><strong>Gamma:</strong> The change in delta for a $1 change in the underlying. For a calendar spread, gamma is positive but small. The position is not as sensitive to small moves as a single option would be.</p>
 <h2>Greeks at Entry (30 Days to Event)</h2>
 <p>For a calendar spread with the strike at $150, the near-term option at 14 DTE, and the longer-dated option at 45 DTE, on a stock at $150 with 60% IV:</p>
-<p>| Greek | Per Spread | Notes |</p>
-<p>|---|---|---|</p>
-<p>| Delta | +0.05 | Near zero; position is directionally neutral |</p>
-<p>| Theta | -0.05 per day | Negative; position loses $5 per day to time decay |</p>
-<p>| Vega | +0.10 per IV point | Positive; position benefits from a 1-point IV rise |</p>
-<p>| Gamma | +0.005 per $1 move | Low; delta is not very sensitive |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Greek</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Per Spread</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Notes</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Delta</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.05</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Near zero; position is directionally neutral</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Theta</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-0.05 per day</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Negative; position loses $5 per day to time decay</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Vega</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.10 per IV point</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Positive; position benefits from a 1-point IV rise</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Gamma</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.005 per $1 move</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Low; delta is not very sensitive</td>
+</tr>
+</tbody></table></div>
 <p>At entry, the calendar spread has negative theta. The position is losing $5 per day to time decay, and this loss is dominated by the faster time decay of the near-term option. The trader who enters the position 30 days before the event is "paying" for the IV crush that will come later.</p>
 <h2>Greeks at 14 Days to Event (Event in 14 Days)</h2>
 <p>Two weeks before the event, the Greeks have shifted:</p>
-<p>| Greek | Per Spread | Change from Entry |</p>
-<p>|---|---|---|</p>
-<p>| Delta | +0.08 | Slightly higher; some directional bias from time decay |</p>
-<p>| Theta | -0.03 per day | Less negative; time decay is slowing on the near-term option |</p>
-<p>| Vega | +0.12 per IV point | Higher; IV is rising into the event |</p>
-<p>| Gamma | +0.008 per $1 move | Slightly higher |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Greek</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Per Spread</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Change from Entry</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Delta</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.08</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Slightly higher; some directional bias from time decay</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Theta</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-0.03 per day</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Less negative; time decay is slowing on the near-term option</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Vega</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.12 per IV point</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Higher; IV is rising into the event</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Gamma</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.008 per $1 move</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Slightly higher</td>
+</tr>
+</tbody></table></div>
 <p>The theta is less negative because the near-term option is approaching its event, and its time value is starting to compress. The vega is higher because IV is rising in anticipation of the event. The position is becoming more sensitive to IV changes and less sensitive to time decay.</p>
 <h2>Greeks on the Event Day</h2>
 <p>On the event day, the Greeks shift dramatically:</p>
-<p>| Greek | Per Spread | Notes |</p>
-<p>|---|---|---|</p>
-<p>| Delta | -0.10 to +0.10 (depending on the move) | Wide range; delta is volatile on the event day |</p>
-<p>| Theta | -0.01 to +0.05 per day | Near zero or positive; the near-term option is mostly intrinsic |</p>
-<p>| Vega | +0.05 to +0.15 per IV point | High; IV is collapsing rapidly |</p>
-<p>| Gamma | +0.020 to +0.040 per $1 move | High; the position is sensitive to small moves |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Greek</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Per Spread</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Notes</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Delta</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-0.10 to +0.10 (depending on the move)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Wide range; delta is volatile on the event day</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Theta</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-0.01 to +0.05 per day</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Near zero or positive; the near-term option is mostly intrinsic</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Vega</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.05 to +0.15 per IV point</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">High; IV is collapsing rapidly</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Gamma</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.020 to +0.040 per $1 move</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">High; the position is sensitive to small moves</td>
+</tr>
+</tbody></table></div>
 <p>The vega is high because the IV crush is happening. The position's value is moving in response to the IV collapse, and a 10-point IV drop in the near-term option can move the position by $1.00-$1.50 per spread. The trader who is long vega benefits from this move.</p>
 <p>The theta can be positive if the near-term option's time value has collapsed faster than the longer-dated option's time value. In this case, the position is gaining time value daily even though both options are losing time value.</p>
 <h2>Greeks at T+1 (1 Day After Event)</h2>
 <p>The day after the event, the IV crush is partially complete:</p>
-<p>| Greek | Per Spread | Notes |</p>
-<p>|---|---|---|</p>
-<p>| Delta | -0.15 to +0.15 (depending on the move) | Wide range; position is sensitive to follow-through |</p>
-<p>| Theta | +0.02 to +0.08 per day | Positive; the near-term option's time value is collapsing |</p>
-<p>| Vega | +0.05 to +0.10 per IV point | Lower than event day; IV crush is slowing |</p>
-<p>| Gamma | +0.020 to +0.030 per $1 move | Still elevated |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Greek</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Per Spread</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Notes</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Delta</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-0.15 to +0.15 (depending on the move)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Wide range; position is sensitive to follow-through</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Theta</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.02 to +0.08 per day</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Positive; the near-term option's time value is collapsing</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Vega</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.05 to +0.10 per IV point</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Lower than event day; IV crush is slowing</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Gamma</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.020 to +0.030 per $1 move</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Still elevated</td>
+</tr>
+</tbody></table></div>
 <p>The theta is positive, which means the position is gaining value from time decay. This is the "sweet spot" of the calendar trade — the near-term option is rapidly losing time value, and the longer-dated option is retaining more value. The position is gaining $2-$8 per day from the time decay differential.</p>
 <h2>Greeks at T+3 (3 Days After Event)</h2>
 <p>The IV crush is essentially complete:</p>
-<p>| Greek | Per Spread | Notes |</p>
-<p>|---|---|---|</p>
-<p>| Delta | -0.20 to +0.20 (depending on the move) | Wide range; position is exposed to the underlying's move |</p>
-<p>| Theta | +0.01 to +0.03 per day | Smaller; the differential is shrinking as both options lose value |</p>
-<p>| Vega | +0.02 to +0.05 per IV point | Low; IV is stable |</p>
-<p>| Gamma | +0.015 to +0.025 per $1 move | Moderate; position is still sensitive |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Greek</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Per Spread</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Notes</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Delta</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-0.20 to +0.20 (depending on the move)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Wide range; position is exposed to the underlying's move</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Theta</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.01 to +0.03 per day</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Smaller; the differential is shrinking as both options lose value</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Vega</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.02 to +0.05 per IV point</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Low; IV is stable</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Gamma</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.015 to +0.025 per $1 move</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Moderate; position is still sensitive</td>
+</tr>
+</tbody></table></div>
 <p>The theta is still positive but smaller. The time decay differential is shrinking as the near-term option approaches expiration. The trader should close the position around T+2 to T+3 to capture the remaining theta and avoid the directional risk that builds up after the event.</p>
 <h2>Theta Sign Flip: The Key Insight</h2>
 <p>The most important Greek dynamic in a calendar spread is the theta sign flip. The position enters with negative theta (the trader is paying for the IV crush that will come later) and shifts to positive theta after the event (the trader is now collecting the time decay differential).</p>
-<p>| Stage | Theta Sign | Interpretation |</p>
-<p>|---|---|---|</p>
-<p>| Entry to T-1 | Negative | Trader is paying for the IV crush |</p>
-<p>| T-1 to T+0 | Near zero | Transition; IV is peaking |</p>
-<p>| T+0 to T+1 | Slightly positive | IV crush begins |</p>
-<p>| T+1 to T+2 | Strongly positive | Peak theta; time decay differential is largest |</p>
-<p>| T+2 to T+3 | Positive but declining | Differential is shrinking |</p>
-<p>| T+3 to near-term expiration | Near zero or negative | Both options are losing value similarly |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Stage</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Theta Sign</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Interpretation</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Entry to T-1</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Negative</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Trader is paying for the IV crush</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">T-1 to T+0</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Near zero</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Transition; IV is peaking</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">T+0 to T+1</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Slightly positive</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">IV crush begins</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">T+1 to T+2</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Strongly positive</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Peak theta; time decay differential is largest</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">T+2 to T+3</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Positive but declining</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Differential is shrinking</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">T+3 to near-term expiration</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Near zero or negative</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Both options are losing value similarly</td>
+</tr>
+</tbody></table></div>
 <p>The trader who understands this dynamic can manage the position through the theta sign flip. The position is "working" when theta is positive, and it is "carrying cost" when theta is negative. The flip happens around the event day.</p>
 <h2>Vega Sign and Magnitude</h2>
 <p>The calendar spread is long vega throughout its lifecycle. The position benefits from a rise in IV and loses value from a decline. The vega magnitude changes:</p>
-<p>| Stage | Vega | IV Sensitivity |</p>
-<p>|---|---|---|</p>
-<p>| Entry to T-7 | +0.10 to +0.15 | High; IV is rising into the event |</p>
-<p>| T-7 to T+0 | +0.15 to +0.20 | Peak; IV is at its highest |</p>
-<p>| T+0 to T+2 | +0.10 to +0.15 | Declining; IV crush is in progress |</p>
-<p>| T+2 to T+3 | +0.05 to +0.10 | Lower; IV crush is mostly complete |</p>
-<p>| T+3 to near-term expiration | +0.02 to +0.05 | Low; IV is stable |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Stage</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Vega</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">IV Sensitivity</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Entry to T-7</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.10 to +0.15</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">High; IV is rising into the event</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">T-7 to T+0</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.15 to +0.20</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Peak; IV is at its highest</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">T+0 to T+2</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.10 to +0.15</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Declining; IV crush is in progress</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">T+2 to T+3</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.05 to +0.10</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Lower; IV crush is mostly complete</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">T+3 to near-term expiration</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.02 to +0.05</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Low; IV is stable</td>
+</tr>
+</tbody></table></div>
 <p>The peak vega is around the event day. The position is most sensitive to IV changes when IV is changing the most. The trader who closes the position on T+2 captures the vega benefit before it declines.</p>
 <h2>Delta Profile Around the Event</h2>
 <p>The delta of a calendar spread is near zero at entry but can become meaningful if the underlying moves sharply. The position's delta depends on whether the underlying is above or below the strike at any point.</p>
-<p>| Underlying vs Strike | Delta (per spread) | Interpretation |</p>
-<p>|---|---|---|</p>
-<p>| Well below strike | -0.20 | Position is short delta; benefits from a fall |</p>
-<p>| At strike | +0.00 | Position is delta-neutral |</p>
-<p>| Well above strike | +0.20 | Position is long delta; benefits from a rise |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Underlying vs Strike</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Delta (per spread)</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Interpretation</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Well below strike</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-0.20</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Position is short delta; benefits from a fall</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">At strike</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.00</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Position is delta-neutral</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Well above strike</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.20</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Position is long delta; benefits from a rise</td>
+</tr>
+</tbody></table></div>
 <p>The delta is most sensitive around the strike. The trader who has a directional view can shift the strike (to OTM for a directional bias) or use a different structure (debit spread for a strong directional view).</p>
 <h2>Gamma Profile</h2>
 <p>Gamma is positive but small for a calendar spread. The position is not as gamma-sensitive as a single option or a debit spread. The gamma is concentrated near the strike, but the magnitude is lower than for a long option.</p>
-<p>| Underlying vs Strike | Gamma (per spread) | Delta Sensitivity |</p>
-<p>|---|---|---|</p>
-<p>| Well below strike | +0.005 | Low |</p>
-<p>| Near strike | +0.020 | Moderate |</p>
-<p>| Well above strike | +0.005 | Low |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Underlying vs Strike</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Gamma (per spread)</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Delta Sensitivity</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Well below strike</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.005</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Low</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Near strike</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.020</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Moderate</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Well above strike</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.005</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Low</td>
+</tr>
+</tbody></table></div>
 <p>The position's gamma is meaningful only near the strike. The trader who expects the underlying to stay near the strike should expect moderate gamma exposure; the trader who expects a large move should expect the position to behave more like a directional trade.</p>
 <h2>The Greeks at Near-Term Expiration</h2>
 <p>On the day of the near-term option's expiration, the position's profile has shifted significantly:</p>
-<p>| Greek | Per Spread | Notes |</p>
-<p>|---|---|---|</p>
-<p>| Delta | -0.30 to +0.30 (depending on the move) | Wide range; position is exposed to the move |</p>
-<p>| Theta | Near zero | Both options have similar time decay |</p>
-<p>| Vega | +0.05 to +0.10 | Moderate; the longer-dated option retains vega |</p>
-<p>| Gamma | +0.025 | High; position is sensitive to small moves |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Greek</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Per Spread</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Notes</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Delta</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-0.30 to +0.30 (depending on the move)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Wide range; position is exposed to the move</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Theta</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Near zero</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Both options have similar time decay</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Vega</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.05 to +0.10</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Moderate; the longer-dated option retains vega</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Gamma</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.025</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">High; position is sensitive to small moves</td>
+</tr>
+</tbody></table></div>
 <p>The position is essentially a long position in the longer-dated option, with the near-term option expiring. The trader who has not closed the position by near-term expiration should either close it or be prepared to hold a long option position for the remaining time.</p>
 <h2>The Decision Framework</h2>
 <p>The Greeks tell the story of the position:</p>

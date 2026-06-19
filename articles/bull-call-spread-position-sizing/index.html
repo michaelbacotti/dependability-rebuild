@@ -83,11 +83,26 @@
 <p>The position size is determined by the debit ($300), not the notional value ($1,000). A $100,000 portfolio with 2% risk ($2,000) can run 6-7 contracts of this spread.</p>
 <h2>Buying Power Reduction</h2>
 <p>Bull call spreads have a defined risk that is fully covered by the debit paid. Most brokers do not require additional margin for a long call spread, but the buying power reduction (BPR) is typically the debit paid plus a small buffer.</p>
-<p>| Broker Type | BPR for Bull Call Spread |</p>
-<p>|---|---|</p>
-<p>| Cash account | Full debit (e.g., $300 per contract) |</p>
-<p>| Reg-T margin | Debit + small buffer (typically 100% of debit) |</p>
-<p>| Portfolio margin | Debit × 0.20-0.40 (stress-loss-based) |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Broker Type</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">BPR for Bull Call Spread</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Cash account</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Full debit (e.g., $300 per contract)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Reg-T margin</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Debit + small buffer (typically 100% of debit)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Portfolio margin</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Debit × 0.20-0.40 (stress-loss-based)</td>
+</tr>
+</tbody></table></div>
 <p>The BPR is not the risk metric. The risk metric is the debit. The 2% rule is applied to the debit, and the BPR determines how much of the portfolio's buying power is consumed.</p>
 <h2>Portfolio-Level Allocation</h2>
 <p>A portfolio running 5-10 simultaneous bull call spreads should size each position so that the total portfolio risk (the sum of debits paid) does not exceed 10-20% of capital. This means each individual position is sized at 1-2% of capital, and the positions are selected to be uncorrelated or low-correlation.</p>
@@ -101,12 +116,35 @@
 <h2>Correlation: The Hidden Risk</h2>
 <p>The single biggest risk in a multi-spread portfolio is correlation. If all 5 spreads are on tech stocks, they will all move together during a sector rotation. A 5-position portfolio with correlated underlyings is effectively a 5x leveraged single-position bet.</p>
 <p>The fix: diversify across underlyings with low correlation in their short-term price movements.</p>
-<p>| Correlation Tier | Examples | Suitability for Multi-Spread Portfolio |</p>
-<p>|---|---|---|</p>
-<p>| High (>0.7) | AAPL, MSFT, GOOGL, NVDA | Use 1-2 maximum |</p>
-<p>| Moderate (0.4-0.7) | Tech ETFs (XLK, QQQ), sector peers (XLF components) | Use 1-2 maximum |</p>
-<p>| Low (0.1-0.4) | Unrelated sectors (XLV vs XLE), bonds (TLT), commodities (GLD) | Use freely |</p>
-<p>| Very low (<0.1) | International ETFs, currencies, unrelated industries | Use freely |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Correlation Tier</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Examples</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Suitability for Multi-Spread Portfolio</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">High (>0.7)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">AAPL, MSFT, GOOGL, NVDA</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Use 1-2 maximum</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Moderate (0.4-0.7)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Tech ETFs (XLK, QQQ), sector peers (XLF components)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Use 1-2 maximum</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Low (0.1-0.4)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Unrelated sectors (XLV vs XLE), bonds (TLT), commodities (GLD)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Use freely</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Very low (<0.1)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">International ETFs, currencies, unrelated industries</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Use freely</td>
+</tr>
+</tbody></table></div>
 <p>A balanced portfolio might include 1 spread on a tech stock, 1 spread on a sector ETF, 1 spread on a non-tech sector, 1 spread on a bond or commodity ETF, and 1 spread on a low-correlation industry. The correlations between these positions are low enough that a market event that hits one is unlikely to hit all.</p>
 <h2>The Sector Concentration Limit</h2>
 <p>Beyond correlation, sector concentration is a separate risk. A portfolio with 3 spreads on tech stocks, 1 spread on a healthcare stock, and 1 spread on a financial stock is sector-concentrated in tech. A sector rotation out of tech can produce large losses on the 3 tech spreads while the other 2 are unaffected.</p>

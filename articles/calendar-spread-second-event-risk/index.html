@@ -75,13 +75,40 @@
 <p>The second event can occur before or after the primary event. If it occurs before, the IV crush is delayed or muted (because the market is pricing in the second event). If it occurs after, the IV may not stay crushed (because the second event is keeping volatility elevated).</p>
 <h2>The IV Profile with Two Events</h2>
 <p>A single-event underlying has a clear IV profile: IV rises into the event, then crushes after. A two-event underlying has a more complex profile:</p>
-<p>| Time Period | Single-Event IV | Two-Event IV |</p>
-<p>|---|---|---|</p>
-<p>| T-30 to T-14 (first event) | 80% | 80% (first event) |</p>
-<p>| T-14 to T+0 (first event) | 90% (peak) | 90% (peak, combined effect) |</p>
-<p>| T+0 to T+5 (after first event) | 40% (crushed) | 70% (partially crushed, second event) |</p>
-<p>| T+5 to T-7 (second event) | 40% | 75% (rising again) |</p>
-<p>| T-7 to T+5 (around second event) | 40% | 90% (peak) and 40% (crush) |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Time Period</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Single-Event IV</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Two-Event IV</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">T-30 to T-14 (first event)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">80%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">80% (first event)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">T-14 to T+0 (first event)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">90% (peak)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">90% (peak, combined effect)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">T+0 to T+5 (after first event)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">40% (crushed)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">70% (partially crushed, second event)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">T+5 to T-7 (second event)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">40%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">75% (rising again)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">T-7 to T+5 (around second event)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">40%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">90% (peak) and 40% (crush)</td>
+</tr>
+</tbody></table></div>
 <p>The two-event profile is "double peaked" — IV rises into the first event, partially crushes, then rises again into the second event. The calendar spread that was entered for the first event does not capture the full IV crush, because the second event is keeping IV elevated.</p>
 <h2>The Calendar's Exposure</h2>
 <p>The calendar spread is short the near-term option and long the longer-dated option. The position is exposed to the IV differential between the two expirations. With two events:</p>
@@ -114,12 +141,30 @@
 </ul>
 <h2>The Adjustment: Reduce Size</h2>
 <p>If the second event is more than 14 days away, the calendar can still be entered, but with a reduced size. The reduced size accounts for the smaller IV crush:</p>
-<p>| Time Between Events | Calendar Adjustment |</p>
-<p>|---|---|</p>
-<p>| 0-7 days | Skip the trade |</p>
-<p>| 7-14 days | Reduce size to 50% of standard |</p>
-<p>| 14-30 days | Reduce size to 75% of standard |</p>
-<p>| 30+ days | Standard size |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Time Between Events</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Calendar Adjustment</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">0-7 days</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Skip the trade</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">7-14 days</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Reduce size to 50% of standard</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">14-30 days</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Reduce size to 75% of standard</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">30+ days</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Standard size</td>
+</tr>
+</tbody></table></div>
 <p>The reduced size is the trader's defense against the muted IV crush. The smaller position produces a smaller loss if the IV crush is muted.</p>
 <h2>The Adjustment: Different Strikes</h2>
 <p>For a two-event underlying, the strike selection can be adjusted to capture the directional bias of the second event. If the trader has a view on the second event, the strike can be shifted to incorporate the view.</p>

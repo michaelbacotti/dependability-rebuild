@@ -78,39 +78,110 @@
 <p>The iron butterfly is structurally a "centered" version of the iron condor — both have short strikes, but the butterfly's short strikes are closer to the current price of the underlying.</p>
 <h2>Credit and Win Rate</h2>
 <p>For the same underlying and the same DTE:</p>
-<p>| Structure | Typical Credit | Typical Win Rate | Breakeven Width |</p>
-<p>|---|---|---|---|</p>
-<p>| Iron Condor (15-pt wings) | $1.50 - $2.50 | 65-75% | $12 - $15 (per side) |</p>
-<p>| Iron Butterfly (5-pt wings) | $3.00 - $5.00 | 50-60% | $3 - $5 (per side) |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Structure</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Typical Credit</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Typical Win Rate</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Breakeven Width</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Iron Condor (15-pt wings)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$1.50 - $2.50</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">65-75%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$12 - $15 (per side)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Iron Butterfly (5-pt wings)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$3.00 - $5.00</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">50-60%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$3 - $5 (per side)</td>
+</tr>
+</tbody></table></div>
 <p>The iron butterfly collects more credit in absolute terms but has a much narrower profit zone. The breakeven width of a butterfly is the wing width minus the credit, which is typically only a few points. A small move in the underlying can push the short strike into the money.</p>
 <p>The iron condor collects less credit but has a much wider profit zone. A moderate move in the underlying (up to 1.0 standard deviation) is usually still within the profit zone. The condor's wider wings give the position more "room to be wrong."</p>
 <h2>Gamma Exposure</h2>
 <p>The iron butterfly is a high-gamma position. The short straddle is at or near the money, which means delta is highly sensitive to small moves. A butterfly trader is exposed to a sharp move in either direction. The condor trader has a much lower gamma exposure at entry because both short strikes are out of the money.</p>
 <p>This gamma difference is the primary reason the butterfly has a lower win rate than the condor. The butterfly needs the underlying to stay in a tighter range to be profitable, and any meaningful move outside that range causes rapid losses.</p>
-<p>| Structure | Gamma at Short Strike (45 DTE) | Sensitivity to $5 Move |</p>
-<p>|---|---|---|</p>
-<p>| Iron Condor (15-pt wings) | Low | Small — delta changes a few cents per $5 move |</p>
-<p>| Iron Butterfly (5-pt wings) | High | Large — delta can flip from neutral to short/long on a $5 move |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Structure</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Gamma at Short Strike (45 DTE)</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Sensitivity to $5 Move</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Iron Condor (15-pt wings)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Low</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Small — delta changes a few cents per $5 move</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Iron Butterfly (5-pt wings)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">High</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Large — delta can flip from neutral to short/long on a $5 move</td>
+</tr>
+</tbody></table></div>
 <h2>When the Underlying Is Range-Bound</h2>
 <p>In a clear range-bound market, both strategies can be profitable, but the butterfly's higher credit and tighter breakeven can be appealing. The argument for the butterfly in a tight range is that the trader is collecting more premium for taking a more confident view on the range.</p>
 <p>The argument against the butterfly is that the trader does not need to be that confident. The condor's wider wings give the position more tolerance for a slightly wider range, and the credit, while smaller, is more reliable. A condor that expires worthless collects 100% of its max profit; a butterfly that is tested but does not breach the long strike collects only a partial profit, and the partial profit may be less than the credit collected by a comparable condor.</p>
 <h2>When the Underlying Is Trending</h2>
 <p>In a trending market, neither strategy is ideal, but the condor is the better choice of the two. A condor with 15-point wings can absorb a moderate trend without breaching the short strike, and the wider profit zone gives the position time to manage. A butterfly with 5-point wings is at risk of being tested within days of entry, and the gamma exposure means that a small trend can produce a large mark-to-market loss.</p>
-<p>| Market Condition | Preferred Structure | Reason |</p>
-<p>|---|---|---|</p>
-<p>| Tight range, high confidence | Iron Butterfly | Higher credit, tighter breakeven rewards the conviction |</p>
-<p>| Moderate range, lower confidence | Iron Condor | Wider profit zone, more tolerance for small trend days |</p>
-<p>| Trending market | Neither (close if held) | Both strategies are directionally challenged; reduce size or exit |</p>
-<p>| High IV, range-bound | Iron Condor | IV crush works on both; condor's wider wings handle the post-crush range expansion |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Market Condition</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Preferred Structure</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Reason</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Tight range, high confidence</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Iron Butterfly</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Higher credit, tighter breakeven rewards the conviction</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Moderate range, lower confidence</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Iron Condor</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Wider profit zone, more tolerance for small trend days</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Trending market</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Neither (close if held)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Both strategies are directionally challenged; reduce size or exit</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">High IV, range-bound</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Iron Condor</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">IV crush works on both; condor's wider wings handle the post-crush range expansion</td>
+</tr>
+</tbody></table></div>
 <h2>Event-Driven Volatility</h2>
 <p>Both strategies can be used around events (FOMC, earnings) to collect the IV crush. The butterfly is more sensitive to the size of the move; a small surprise move can push the short strike into the money. The condor's wider wings give the position more tolerance for an unexpected move.</p>
 <p>For event-driven trades, the condor is generally the better choice. The IV crush does the work that the structure would otherwise need, and the wider wings give the position the room to absorb a small surprise.</p>
 <h2>Capital Efficiency</h2>
 <p>The iron butterfly uses less buying power reduction (BPR) per contract than the iron condor in some brokers, but the trade-off is the higher gamma. A butterfly with a $5 wing has a max loss of $5 minus credit, while a condor with a $15 wing has a max loss of $15 minus credit. The condor's larger max loss is the price of the wider profit zone.</p>
-<p>| Structure | Max Loss per Spread (SPX) | Buying Power (per spread) |</p>
-<p>|---|---|---|</p>
-<p>| Iron Condor (15-pt wings) | $12.50 - $13.50 | $1,250 - $1,350 |</p>
-<p>| Iron Butterfly (5-pt wings) | $2.00 - $3.00 | $200 - $300 |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Structure</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Max Loss per Spread (SPX)</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Buying Power (per spread)</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Iron Condor (15-pt wings)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$12.50 - $13.50</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$1,250 - $1,350</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Iron Butterfly (5-pt wings)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$2.00 - $3.00</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$200 - $300</td>
+</tr>
+</tbody></table></div>
 <p>The condor's BPR is 4-5x the butterfly's, but the condor's win rate is also 10-15 percentage points higher.</p>
 <h2>Management Cost</h2>
 <p>The butterfly requires more active management than the condor. The narrow profit zone means that small moves produce meaningful mark-to-market changes, and the trader needs to be ready to roll or close quickly. The condor's wider wings give the position more "stay in the trade" room; a $5 move that would test a butterfly's short strike is still inside a condor's profit zone.</p>

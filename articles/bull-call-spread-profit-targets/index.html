@@ -64,12 +64,40 @@
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 <h2>The Profit Target Decision</h2>
 <p>A bull call spread is entered with a debit. The position's value at any time is a function of the underlying's price and the time to expiration. The profit target is the value at which the position is closed.</p>
-<p>| Target | Value at Close | Probability of Reaching | Expected Return per Trade |</p>
-<p>|---|---|---|---|</p>
-<p>| 50% of debit | $1.50 debit → $2.25 close | 50-60% | 12-15% of debit |</p>
-<p>| 100% of debit (2x) | $1.50 debit → $3.00 close | 30-40% | 15-20% of debit |</p>
-<p>| 200% of debit (3x) | $1.50 debit → $4.50 close | 15-25% | 15-25% of debit |</p>
-<p>| Max profit | $1.50 debit → $6.50 close | 5-10% | 5-10% of debit |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Target</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Value at Close</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Probability of Reaching</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Expected Return per Trade</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">50% of debit</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$1.50 debit → $2.25 close</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">50-60%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">12-15% of debit</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">100% of debit (2x)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$1.50 debit → $3.00 close</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">30-40%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">15-20% of debit</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">200% of debit (3x)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$1.50 debit → $4.50 close</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">15-25%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">15-25% of debit</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Max profit</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$1.50 debit → $6.50 close</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">5-10%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">5-10% of debit</td>
+</tr>
+</tbody></table></div>
 <p>The 50% target has the highest probability of being reached but the lowest expected return per trade. The max profit target has the lowest probability but a high payout. The 100% target is a balance between the two.</p>
 <h2>The 2x Debit Rule</h2>
 <p>The most common profit target for bull call spreads is the <strong>2x debit rule</strong>: close the position when it reaches 2x the debit paid.</p>
@@ -132,13 +160,40 @@
 <p>The scaling-out approach is appropriate for traders who want to capture multiple profit levels without committing to a single target. The expected return is between the 50% and 3x targets, depending on the underlying's behavior.</p>
 <h2>The Time-Adjusted Target</h2>
 <p>The standard target rules assume a fixed profit level regardless of time. A more nuanced approach adjusts the target based on the time to expiration.</p>
-<p>| DTE | Adjusted Target | Rationale |</p>
-<p>|---|---|---|</p>
-<p>| 45+ | 3x debit | Plenty of time; the position can reach a high target |</p>
-<p>| 30-45 | 2x debit | Standard target; the position has time to work |</p>
-<p>| 21-30 | 50-100% of debit | Time decay is accelerating; lock in gains |</p>
-<p>| 14-21 | Close at any profit | Final weeks; gamma risk is high |</p>
-<p>| 0-14 | Hold to expiration | No more time; let the position settle |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">DTE</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Adjusted Target</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Rationale</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">45+</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">3x debit</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Plenty of time; the position can reach a high target</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">30-45</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">2x debit</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Standard target; the position has time to work</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">21-30</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">50-100% of debit</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Time decay is accelerating; lock in gains</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">14-21</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Close at any profit</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Final weeks; gamma risk is high</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">0-14</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Hold to expiration</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">No more time; let the position settle</td>
+</tr>
+</tbody></table></div>
 <p>The time-adjusted target is appropriate for traders who want to capture the most profit per trade without holding through the high-gamma final weeks. The adjustment can be applied to any of the standard targets (50%, 2x, 3x) by lowering the target as DTE decreases.</p>
 <h2>The Decision Rule</h2>
 <p>A practical algorithm for selecting the profit target:</p>

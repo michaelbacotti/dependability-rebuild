@@ -102,13 +102,40 @@
   <li>The short call funded the long call, reducing the cost of directional exposure while keeping the upside.</li>
 </ul>
 <h2>Key Metrics</h2>
-<p>| Parameter | Target | Rationale |</p>
-<p>|---|---|---|</p>
-<p>| Strike selection | 2–3 strikes below expected move | Captures moderate move without needing explosive rally |</p>
-<p>| Days to expiration (DTE) | 30–45 days | Theta decay accelerates here; sufficient time for move to develop |</p>
-<p>| Net debit | No more than 50% of intrinsic value of long call | Ensures reasonable risk/reward; avoid paying full intrinsic value |</p>
-<p>| Position size | No more than 2% of capital per spread | Manage tail risk; spreads can still lose 100% of debit |</p>
-<p>| Max profit target | 2x debit paid | Realistic take-profit level for moderate moves |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Parameter</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Target</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Rationale</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Strike selection</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">2–3 strikes below expected move</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Captures moderate move without needing explosive rally</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Days to expiration (DTE)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">30–45 days</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Theta decay accelerates here; sufficient time for move to develop</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Net debit</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">No more than 50% of intrinsic value of long call</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Ensures reasonable risk/reward; avoid paying full intrinsic value</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Position size</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">No more than 2% of capital per spread</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Manage tail risk; spreads can still lose 100% of debit</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Max profit target</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">2x debit paid</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Realistic take-profit level for moderate moves</td>
+</tr>
+</tbody></table></div>
 <h2>When to Use It</h2>
 <p><strong>Ideal conditions:</strong></p>
 <ul>
@@ -190,13 +217,52 @@
 </ul>
 <p><strong>Key insight:</strong> The bull call spread is slightly long volatility. If IV rises while the stock moves, you get a double benefit.</p>
 <h2>Bull Call Spread vs Alternatives</h2>
-<p>| Strategy | When to Use | Max Loss | Max Profit | Cost |</p>
-<p>|---|---|---|---|---|</p>
-<p>| <strong>Bull Call Spread</strong> | Moderate bullish, IV elevated | Net debit | Width - debit | Medium |</p>
-<p>| <strong>Long Call</strong> | Strong bullish, low IV, need full upside | Premium paid | Unlimited | High |</p>
-<p>| <strong>Bear Call Spread</strong> | Moderately bearish | Width - credit | Credit received | Low |</p>
-<p>| <strong>Bull Put Spread</strong> | Bullish with range, income target | Width - credit | Credit received | Very low |</p>
-<p>| <strong>Ratio Call Spread</strong> | Bullish, slightly bullish on IV | Net debit (or more) | Asymmetric | Medium |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Strategy</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">When to Use</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Max Loss</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Max Profit</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Cost</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Bull Call Spread</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Moderate bullish, IV elevated</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Net debit</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Width - debit</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Medium</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Long Call</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Strong bullish, low IV, need full upside</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Premium paid</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Unlimited</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">High</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Bear Call Spread</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Moderately bearish</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Width - credit</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Credit received</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Low</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Bull Put Spread</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Bullish with range, income target</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Width - credit</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Credit received</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Very low</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Ratio Call Spread</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Bullish, slightly bullish on IV</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Net debit (or more)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Asymmetric</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Medium</td>
+</tr>
+</tbody></table></div>
 <h2>Common Mistakes</h2>
 <h3>1. Buying spreads that are too wide</h3>
 <p>A 20-wide spread looks more profitable but costs more and requires a bigger move.</p>
@@ -214,14 +280,38 @@
 <p>Bull call spreads can lose 100% of the debit. If you allocate 20% of capital to one spread and it goes wrong, you devastate your account.</p>
 <p><strong>Fix:</strong> 1-2% of capital per position. Run 3-5 positions across different tickers for diversification.</p>
 <h2>Exit Rules Summary</h2>
-<p>| Scenario | Action |</p>
-<p>|---|---|</p>
-<p>| Profit reaches 2x debit | Take profit — close the spread |</p>
-<p>| Stock breaks through short strike | Roll up (buy back short, sell new higher strike) |</p>
-<p>| Stock drops below long strike, 2+ weeks left | Hold — thesis may still be valid |</p>
-<p>| Stock drops, thesis broken | Close — cut the loss |</p>
-<p>| 1 week from expiration, underwater | Close or roll to next month |</p>
-<p>| IV collapse before expected move | Evaluate — IV crush hurts if stock hasn't moved |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Scenario</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Action</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Profit reaches 2x debit</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Take profit — close the spread</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Stock breaks through short strike</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Roll up (buy back short, sell new higher strike)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Stock drops below long strike, 2+ weeks left</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Hold — thesis may still be valid</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Stock drops, thesis broken</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Close — cut the loss</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">1 week from expiration, underwater</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Close or roll to next month</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">IV collapse before expected move</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Evaluate — IV crush hurts if stock hasn't moved</td>
+</tr>
+</tbody></table></div>
 <h2>Tools for Building Bull Call Spreads</h2>
 <p>We use [OptionsStrat](https://optionstrat.com/ventureprise) to model the exact strike combination, probability of profit, and Greeks for any bull call spread before entry. Enter your price target, expiration, and IV environment to see the optimal spread structure.</p>
 <p><strong>Previous:</strong> [Iron Condors: Premium Collection in Range-Bound Markets](/articles/iron-condors-range-bound-markets/)</p>

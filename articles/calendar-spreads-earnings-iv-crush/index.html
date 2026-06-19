@@ -108,14 +108,45 @@
   <li>This is why the calendar is the preferred strategy around events — you profit from IV collapse with defined risk, not directional betting.</li>
 </ul>
 <h2>Key Metrics</h2>
-<p>| Parameter | Target | Rationale |</p>
-<p>|---|---|---|</p>
-<p>| Strike selection | ATM or slightly OTM | Captures both direction and IV differential |</p>
-<p>| Near-term DTE | 2–4 weeks to event | IV peaks here; collapse is most dramatic |</p>
-<p>| Far-term DTE | 6–12 weeks from now | Provides the hedge while near-term decays |</p>
-<p>| Front-load IV | 60th+ percentile historically | Premium is high enough to sell; collapse is significant |</p>
-<p>| Net debit | No more than 2% of capital per spread | Manage risk; calendar can lose full debit |</p>
-<p>| Position sizing | Spread across 3–5 strikes | Reduce strike-selection risk |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Parameter</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Target</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Rationale</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Strike selection</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">ATM or slightly OTM</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Captures both direction and IV differential</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Near-term DTE</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">2–4 weeks to event</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">IV peaks here; collapse is most dramatic</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Far-term DTE</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">6–12 weeks from now</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Provides the hedge while near-term decays</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Front-load IV</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">60th+ percentile historically</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Premium is high enough to sell; collapse is significant</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Net debit</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">No more than 2% of capital per spread</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Manage risk; calendar can lose full debit</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Position sizing</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Spread across 3–5 strikes</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Reduce strike-selection risk</td>
+</tr>
+</tbody></table></div>
 <h2>When to Use It</h2>
 <p><strong>Ideal conditions:</strong></p>
 <ul>
@@ -187,14 +218,45 @@
   <li>At near-term expiration: maximum theta gain as near-term expires worthless</li>
 </ul>
 <h2>Calendar Spread vs Long Straddle (Same Event)</h2>
-<p>| Scenario | Long Straddle | Calendar Spread |</p>
-<p>|---|---|---|</p>
-<p>| Large move in either direction | Profit (unlimited upside) | Profit (capped by width) |</p>
-<p>| No move / small move | Loss (both premiums decay) | Small loss or breakeven |</p>
-<p>| IV crush without big move | Significant loss | Profit (near-term IV collapses) |</p>
-<p>| Cost | High (two long options) | Low (net debit, partly funded) |</p>
-<p>| Max loss | Both premiums | Net debit |</p>
-<p>| Best for | Binary outcomes with big move expected | Events with uncertain direction but IV spike |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Scenario</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Long Straddle</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Calendar Spread</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Large move in either direction</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Profit (unlimited upside)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Profit (capped by width)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">No move / small move</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Loss (both premiums decay)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Small loss or breakeven</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">IV crush without big move</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Significant loss</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Profit (near-term IV collapses)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Cost</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">High (two long options)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Low (net debit, partly funded)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Max loss</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Both premiums</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Net debit</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Best for</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Binary outcomes with big move expected</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Events with uncertain direction but IV spike</td>
+</tr>
+</tbody></table></div>
 <h2>Common Mistakes</h2>
 <h3>1. Wrong strike selection</h3>
 <p>ATM is the most reliable because it captures the maximum IV differential. OTM calendars are speculative — you're betting on a specific move direction.</p>
@@ -212,13 +274,34 @@
 <p>Below 40th percentile IV rank means the premium isn't high enough to make the calendar profitable.</p>
 <p><strong>Fix:</strong> Wait for IV rank above 50-60th percentile before entering.</p>
 <h2>Exit Rules Summary</h2>
-<p>| Scenario | Action |</p>
-<p>|---|---|</p>
-<p>| IV crush complete (1-3 days post-event) | Close both legs — sell far-term, buy back near-term (should be near zero) |</p>
-<p>| Stock moves >10% against position | Close early — thesis may be wrong |</p>
-<p>| Lose 50% of net debit before event | Evaluate: roll or close |</p>
-<p>| Near-term expires with stock near strike | Long far-term is now a naked long option — decide to hold or sell |</p>
-<p>| Second event approaching | Close before the second event |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Scenario</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Action</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">IV crush complete (1-3 days post-event)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Close both legs — sell far-term, buy back near-term (should be near zero)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Stock moves >10% against position</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Close early — thesis may be wrong</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Lose 50% of net debit before event</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Evaluate: roll or close</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Near-term expires with stock near strike</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Long far-term is now a naked long option — decide to hold or sell</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Second event approaching</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Close before the second event</td>
+</tr>
+</tbody></table></div>
 <h2>Tools for Building Calendar Spreads</h2>
 <p>We use [OptionsStrat](https://optionstrat.com/ventureprise) to model the exact strike, expiration combination, probability of profit, and Greeks for any calendar spread before entry. The platform's payoff diagram shows you the profit zone across different stock prices at near-term expiration.</p>
 <p><strong>Previous:</strong> [Bull Call Spreads: Defined-Risk Bullish Direction](/articles/bull-call-spreads-defined-risk/)</p>

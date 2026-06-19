@@ -65,14 +65,45 @@
 <h2>Structural Comparison</h2>
 <p><strong>Long straddle:</strong> Buy an at-the-money call and an at-the-money put with the same strike and expiration. The position profits if the underlying moves significantly in either direction. The cost is the sum of the call and put premiums. The position has unlimited upside and substantial downside (the full premium paid).</p>
 <p><strong>Calendar spread:</strong> Sell a near-term at-the-money option and buy a longer-dated at-the-money option at the same strike. The position profits from the IV crush after the event and from the time decay differential. The cost is the net debit (longer-dated premium minus near-term premium). The position has limited profit potential and limited loss (the net debit).</p>
-<p>| Parameter | Long Straddle | Calendar Spread |</p>
-<p>|---|---|---|</p>
-<p>| Cost | Sum of ATM call + ATM put | Net debit (longer-dated minus near-term) |</p>
-<p>| Profit potential | Unlimited | Limited (to the spread width) |</p>
-<p>| Loss potential | Full premium | Net debit paid |</p>
-<p>| Breakeven | Strike ± total premium | Range around the strike |</p>
-<p>| IV crush impact | Negative (loses value) | Positive (gains value) |</p>
-<p>| Directional bias | None (profits from large moves) | Slight (profits if stock stays near strike) |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Parameter</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Long Straddle</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Calendar Spread</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Cost</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Sum of ATM call + ATM put</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Net debit (longer-dated minus near-term)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Profit potential</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Unlimited</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Limited (to the spread width)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Loss potential</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Full premium</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Net debit paid</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Breakeven</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Strike ± total premium</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Range around the strike</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">IV crush impact</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Negative (loses value)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Positive (gains value)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Directional bias</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">None (profits from large moves)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Slight (profits if stock stays near strike)</td>
+</tr>
+</tbody></table></div>
 <h2>Cost and Breakeven Example</h2>
 <p>Stock at $150, earnings in 14 days, IV rank 80%:</p>
 <p><strong>Long straddle:</strong></p>
@@ -94,30 +125,81 @@
 <p>The straddle costs $10.00 per spread; the calendar costs $3.00 per spread. The straddle needs a $10 move to be profitable; the calendar needs the stock to stay in a $5 range and the IV to crush.</p>
 <h2>IV Crush Impact</h2>
 <p>The IV crush is the central difference between the two structures:</p>
-<p>| Structure | Pre-Event IV (ATM) | Post-Event IV (ATM) | IV Crush Impact |</p>
-<p>|---|---|---|---|</p>
-<p>| Long straddle | 90% | 40% | -$3.00 to -$4.00 loss on premium |</p>
-<p>| Calendar spread | 90% / 60% | 40% / 50% | +$1.50 to +$2.00 gain on differential |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Structure</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Pre-Event IV (ATM)</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Post-Event IV (ATM)</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">IV Crush Impact</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Long straddle</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">90%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">40%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-$3.00 to -$4.00 loss on premium</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Calendar spread</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">90% / 60%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">40% / 50%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+$1.50 to +$2.00 gain on differential</td>
+</tr>
+</tbody></table></div>
 <p>The long straddle loses $3-$4 per spread from the IV crush. The calendar spread gains $1.50-$2.00 per spread from the IV differential. The IV crush is a major headwind for the straddle and a major tailwind for the calendar.</p>
 <p>The reason: the long straddle is long vega, so it loses value when IV falls. The calendar spread is short the near-term option (high vega, big IV loss) and long the longer-dated option (lower vega, smaller IV loss). The differential is positive for the calendar.</p>
 <h2>Breakeven Implications</h2>
 <p>The long straddle has two breakevens: one above the strike and one below. The position is profitable only if the stock moves beyond one of the breakevens by expiration.</p>
 <p>The calendar spread has a breakeven range: the position is profitable as long as the stock stays within the range at the near-term option's expiration.</p>
-<p>| Structure | Breakeven | Required Outcome |</p>
-<p>|---|---|---|</p>
-<p>| Long straddle | $140 or $160 | Stock must move >$10 in either direction |</p>
-<p>| Calendar spread | $145 to $155 | Stock must stay in $5 range |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Structure</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Breakeven</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Required Outcome</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Long straddle</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$140 or $160</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Stock must move >$10 in either direction</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Calendar spread</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$145 to $155</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Stock must stay in $5 range</td>
+</tr>
+</tbody></table></div>
 <p>The straddle requires a large move. The calendar requires a small move (or no move). The choice between them depends on the trader's view on the size of the move.</p>
 <h2>Directional Bias</h2>
 <p>The long straddle is delta-neutral at entry. The position has positive vega (long volatility) and negative theta (paying time decay). The position profits from a large move in either direction.</p>
 <p>The calendar spread is delta-neutral at entry but has positive vega (long volatility) and a theta profile that depends on the stage of the trade. The position profits from a small move (or no move) and the IV crush.</p>
 <p>The directional bias of each structure:</p>
-<p>| View | Best Structure |</p>
-<p>|---|---|</p>
-<p>| Large move in either direction | Long straddle |</p>
-<p>| Small move or no move | Calendar spread |</p>
-<p>| Moderate bullish move | Bull call spread |</p>
-<p>| Moderate bearish move | Bear put spread |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">View</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Best Structure</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Large move in either direction</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Long straddle</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Small move or no move</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Calendar spread</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Moderate bullish move</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Bull call spread</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Moderate bearish move</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Bear put spread</td>
+</tr>
+</tbody></table></div>
 <p>The long straddle is appropriate when the trader expects a large move. The calendar spread is appropriate when the trader expects a small move or no move and wants to capture the IV crush.</p>
 <h2>The Expected Move Match</h2>
 <p>The most important variable in choosing between the structures is the expected move of the underlying. The expected move is the standard deviation of the stock's price over the holding period, calculated as the straddle price divided by the stock price.</p>
@@ -137,19 +219,55 @@
 <p>The calendar is the opposite of the straddle in terms of move expectations. The calendar profits from a move smaller than expected; the straddle profits from a move larger than expected.</p>
 <h2>The Volatility of Volatility</h2>
 <p>The straddle and the calendar have different sensitivities to the volatility of volatility (vol-of-vol). The straddle is long vol-of-vol (benefits from large IV changes); the calendar is short vol-of-vol (benefits from the IV differential being large).</p>
-<p>| Vol-of-Vol Regime | Best Structure |</p>
-<p>|---|---|</p>
-<p>| High vol-of-vol (large IV swings) | Long straddle |</p>
-<p>| Low vol-of-vol (stable IV) | Calendar spread |</p>
-<p>| Event-driven (large pre/post IV difference) | Calendar spread |</p>
-<p>| Range-bound (small pre/post IV difference) | Long straddle |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Vol-of-Vol Regime</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Best Structure</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">High vol-of-vol (large IV swings)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Long straddle</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Low vol-of-vol (stable IV)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Calendar spread</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Event-driven (large pre/post IV difference)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Calendar spread</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Range-bound (small pre/post IV difference)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Long straddle</td>
+</tr>
+</tbody></table></div>
 <p>The trader who expects a large IV swing should use the straddle. The trader who expects a stable IV (with the standard pre/post event pattern) should use the calendar.</p>
 <h2>The Cost Efficiency Comparison</h2>
 <p>A useful metric: <strong>the cost as a percentage of the expected move</strong>.</p>
-<p>| Structure | Cost | Expected Move | Cost as % of Expected Move |</p>
-<p>|---|---|---|---|</p>
-<p>| Long straddle | $10.00 | $10 | 100% |</p>
-<p>| Calendar spread | $3.00 | $7.50 (for the near-term period) | 40% |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Structure</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Cost</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Expected Move</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Cost as % of Expected Move</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Long straddle</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$10.00</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$10</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">100%</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Calendar spread</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$3.00</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$7.50 (for the near-term period)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">40%</td>
+</tr>
+</tbody></table></div>
 <p>The straddle costs 100% of the expected move, which is the maximum cost. The calendar costs 40% of the expected move, which is much cheaper. The cost efficiency of the calendar is 2.5x better than the straddle.</p>
 <h2>The Risk Profile</h2>
 <p>The long straddle has a max loss equal to the full premium paid. The position can lose the entire $10 per spread if the stock stays at $150 at expiration. The risk is concentrated in a single point (the strike).</p>
@@ -169,11 +287,30 @@
 <p>The decision is view-driven. The trader who has a view on the move should match the structure to the view.</p>
 <h2>The Hybrid Approach</h2>
 <p>Some traders run both structures on the same underlying: a long straddle for the move and a calendar spread for the IV crush. The combined position has a lower net cost (the calendar credit offsets part of the straddle cost) and a more balanced risk profile.</p>
-<p>| Component | Cost | Purpose |</p>
-<p>|---|---|---|</p>
-<p>| Long straddle | $10.00 | Captures a large move |</p>
-<p>| Calendar spread | -$3.00 (debit, but offsets straddle) | Captures the IV crush |</p>
-<p>| Net cost | $7.00 | Lower than straddle alone |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Component</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Cost</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Purpose</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Long straddle</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$10.00</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Captures a large move</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Calendar spread</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">-$3.00 (debit, but offsets straddle)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Captures the IV crush</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Net cost</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$7.00</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Lower than straddle alone</td>
+</tr>
+</tbody></table></div>
 <p>The hybrid approach is appropriate for traders who want exposure to both the move and the IV crush. The cost is lower than the straddle alone, and the risk profile is more balanced.</p>
 <h2>The Common Mistakes</h2>
 <p><strong>Using a long straddle in a low-IV environment.</strong> The straddle is expensive in high-IV environments (when premiums are inflated) and cheap in low-IV environments. The trader who buys a straddle in a low-IV environment may have a cheap entry, but the IV is unlikely to crush (it's already low), and the position's profit potential is limited.</p>

@@ -65,11 +65,38 @@
 <h2>The Ex-Dividend Mechanism</h2>
 <p>When a stock pays a dividend, the ex-dividend date is the cutoff for receiving the dividend. Shareholders of record on the record date receive the dividend; shareholders who buy after the ex-dividend date do not.</p>
 <p>On the ex-dividend date, the stock price opens lower by approximately the dividend amount. The price drop reflects the fact that the dividend is being "paid out" of the stock's value.</p>
-<p>| Date | Event | Stock Price (Before) | Dividend | Stock Price (After) |</p>
-<p>|---|---|---|---|---|</p>
-<p>| T-1 (day before ex-date) | Stock trades with dividend | $100 | — | $100 |</p>
-<p>| T (ex-dividend date) | Stock opens ex-dividend | $100 | $0.50 | $99.50 |</p>
-<p>| T+1 | Stock continues trading | $99.50 | — | $99.50 |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Date</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Event</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Stock Price (Before)</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Dividend</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Stock Price (After)</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">T-1 (day before ex-date)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Stock trades with dividend</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$100</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">—</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$100</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">T (ex-dividend date)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Stock opens ex-dividend</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$100</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$0.50</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$99.50</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">T+1</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Stock continues trading</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$99.50</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">—</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$99.50</td>
+</tr>
+</tbody></table></div>
 <p>The $0.50 drop on the ex-dividend date is the mechanical price adjustment for the dividend payment. Shareholders who held the stock through the ex-date receive the $0.50 dividend in cash.</p>
 <h2>The Early Assignment Risk</h2>
 <p>For a covered call, the call option gives the holder the right to buy the shares at the strike price. If the call is in the money and the stock is about to go ex-dividend, the option holder has an economic decision:</p>
@@ -82,12 +109,30 @@
 <p>The early exercise is rational when the dividend exceeds the time value of the call. The option holder would rather exercise now (capturing the dividend) than hold to expiration (missing the dividend and losing the time value).</p>
 <h2>The Assignment Math</h2>
 <p>For a covered call with a $100 strike on a $102 stock, with a $0.50 dividend and 5 days to expiration:</p>
-<p>| Component | Value |</p>
-<p>|---|---|</p>
-<p>| Intrinsic value of call | $2.00 ($102 - $100) |</p>
-<p>| Time value of call | $0.10 (small, 5 DTE) |</p>
-<p>| Total call value | $2.10 |</p>
-<p>| Dividend | $0.50 |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Component</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Intrinsic value of call</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$2.00 ($102 - $100)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Time value of call</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$0.10 (small, 5 DTE)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Total call value</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$2.10</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Dividend</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$0.50</td>
+</tr>
+</tbody></table></div>
 <p>The option holder can:</p>
 <ul>
   <li>Exercise now: receive $2.00 intrinsic + $0.50 dividend = $2.50</li>
@@ -95,23 +140,64 @@
 </ul>
 <p>The early exercise captures an extra $0.50 (the dividend), so the rational option holder exercises early.</p>
 <p>For a covered call with a $100 strike on a $102 stock, with a $0.30 dividend and 5 days to expiration:</p>
-<p>| Component | Value |</p>
-<p>|---|---|</p>
-<p>| Intrinsic value of call | $2.00 |</p>
-<p>| Time value of call | $0.10 |</p>
-<p>| Total call value | $2.10 |</p>
-<p>| Dividend | $0.30 |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Component</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Intrinsic value of call</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$2.00</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Time value of call</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$0.10</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Total call value</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$2.10</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Dividend</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$0.30</td>
+</tr>
+</tbody></table></div>
 <p>The early exercise captures $0.30 (the dividend), which exceeds the $0.10 time value. The rational option holder still exercises early, but the economic incentive is smaller.</p>
 <h2>The Decision Threshold</h2>
 <p>The early assignment is rational when:</p>
 <p><strong>Dividend > Time Value of Call</strong></p>
 <p>For American-style options on dividend-paying stocks, the option holder will exercise early if the dividend exceeds the remaining time value of the call. The threshold:</p>
-<p>| Time to Expiration | Typical Time Value | Minimum Dividend to Trigger Early Exercise |</p>
-<p>|---|---|---|</p>
-<p>| 30+ days | $1.00 - $3.00 | $1.00 - $3.00 (large dividend required) |</p>
-<p>| 14-30 days | $0.50 - $1.50 | $0.50 - $1.50 |</p>
-<p>| 7-14 days | $0.20 - $0.50 | $0.20 - $0.50 |</p>
-<p>| 0-7 days | $0.05 - $0.20 | $0.05 - $0.20 |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Time to Expiration</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Typical Time Value</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Minimum Dividend to Trigger Early Exercise</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">30+ days</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$1.00 - $3.00</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$1.00 - $3.00 (large dividend required)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">14-30 days</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$0.50 - $1.50</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$0.50 - $1.50</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">7-14 days</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$0.20 - $0.50</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$0.20 - $0.50</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">0-7 days</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$0.05 - $0.20</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$0.05 - $0.20</td>
+</tr>
+</tbody></table></div>
 <p>For most dividend-paying stocks with regular quarterly dividends ($0.20-$0.50 per share), the early assignment risk is concentrated in the final 7-14 days before the ex-dividend date.</p>
 <h2>Avoiding Early Assignment</h2>
 <p>The covered call seller can avoid early assignment by:</p>
@@ -130,25 +216,64 @@
 <h2>The Buy-Back Cost</h2>
 <p>The buy-back cost is the premium paid to close the call before the ex-dividend date. The cost depends on the time value of the call and the expected early exercise.</p>
 <p>For a $2.10 call with $0.50 dividend and 5 days to expiration, the call's value includes the early exercise premium. The market price of the call may be $2.55-$2.60 (the intrinsic value plus the dividend). The buy-back cost is the premium above the intrinsic value.</p>
-<p>| Component | Value |</p>
-<p>|---|---|</p>
-<p>| Intrinsic value | $2.00 |</p>
-<p>| Expected early exercise premium | $0.50 |</p>
-<p>| Time value | $0.05 |</p>
-<p>| Total call value | $2.55 |</p>
-<p>| Buy-back cost above intrinsic | $0.55 |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Component</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Intrinsic value</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$2.00</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Expected early exercise premium</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$0.50</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Time value</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$0.05</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Total call value</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$2.55</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Buy-back cost above intrinsic</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$0.55</td>
+</tr>
+</tbody></table></div>
 <p>The covered call seller who buys back the call for $2.55 captures the dividend ($0.50) but pays $0.55 in time value and early exercise premium. The net economic outcome is similar to holding the shares through the ex-dividend date and not having the call assigned.</p>
 <h2>The Ex-Dividend Capture Strategy</h2>
 <p>Some covered call sellers deliberately hold covered calls through the ex-dividend date to capture the dividend. The strategy assumes that the call is in the money and the time value is less than the dividend.</p>
 <p>The ex-dividend capture is profitable when:</p>
 <p><strong>Dividend > Time Value of Call + Transaction Costs</strong></p>
 <p>For a $0.50 dividend with $0.10 time value and $0.05 transaction costs:</p>
-<p>| Component | Value |</p>
-<p>|---|---|</p>
-<p>| Dividend received | $0.50 |</p>
-<p>| Time value lost | $0.10 |</p>
-<p>| Transaction costs | $0.05 |</p>
-<p>| Net capture | $0.35 |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Component</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Dividend received</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$0.50</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Time value lost</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$0.10</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Transaction costs</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$0.05</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Net capture</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$0.35</td>
+</tr>
+</tbody></table></div>
 <p>The covered call seller captures $0.35 per share by allowing the early assignment. The strategy is profitable, but the profit per share is small, and the strategy requires holding a large position to be meaningful.</p>
 <h2>The Calendar Overlay</h2>
 <p>The standard calendar strategy for covered calls around ex-dividend dates:</p>

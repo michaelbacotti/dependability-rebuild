@@ -94,12 +94,35 @@
   <li><strong>Low IV (rank <30%):</strong> Use the naked call. OTM calls are cheap, and the credit from selling the short call is small. The spread's cost reduction is not worth the capped upside.</li>
   <li><strong>Moderate IV (30-50%):</strong> Use either. The choice depends on the trader's conviction and target.</li>
 </ul>
-<p>| IV Rank | Preferred Structure | Reason |</p>
-<p>|---|---|---|</p>
-<p>| 0-30% | Naked call | Spreads don't reduce cost enough; capped upside not worth it |</p>
-<p>| 30-50% | Either | Use spread for moderate-conviction trades, naked call for high-conviction trades |</p>
-<p>| 50-70% | Spread | OTM calls expensive; short call credit is meaningful |</p>
-<p>| 70-100% | Spread (preferred) or skip | Very expensive OTM calls; spreads capture the IV crush |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">IV Rank</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Preferred Structure</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Reason</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">0-30%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Naked call</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Spreads don't reduce cost enough; capped upside not worth it</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">30-50%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Either</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Use spread for moderate-conviction trades, naked call for high-conviction trades</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">50-70%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Spread</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">OTM calls expensive; short call credit is meaningful</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">70-100%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Spread (preferred) or skip</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Very expensive OTM calls; spreads capture the IV crush</td>
+</tr>
+</tbody></table></div>
 <h2>When Naked Calls Win</h2>
 <p>The naked call is the better structure in three situations:</p>
 <ol>

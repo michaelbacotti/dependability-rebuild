@@ -72,29 +72,84 @@
 <p>The 45 DTE entry is the most common for a reason: it balances premium collection against gamma risk and gives the position enough time to work through a small directional drift.</p>
 <h2>Premium Comparison</h2>
 <p>For a 15-point wide SPX condor with short strikes roughly 1.0 standard deviation out of the money:</p>
-<p>| DTE | Typical Credit | Credit per Day Held |</p>
-<p>|---|---|---|</p>
-<p>| 30 | $1.00 - $1.50 | $0.033 - $0.050 |</p>
-<p>| 45 | $1.50 - $2.20 | $0.033 - $0.049 |</p>
-<p>| 60 | $1.80 - $2.80 | $0.030 - $0.047 |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">DTE</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Typical Credit</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Credit per Day Held</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">30</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$1.00 - $1.50</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$0.033 - $0.050</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">45</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$1.50 - $2.20</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$0.033 - $0.049</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">60</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$1.80 - $2.80</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$0.030 - $0.047</td>
+</tr>
+</tbody></table></div>
 <p>The credit per day held is roughly similar across the three entry points. The longer-dated entries collect more absolute premium but spread it over more days, so the daily rate is comparable. The choice between 30, 45, and 60 DTE is therefore not primarily a credit optimization question — it is a risk and management question.</p>
 <h2>Theta Profile</h2>
 <p>Theta is not constant across expirations. For an at-the-money option, theta is highest at 30-45 DTE, then declines as expiration approaches. For an out-of-the-money option (the short strikes of a condor), the theta profile is shifted — peak theta is closer to 45-60 DTE, with the back-loaded decay pattern that condor sellers rely on.</p>
-<p>| DTE Band | Theta Pattern |</p>
-<p>|---|---|</p>
-<p>| 60 → 30 DTE | Theta accelerating. Position is collecting time decay at an increasing rate. |</p>
-<p>| 30 → 14 DTE | Theta near peak. Position is collecting maximum daily premium. |</p>
-<p>| 14 → 0 DTE | Theta declining. Premium remaining is small; gamma is now the dominant risk. |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">DTE Band</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Theta Pattern</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">60 → 30 DTE</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Theta accelerating. Position is collecting time decay at an increasing rate.</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">30 → 14 DTE</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Theta near peak. Position is collecting maximum daily premium.</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">14 → 0 DTE</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Theta declining. Premium remaining is small; gamma is now the dominant risk.</td>
+</tr>
+</tbody></table></div>
 <p>The 45 DTE entry gives the position the most time in the "theta accelerating" phase (45 → 30 DTE is 15 days of acceleration) and the most time in the "theta at peak" phase (30 → 14 DTE is 16 days). A 30 DTE entry skips the acceleration phase and goes straight to peak. A 60 DTE entry extends the acceleration phase but at a lower daily rate.</p>
 <h2>Gamma Exposure</h2>
 <p>Gamma is the rate of change of delta. A high-gamma position is sensitive to small moves in the underlying; a low-gamma position is less sensitive. For an iron condor, gamma risk is concentrated in the short strikes, and it grows rapidly as expiration approaches.</p>
-<p>| DTE | Gamma at Short Strike (Approximate) |</p>
-<p>|---|---|</p>
-<p>| 60 | Low — small changes in underlying produce small changes in delta |</p>
-<p>| 45 | Low — gamma is starting to rise but still manageable |</p>
-<p>| 30 | Moderate — delta is starting to move with $5-10 changes in underlying |</p>
-<p>| 14 | High — small moves can flip the short strike from out-of-the-money to in-the-money |</p>
-<p>| 7 | Very high — gamma dominates; small moves can cause large mark-to-market swings |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">DTE</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Gamma at Short Strike (Approximate)</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">60</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Low — small changes in underlying produce small changes in delta</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">45</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Low — gamma is starting to rise but still manageable</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">30</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Moderate — delta is starting to move with $5-10 changes in underlying</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">14</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">High — small moves can flip the short strike from out-of-the-money to in-the-money</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">7</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Very high — gamma dominates; small moves can cause large mark-to-market swings</td>
+</tr>
+</tbody></table></div>
 <p>The 30 DTE entry has materially more gamma risk than the 45 DTE entry. A 60 DTE entry has the least gamma risk at entry, but the position will still pass through 30 DTE on its way to expiration and will experience the same gamma exposure. The 45 DTE entry is the most efficient balance: enough time to manage, low enough gamma to avoid noise.</p>
 <h2>Win Rate and Management</h2>
 <p>Historical studies of SPX condors show win rates in the 65-75% range when the position is held to expiration or closed at 50% of max profit. The win rate is fairly stable across 30, 45, and 60 DTE entries when adjusted for the difference in strike width.</p>
@@ -107,11 +162,30 @@
 <p>The 45 DTE entry has the cleanest management timeline: 21 days to evaluate, 14 days to act, 7 days to close if needed. The 30 DTE entry compresses this timeline by a third, and the 60 DTE entry extends it but at the cost of more capital tied up.</p>
 <h2>IV Environment Considerations</h2>
 <p>The optimal DTE shifts with IV. In low-IV environments (VIX below 15, IV rank below 30), 60 DTE entries collect more premium and have a wider profit zone. In high-IV environments (VIX above 25, IV rank above 60), 30 DTE entries are often preferred because IV crush does the work that longer duration would otherwise do.</p>
-<p>| IV Environment | Preferred Entry | Reason |</p>
-<p>|---|---|---|</p>
-<p>| VIX < 15, IV rank < 30 | 60 DTE | Need longer duration to collect meaningful premium; low gamma is the upside |</p>
-<p>| VIX 15-25, IV rank 30-60 | 45 DTE | Standard environment; 45 DTE is the optimal balance |</p>
-<p>| VIX > 25, IV rank > 60 | 30 DTE | IV crush accelerates premium collection; longer duration ties up capital that could be deployed elsewhere |</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">IV Environment</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Preferred Entry</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #c8001e;background:#f9f9f9;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Reason</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">VIX < 15, IV rank < 30</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">60 DTE</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Need longer duration to collect meaningful premium; low gamma is the upside</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">VIX 15-25, IV rank 30-60</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">45 DTE</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Standard environment; 45 DTE is the optimal balance</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">VIX > 25, IV rank > 60</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">30 DTE</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">IV crush accelerates premium collection; longer duration ties up capital that could be deployed elsewhere</td>
+</tr>
+</tbody></table></div>
 <p>The "right" DTE is environment-dependent, and rigid rules ("always 45 DTE") underperform environment-adjusted rules.</p>
 <h2>The 45 DTE Default</h2>
 <p>For most retail and institutional iron condor programs, 45 DTE is the right default entry. It balances premium, gamma, and management overhead, and it gives the position enough time to work through a moderate directional drift without requiring constant attention. The exceptions are:</p>
