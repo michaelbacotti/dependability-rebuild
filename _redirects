@@ -53,3 +53,103 @@ https://www.dependability.us/* https://dependability.us/:splat 301!
 /articles/bull-call-spreads-defined-risk.html /articles/bull-call-spreads-defined-risk/ 301
 /articles/forecast-methodology-2026.html /articles/forecast-methodology-2026/ 301
 /articles/iron-condors-range-bound-markets.html /articles/iron-condors-range-bound-markets/ 301
+
+# ── No-slash → slash redirects (301 permanent)
+# Google treats 308 redirects as 'Page with redirect' = not indexed.
+# 301 permanent tells Google the URL has moved permanently.
+
+# Top-level pages
+/about /about/ 301
+/commentary /commentary/ 301
+/contact /contact/ 301
+/disclaimer /disclaimer/ 301
+/education /education/ 301
+/forecast /forecast/ 301
+/privacy /privacy/ 301
+/strategies /strategies/ 301
+/archive /archive/ 301
+/methodology /methodology/ 301
+/terms /terms/ 301
+
+# Root-level articles (slugs at /)
+/gold-as-a-store-of-value /gold-as-a-store-of-value/ 301
+/inflation-measurement-modern-economy /inflation-measurement-modern-economy/ 301
+/oil-paradox-energy-dominance /oil-paradox-energy-dominance/ 301
+/the-dollars-lever /the-dollars-lever/ 301
+/tlt-new-bond-regime /tlt-new-bond-regime/ 301
+
+# Article pages
+/articles/2026-05-01-put-call-parity /articles/2026-05-01-put-call-parity/ 301
+/articles/2026-05-10-iv-crush-explained /articles/2026-05-10-iv-crush-explained/ 301
+/articles/2026-05-12-market-outlook /articles/2026-05-12-market-outlook/ 301
+/articles/2026-05-13-research-themes /articles/2026-05-13-research-themes/ 301
+/articles/2026-05-13-trump-china-summit /articles/2026-05-13-trump-china-summit/ 301
+/articles/2026-05-14-spacex-ipo-etf-exposure /articles/2026-05-14-spacex-ipo-etf-exposure/ 301
+/articles/2026-05-22-sell-in-may /articles/2026-05-22-sell-in-may/ 301
+/articles/2026-05-23-bond-yields-equity-options /articles/2026-05-23-bond-yields-equity-options/ 301
+/articles/2026-05-23-gamma-scalping /articles/2026-05-23-gamma-scalping/ 301
+/articles/2026-05-23-market-regime-change /articles/2026-05-23-market-regime-change/ 301
+/articles/2026-05-23-reading-the-skew /articles/2026-05-23-reading-the-skew/ 301
+/articles/2026-05-23-understanding-the-vix /articles/2026-05-23-understanding-the-vix/ 301
+/articles/2026-05-25-short-interest-surging /articles/2026-05-25-short-interest-surging/ 301
+/articles/2026-06-02-are-markets-overbought /articles/2026-06-02-are-markets-overbought/ 301
+/articles/2026-06-03-this-time-really-different-ai-dot-com /articles/2026-06-03-this-time-really-different-ai-dot-com/ 301
+/articles/2026-06-18-feds-new-era-kevin-warsh /articles/2026-06-18-feds-new-era-kevin-warsh/ 301
+/articles/2026-06-27-july-seasonality /articles/2026-06-27-july-seasonality/ 301
+/articles/bull-call-spread-expiration-management /articles/bull-call-spread-expiration-management/ 301
+/articles/bull-call-spread-greeks-delta-theta /articles/bull-call-spread-greeks-delta-theta/ 301
+/articles/bull-call-spread-iv-regime-guide /articles/bull-call-spread-iv-regime-guide/ 301
+/articles/bull-call-spread-position-sizing /articles/bull-call-spread-position-sizing/ 301
+/articles/bull-call-spread-profit-targets /articles/bull-call-spread-profit-targets/ 301
+/articles/bull-call-spread-roll-up-guide /articles/bull-call-spread-roll-up-guide/ 301
+/articles/bull-call-spread-strike-selection /articles/bull-call-spread-strike-selection/ 301
+/articles/bull-call-spread-vs-naked-calls /articles/bull-call-spread-vs-naked-calls/ 301
+/articles/bull-call-spreads-defined-risk /articles/bull-call-spreads-defined-risk/ 301
+/articles/calendar-spread-exit-timing /articles/calendar-spread-exit-timing/ 301
+/articles/calendar-spread-front-load-iv-rank /articles/calendar-spread-front-load-iv-rank/ 301
+/articles/calendar-spread-greeks-time-decay /articles/calendar-spread-greeks-time-decay/ 301
+/articles/calendar-spread-iv-crush-math /articles/calendar-spread-iv-crush-math/ 301
+/articles/calendar-spread-near-term-expiration-guide /articles/calendar-spread-near-term-expiration-guide/ 301
+/articles/calendar-spread-second-event-risk /articles/calendar-spread-second-event-risk/ 301
+/articles/calendar-spread-strike-selection-atm-vs-otm /articles/calendar-spread-strike-selection-atm-vs-otm/ 301
+/articles/calendar-spread-vs-long-straddle /articles/calendar-spread-vs-long-straddle/ 301
+/articles/calendar-spreads-earnings-iv-crush /articles/calendar-spreads-earnings-iv-crush/ 301
+/articles/cash-secured-put-assignment-management /articles/cash-secured-put-assignment-management/ 301
+/articles/cash-secured-put-reserve-cash-sizing /articles/cash-secured-put-reserve-cash-sizing/ 301
+/articles/cash-secured-put-roll-down-guide /articles/cash-secured-put-roll-down-guide/ 301
+/articles/covered-call-ex-dividend-management /articles/covered-call-ex-dividend-management/ 301
+/articles/covered-call-income-math /articles/covered-call-income-math/ 301
+/articles/covered-call-roll-up-out-guide /articles/covered-call-roll-up-out-guide/ 301
+/articles/covered-call-vs-cash-secured-put-comparison /articles/covered-call-vs-cash-secured-put-comparison/ 301
+/articles/covered-calls-cash-secured-puts-income /articles/covered-calls-cash-secured-puts-income/ 301
+/articles/forecast-methodology-2026 /articles/forecast-methodology-2026/ 301
+/articles/iron-condor-dte-timing-guide /articles/iron-condor-dte-timing-guide/ 301
+/articles/iron-condor-greeks-explained /articles/iron-condor-greeks-explained/ 301
+/articles/iron-condor-income-vs-directional-spreads /articles/iron-condor-income-vs-directional-spreads/ 301
+/articles/iron-condor-iv-rank-entry-timing /articles/iron-condor-iv-rank-entry-timing/ 301
+/articles/iron-condor-max-loss-calculation /articles/iron-condor-max-loss-calculation/ 301
+/articles/iron-condor-rolling-adjustments-guide /articles/iron-condor-rolling-adjustments-guide/ 301
+/articles/iron-condor-vs-iron-butterfly /articles/iron-condor-vs-iron-butterfly/ 301
+/articles/iron-condors-range-bound-markets /articles/iron-condors-range-bound-markets/ 301
+/articles/spx-vs-qqq-iron-condors /articles/spx-vs-qqq-iron-condors/ 301
+/articles/wheel-strategy-covered-call-cash-secured-put /articles/wheel-strategy-covered-call-cash-secured-put/ 301
+
+# Forecast detail pages
+/forecast/2025-11-14 /forecast/2025-11-14/ 301
+/forecast/2026-02-14 /forecast/2026-02-14/ 301
+/forecast/2026-05-22 /forecast/2026-05-22/ 301
+/forecast/2026-05-26 /forecast/2026-05-26/ 301
+/forecast/2026-05-29 /forecast/2026-05-29/ 301
+/forecast/2026-06-05 /forecast/2026-06-05/ 301
+/forecast/2026-06-14 /forecast/2026-06-14/ 301
+/forecast/2026-06-18 /forecast/2026-06-18/ 301
+/forecast/2026-06-22 /forecast/2026-06-22/ 301
+/forecast/2026-06-22-weekly /forecast/2026-06-22-weekly/ 301
+/forecast/2026-06-23 /forecast/2026-06-23/ 301
+/forecast/2026-06-24 /forecast/2026-06-24/ 301
+/forecast/2026-06-25 /forecast/2026-06-25/ 301
+/forecast/2026-06-26 /forecast/2026-06-26/ 301
+/forecast/2026-06-28 /forecast/2026-06-28/ 301
+/forecast/2026-06-29 /forecast/2026-06-29/ 301
+/forecast/2026-06-30 /forecast/2026-06-30/ 301
+/forecast/2026-07-01 /forecast/2026-07-01/ 301
