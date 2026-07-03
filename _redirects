@@ -22,13 +22,11 @@ https://www.dependability.us/* https://dependability.us/:splat 301!
 /disclaimer.html /disclaimer/ 301
 /privacy.html /privacy/ 301
 /terms.html /terms/ 301
-/strategies.html /strategies/ 301
 
 # Section listing pages
 /commentary.html /commentary/ 301
 /education.html /education/ 301
 /forecast.html /forecast/ 301
-/archive.html /archive/ 301
 /methodology.html /methodology/ 301
 
 # Root-level articles (now slug/index.html)
