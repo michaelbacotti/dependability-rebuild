@@ -11,7 +11,7 @@
    ' <a href="/" class="top-wordmark">DEPENDABILITY</a>',
    ' <span class="top-tagline">Independent market research and options analysis</span>',
    ' <div class="top-links">',
-   '  <a href="/about">About</a>',
+   '  <a href="/about/">About</a>',
    '  <a href="/methodology">Methodology</a>',
    '  <a href="/about#contact">Contact</a>',
    ' </div>',
@@ -26,10 +26,10 @@
    '<div class="tab-bar">',
    ' <div class="tab-bar-inner">',
    '  <a href="/index">Overview</a>',
-   '  <a href="/commentary">Market Commentary</a>',
-   '  <a href="/forecast">Forecast</a>',
-   '  <a href="/strategies">Options Strategies</a>',
-   '  <a href="/education">Education</a>',
+   '  <a href="/commentary/">Market Commentary</a>',
+   '  <a href="/forecast/">Forecast</a>',
+   '  <a href="/strategies/">Options Strategies</a>',
+   '  <a href="/education/">Education</a>',
    ' </div>',
    '</div>'
   ].join('\n');
