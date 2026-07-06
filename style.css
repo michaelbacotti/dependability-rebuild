@@ -11,7 +11,7 @@
  --color-utility-bg: #111111;
  --color-utility-text: #ffffff;
  --color-category: #666666;
- --color-date: #888888;
+ --color-date: #595959;  /* WCAG AAA: 7.0:1 on #ffffff */
  --color-border: #e0e0e0;
  --font-heading: Georgia, serif;
  --font-body: system-ui, -apple-system, Inter, sans-serif;
