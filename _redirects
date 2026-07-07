@@ -156,6 +156,8 @@ https://www.dependability.us/* https://dependability.us/:splat 301!
 
 # ============================================================
 # Catch-all 404 + phantom .html handling (added 2026-07-07)
+# Preserve /404.html before /*.html rule (otherwise /404.html redirects to /)
 # ============================================================
+/404.html /404.html 200
 /* /404.html 404
 /*.html / 301
