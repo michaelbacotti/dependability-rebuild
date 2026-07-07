@@ -153,3 +153,9 @@ https://www.dependability.us/* https://dependability.us/:splat 301!
 /forecast/2026-06-29 /forecast/2026-06-29/ 301
 /forecast/2026-06-30 /forecast/2026-06-30/ 301
 /forecast/2026-07-01 /forecast/2026-07-01/ 301
+
+# ============================================================
+# Catch-all 404 + phantom .html handling (added 2026-07-07)
+# ============================================================
+/* /404.html 404
+/*.html / 301
