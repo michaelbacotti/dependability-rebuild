@@ -287,6 +287,7 @@ small, .small {
 
 .hero-sidebar {
  padding: 48px 24px 48px 48px;
+ align-self: start;   /* don't stretch to match featured column height (2026-07-10 sidebar regression fix) */
 }
 
 .hero-sidebar h3 {
