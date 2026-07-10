@@ -330,6 +330,29 @@ small, .small {
  color: var(--color-accent);
 }
 
+/* Sidebar item compactness: descriptions clip to 2 lines max, titles to 2 lines max.
+   Without this the column hits ~1100px which is taller than most laptop viewports. */
+.hero-sidebar .sidebar-article h4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  overflow: hidden;
+  margin-bottom: 6px;
+  line-height: 1.35;
+}
+.hero-sidebar .sidebar-article p {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  overflow: hidden;
+  line-height: 1.45;
+}
+.hero-sidebar .sidebar-article {
+  padding: 14px 0;
+}
+
 /* 8. Section Headers */
 .section-header {
  display: flex;
