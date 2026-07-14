@@ -40,7 +40,7 @@
    ' </div>',
    ' <div class="footer-bottom">',
    '  <p>&copy; 2026 Dependability Holdings LLC. All rights reserved.</p>',
-   '  <p>tredey.com is operated by Dependability Holdings LLC. For informational purposes only. Not investment advice. '
+   '  <p>For informational purposes only. Not investment advice. '
    +    'See our <a href="/methodology">full disclosures</a>.</p>',
    ' </div>',
    '</div>'
