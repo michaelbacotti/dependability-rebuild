@@ -237,6 +237,58 @@ small, .small {
  border-bottom-color: var(--color-accent);
 }
 
+/* Dropdown menu (Market Commentary tab — hovers reveal Morning/Afternoon Updates) */
+.tab-bar-inner .dropdown {
+ position: relative;
+ display: inline-block;
+}
+
+.tab-bar-inner .dropdown-toggle {
+ cursor: pointer;
+ user-select: none;
+}
+
+.tab-bar-inner .dropdown-toggle .caret {
+ font-size: 0.7rem;
+ margin-left: 4px;
+ opacity: 0.7;
+}
+
+.tab-bar-inner .dropdown-content {
+ display: none;
+ position: absolute;
+ top: 100%;
+ left: 0;
+ min-width: 220px;
+ background: #fff;
+ border: 1px solid var(--color-border);
+ border-top: 3px solid var(--color-accent);
+ box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+ z-index: 100;
+ padding: 0.5rem 0;
+}
+
+.tab-bar-inner .dropdown:hover .dropdown-content,
+.tab-bar-inner .dropdown.open .dropdown-content {
+ display: block;
+}
+
+.tab-bar-inner .dropdown-content a {
+ display: block;
+ padding: 10px 20px;
+ font-size: 0.875rem;
+ color: var(--color-text);
+ text-decoration: none;
+ border-bottom: none;
+ white-space: nowrap;
+ transition: background 0.15s, color 0.15s;
+}
+
+.tab-bar-inner .dropdown-content a:hover {
+ background: #f5f0e8;
+ color: var(--color-accent);
+}
+
 @media (max-width: 768px) {
  .nav-descriptor { display: none; }
 }
