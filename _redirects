@@ -161,3 +161,6 @@ https://www.dependability.us/* https://dependability.us/:splat 301!
 /404.html /404.html 200
 /* /404.html 404
 /*.html / 301
+
+# Removed forecast page (rolled back 2026-07-15): 410 Gone
+/forecast/2026-07-15 /forecast/2026-07-15/ 410
