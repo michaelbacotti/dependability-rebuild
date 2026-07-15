@@ -164,3 +164,7 @@ https://www.dependability.us/* https://dependability.us/:splat 301!
 
 # Removed forecast page (rolled back 2026-07-15): 410 Gone
 /forecast/2026-07-15 /forecast/2026-07-15/ 410
+
+# Commentary morning archive retired 2026-07-15 13:25 ET — merged into /archive/
+/commentary/archive /archive/ 301
+/commentary/archive/ /archive/ 301
