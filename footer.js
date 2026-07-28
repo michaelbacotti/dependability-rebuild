@@ -26,7 +26,7 @@
    '   <h5>Company</h5>',
    '   <ul>',
    '    <li><a href="/about/">About</a></li>',
-   '    <li><a href="/methodology">Methodology</a></li>',
+   '    <li><a href="/methodology/">Methodology</a></li>',
    '    <li><a href="/contact/">Contact</a></li>',
    '   </ul>',
    '  </div>',
@@ -41,7 +41,7 @@
    ' <div class="footer-bottom">',
    '  <p>&copy; 2026 Dependability Holdings LLC. All rights reserved.</p>',
    '  <p>For informational purposes only. Not investment advice. '
-   +    'See our <a href="/methodology">full disclosures</a>.</p>',
+   +    'See our <a href="/methodology/">full disclosures</a>.</p>',
    ' </div>',
    '</div>'
   ].join('\n');

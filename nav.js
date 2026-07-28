@@ -21,7 +21,7 @@
    ' <span class="top-tagline">Independent market research and options analysis</span>',
    ' <div class="top-links">',
    '  <a href="/about/">About</a>',
-   '  <a href="/methodology">Methodology</a>',
+   '  <a href="/methodology/">Methodology</a>',
    '  <a href="/about#contact">Contact</a>',
    ' </div>',
    '</nav>'
@@ -34,7 +34,7 @@
   nav.innerHTML = [
    '<div class="tab-bar">',
    ' <div class="tab-bar-inner">',
-   '  <a href="/index">Overview</a>',
+   '  <a href="/index/">Overview</a>',
    '  <div class="dropdown">',
    '   <a href="/commentary/" class="dropdown-toggle" data-dropdown-target="commentary">Market Commentary &#9662;</a>',
    '   <div class="dropdown-content">',
