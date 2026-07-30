@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Volatility Education: VIX, Skew, IV Crush, and Implied Volatility | Dependability Holdings LLC</title>
+ <meta name="description" content="Build your foundation in volatility trading. VIX, volatility skew, implied volatility crush, gamma scalping, and the volatility regime reads that drive our daily forecasts.">
+ <link rel="canonical" href="https://dependability.us/education/volatility/">
+ <meta property="og:type" content="article">
+ <meta property="og:url" content="https://dependability.us/education/volatility/">
+ <meta property="og:image" content="https://dependability.us/og-image.jpg">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <link rel="manifest" href="/site.webmanifest">
+ <link rel="stylesheet" href="/style.css">
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR7TV6QRSN"></script>
+ <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CR7TV6QRSN');
+ </script>
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+  <div class="page-hero">
+   <h1>Volatility Education</h1>
+   <p>Build the foundation that makes options pricing legible: how volatility is measured, how it's priced into options, and how volatility regimes drive every trade on this site.</p>
+  </div>
+
+  <div style="margin:1.5rem auto;max-width:336px;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+   <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+   <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966"></ins>
+  </div>
+
+  <div class="page-content" style="max-width:880px;margin:0 auto;padding:0 1rem 2rem;">
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;">Volatility is the most important variable in options pricing — more important than direction, more important than time. Every strategy on Dependability.us depends on understanding how volatility behaves, how it's priced into options, and how to read volatility regimes in real time. This page is the entry point for our volatility education series.</p>
+
+   <div style="background:#f9f9f9;border:1px solid #e0e0e0;border-left:3px solid #c8001e;padding:20px;margin:1.5rem 0;">
+    <p style="font-size:.95rem;line-height:1.7;margin:0;color:#2a2a2a;"><strong>What this page covers.</strong> Understanding the VIX → reading volatility skew → implied volatility crush and earnings → gamma scalping mechanics. Each section links to a standalone deep-dive.</p>
+   </div>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Understanding the VIX</h2>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">The CBOE Volatility Index (VIX) is the market's "fear gauge" — a 30-day forward-looking measure of expected S&amp;P 500 volatility derived from SPX option prices. The VIX is calculated from a portfolio of SPX options that replicates a constant 30-day variance swap; in practice, it's a model-free implied volatility measure that's tradable through VIX futures and VIX options.</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">VIX regimes — how to read the level:</p>
+
+   <ul style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;padding-left:1.5rem;">
+    <li><strong>VIX 10–15:</strong> low-vol, complacent regime. Theta-heavy strategies underperform; vega-heavy strategies cheap. Calendar spreads and iron condors struggle.</li>
+    <li><strong>VIX 15–20:</strong> normal regime. Most strategies work as designed. Default entry environment.</li>
+    <li><strong>VIX 20–25:</strong> elevated regime. Premium collection strategies (iron condors, covered calls) outperform; long-premium strategies are expensive.</li>
+    <li><strong>VIX 25+:</strong> stressed regime. Protective structures (puts, collars) are priced richly; long gamma strategies attractive. Avoid selling premium in stressed vol unless the position is small.</li>
+   </ul>
+
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1.5rem;"><a href="/articles/2026-05-23-understanding-the-vix/" style="color:#c8001e;font-weight:600;">Read the full VIX primer →</a></p>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Reading the Skew</h2>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">Volatility skew is the difference in implied volatility across strikes at the same expiration. For equity indexes, OTM puts typically have higher IV than ATM calls — the "put skew" reflects demand for downside protection. Steep skew (high put IV relative to call IV) signals fear of a sharp drawdown; flat skew signals balanced risk.</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">Skew is a tail-risk gauge: when skew is steep, the market is paying up for protection against sharp moves; when skew is flat, the market is complacent. Skew also affects strategy selection: in steep skew environments, bull put spreads have favorable risk/reward relative to bull call spreads (puts are rich relative to calls).</p>
+
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1.5rem;"><a href="/articles/2026-05-23-reading-the-skew/" style="color:#c8001e;font-weight:600;">Read the full Skew guide →</a></p>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Implied Volatility Crush and Earnings</h2>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">Implied volatility expands ahead of known events (earnings, FOMC, FDA decisions) and collapses after the event regardless of the outcome. The IV crush is the trade thesis for calendar spreads and certain premium-collection structures. The mechanics:</p>
+
+   <ul style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;padding-left:1.5rem;">
+    <li>Pre-event: implied volatility is elevated to compensate for the unknown outcome.</li>
+    <li>Event happens: outcome is known, uncertainty collapses.</li>
+    <li>Post-event: implied volatility normalizes to historical levels. The "crush" can be 30–50% of the pre-event IV.</li>
+   </ul>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;">Calendar spreads profit directly from the IV crush with defined risk. Long straddles/strangles lose money on the IV crush even when the underlying moves in the expected direction — the IV loss overwhelms the directional gain.</p>
+
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1.5rem;"><a href="/articles/2026-05-10-iv-crush-explained/" style="color:#c8001e;font-weight:600;">Read the IV Crush guide →</a></p>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Gamma Scalping in Practice</h2>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">Gamma scalping is the practice of dynamically hedging a long option position to capture gamma (the rate of change of delta). In theory, gamma scalping produces consistent profit on any sufficiently volatile underlying. In practice, the gap between theory and execution is wider than most traders expect — commissions, bid-ask spreads, and timing all erode the theoretical edge.</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;">The practical gamma-scalp setup: long a straddle, hedge delta with the underlying as it moves, capture gamma as the underlying oscillates. Works in choppy markets with high realized volatility; fails when the underlying trends (delta-hedging costs exceed gamma gains) or in low-vol environments (insufficient movement to cover hedging costs).</p>
+
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1.5rem;"><a href="/articles/2026-05-23-gamma-scalping/" style="color:#c8001e;font-weight:600;">Read the Gamma Scalping guide →</a></p>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Related Research</h2>
+
+   <ul style="font-size:1rem;line-height:1.7;color:#333;margin-bottom:1.5rem;padding-left:1.5rem;">
+    <li><a href="/articles/forecast-methodology-2026/" style="color:#c8001e;">Forecast Methodology</a> — how we use VIX, skew, and term structure in our daily reads</li>
+    <li><a href="/strategies/calendar-spreads/" style="color:#c8001e;">Calendar Spreads</a> — the canonical IV-crush play</li>
+    <li><a href="/strategies/income-strategies/" style="color:#c8001e;">Income Strategies</a> — covered calls and CSPs in elevated IV regimes</li>
+   </ul>
+
+   <div style="margin:2rem 0;padding:1rem;border-left:3px solid #888;background:#fafafa;">
+    <p style="font-size:0.875rem;line-height:1.6;color:#666;margin:0;"><em>For informational and educational purposes only. Not investment advice. Volatility trading involves substantial risk. See our <a href="/disclaimer/" style="color:#666;">full disclosure</a>.</em></p>
+   </div>
+
+  </div>
+
+ </main>
+
+ <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+ <script src="/nav.js"></script>
+
+<div id="site-footer">
+  <div class="main-footer">
+   <div class="footer-grid">
+    <div class="footer-brand">
+     <h4>Dependability Holdings LLC</h4>
+     <p>Independent financial research and market analysis.</p>
+    </div>
+    <div class="footer-nav">
+     <h5>Research</h5>
+     <ul>
+      <li><a href="/forecast/">S&amp;P 500 &amp; VIX Forecast</a></li>
+      <li><a href="/commentary/">Market Commentary</a></li>
+      <li><a href="/education/">Options Education</a></li>
+      <li><a href="/strategies/">Options Strategies</a></li>
+     </ul>
+    </div>
+    <div class="footer-nav">
+     <h5>Company</h5>
+     <ul>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/articles/forecast-methodology-2026/">Methodology</a></li>
+      <li><a href="/contact/">Contact</a></li>
+     </ul>
+    </div>
+    <div class="footer-nav">
+     <h5>Legal</h5>
+     <ul>
+      <li><a href="/privacy/">Privacy Policy</a></li>
+      <li><a href="/terms/">Terms of Service</a></li>
+      <li><a href="/disclaimer/">Investment Disclaimer</a></li>
+     </ul>
+    </div>
+   </div>
+   <div class="footer-bottom">
+    <p>&copy; 2026 Dependability Holdings LLC. All rights reserved.</p>
+    <p>For informational purposes only. Not investment advice.</p>
+   </div>
+  </div>
+</div>
+
+</body>
+</html>

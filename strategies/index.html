@@ -3,16 +3,28 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Options Strategies | Dependability Holdings LLC</title>
- <meta name="description" content="Practical options strategies for different market conditions — iron condors, spreads, volatility plays, and income-generating structures.">
- <link rel="stylesheet" href="/style.css">
- <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+ <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+ <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+ <title>Options Strategies: Bull Call Spreads, Calendar Spreads, Iron Condors, and Income Plays | Dependability Holdings LLC</title>
+ <meta name="description" content="A complete reference for options strategies: bull call spreads, calendar spreads, iron condors, covered calls, cash-secured puts, and the wheel — with entry logic, position management, and exit rules for each structure.">
  <link rel="canonical" href="https://dependability.us/strategies/">
-<meta property="og:image" content="https://dependability.us/og-image.jpg">
- <meta property="og:url" content="https://dependability.us/strategies/">
  <meta property="og:type" content="website">
-
+ <meta property="og:url" content="https://dependability.us/strategies/">
+ <meta property="og:image" content="https://dependability.us/og-image.jpg">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <link rel="manifest" href="/site.webmanifest">
+ <link rel="preload" href="/style.css" as="style">
+ <link rel="stylesheet" href="/style.css" media="print" onload="this.media='all'">
+ <noscript><link rel="stylesheet" href="/style.css"></noscript>
  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR7TV6QRSN"></script>
+ <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CR7TV6QRSN');
+ </script>
  <!-- FAQ Schema for Google rich snippets -->
  <script type="application/ld+json">
  {
@@ -21,46 +33,31 @@
    "mainEntity": [
      {
        "@type": "Question",
-       "name": "When should I use an iron condor strategy?",
-       "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "Use iron condors when the underlying is trading in a well-defined range with no clear directional catalyst. Target 30-45 days to expiration and collect a net credit of $1.50-$2.50 per spread. Take profit at 50% of max profit."
-       }
-     },
-     {
-       "@type": "Question",
-       "name": "What is the best options strategy for moderate uptrends?",
-       "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "A bull call spread is ideal for moderate upmoves. Buy 2-3 strikes below expected move, target 30-45 DTE, and take profit when the long call reaches 2x the debit paid."
-       }
+       "name": "What is the best options strategy for a moderate uptrend?",
+       "acceptedAnswer": {"@type": "Answer", "text": "A bull call spread is the standard. Buy 2–3 strikes below the expected move, sell a higher strike to fund the long call. Target 30–45 DTE, take profit at 50% of debit. The full guide is in our Bull Call Spread Master Guide."}
      },
      {
        "@type": "Question",
        "name": "How do calendar spreads work around earnings?",
-       "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "Sell the near-term option and buy the same strike in a later expiration. Post-event IV collapse on the near-term option drives profits while the longer-dated option retains value. Use ATM or slightly OTM strikes when front-load IV is in the 60th+ percentile."
-       }
+       "acceptedAnswer": {"@type": "Answer", "text": "Sell the near-term option expiring just after earnings, buy the same strike in a later expiration. Post-event IV crush on the near-term option drives profit; the longer-dated option retains value. Use ATM or slightly OTM strikes when front-load IV is in the 60th+ percentile."}
      },
      {
        "@type": "Question",
-       "name": "Covered call vs cash-secured put — which is better for income?",
-       "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "Both generate income but differ in obligation and upside. Covered calls work on stock you own; you cap upside at the short strike. Cash-secured puts obligate you to buy at the strike but let you collect premium while waiting. Exit rules: buy back if underlying drops >10%, roll if assigned."
-       }
+       "name": "When should I use an iron condor strategy?",
+       "acceptedAnswer": {"@type": "Answer", "text": "Use iron condors when the underlying is trading in a well-defined range with no clear directional catalyst. Sell OTM put spread + OTM call spread, target 30–45 DTE, collect a net credit of $1.50–$2.50 per spread. Take profit at 50% of max profit. Never hold through FOMC or CPI."}
+     },
+     {
+       "@type": "Question",
+       "name": "What is the Wheel strategy and when should I use it?",
+       "acceptedAnswer": {"@type": "Answer", "text": "The Wheel runs cash-secured puts until assigned, then covered calls until called away, then back to cash-secured puts. It generates consistent income but locks you into a stock through multiple cycles. Only wheel stocks you'd be comfortable owning through a 30%+ drawdown."}
+     },
+     {
+       "@type": "Question",
+       "name": "How much premium can I earn with covered calls?",
+       "acceptedAnswer": {"@type": "Answer", "text": "A monthly covered call on a liquid large-cap stock collects 0.5–2% of the stock value in premium. Annualized, that's 6–24% if you roll monthly — but with capped upside and continued stock risk. After assignment and dividend events, real returns tend to be 8–15% annualized in favorable regimes."}
      }
    ]
  }
- </script>
- <!-- Google tag (gtag.js) — GA4 (shared BacottiBot property) -->
- <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR7TV6QRSN"></script>
- <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-CR7TV6QRSN');
  </script>
 </head>
 <body>
@@ -72,126 +69,158 @@
 
   <div class="page-hero">
    <h1>Options Strategies</h1>
-   <p>Strategy guides matched to market conditions — with entry logic, position management, and exit rules for each scenario.</p>
-<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
-  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
-  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966"></ins>
-</div>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-   <p class="hero-blurb">Options Education is the foundational layer that every trader needs before moving to strategy implementation. This page focuses on applied options strategies — concrete trade setups, risk frameworks, and execution tactics for active traders who understand the basics and want to put them to work.</p>
-<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
-  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
-  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="7590828986" data-ad-format="auto" data-full-width-responsive="true"></ins>
-</div>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+   <p>Strategy guides matched to market conditions — with entry logic, position management, and exit rules for each scenario. Every strategy links to a dedicated hub page with the full framework, supporting deep-dives, and FAQ.</p>
   </div>
 
-  <!-- FIRST AD PLACEMENT — after intro paragraph -->
-  <div style="margin:1.5rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
-   <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="7590828986" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <div style="margin:1.5rem auto;max-width:336px;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+   <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+   <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966"></ins>
   </div>
 
-  <div class="page-content">
+  <div class="page-content" style="max-width:880px;margin:0 auto;padding:0 1rem 2rem;">
 
-   <div class="edu-section">
-    <h2>Range-Bound Markets — Iron Condors</h2>
-    <div class="edu-grid" style="margin-bottom:24px;">
-     <div class="edu-card">
-      <h3>When to Use It</h3>
-      <p>When the underlying is trading in a well-defined range with no clear directional catalyst. The iron condor collects premium from time decay while having a wide enough range to tolerate modest volatility without taking losses.</p>
-     </div>
-     <div class="edu-card">
-      <h3>Structure</h3>
-      <p>Sell OTM put spread (lower strikes) + sell OTM call spread (upper strikes). Both spreads are outside the expected trading range. The wider the wings, the more profit potential but also more risk if the underlying breaks out.</p>
-     </div>
-     <div class="edu-card">
-      <h3>Key Metrics</h3>
-      <p>Target 30–45 days to expiration. Wing width of 15–20 S&amp;P points (or equivalent). Collect a net credit of $1.50–$2.50 per spread. Max risk = width minus credit received.</p>
-     </div>
-     <div class="edu-card">
-      <h3>Exit Rules</h3>
-      <p>Take profit at 50% of max profit. Stop out if the short strike is breached and the long leg cannot be rolled. Never hold through a major event (FOMC, CPI) without adjusting.</p>
-     </div>
-    </div>
-    <p style="margin-bottom:16px;"><a href="/articles/iron-condors-range-bound-markets/" style="color:#c8001e;font-weight:600;">Read the full Iron Condor guide →</a></p>
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;">Options strategies fall into four families based on the market view they express: directional (bull call spread, bear put spread), non-directional premium collection (iron condor, calendar spread), income on existing positions (covered call, cash-secured put, the Wheel), and event-driven (long straddle, calendar spread pre-earnings). Each family has a hub page on this site that walks through the strategy in full — with the underlying mechanics, when-to-use rules, position sizing, exit frameworks, and links to standalone deep-dives.</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;">Before choosing a strategy, you need to know your view on the underlying (directional, range-bound, or volatility-driven), the time horizon (swing trade, monthly income, LEAP), and the IV regime (low, normal, elevated, stressed). The strategies below are organized by view; pick the one that matches your read of the market, then drill into the hub page for the full framework.</p>
+
+   <div style="background:#f9f9f9;border:1px solid #e0e0e0;border-left:3px solid #c8001e;padding:20px;margin:1.5rem 0;">
+    <p style="font-size:.95rem;line-height:1.7;margin:0;color:#2a2a2a;"><strong>How to use this page.</strong> Pick the strategy hub that matches your market view. Each hub gives you the full framework, links to 8–9 standalone deep-dives, an FAQ, and "Related Research" pointing to other relevant strategies. If you're new to options, start with <a href="/education/options-foundations/" style="color:#c8001e;font-weight:600;">Options Foundations</a> to build the base knowledge that makes the strategies legible.</p>
    </div>
 
-   <div class="edu-section">
-    <h2>Moderate Upmove — Bull Call Spread</h2>
-    <div class="edu-grid" style="margin-bottom:24px;">
-     <div class="edu-card">
-      <h3>When to Use It</h3>
-      <p>When you expect a moderate move higher — enough to be profitable but not a runaway move. Buying a naked call is expensive in high-IV environments; the spread reduces cost while maintaining directional exposure.</p>
-     </div>
-     <div class="edu-card">
-      <h3>Structure</h3>
-      <p>Buy a call at a lower strike; sell a call at a higher strike. Same expiration. Net debit. The long call captures the upside; the short call funds it. Max profit = the difference in strikes minus the net debit.</p>
-     </div>
-     <div class="edu-card">
-      <h3>Key Metrics</h3>
-      <p>Buy 2–3 strikes below expected move. Target 30–45 DTE. Net debit should be no more than 50% of the intrinsic value of the long call at entry.</p>
-     </div>
-     <div class="edu-card">
-      <h3>Exit Rules</h3>
-      <p>Take profit when the long call reaches 2x the debit paid. Move the short strike up (rolling) if the underlying breaks through. Don't hold past 2 weeks before expiration if underperforming.</p>
-     </div>
-    </div>
-    <p style="margin-bottom:16px;"><a href="/articles/bull-call-spreads-defined-risk/" style="color:#c8001e;font-weight:600;">Read the full Bull Call Spread guide →</a></p>
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Directional Strategies — When You Have a View on Direction</h2>
+
+   <div class="strategy-hub" style="background:#fff;border:1px solid #e0e0e0;border-top:3px solid #c8001e;padding:24px;margin-bottom:24px;">
+    <h3 style="font-size:1.25rem;color:#1a1a1a;margin-bottom:.5rem;"><a href="/strategies/bull-call-spreads/" style="color:#000;">Bull Call Spread Master Guide</a></h3>
+    <p style="font-size:1rem;line-height:1.7;color:#333;margin-bottom:1rem;">The most-used directional options strategy. Buy a call at a lower strike, sell a call at a higher strike, same expiration. Net debit. Defined risk, capped upside, lower cost than a naked call. Best for moderate bullish views in elevated IV environments.</p>
+    <p style="font-size:.95rem;line-height:1.6;color:#555;margin-bottom:1rem;"><strong>When to use:</strong> moderate bullish view, elevated IV (VIX 18+), want defined risk for sizing. <strong>When not to use:</strong> expecting a runaway move (use a naked call), uncertain direction (use an iron condor).</p>
+    <p style="font-size:1rem;"><a href="/strategies/bull-call-spreads/" style="color:#c8001e;font-weight:600;">Read the full Bull Call Spread Master Guide →</a></p>
    </div>
 
-   <div class="edu-section">
-    <h2>Earnings / Event — Long Gamma / Calendar Spread</h2>
-    <div class="edu-grid" style="margin-bottom:24px;">
-     <div class="edu-card">
-      <h3>When to Use It</h3>
-      <p>Before known events (earnings, FDA decisions, mergers) where implied volatility will collapse post-event regardless of the price outcome. Two strategies work here: buying naked options (high risk, high reward) or a calendar spread (defined risk, moderate reward).</p>
-     </div>
-     <div class="edu-card">
-      <h3>Structure — Calendar Spread</h3>
-      <p>Sell the near-term option; buy the same strike and quantity in a later expiration. The near-term option's IV collapses post-event; the longer-dated option retains value. Net debit; profit comes from the IV differential between expirations.</p>
-     </div>
-     <div class="edu-card">
-      <h3>Key Metrics</h3>
-      <p>Use ATM or slightly OTM strikes. Front-load IV should be in the 60th+ percentile historically. Never risk more than 2% of capital on a single calendar spread. Spread the risk across multiple strikes.</p>
-     </div>
-     <div class="edu-card">
-      <h3>Exit Rules</h3>
-      <p>Close the spread the day after the event once IV crush is complete. Do not hold the long option side through a second event. Exit if the position loses more than 50% of the debit before the event.</p>
-     </div>
-    </div>
-    <p style="margin-bottom:16px;"><a href="/articles/calendar-spreads-earnings-iv-crush/" style="color:#c8001e;font-weight:600;">Read the full Calendar Spread guide →</a></p>
+   <div class="strategy-hub" style="background:#fff;border:1px solid #e0e0e0;border-top:3px solid #c8001e;padding:24px;margin-bottom:24px;">
+    <h3 style="font-size:1.25rem;color:#1a1a1a;margin-bottom:.5rem;"><a href="/articles/2026-07-10-investing-in-hyperscalers/" style="color:#000;">Bull Put Spread (mirror image)</a></h3>
+    <p style="font-size:1rem;line-height:1.7;color:#333;margin-bottom:1rem;">Bull put spreads have identical risk profiles to bull call spreads but capitalize on put premium specifically. Useful when put skew is steep (puts expensive relative to calls). The bull call spread hub covers the same mechanics in detail; the structure is mirror-image.</p>
+    <p style="font-size:1rem;"><a href="/articles/bull-call-spreads-defined-risk/" style="color:#c8001e;font-weight:600;">Read the Bull Call Spread Mechanics guide (mirror of bull put) →</a></p>
    </div>
 
-   <div class="edu-section">
-    <h2>Income — Covered Call / Short Put</h2>
-    <div class="edu-grid">
-     <div class="edu-card">
-      <h3>When to Use It</h3>
-      <p>When you want income generation on a stock you own (covered call) or on a stock you'd be willing to own at a lower price (cash-secured put). Both strategies collect premium in exchange for obligation.</p>
-     </div>
-     <div class="edu-card">
-      <h3>Structure — Covered Call</h3>
-      <p>Own 100 shares of the underlying. Sell one call per 100 shares. Call strike should be above your cost basis by a margin you find acceptable. Pick expirations 3–6 weeks out. Manage or close before ex-dividend dates.</p>
-     </div>
-     <div class="edu-card">
-      <h3>Structure — Cash-Secured Put</h3>
-      <p>Sell a put at a strike at or below your target buy-in price. Set aside enough cash to cover the purchase if assigned. Collect premium. Either the put expires worthless (you keep the premium) or you get assigned at your target price.</p>
-     </div>
-     <div class="edu-card">
-      <h3>Exit Rules</h3>
-      <p>Covered calls: buy back if the underlying drops >10%. Roll up and out if the underlying runs to the short strike and you want to maintain exposure. Short puts: roll down if the underlying drops significantly and you want to maintain the position at a lower cost basis.</p>
-     </div>
-    </div>
-    <p style="margin-top:16px;"><a href="/articles/covered-calls-cash-secured-puts-income/" style="color:#c8001e;font-weight:600;">Read the full Covered Call / Short Put guide →</a></p>
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Non-Directional Premium Collection — Range-Bound and Vol-Driven</h2>
+
+   <div class="strategy-hub" style="background:#fff;border:1px solid #e0e0e0;border-top:3px solid #c8001e;padding:24px;margin-bottom:24px;">
+    <h3 style="font-size:1.25rem;color:#1a1a1a;margin-bottom:.5rem;"><a href="/strategies/iron-condors/" style="color:#000;">Iron Condors: Range-Bound Premium Collection</a></h3>
+    <p style="font-size:1rem;line-height:1.7;color:#333;margin-bottom:1rem;">Sell an out-of-the-money put spread and an out-of-the-money call spread to collect premium in markets you expect to stay range-bound. The defining non-directional strategy. Best for elevated IV environments with no major catalysts on the horizon.</p>
+    <p style="font-size:.95rem;line-height:1.6;color:#555;margin-bottom:1rem;"><strong>When to use:</strong> range-bound view, IV rank above 50, no major events within trade window. <strong>When not to use:</strong> trending markets (the breakout tests your short strikes), low IV (insufficient premium).</p>
+    <p style="font-size:1rem;"><a href="/strategies/iron-condors/" style="color:#c8001e;font-weight:600;">Read the full Iron Condors guide →</a></p>
    </div>
 
-   <!-- Tools -->
-   <div style="margin-top:40px;padding:24px;background:#f9f9f9;border:1px solid #e0e0e0;border-top:3px solid #c8001e;">
+   <div class="strategy-hub" style="background:#fff;border:1px solid #e0e0e0;border-top:3px solid #c8001e;padding:24px;margin-bottom:24px;">
+    <h3 style="font-size:1.25rem;color:#1a1a1a;margin-bottom:.5rem;"><a href="/strategies/calendar-spreads/" style="color:#000;">Calendar Spread Master Guide</a></h3>
+    <p style="font-size:1rem;line-height:1.8;color:#333;margin-bottom:1rem;">Sell a near-term option, buy a longer-dated option at the same strike. Net debit. Profits from time decay and IV crush (post-earnings, post-FOMC). The cleanest way to capture an expected collapse in implied volatility.</p>
+    <p style="font-size:.95rem;line-height:1.6;color:#555;margin-bottom:1rem;"><strong>When to use:</strong> IV rank above 60, expect IV to fall, want defined risk. <strong>When not to use:</strong> expecting a sharp directional move (use a long straddle or directional spread), low IV (insufficient premium to capture).</p>
+    <p style="font-size:1rem;"><a href="/strategies/calendar-spreads/" style="color:#c8001e;font-weight:600;">Read the full Calendar Spread Master Guide →</a></p>
+   </div>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Income Strategies — Premium on Existing Positions or Cash</h2>
+
+   <div class="strategy-hub" style="background:#fff;border:1px solid #e0e0e0;border-top:3px solid #c8001e;padding:24px;margin-bottom:24px;">
+    <h3 style="font-size:1.25rem;color:#1a1a1a;margin-bottom:.5rem;"><a href="/strategies/income-strategies/" style="color:#000;">Income Strategies: Covered Calls, CSPs, and the Wheel</a></h3>
+    <p style="font-size:1rem;line-height:1.7;color:#333;margin-bottom:1rem;">Generate income on stock you own (covered call) or on cash reserves waiting to buy at a target (cash-secured put). Combine both into the Wheel for continuous premium collection. The most-used single-leg options structures for retail traders.</p>
+    <p style="font-size:.95rem;line-height:1.6;color:#555;margin-bottom:1rem;"><strong>When to use:</strong> long-term holder wanting to monetize volatility, cash reserves with a target buy-in price. <strong>When not to use:</strong> expecting sharp moves in the underlying (use directional strategies), low IV (insufficient premium).</p>
+    <p style="font-size:1rem;"><a href="/strategies/income-strategies/" style="color:#c8001e;font-weight:600;">Read the full Income Strategies guide →</a></p>
+   </div>
+
+   <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:24px;">
+    <div class="strategy-hub" style="background:#fff;border:1px solid #e0e0e0;border-top:3px solid #c8001e;padding:20px;">
+     <h3 style="font-size:1.1rem;color:#1a1a1a;margin-bottom:.5rem;"><a href="/strategies/covered-calls/" style="color:#000;">Covered Calls</a></h3>
+     <p style="font-size:.95rem;line-height:1.6;color:#333;margin-bottom:.75rem;">Own 100 shares, sell one call against them. Premium is income; upside is capped.</p>
+     <p style="font-size:.95rem;"><a href="/strategies/covered-calls/" style="color:#c8001e;font-weight:600;">Read the guide →</a></p>
+    </div>
+    <div class="strategy-hub" style="background:#fff;border:1px solid #e0e0e0;border-top:3px solid #c8001e;padding:20px;">
+     <h3 style="font-size:1.1rem;color:#1a1a1a;margin-bottom:.5rem;"><a href="/strategies/cash-secured-puts/" style="color:#000;">Cash-Secured Puts</a></h3>
+     <p style="font-size:.95rem;line-height:1.6;color:#333;margin-bottom:.75rem;">Sell a put at your target buy-in. Reserve cash for potential assignment.</p>
+     <p style="font-size:.95rem;"><a href="/strategies/cash-secured-puts/" style="color:#c8001e;font-weight:600;">Read the guide →</a></p>
+    </div>
+   </div>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Choosing the Right Strategy</h2>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">A quick framework for matching strategy to view:</p>
+
+   <table style="width:100%;border-collapse:collapse;margin-bottom:1.5rem;font-size:.95rem;">
+    <thead>
+     <tr style="background:#f5f5f5;border-bottom:2px solid #c8001e;">
+      <th style="text-align:left;padding:10px;border:1px solid #ddd;">Market view</th>
+      <th style="text-align:left;padding:10px;border:1px solid #ddd;">Primary strategy</th>
+      <th style="text-align:left;padding:10px;border:1px solid #ddd;">Secondary strategy</th>
+      <th style="text-align:left;padding:10px;border:1px solid #ddd;">Avoid</th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td style="padding:10px;border:1px solid #ddd;">Moderate bullish, elevated IV</td>
+      <td style="padding:10px;border:1px solid #ddd;"><a href="/strategies/bull-call-spreads/" style="color:#c8001e;">Bull call spread</a></td>
+      <td style="padding:10px;border:1px solid #ddd;">Covered call on existing stock</td>
+      <td style="padding:10px;border:1px solid #ddd;">Naked long call (overpriced)</td>
+     </tr>
+     <tr>
+      <td style="padding:10px;border:1px solid #ddd;">Range-bound, elevated IV</td>
+      <td style="padding:10px;border:1px solid #ddd;"><a href="/strategies/iron-condors/" style="color:#c8001e;">Iron condor</a></td>
+      <td style="padding:10px;border:1px solid #ddd;"><a href="/strategies/calendar-spreads/" style="color:#c8001e;">Calendar spread</a></td>
+      <td style="padding:10px;border:1px solid #ddd;">Directional spreads (wrong view)</td>
+     </tr>
+     <tr>
+      <td style="padding:10px;border:1px solid #ddd;">Pre-earnings, IV elevated</td>
+      <td style="padding:10px;border:1px solid #ddd;"><a href="/strategies/calendar-spreads/" style="color:#c8001e;">Calendar spread</a></td>
+      <td style="padding:10px;border:1px solid #ddd;">Iron condor (if range-bound)</td>
+      <td style="padding:10px;border:1px solid #ddd;">Long straddle (IV crush loss)</td>
+     </tr>
+     <tr>
+      <td style="padding:10px;border:1px solid #ddd;">Long-term holder, want income</td>
+      <td style="padding:10px;border:1px solid #ddd;"><a href="/strategies/covered-calls/" style="color:#c8001e;">Covered call</a></td>
+      <td style="padding:10px;border:1px solid #ddd;">Wheel strategy</td>
+      <td style="padding:10px;border:1px solid #ddd;">Selling puts on stocks you wouldn't own</td>
+     </tr>
+     <tr>
+      <td style="padding:10px;border:1px solid #ddd;">Cash reserves, target buy-in</td>
+      <td style="padding:10px;border:1px solid #ddd;"><a href="/strategies/cash-secured-puts/" style="color:#c8001e;">Cash-secured put</a></td>
+      <td style="padding:10px;border:1px solid #ddd;">Wheel strategy</td>
+      <td style="padding:10px;border:1px solid #ddd;">Naked puts (unlimited risk)</td>
+     </tr>
+     <tr>
+      <td style="padding:10px;border:1px solid #ddd;">Sharp directional move expected</td>
+      <td style="padding:10px;border:1px solid #ddd;">Long straddle/strangle</td>
+      <td style="padding:10px;border:1px solid #ddd;">Naked long call/put</td>
+      <td style="padding:10px;border:1px solid #ddd;">Iron condor (short gamma risk)</td>
+     </tr>
+     <tr>
+      <td style="padding:10px;border:1px solid #ddd;">Defensive, want downside hedge</td>
+      <td style="padding:10px;border:1px solid #ddd;">Protective put</td>
+      <td style="padding:10px;border:1px solid #ddd;">Collar (long stock + long put + short call)</td>
+      <td style="padding:10px;border:1px solid #ddd;">Selling premium into stress</td>
+     </tr>
+    </tbody>
+   </table>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Tools and References</h2>
+
+   <div style="background:#f9f9f9;border:1px solid #e0e0e0;border-top:3px solid #c8001e;padding:24px;margin-bottom:24px;">
     <div class="category-label" style="margin-bottom:12px;">TOOLS WE USE</div>
-    <p style="font-size:0.95rem;line-height:1.7;color:#2a2a2a;margin-bottom:16px;">When building or reviewing multi-leg options positions — iron condors, calendar spreads, bull call spreads, or protective collars — we use <a href="https://optionstrat.com/ventureprise" target="_blank" rel="noopener" style="color:#c8001e;font-weight:600;">OptionsStrat</a> to visualize break-even points, max profit/loss zones, probability distributions, and Greeks across strikes and expirations. It's the fastest way to stress-test a structure before entry.</p>
+    <p style="font-size:0.95rem;line-height:1.7;color:#2a2a2a;margin-bottom:0;">When building or reviewing multi-leg options positions — iron condors, calendar spreads, bull call spreads, or protective collars — we use <a href="https://optionstrat.com/ventureprise" target="_blank" rel="noopener" style="color:#c8001e;font-weight:600;">OptionsStrat</a> to visualize break-even points, max profit/loss zones, probability distributions, and Greeks across strikes and expirations. It's the fastest way to stress-test a structure before entry.</p>
+   </div>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Related Research</h2>
+
+   <ul style="font-size:1rem;line-height:1.7;color:#333;margin-bottom:1.5rem;padding-left:1.5rem;">
+    <li><a href="/education/options-foundations/" style="color:#c8001e;">Options Foundations</a> — the base knowledge that makes every strategy legible</li>
+    <li><a href="/education/volatility/" style="color:#c8001e;">Volatility Education</a> — VIX, skew, IV crush, and gamma scalping</li>
+    <li><a href="/articles/forecast-methodology-2026/" style="color:#c8001e;">Forecast Methodology</a> — how our daily market reads inform strategy selection</li>
+    <li><a href="/forecast/" style="color:#c8001e;">S&amp;P 500 &amp; VIX Forecast</a> — current views on volatility regime and direction</li>
+   </ul>
+
+   <div style="margin:2rem 0;padding:1rem;border-left:3px solid #888;background:#fafafa;">
+    <p style="font-size:0.875rem;line-height:1.6;color:#666;margin:0;"><em>For informational and educational purposes only. Not investment advice. Options trading involves substantial risk of loss. Every strategy on this site has defined risk but no defined outcome. Past performance does not guarantee future results. See our <a href="/disclaimer/" style="color:#666;">full disclosure</a>.</em></p>
    </div>
 
   </div>
+
  </main>
 
  <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">

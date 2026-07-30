@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+ <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+ <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+ <title>Bull Call Spread Master Guide: Entry, Greeks, Exit, and Rolling | Dependability Holdings LLC</title>
+ <meta name="description" content="The complete bull call spread reference: strike selection, position sizing, the 2-week exit rule, IV regimes, rolling mechanics, and 9 supporting guides from Dependability Research.">
+ <link rel="canonical" href="https://dependability.us/strategies/bull-call-spreads/">
+ <meta property="og:type" content="article">
+ <meta property="og:url" content="https://dependability.us/strategies/bull-call-spreads/">
+ <meta property="og:image" content="https://dependability.us/og-image.jpg">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <link rel="manifest" href="/site.webmanifest">
+ <link rel="preload" href="/style.css" as="style">
+ <link rel="stylesheet" href="/style.css" media="print" onload="this.media='all'">
+ <noscript><link rel="stylesheet" href="/style.css"></noscript>
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+ <!-- Google tag (gtag.js) — GA4 -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR7TV6QRSN"></script>
+ <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CR7TV6QRSN');
+ </script>
+ <!-- FAQ Schema -->
+ <script type="application/ld+json">
+ {
+   "@context": "https://schema.org",
+   "@type": "FAQPage",
+   "mainEntity": [
+     {"@type": "Question", "name": "What is a bull call spread?",
+      "acceptedAnswer": {"@type": "Answer", "text": "A bull call spread is a defined-risk options strategy: buy a call at a lower strike, sell a call at a higher strike, same expiration. The short call reduces the cost of the long call. Max profit equals the strike width minus the net debit paid; max loss equals the debit."}},
+     {"@type": "Question", "name": "When should I use a bull call spread instead of a naked call?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Use a bull call spread when implied volatility is elevated (so naked calls are expensive), when you want defined risk for sizing purposes, or when your upside target is moderate — enough to be profitable, not a runaway. Naked calls make sense when you want unlimited upside and can tolerate the cost."}},
+     {"@type": "Question", "name": "What is the 2-week rule for bull call spreads?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Close the position 14 days before expiration (10 trading days) regardless of profit or loss. In the final two weeks, gamma and time decay dominate and small moves can produce large mark-to-market swings. The 2-week rule removes discretion from the exit decision."}},
+     {"@type": "Question", "name": "How do I pick the strikes for a bull call spread?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Buy the long call at a delta of 0.50–0.65 (2–3 strikes below the expected move), sell the short call above expected move but within a credit-funding range. The width between strikes is the max profit. Standard width is 5–10 points on SPX (or 2.5–5 dollars on liquid single names)."}},
+     {"@type": "Question", "name": "What IV regime is best for entering a bull call spread?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Higher IV at entry is better: the short call's premium funds more of the long call, lowering the debit and improving the breakeven. The worst regime is low IV with a lot of time to expiration — the position has high theta exposure with little premium cushion."}},
+     {"@type": "Question", "name": "When should I roll a bull call spread?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Roll up (to a higher short strike) when the underlying has broken through the short strike and you want to maintain directional exposure. Roll forward (to a later expiration) when the directional view is intact but time is running out and the position is at a loss. Avoid rolling into a worse setup — sometimes closing is correct."}}
+   ]
+ }
+ </script>
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+  <div class="page-hero">
+   <h1>Bull Call Spread Master Guide</h1>
+   <p>The complete reference for one of the most-used directional options strategies: strike selection, position sizing, the 2-week rule, IV regimes, rolling, and how to convert a good entry into a good trade.</p>
+  </div>
+
+  <div style="margin:1.5rem auto;max-width:336px;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+   <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+   <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966"></ins>
+  </div>
+
+  <div class="page-content" style="max-width:880px;margin:0 auto;padding:0 1rem 2rem;">
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;">A bull call spread is the workhorse directional strategy for retail options traders who want defined risk and a clear framework. It's the cleanest way to express a moderate bullish view without paying full premium for a naked call. This guide is the entry point for our nine-article series on bull call spreads — every concept on this page links to a dedicated deep-dive, and the framework below is the same one our research desk uses when reviewing trades.</p>
+
+   <div style="background:#f9f9f9;border:1px solid #e0e0e0;border-left:3px solid #c8001e;padding:20px;margin:1.5rem 0;">
+    <p style="font-size:.95rem;line-height:1.7;margin:0;color:#2a2a2a;"><strong>What this guide covers.</strong> Mechanics and when-to-use → strike selection → position sizing → Greeks across the lifecycle → IV regime selection → the 2-week exit rule → rolling mechanics → profit targets → bull call spread vs alternatives → FAQ. Each section links to a standalone deep-dive in the bull-call-spread series.</p>
+   </div>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">What a Bull Call Spread Is and When to Use It</h2>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">A bull call spread is two legs on the same expiration: a long call at a lower strike and a short call at a higher strike. Net debit. The long call captures upside; the short call funds it. Max profit equals the strike width minus the debit. Max loss equals the debit. The position profits if the underlying closes above the long call's strike plus the debit at expiration, and is capped at the short call's strike.</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">Use a bull call spread in three situations:</p>
+
+   <ul style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;padding-left:1.5rem;">
+    <li><strong>Elevated implied volatility.</strong> Naked calls are expensive in high-IV environments. Selling the upside against the long call reduces the cost meaningfully.</li>
+    <li><strong>Defined risk for sizing purposes.</strong> If your model caps risk at 1–2% of capital per trade, a bull call spread gives you a hard dollar maximum at entry. Naked calls have unlimited upside but the position size has to be smaller to match the same risk budget.</li>
+    <li><strong>Moderate directional view.</strong> The spread makes sense when you expect a meaningful move higher, but not a runaway. If you think the underlying can run 15%+ from here, naked calls capture more of that. If you think 5–8% is the realistic upside, the spread is the right tool.</li>
+   </ul>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;">Avoid bull call spreads when the directional view is unclear (use an iron condor instead), when IV is crushed to historical lows and theta is dominant (wait for a better entry), or when the move you want to capture is event-driven with binary outcomes (consider a calendar spread or a long straddle instead).</p>
+
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1.5rem;"><a href="/articles/bull-call-spreads-defined-risk/" style="color:#c8001e;font-weight:600;">Read the full Bull Call Spread mechanics guide →</a></p>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Strike Selection</h2>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">The single most important decision in a bull call spread is the long call strike. Sell-side pricing tends to use delta: a 0.50–0.65 delta long call is the most common entry for a 30–45 DTE bull call spread. Lower deltas (0.30–0.45) make the spread cheaper but skew the breakeven further from the underlying. Higher deltas (0.65+) raise the cost but improve the probability of profit and reduce the breakeven distance.</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">The short call strike is usually set 5–10 points above the long strike on SPX (or 2.5–5 dollars on liquid single names). Wider spreads have more profit potential but more risk. The standard width-to-debit ratio we use: aim for max profit to be at least 1.5–2× the debit paid. If the spread width is 10 points and the debit is 4, max profit is 6 — that's 1.5× the debit, which is acceptable but not strong. A spread width of 10 with a debit of 3 gives max profit of 7 — that's 2.3× the debit, much better.</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">The breakeven at expiration is the long call strike plus the debit paid. If the long call is at 100 and the debit is 4, breakeven is 104. Anything above 104 at expiration is a profit; below is a loss up to the debit. Be honest about the breakeven distance relative to your directional view: if your view says 5% upside but the breakeven is 7% away, the trade is structurally wrong before it starts.</p>
+
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1.5rem;"><a href="/articles/bull-call-spread-strike-selection/" style="color:#c8001e;font-weight:600;">Read the full Strike Selection guide →</a></p>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Greeks Across the Lifecycle</h2>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">The four Greeks behave differently in a bull call spread than they do in a single-leg position:</p>
+
+   <ul style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;padding-left:1.5rem;">
+    <li><strong>Delta</strong> is positive throughout the trade and increases as the underlying rises. Near expiration, delta approaches 0 below the long strike, ~0.5 at the long strike, and 1 above the short strike.</li>
+    <li><strong>Theta</strong> is negative — you're paying for time decay on the long call. The short call also decays, which partially offsets, but the net theta is negative in most setups. Theta accelerates in the final 30 days.</li>
+    <li><strong>Gamma</strong> shifts sign at the long strike. Below the long strike, gamma is positive (delta gains as underlying rises). Above the short strike, gamma is negative (delta loses as underlying rises). At the strikes, gamma is large and the position is most sensitive.</li>
+    <li><strong>Vega</strong> is positive (the long call dominates), but smaller than a naked call's vega. Rising IV helps the position; falling IV hurts. The 2-week rule partly reflects this: gamma and vega both collapse in the final week.</li>
+   </ul>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;">The lifecycle is roughly: 45–30 DTE, theta is moderate and the position benefits from continued upside movement; 30–14 DTE, theta accelerates and gamma starts to dominate around the long strike; 14–0 DTE, theta is large, gamma is enormous near the strikes, and the position behaves like a binary bet.</p>
+
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1.5rem;"><a href="/articles/bull-call-spread-greeks-delta-theta/" style="color:#c8001e;font-weight:600;">Read the full Greeks guide →</a></p>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Position Sizing and Risk</h2>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">The standard position-sizing rule for a defined-risk directional spread is 1–2% of trading capital at risk per trade. If your trading account is $50,000 and you cap single-trade risk at 1%, your max loss on a single bull call spread is $500. At a debit of $4 per spread (with multiplier 100 for SPX-style or 1 for SPY), that's 1.25 contracts — round down to 1 contract.</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">Correlation across positions matters. If you have three bull call spreads open simultaneously, all on SPX-exposed names, your effective risk is roughly 3× the per-trade figure — and your portfolio is not actually diversified. Treat the bull call spread as one piece of a portfolio and aggregate by underlying exposure, not by trade count.</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;">Liquidity risk is real but small for index products. For single-name spreads on less-liquid underlyings, widen the bid-ask allowance to 5–10% of the debit or pass on the trade.</p>
+
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1.5rem;"><a href="/articles/bull-call-spread-position-sizing/" style="color:#c8001e;font-weight:600;">Read the full Position Sizing guide →</a></p>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">IV Regime Selection</h2>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">IV rank and IV percentile are the two most useful regime filters for bull call spread entry. Higher IV at entry improves the trade because:</p>
+
+   <ul style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;padding-left:1.5rem;">
+    <li>The short call's premium funds more of the long call, lowering the debit and improving the breakeven.</li>
+    <li>Higher entry IV means more IV to "burn off" if the underlying goes nowhere — the position benefits from theta.</li>
+    <li>Vega exposure is positive: if IV rises further (which often accompanies the move you're positioning for), the position gains.</li>
+   </ul>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">Lower IV at entry is worse because the spread is more expensive relative to the upside captured, and there's less theta to burn. The exception: if you expect a sharp, fast move (earnings, macro catalyst) and you want to be in early, a low-IV entry with the move being priced in is acceptable. For typical 30–45 DTE swing trades, wait for IV rank above 30–40 to enter.</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;">Use VIX as the regime gauge for index products. VIX below 12 is a low-IV environment where theta-heavy bull call spreads underperform. VIX 12–18 is normal. VIX 18–25 is elevated — favorable for entry. VIX above 25 is stressed — only enter if your directional view is strong and the spread is wide.</p>
+
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1.5rem;"><a href="/articles/bull-call-spread-iv-regime-guide/" style="color:#c8001e;font-weight:600;">Read the full IV Regime guide →</a></p>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Expiration Management and the 2-Week Rule</h2>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">A bull call spread has three exits: profit target, stop loss, and expiration. Each is a mechanical rule that removes discretion.</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;"><strong>The 2-week rule is the most important exit rule.</strong> Close the position 14 days before expiration (10 trading days) regardless of profit or loss. The reasoning: in the final two weeks, gamma dominates and time decay accelerates. The position's value becomes dominated by intrinsic value plus small time value. A small adverse move in the final two weeks can produce a large mark-to-market swing — for an already-profitable position, that's money you didn't lock in; for an already-unprofitable position, that's a loss that gets worse.</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">The 2-week rule is not about predicting the move — it's about removing the temptation to predict. Most retail losses on bull call spreads come from holding too long after the directional view has played out, hoping for one more dollar of profit.</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;">Profit target: take profit at 50–100% of the debit paid. The standard target is 50% — it produces the highest probability of capturing gains and matches the iron condor's profit-taking rule. Some traders aim for 100% of debit (a 100% gain), accepting lower hit rate. The 50% target is the right default for most traders.</p>
+
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1.5rem;"><a href="/articles/bull-call-spread-expiration-management/" style="color:#c8001e;font-weight:600;">Read the full Expiration Management guide →</a></p>
+
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1.5rem;"><a href="/articles/bull-call-spread-profit-targets/" style="color:#c8001e;font-weight:600;">Read the full Profit Targets guide →</a></p>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Rolling Mechanics</h2>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">Rolling a bull call spread means closing the current spread and opening a new one. There are two directions:</p>
+
+   <ul style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;padding-left:1.5rem;">
+    <li><strong>Roll up:</strong> keep the same expiration but move both strikes higher. Used when the underlying has moved through the short strike and you want to maintain directional exposure at higher levels.</li>
+    <li><strong>Roll forward:</strong> keep the same strikes but move to a later expiration. Used when the directional view is intact but time is running out, especially when the position is at a loss.</li>
+   </ul>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">Rolling is not always the right move. The cost of rolling is the difference between closing the current spread and opening the new one, plus any spread/commissions. If the rolling cost exceeds 25–30% of the original debit, the roll is likely worse than closing the position and re-entering fresh later.</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;">A common mistake is rolling into a worse setup: a position with the directional view broken that gets rolled forward in hopes of more time. If your directional view has failed, close the position. Don't roll to give the trade "more time." Time alone doesn't fix a wrong view.</p>
+
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1.5rem;"><a href="/articles/bull-call-spread-roll-up-guide/" style="color:#c8001e;font-weight:600;">Read the full Rolling guide →</a></p>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Bull Call Spread vs Naked Calls and Other Alternatives</h2>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">The bull call spread's main alternative is the naked long call. Naked calls have unlimited upside but cost more (no short call to fund them) and have higher theta decay. Naked calls make sense when you want maximum upside capture, when IV is low (so the call isn't overpriced), and when your directional view has a long enough time horizon that the time decay doesn't dominate.</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">A bull put spread is the same directional view from the put side — long lower-strike put, short higher-strike put, same expiration. Bull put spreads have identical risk profiles to bull call spreads but capitalize on put premium specifically. They're useful when put skew is steep (puts expensive relative to calls), when you want to avoid early assignment risk on the short call, or when your view is that the underlying is range-bound to higher (rather than expecting a sharp move up).</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;">A long call diagonal is a more complex structure combining a long-dated long call with a shorter-dated short call at a different strike. Diagonals are more capital-efficient than bull call spreads in some configurations but harder to manage. For most retail traders, the simpler bull call spread is the right default.</p>
+
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1.5rem;"><a href="/articles/bull-call-spread-vs-naked-calls/" style="color:#c8001e;font-weight:600;">Read the Bull Call Spread vs Naked Calls comparison →</a></p>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Bull Call Spread FAQ</h2>
+
+   <div class="edu-section" style="margin-bottom:24px;">
+    <h3 style="font-size:1.1rem;color:#1a1a1a;margin:1.25rem 0 .5rem;">What delta should my long call have at entry?</h3>
+    <p style="font-size:1rem;line-height:1.7;color:#333;margin-bottom:1rem;">For a 30–45 DTE bull call spread, 0.50–0.65 delta is the standard. Lower deltas (0.30–0.45) make the spread cheaper but push the breakeven further from the underlying. Higher deltas (0.65+) raise the cost but improve the probability of profit. The choice depends on how aggressive your directional view is: stronger views justify higher deltas; more uncertain views justify lower deltas with cheaper entry.</p>
+
+    <h3 style="font-size:1.1rem;color:#1a1a1a;margin:1.25rem 0 .5rem;">What's the best width for the spread?</h3>
+    <p style="font-size:1rem;line-height:1.7;color:#333;margin-bottom:1rem;">Standard widths are 5–10 points on SPX, 2.5–5 dollars on liquid single names, or 5–10% of the underlying price. Wider spreads have more profit potential but more risk and a higher max loss cap. The width-to-debit ratio is more useful than absolute width: aim for max profit (width minus debit) to be at least 1.5–2× the debit paid.</p>
+
+    <h3 style="font-size:1.1rem;color:#1a1a1a;margin:1.25rem 0 .5rem;">Can I get assigned early on the short call?</h3>
+    <p style="font-size:1rem;line-height:1.7;color:#333;margin-bottom:1rem;">Early assignment on a short call is rare but possible when the underlying trades above the short strike close to ex-dividend date for equity underlyings. For index options (SPX, XSP), early assignment is essentially impossible — they settle in cash and European-style exercise prevents early exercise. For single-name equity spreads, monitor the ex-dividend calendar if the spread is in the money.</p>
+
+    <h3 style="font-size:1.1rem;color:#1a1a1a;margin:1.25rem 0 .5rem;">Should I close the spread before earnings?</h3>
+    <p style="font-size:1rem;line-height:1.7;color:#333;margin-bottom:1rem;">If the spread was opened specifically for an earnings event, hold through the event and exit after IV crush. If the spread was opened for a non-earnings thesis and earnings is approaching, close before the event to avoid the IV crush. Earnings gaps can be favorable or unfavorable — what's certain is the volatility collapse that erodes the time value of both legs.</p>
+
+    <h3 style="font-size:1.1rem;color:#1a1a1a;margin:1.25rem 0 .5rem;">How long should I hold a bull call spread?</h3>
+    <p style="font-size:1rem;line-height:1.7;color:#333;margin-bottom:1rem;">Entry to 14 DTE. The maximum hold period is 30–45 DTE entry to 14 DTE exit. Holding past 14 DTE is the single most common retail mistake — the position becomes gamma-dominated and small moves can produce large swings. The 2-week rule applies regardless of profit or loss.</p>
+
+    <h3 style="font-size:1.1rem;color:#1a1a1a;margin:1.25rem 0 .5rem;">What's the difference between a bull call spread and a debit call spread?</h3>
+    <p style="font-size:1rem;line-height:1.7;color:#333;margin-bottom:1rem;">They are the same strategy. "Bull call spread" is the standard name; "debit call spread" emphasizes the net debit at entry (as opposed to a credit spread like a bear call spread). Some platforms and brokers use these terms interchangeably; on Dependability, we use "bull call spread" throughout.</p>
+   </div>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">The Full Bull Call Spread Series</h2>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">Every concept on this page is a standalone deep-dive. Read in any order; the most-referenced entry point is <a href="/articles/bull-call-spread-expiration-management/" style="color:#c8001e;font-weight:600;">Bull Call Spread Expiration Management: When to Close, the 2-Week Rule, and Rolling</a>.</p>
+
+   <ul style="font-size:1rem;line-height:1.7;color:#333;margin-bottom:1.5rem;padding-left:1.5rem;">
+    <li><a href="/articles/bull-call-spreads-defined-risk/" style="color:#c8001e;">Bull Call Spread Defined Risk — Mechanics and When to Use It</a></li>
+    <li><a href="/articles/bull-call-spread-strike-selection/" style="color:#c8001e;">Strike Selection — Delta, Width, and Breakeven</a></li>
+    <li><a href="/articles/bull-call-spread-greeks-delta-theta/" style="color:#c8001e;">Greeks: Delta, Theta, Gamma, and Vega Across the Lifecycle</a></li>
+    <li><a href="/articles/bull-call-spread-position-sizing/" style="color:#c8001e;">Position Sizing — 1–2% Rule and Account Risk</a></li>
+    <li><a href="/articles/bull-call-spread-iv-regime-guide/" style="color:#c8001e;">IV Regime Guide — When High IV Helps, When Low IV Kills</a></li>
+    <li><a href="/articles/bull-call-spread-expiration-management/" style="color:#c8001e;">Expiration Management — The 2-Week Rule, Profit Targets, and Stop Losses</a></li>
+    <li><a href="/articles/bull-call-spread-roll-up-guide/" style="color:#c8001e;">Rolling — Roll-Up, Roll-Forward, and When Not to Roll</a></li>
+    <li><a href="/articles/bull-call-spread-profit-targets/" style="color:#c8001e;">Profit Targets — Why 50% Is the Right Default</a></li>
+    <li><a href="/articles/bull-call-spread-vs-naked-calls/" style="color:#c8001e;">Bull Call Spread vs Naked Calls — Cost, Risk, and Upside Capture</a></li>
+   </ul>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Related Research</h2>
+
+   <ul style="font-size:1rem;line-height:1.7;color:#333;margin-bottom:1.5rem;padding-left:1.5rem;">
+    <li><a href="/strategies/calendar-spreads/" style="color:#c8001e;">Calendar Spreads</a> — alternative structure for earnings/event-driven trades where IV crush is the thesis</li>
+    <li><a href="/strategies/income-strategies/" style="color:#c8001e;">Income Strategies — Covered Calls, CSPs, and the Wheel</a> — when direction is sideways-to-modestly-up, premium collection can outperform long premium</li>
+    <li><a href="/articles/2026-05-23-understanding-the-vix/" style="color:#c8001e;">Understanding the VIX</a> — the IV regime gauge for index-product bull call spreads</li>
+    <li><a href="/articles/2026-05-23-reading-the-skew/" style="color:#c8001e;">Reading the Skew</a> — when put skew is steep, bull put spreads can replace bull call spreads with identical risk profiles</li>
+    <li><a href="/articles/2026-07-24-hyperscaler-capex-explained/" style="color:#c8001e;">Hyperscaler CAPEX Explained</a> — bull call spreads on AI-exposed names have been one of the highest-hit-rate structures of 2026</li>
+   </ul>
+
+   <div style="background:#f9f9f9;border:1px solid #e0e0e0;border-top:3px solid #c8001e;padding:24px;margin:2rem 0;">
+    <div class="category-label" style="margin-bottom:12px;">TOOLS WE USE</div>
+    <p style="font-size:0.95rem;line-height:1.7;color:#2a2a2a;margin-bottom:0;">When building or reviewing bull call spreads — visualizing break-even points, max profit/loss zones, probability distributions, and Greeks across strikes and expirations — we use <a href="https://optionstrat.com/ventureprise" target="_blank" rel="noopener" style="color:#c8001e;font-weight:600;">OptionsStrat</a>. It's the fastest way to stress-test a structure before entry, and the same tool we use to model the iron condors and calendar spreads discussed elsewhere on this site.</p>
+   </div>
+
+   <div style="margin:2rem 0;padding:1rem;border-left:3px solid #888;background:#fafafa;">
+    <p style="font-size:0.875rem;line-height:1.6;color:#666;margin:0;"><em>For informational and educational purposes only. Not investment advice. Options trading involves substantial risk of loss. Bull call spreads are defined-risk structures, but losses can still reach 100% of the debit paid. Past performance does not guarantee future results. See our <a href="/disclaimer/" style="color:#666;">full disclosure</a>.</em></p>
+   </div>
+
+  </div>
+
+ </main>
+
+ <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+ <script src="/nav.js"></script>
+
+<div id="site-footer">
+  <div class="main-footer">
+   <div class="footer-grid">
+    <div class="footer-brand">
+     <h4>Dependability Holdings LLC</h4>
+     <p>Independent financial research and market analysis. Our work focuses on options market dynamics, volatility regimes, and macro-driven positioning.</p>
+    </div>
+    <div class="footer-nav">
+     <h5>Research</h5>
+     <ul>
+      <li><a href="/forecast/">S&amp;P 500 &amp; VIX Forecast</a></li>
+      <li><a href="/commentary/">Market Commentary</a></li>
+      <li><a href="/education/">Options Education</a></li>
+      <li><a href="/strategies/">Options Strategies</a></li>
+     </ul>
+    </div>
+    <div class="footer-nav">
+     <h5>Company</h5>
+     <ul>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/articles/forecast-methodology-2026/">Methodology</a></li>
+      <li><a href="/contact/">Contact</a></li>
+     </ul>
+    </div>
+    <div class="footer-nav">
+     <h5>Legal</h5>
+     <ul>
+      <li><a href="/privacy/">Privacy Policy</a></li>
+      <li><a href="/terms/">Terms of Service</a></li>
+      <li><a href="/disclaimer/">Investment Disclaimer</a></li>
+     </ul>
+    </div>
+   </div>
+   <div class="footer-bottom">
+    <p>&copy; 2026 Dependability Holdings LLC. All rights reserved.</p>
+    <p>For informational purposes only. Not investment advice. See our <a href="/articles/forecast-methodology-2026/">full disclosures</a>.</p>
+   </div>
+  </div>
+</div>
+
+</body>
+</html>

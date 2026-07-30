@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+ <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+ <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+ <title>Calendar Spread Master Guide: IV Crush, Strike Selection, Exit Timing | Dependability Holdings LLC</title>
+ <meta name="description" content="The complete calendar spread reference: IV rank entry thresholds, strike selection, time decay mechanics, earnings plays, and 9 supporting guides from Dependability Research.">
+ <link rel="canonical" href="https://dependability.us/strategies/calendar-spreads/">
+ <meta property="og:type" content="article">
+ <meta property="og:url" content="https://dependability.us/strategies/calendar-spreads/">
+ <meta property="og:image" content="https://dependability.us/og-image.jpg">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <link rel="manifest" href="/site.webmanifest">
+ <link rel="preload" href="/style.css" as="style">
+ <link rel="stylesheet" href="/style.css" media="print" onload="this.media='all'">
+ <noscript><link rel="stylesheet" href="/style.css"></noscript>
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR7TV6QRSN"></script>
+ <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CR7TV6QRSN');
+ </script>
+ <!-- FAQ Schema -->
+ <script type="application/ld+json">
+ {
+   "@context": "https://schema.org",
+   "@type": "FAQPage",
+   "mainEntity": [
+     {"@type": "Question", "name": "What is a calendar spread?",
+      "acceptedAnswer": {"@type": "Answer", "text": "A calendar spread (also called a time spread) sells a near-term option and buys a longer-dated option at the same strike. Net debit. The trade profits from the near-term option's faster time decay — and from any implied volatility collapse (IV crush) between the front-month and back-month expirations."}},
+     {"@type": "Question", "name": "When should I use a calendar spread?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Use calendar spreads when implied volatility is elevated (IV rank above 60), when you expect IV to fall (pre-earnings, pre-FOMC, pre-FDA), or when you want a defined-risk position that benefits from time decay without requiring a strong directional view."}},
+     {"@type": "Question", "name": "What IV rank should I look for to enter a calendar spread?",
+      "acceptedAnswer": {"@type": "Answer", "text": "60th percentile or higher. Below 50, there's not enough IV premium to capture, and the position's profit potential is small relative to the debit paid. Above 80 is exceptional — calendar spreads in high-IV environments are the highest-probability version of the trade."}},
+     {"@type": "Question", "name": "Should I use ATM or OTM strikes for a calendar spread?",
+      "acceptedAnswer": {"@type": "Answer", "text": "ATM strikes maximize vega exposure and produce the largest IV-crush payoff. OTM strikes (slightly out-of-the-money) reduce cost and increase directional bias but give up some vega. For pure IV-crush plays, ATM. For directional + IV plays, slightly OTM."}},
+     {"@type": "Question", "name": "What is the second-event risk on a calendar spread?",
+      "acceptedAnswer": {"@type": "Answer", "text": "After the front-month expires, you still hold the back-month option. If a second event (earnings, macro print) hits before you close, the back-month option's IV can swing sharply, and you can lose most of the position's value to either IV crush or IV expansion against you. The second-event risk is the single biggest pitfall of calendar spreads."}},
+     {"@type": "Question", "name": "When should I exit a calendar spread?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Three exit windows: (1) just after the front-month pin (the day after expiration if IV crushed as expected), (2) at 7 DTE on the front-month if the position is deep ITM/OTM and time decay is dominant, (3) at any time if the position loses more than 50% of the debit before the front-month pin."}}
+   ]
+ }
+ </script>
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+  <div class="page-hero">
+   <h1>Calendar Spread Master Guide</h1>
+   <p>The complete reference for selling time and capturing IV crush: mechanics, IV rank thresholds, strike selection, time decay profiles, earnings plays, exit windows, and how to manage the second-event risk.</p>
+  </div>
+
+  <div style="margin:1.5rem auto;max-width:336px;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+   <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+   <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966"></ins>
+  </div>
+
+  <div class="page-content" style="max-width:880px;margin:0 auto;padding:0 1rem 2rem;">
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;">A calendar spread is the cleanest options structure for capturing an expected collapse in implied volatility. Sell a near-term option, buy a longer-dated option at the same strike. The near-term option decays faster and loses IV more sharply — that's where the profit comes from. This guide is the entry point for our nine-article series on calendar spreads, covering every concept you need to enter, manage, and exit the trade.</p>
+
+   <div style="background:#f9f9f9;border:1px solid #e0e0e0;border-left:3px solid #c8001e;padding:20px;margin:1.5rem 0;">
+    <p style="font-size:.95rem;line-height:1.7;margin:0;color:#2a2a2a;"><strong>What this guide covers.</strong> Mechanics and when-to-use → IV rank entry thresholds → strike selection (ATM vs OTM) → time decay and the Greeks → IV crush math → earnings plays → near-term expiration management → exit timing → second-event risk → calendar spread vs long straddle → FAQ. Each section links to a standalone deep-dive.</p>
+   </div>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Calendar Spread Mechanics</h2>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">The basic calendar spread: sell a near-term call (or put) at strike X with 30–45 DTE, buy a longer-dated call at the same strike X with 60–120 DTE. Net debit. The position profits if the front-month expires near the strike (where the time value of the front-month is small) while the back-month retains time value.</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">Max profit for a calendar spread is reached when the front-month expires and the back-month's value is maximized. This typically happens when the underlying closes near the strike at front-month expiration — the front-month expires with little time value (max theta captured), and the back-month still has 30–75 days of time value left. Max loss is the debit paid, which occurs when the underlying moves far enough away from the strike that the back-month becomes the dominant source of value and time decay is irrelevant.</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;">The position has two profit engines: time decay (the front-month loses value faster) and IV crush (if implied volatility falls between entry and the front-month pin, both legs lose IV but the front-month loses more). The third leg of profit is "pin risk" — the tendency of the underlying to gravitate toward strikes with high open interest, which favors the calendar spread holder.</p>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">IV Rank Entry — the Front-Load Threshold</h2>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">IV rank is the single most important filter for calendar spread entries. The trade depends on having IV premium to capture — if you enter when IV is already low, there's nothing to crush and the position's profit potential is small relative to the debit paid.</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">The standard threshold is 60th percentile or higher. Below 50, the calendar spread's profit engine stalls: the front-month doesn't have enough IV to collapse, and the position's max profit is roughly equal to the debit. Above 80, the setup is exceptional — calendar spreads in 80+ percentile IV are the highest-probability version of the trade and historically produce 60–80% hit rates.</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;">For index products, use VIX percentile rather than IV rank — VIX percentile over 50 indicates elevated vol regime favorable for calendar spreads. For single names, IV rank is the standard tool.</p>
+
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1.5rem;"><a href="/articles/calendar-spread-front-load-iv-rank/" style="color:#c8001e;font-weight:600;">Read the full IV Rank Entry guide →</a></p>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Strike Selection — ATM vs OTM</h2>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">ATM strikes maximize vega exposure and produce the largest IV-crush payoff. If the underlying is at 7,400 and you're running a 30/60 DTE calendar, an ATM 7,400 strike gives you the maximum sensitivity to IV changes. The cost is higher (ATM options are the most expensive), but the IV-crush payoff is correspondingly larger.</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">OTM strikes (slightly out-of-the-money) reduce cost and add directional bias. A 7,450 calendar in a 7,400 underlying costs less than the ATM 7,400 calendar but has a directional bullish skew. The trade works if you expect the underlying to drift up toward the strike over the front-month period. The downside: less vega exposure means less IV-crush payoff.</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">ITM strikes are rarely used for calendar spreads — the directional risk dominates the IV-crush payoff, and the position looks more like a debit spread than a pure IV play.</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;">Practical rule: for pure IV-crush plays (pre-earnings, pre-FOMC), ATM. For directional + IV plays (where you want some bullish or bearish bias), slightly OTM (1–2% away from the underlying). For hedged or paired positions, match the strike to your view.</p>
+
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1.5rem;"><a href="/articles/calendar-spread-strike-selection-atm-vs-otm/" style="color:#c8001e;font-weight:600;">Read the full Strike Selection guide →</a></p>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Time Decay and the Greeks</h2>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">The Greeks behave differently in a calendar spread than in a single-leg position:</p>
+
+   <ul style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;padding-left:1.5rem;">
+    <li><strong>Theta</strong> is positive (you're a net seller of time). The front-month decays faster than the back-month, especially in the last 14 days. Theta accelerates as the front-month approaches expiration.</li>
+    <li><strong>Vega</strong> is positive (you benefit from rising IV, but more importantly, you benefit from IV being higher at the front-month than at entry — the IV crush). Position vega is roughly equal to the front-month minus the back-month.</li>
+    <li><strong>Delta</strong> depends on where the underlying is relative to the strike. ATM strikes give near-zero delta initially; the position becomes directional as the underlying moves away from the strike.</li>
+    <li><strong>Gamma</strong> is positive (you're short gamma on the front-month, long gamma on the back-month — net positive if the back-month is longer). Gamma risk grows in the last week of the front-month.</li>
+   </ul>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;">The lifecycle is roughly: 60–30 DTE (back-month dominates), theta builds slowly, position looks "boring"; 30–14 DTE (front-month enters prime decay window), theta accelerates, position gains value; 14–0 DTE (gamma dominates), the position becomes a directional bet on whether the underlying closes near the strike at expiration.</p>
+
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1.5rem;"><a href="/articles/calendar-spread-greeks-time-decay/" style="color:#c8001e;font-weight:600;">Read the full Time Decay guide →</a></p>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">IV Crush Math</h2>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">The IV crush payoff on a calendar spread comes from the front-month's vega being larger than the back-month's vega (front-month options have higher vega per unit of premium). When IV falls, both legs lose value, but the front-month loses more in absolute terms — and the position gains.</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">A practical example: SPX 7,400 calendar at 30/60 DTE, entered at VIX 22 (elevated). If VIX falls to 14 by the front-month pin (a typical post-event normalization), the front-month's IV drops by ~8 vol points and the back-month's by ~5 vol points. The net vega gain to the position is approximately 0.30 × (8-5) = 0.90 points per spread — material profit on a debit of 4–6 points.</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;">The math works best when IV is elevated at entry and falls back toward historical norms by the front-month pin. The math fails when IV rises (the back-month gains more than the front-month loses) or when the underlying moves sharply away from the strike (the directional loss overwhelms the IV gain).</p>
+
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1.5rem;"><a href="/articles/calendar-spread-iv-crush-math/" style="color:#c8001e;font-weight:600;">Read the full IV Crush Math guide →</a></p>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Earnings Plays</h2>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">Calendar spreads are the canonical pre-earnings play. The thesis: implied volatility is elevated ahead of earnings (because the market prices the unknown outcome); after the earnings release, IV collapses whether the print is good or bad. A calendar spread captures the IV collapse with defined risk.</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">The structure: sell the front-month option expiring just after earnings, buy the back-month option that survives the event. Front-month has 5–14 DTE going into the print; back-month has 35–60 DTE. Net debit is typically 2–4 points on liquid single names. The position profits from the IV crush; it loses if the underlying gaps sharply through the strike (directional risk dominates).</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;">The key risk: an earnings surprise can blow through the long strike, leaving you holding a long option that's now deep ITM/OTM and exposed to the next event. Manage by closing the day after earnings once IV crush is complete; do not hold the long option side through a second event.</p>
+
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1.5rem;"><a href="/articles/calendar-spreads-earnings-iv-crush/" style="color:#c8001e;font-weight:600;">Read the full Earnings Plays guide →</a></p>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Near-Term Expiration Guide</h2>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">The 7-DTE decision is the most important late-cycle choice for a calendar spread. By 7 days to front-month expiration, three scenarios are possible:</p>
+
+   <ul style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;padding-left:1.5rem;">
+    <li><strong>The underlying is near the strike.</strong> Theta is large, gamma is significant but balanced. Hold to expiration for max profit capture. The pin risk works in your favor.</li>
+    <li><strong>The underlying has moved away from the strike.</strong> Theta is small, gamma is dominant. Close the position to avoid further directional loss. Don't hold hoping for a snap-back.</li>
+    <li><strong>An event is approaching (the front-month pin or a major macro print).</strong> Manage actively. Close if the position is profitable enough to lock in. Roll the back-month forward if you have directional conviction and want to stay in the trade.</li>
+   </ul>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;">The default at 7 DTE is "hold to expiration" if the position is in profit and the underlying is near the strike. Otherwise, close.</p>
+
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1.5rem;"><a href="/articles/calendar-spread-near-term-expiration-guide/" style="color:#c8001e;font-weight:600;">Read the full Near-Term Expiration guide →</a></p>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Exit Timing</h2>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">Three exit windows for a calendar spread:</p>
+
+   <ol style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;padding-left:1.5rem;">
+    <li><strong>The day after the front-month pin.</strong> If IV crushed as expected, close the back-month for profit. This is the cleanest exit — you've captured the IV crush and the time decay.</li>
+    <li><strong>At 7 DTE on the front-month.</strong> If the position is in profit but you don't want to wait for the pin, close then. You'll capture most of the value.</li>
+    <li><strong>Anytime the position loses more than 50% of the debit.</strong> Don't wait to find out if it recovers. The trade thesis is broken; close and find the next setup.</li>
+   </ol>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;">Most retail calendar spread losses come from holding past the front-month pin hoping for more profit. By the pin, the trade is essentially over — exit cleanly.</p>
+
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1.5rem;"><a href="/articles/calendar-spread-exit-timing/" style="color:#c8001e;font-weight:600;">Read the full Exit Timing guide →</a></p>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">The Second-Event Risk</h2>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">After the front-month expires, you still hold the back-month option. If a second event hits before you close — earnings, FOMC, FDA decision, macro print — the back-month's IV can swing sharply. The risk is asymmetric: an IV expansion against you can wipe out most of the position's value.</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">The classic second-event scenario: you run a calendar spread through earnings, IV crushes as expected, the position is profitable. You decide to hold the back-month for more upside. Before you can close, the company pre-announces or another major event hits. IV expands sharply; the back-month's value moves sharply against you.</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;">The fix: close the back-month the day after the front-month pin. If you want to maintain directional exposure, open a fresh position with new strikes and expirations that account for the second event. Don't ride a calendar spread through a second event by accident.</p>
+
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1.5rem;"><a href="/articles/calendar-spread-second-event-risk/" style="color:#c8001e;font-weight:600;">Read the full Second-Event Risk guide →</a></p>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Calendar Spread vs Long Straddle</h2>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">A long straddle (long call + long put at same strike, same expiration) profits from a large move in either direction. A calendar spread profits from time decay and IV crush — usually with the underlying near the strike. The structures have very different risk/reward profiles:</p>
+
+   <ul style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;padding-left:1.5rem;">
+    <li><strong>Long straddle</strong> has unlimited profit in either direction, max loss = debit. Best for binary events with unclear direction (earnings on a name that could swing 10% either way).</li>
+    <li><strong>Calendar spread</strong> has capped profit (typically 1.5–3× the debit), defined risk. Best for events where you expect IV to crush and the underlying to stay near the strike.</li>
+   </ul>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;">Use the calendar spread when you expect a non-event or an event where IV is mispriced. Use the long straddle when you expect a sharp, directional move but don't know which direction. Use the calendar spread as a default; only switch to the straddle when you have explicit directional conviction.</p>
+
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1.5rem;"><a href="/articles/calendar-spread-vs-long-straddle/" style="color:#c8001e;font-weight:600;">Read the Calendar Spread vs Long Straddle comparison →</a></p>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Calendar Spread FAQ</h2>
+
+   <div class="edu-section" style="margin-bottom:24px;">
+    <h3 style="font-size:1.1rem;color:#1a1a1a;margin:1.25rem 0 .5rem;">What is the typical debit on a calendar spread?</h3>
+    <p style="font-size:1rem;line-height:1.7;color:#333;margin-bottom:1rem;">For SPX/NDX-style indices, debits of 4–8 points (per spread, multiplier 100) are typical for 30/60 DTE calendars. For single-name equities, debits of $2–6 per spread (multiplier 100) are typical. The debit depends on IV at entry — higher IV raises the cost but also raises the profit potential.</p>
+
+    <h3 style="font-size:1.1rem;color:#1a1a1a;margin:1.25rem 0 .5rem;">What happens if the underlying gaps through the strike at expiration?</h3>
+    <p style="font-size:1rem;line-height:1.7;color:#333;margin-bottom:1rem;">If the underlying closes substantially above or below the strike at front-month expiration, the front-month expires with intrinsic value (you owe that on the short leg). The back-month is now deep ITM/OTM and behaves like a debit spread. Max loss is still capped at the debit paid, but the position is no longer benefiting from time decay — it's directional.</p>
+
+    <h3 style="font-size:1.1rem;color:#1a1a1a;margin:1.25rem 0 .5rem;">Can I run a calendar spread through earnings?</h3>
+    <p style="font-size:1rem;line-height:1.7;color:#333;margin-bottom:1rem;">Yes — that's the canonical pre-earnings calendar spread. Sell the front-month option expiring just after earnings; buy the back-month option that survives. The trade profits from the IV collapse. Manage by closing the back-month the day after earnings; do not let it ride through a second event.</p>
+
+    <h3 style="font-size:1.1rem;color:#1a1a1a;margin:1.25rem 0 .5rem;">How wide should the expiration spread be?</h3>
+    <p style="font-size:1rem;line-height:1.7;color:#333;margin-bottom:1rem;">Standard width is 30 days (e.g., 30 DTE front-month, 60 DTE back-month). Wider expirations (60/120 DTE) give more time for IV crush to play out but cost more. Narrower expirations (14/45 DTE) are cheaper but riskier — the front-month decays fast but gamma risk grows. 30/60 is the right default for most setups.</p>
+
+    <h3 style="font-size:1.1rem;color:#1a1a1a;margin:1.25rem 0 .5rem;">Are put calendars better than call calendars?</h3>
+    <p style="font-size:1rem;line-height:1.7;color:#333;margin-bottom:1rem;">Put calendars have the same risk/reward profile as call calendars but capitalize on put-side IV specifically. Use put calendars when put skew is steep (puts are expensive relative to calls) and you want maximum IV-crush payoff. Use call calendars when skew is normal or when your directional bias is bullish.</p>
+
+    <h3 style="font-size:1.1rem;color:#1a1a1a;margin:1.25rem 0 .5rem;">What's the minimum account size for calendar spreads?</h3>
+    <p style="font-size:1rem;line-height:1.7;color:#333;margin-bottom:1rem;">For SPX-style calendars with a 100 multiplier, a $25,000–$50,000 account is a reasonable minimum to size positions at 1–2% risk and absorb early-trade drawdowns. For single-name calendars with a 100 multiplier, a $10,000–$25,000 account works if you're selective on liquidity. Sub-$10K accounts should use cash-secured puts or covered calls instead.</p>
+   </div>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">The Full Calendar Spread Series</h2>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">Every concept on this page is a standalone deep-dive. The most-referenced entry point is <a href="/articles/calendar-spreads-earnings-iv-crush/" style="color:#c8001e;font-weight:600;">Calendar Spreads and Earnings IV Crush</a>.</p>
+
+   <ul style="font-size:1rem;line-height:1.7;color:#333;margin-bottom:1.5rem;padding-left:1.5rem;">
+    <li><a href="/articles/calendar-spread-front-load-iv-rank/" style="color:#c8001e;">Front-Load IV Rank — Why 60th Percentile Is the Floor</a></li>
+    <li><a href="/articles/calendar-spread-strike-selection-atm-vs-otm/" style="color:#c8001e;">Strike Selection — ATM vs OTM and Vega Maximization</a></li>
+    <li><a href="/articles/calendar-spread-greeks-time-decay/" style="color:#c8001e;">Greeks: Front-Month Theta vs Back-Month Theta</a></li>
+    <li><a href="/articles/calendar-spread-iv-crush-math/" style="color:#c8001e;">IV Crush Math — Vega, the Earnings Premium, and the Post-Event Collapse</a></li>
+    <li><a href="/articles/calendar-spreads-earnings-iv-crush/" style="color:#c8001e;">Earnings Plays — Pre-Event Setup and Post-Event Exit</a></li>
+    <li><a href="/articles/calendar-spread-near-term-expiration-guide/" style="color:#c8001e;">Near-Term Expiration Guide — The 7-DTE Decision</a></li>
+    <li><a href="/articles/calendar-spread-exit-timing/" style="color:#c8001e;">Exit Timing — Three Windows and When to Use Each</a></li>
+    <li><a href="/articles/calendar-spread-second-event-risk/" style="color:#c8001e;">Second-Event Risk — The Single Biggest Pitfall</a></li>
+    <li><a href="/articles/calendar-spread-vs-long-straddle/" style="color:#c8001e;">Calendar Spread vs Long Straddle — Defined Risk vs Unlimited Upside</a></li>
+   </ul>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Related Research</h2>
+
+   <ul style="font-size:1rem;line-height:1.7;color:#333;margin-bottom:1.5rem;padding-left:1.5rem;">
+    <li><a href="/strategies/bull-call-spreads/" style="color:#c8001e;">Bull Call Spreads</a> — when the thesis is directional rather than IV-driven</li>
+    <li><a href="/articles/2026-05-10-iv-crush-explained/" style="color:#c8001e;">Implied Volatility Crush: How to Position Ahead of Earnings Season</a> — the foundation for the IV-crush thesis</li>
+    <li><a href="/articles/2026-05-23-understanding-the-vix/" style="color:#c8001e;">Understanding the VIX</a> — the IV regime gauge for index-product calendars</li>
+    <li><a href="/articles/2026-07-24-hyperscaler-capex-explained/" style="color:#c8001e;">Hyperscaler CAPEX Explained</a> — hyperscaler earnings are the highest-IV events in tech; calendars are the canonical play</li>
+   </ul>
+
+   <div style="background:#f9f9f9;border:1px solid #e0e0e0;border-top:3px solid #c8001e;padding:24px;margin:2rem 0;">
+    <div class="category-label" style="margin-bottom:12px;">TOOLS WE USE</div>
+    <p style="font-size:0.95rem;line-height:1.7;color:#2a2a2a;margin-bottom:0;">When modeling calendar spread P&amp;L across strikes and expiration cycles — visualizing vega exposure, gamma risk in the final week, and the back-month's sensitivity to a second event — we use <a href="https://optionstrat.com/ventureprise" target="_blank" rel="noopener" style="color:#c8001e;font-weight:600;">OptionsStrat</a>. It's the fastest way to stress-test the structure before entry.</p>
+   </div>
+
+   <div style="margin:2rem 0;padding:1rem;border-left:3px solid #888;background:#fafafa;">
+    <p style="font-size:0.875rem;line-height:1.6;color:#666;margin:0;"><em>For informational and educational purposes only. Not investment advice. Options trading involves substantial risk of loss. Calendar spreads are defined-risk structures, but losses can still reach 100% of the debit paid. Past performance does not guarantee future results. See our <a href="/disclaimer/" style="color:#666;">full disclosure</a>.</em></p>
+   </div>
+
+  </div>
+
+ </main>
+
+ <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+ <script src="/nav.js"></script>
+
+<div id="site-footer">
+  <div class="main-footer">
+   <div class="footer-grid">
+    <div class="footer-brand">
+     <h4>Dependability Holdings LLC</h4>
+     <p>Independent financial research and market analysis. Our work focuses on options market dynamics, volatility regimes, and macro-driven positioning.</p>
+    </div>
+    <div class="footer-nav">
+     <h5>Research</h5>
+     <ul>
+      <li><a href="/forecast/">S&amp;P 500 &amp; VIX Forecast</a></li>
+      <li><a href="/commentary/">Market Commentary</a></li>
+      <li><a href="/education/">Options Education</a></li>
+      <li><a href="/strategies/">Options Strategies</a></li>
+     </ul>
+    </div>
+    <div class="footer-nav">
+     <h5>Company</h5>
+     <ul>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/articles/forecast-methodology-2026/">Methodology</a></li>
+      <li><a href="/contact/">Contact</a></li>
+     </ul>
+    </div>
+    <div class="footer-nav">
+     <h5>Legal</h5>
+     <ul>
+      <li><a href="/privacy/">Privacy Policy</a></li>
+      <li><a href="/terms/">Terms of Service</a></li>
+      <li><a href="/disclaimer/">Investment Disclaimer</a></li>
+     </ul>
+    </div>
+   </div>
+   <div class="footer-bottom">
+    <p>&copy; 2026 Dependability Holdings LLC. All rights reserved.</p>
+    <p>For informational purposes only. Not investment advice. See our <a href="/articles/forecast-methodology-2026/">full disclosures</a>.</p>
+   </div>
+  </div>
+</div>
+
+</body>
+</html>

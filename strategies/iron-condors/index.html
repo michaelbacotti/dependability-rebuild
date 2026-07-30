@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Iron Condors: Range-Bound Premium Collection | Dependability Holdings LLC</title>
+ <meta name="description" content="Iron condor strategy: sell OTM put spread + sell OTM call spread to collect premium in range-bound markets. Wing width, profit targets, exit rules, and the full guide.">
+ <link rel="canonical" href="https://dependability.us/strategies/iron-condors/">
+ <meta property="og:type" content="article">
+ <meta property="og:url" content="https://dependability.us/strategies/iron-condors/">
+ <meta property="og:image" content="https://dependability.us/og-image.jpg">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <link rel="manifest" href="/site.webmanifest">
+ <link rel="stylesheet" href="/style.css">
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR7TV6QRSN"></script>
+ <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CR7TV6QRSN');
+ </script>
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+  <div class="page-hero">
+   <h1>Iron Condors: Range-Bound Premium Collection</h1>
+   <p>The defining non-directional options strategy: sell an out-of-the-money put spread and an out-of-the-money call spread to collect premium in markets you expect to stay range-bound.</p>
+  </div>
+
+  <div style="margin:1.5rem auto;max-width:336px;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+   <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+   <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966"></ins>
+  </div>
+
+  <div class="page-content" style="max-width:880px;margin:0 auto;padding:0 1rem 2rem;">
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;">An iron condor is two credit spreads: a short put spread below the underlying and a short call spread above. The position profits if the underlying stays between the short strikes at expiration. It's the cleanest way to express a neutral-to-slightly-directional view that the market is range-bound.</p>
+
+   <div style="background:#f9f9f9;border:1px solid #e0e0e0;border-left:3px solid #c8001e;padding:20px;margin:1.5rem 0;">
+    <p style="font-size:.95rem;line-height:1.7;margin:0;color:#2a2a2a;"><strong>Iron condor essentials.</strong> Target 30–45 DTE. Sell 15–20 S&amp;P points (or equivalent) OTM on each side. Collect $1.50–$2.50 per spread. Take profit at 50% of max profit. Close if the short strike is breached. Avoid holding through FOMC or CPI prints.</p>
+   </div>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Structure and Mechanics</h2>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">A standard iron condor on SPX with the underlying at 7,400:</p>
+
+   <ul style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;padding-left:1.5rem;">
+    <li><strong>Short put spread:</strong> Sell the 7,300 put, buy the 7,250 put. Net credit.</li>
+    <li><strong>Short call spread:</strong> Sell the 7,500 call, buy the 7,550 call. Net credit.</li>
+    <li><strong>Total credit:</strong> $2.00 (per spread, before multiplier).</li>
+    <li><strong>Max profit:</strong> $2.00 (the credit, if both spreads expire worthless).</li>
+    <li><strong>Max loss:</strong> $48.00 (the $50 wing width minus the $2 credit).</li>
+    <li><strong>Breakeven:</strong> 7,302 below and 7,498 above.</li>
+   </ul>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;">The position has a 26:1 reward-to-risk ratio on entry ($2 max profit vs $48 max loss), but the probability of max profit is high if the underlying stays in the range. The expected value depends on the IV regime and the probability the underlying reaches either short strike — that's where modeling matters.</p>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">When to Use an Iron Condor</h2>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">Use an iron condor when:</p>
+
+   <ul style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;padding-left:1.5rem;">
+    <li>You expect the underlying to stay in a defined range (no major breakout catalyst).</li>
+    <li>Implied volatility is elevated (iron condors benefit from IV crush and time decay).</li>
+    <li>No major events (FOMC, CPI, earnings) are within the trade window.</li>
+    <li>You want defined risk for sizing purposes.</li>
+   </ul>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;">Avoid iron condors in strongly trending markets (the breakout will test your short strikes), in low-IV environments (insufficient premium to make the trade attractive), or in the days leading up to major events (vol expansion will inflate the price of your short strikes against you).</p>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Exit Rules</h2>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">The standard exit rules for an iron condor:</p>
+
+   <ul style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;padding-left:1.5rem;">
+    <li><strong>Profit target: 50% of max profit.</strong> Close the position when you've captured half the credit. This is the highest-probability exit and matches the rule for other premium-collection strategies.</li>
+    <li><strong>Stop loss: short strike breach.</strong> If the underlying trades through a short strike, close the position before losses accelerate. If you can't close immediately, roll the untested side closer to collect more premium to offset.</li>
+    <li><strong>Time stop: 21 DTE.</strong> Close at 21 DTE if the position hasn't hit profit target. After 21 DTE, gamma risk grows and the position becomes a directional bet.</li>
+    <li><strong>Event adjustment: never hold through FOMC or CPI.</strong> Close or adjust before any major macro print.</li>
+   </ul>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Related Research</h2>
+
+   <ul style="font-size:1rem;line-height:1.7;color:#333;margin-bottom:1.5rem;padding-left:1.5rem;">
+    <li><a href="/articles/iron-condors-range-bound-markets/" style="color:#c8001e;">Iron Condors for Range-Bound Markets — The Full Guide</a></li>
+    <li><a href="/articles/2026-05-23-understanding-the-vix/" style="color:#c8001e;">Understanding the VIX</a> — IV regime gauge for sizing iron condors</li>
+    <li><a href="/strategies/calendar-spreads/" style="color:#c8001e;">Calendar Spreads</a> — alternative structure when the thesis is IV-driven but the underlying might move</li>
+    <li><a href="/strategies/bull-call-spreads/" style="color:#c8001e;">Bull Call Spreads</a> — directional alternative when you don't expect the underlying to stay in a range</li>
+   </ul>
+
+   <div style="margin:2rem 0;padding:1rem;border-left:3px solid #888;background:#fafafa;">
+    <p style="font-size:0.875rem;line-height:1.6;color:#666;margin:0;"><em>For informational and educational purposes only. Not investment advice. Options trading involves substantial risk of loss. Iron condors are defined-risk structures, but losses can still reach the full wing width minus credit. Past performance does not guarantee future results. See our <a href="/disclaimer/" style="color:#666;">full disclosure</a>.</em></p>
+   </div>
+
+  </div>
+
+ </main>
+
+ <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+ <script src="/nav.js"></script>
+
+<div id="site-footer">
+  <div class="main-footer">
+   <div class="footer-grid">
+    <div class="footer-brand">
+     <h4>Dependability Holdings LLC</h4>
+     <p>Independent financial research and market analysis.</p>
+    </div>
+    <div class="footer-nav">
+     <h5>Research</h5>
+     <ul>
+      <li><a href="/forecast/">S&amp;P 500 &amp; VIX Forecast</a></li>
+      <li><a href="/commentary/">Market Commentary</a></li>
+      <li><a href="/education/">Options Education</a></li>
+      <li><a href="/strategies/">Options Strategies</a></li>
+     </ul>
+    </div>
+    <div class="footer-nav">
+     <h5>Company</h5>
+     <ul>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/articles/forecast-methodology-2026/">Methodology</a></li>
+      <li><a href="/contact/">Contact</a></li>
+     </ul>
+    </div>
+    <div class="footer-nav">
+     <h5>Legal</h5>
+     <ul>
+      <li><a href="/privacy/">Privacy Policy</a></li>
+      <li><a href="/terms/">Terms of Service</a></li>
+      <li><a href="/disclaimer/">Investment Disclaimer</a></li>
+     </ul>
+    </div>
+   </div>
+   <div class="footer-bottom">
+    <p>&copy; 2026 Dependability Holdings LLC. All rights reserved.</p>
+    <p>For informational purposes only. Not investment advice.</p>
+   </div>
+  </div>
+</div>
+
+</body>
+</html>

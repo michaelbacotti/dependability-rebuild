@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Options Foundations: Pricing, Greeks, and Put-Call Parity | Dependability Holdings LLC</title>
+ <meta name="description" content="The foundational knowledge that makes options pricing legible: put-call parity, the Black-Scholes framework, the Greeks (delta, theta, gamma, vega, rho), and how they evolve across a trade.">
+ <link rel="canonical" href="https://dependability.us/education/options-foundations/">
+ <meta property="og:type" content="article">
+ <meta property="og:url" content="https://dependability.us/education/options-foundations/">
+ <meta property="og:image" content="https://dependability.us/og-image.jpg">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <link rel="manifest" href="/site.webmanifest">
+ <link rel="stylesheet" href="/style.css">
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR7TV6QRSN"></script>
+ <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CR7TV6QRSN');
+ </script>
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+  <div class="page-hero">
+   <h1>Options Foundations</h1>
+   <p>The foundational knowledge that makes options pricing legible: how options are priced, what the Greeks measure, and how put-call parity connects calls and puts across strikes and expirations.</p>
+  </div>
+
+  <div style="margin:1.5rem auto;max-width:336px;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+   <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+   <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966"></ins>
+  </div>
+
+  <div class="page-content" style="max-width:880px;margin:0 auto;padding:0 1rem 2rem;">
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;">Every options strategy on Dependability.us rests on the same foundational math: how options are priced (Black-Scholes and beyond), what the Greeks measure (delta, theta, gamma, vega, rho), and how put-call parity connects calls and puts at the same strike. Once you understand these, every strategy becomes a deliberate combination of inputs and exposures. This page is the entry point for the foundations series.</p>
+
+   <div style="background:#f9f9f9;border:1px solid #e0e0e0;border-left:3px solid #c8001e;padding:20px;margin:1.5rem 0;">
+    <p style="font-size:.95rem;line-height:1.7;margin:0;color:#2a2a2a;"><strong>What this page covers.</strong> Put-call parity → Black-Scholes framework → the Greeks (delta, theta, gamma, vega, rho) → how Greeks evolve across a trade.</p>
+   </div>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Put-Call Parity</h2>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">Put-call parity is the relationship that makes options markets coherent. For European-style options on a non-dividend stock at the same strike and expiration:</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;background:#f5f5f5;padding:12px;border-left:3px solid #c8001e;font-family:'Courier New',monospace;">Call Price − Put Price = Stock Price − Strike × e<sup>−rT</sup></p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">In plain English: the price difference between a call and a put at the same strike equals the present value of the difference between the stock price and the strike. If this relationship breaks down — say a call is priced higher than the formula allows — arbitrageurs step in and restore the balance.</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;">Put-call parity is the foundation of synthetic positions. A synthetic long stock = long call + short put (same strike). A synthetic short stock = long put + short call. These synthetics are critical for understanding why bull call spreads and bear put spreads have identical risk profiles, why covered calls and cash-secured puts are mirror images, and why calendar spreads can be analyzed as combinations of synthetics.</p>
+
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1.5rem;"><a href="/articles/2026-05-01-put-call-parity/" style="color:#c8001e;font-weight:600;">Read the full Put-Call Parity guide →</a></p>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">The Greeks</h2>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">The Greeks measure how an option's price responds to changes in the underlying inputs. There are five first-order Greeks:</p>
+
+   <ul style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;padding-left:1.5rem;">
+    <li><strong>Delta (Δ):</strong> how much the option price moves per $1 move in the underlying. Ranges 0–1 for calls, -1 to 0 for puts. ATM options have ~0.5 delta; deep ITM options have ~1 (call) or -1 (put).</li>
+    <li><strong>Theta (Θ):</strong> how much the option loses per day, holding all else equal. Always negative for long options. Accelerates in the final 30 days.</li>
+    <li><strong>Gamma (Γ):</strong> the rate of change of delta per $1 move in the underlying. Largest ATM and near expiration.</li>
+    <li><strong>Vega (ν):</strong> how much the option price moves per 1% change in implied volatility. Always positive for long options.</li>
+    <li><strong>Rho (ρ):</strong> how much the option price moves per 1% change in interest rates. Usually minor for short-dated options, meaningful for long-dated LEAPS.</li>
+   </ul>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;">For multi-leg strategies, the position Greeks are the sum of the leg Greeks. A bull call spread is long delta, negative theta, positive vega — these are net positions that change as the underlying moves and time passes.</p>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">How Greeks Evolve Across a Trade</h2>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">Greeks are not static — they change as the underlying moves and as time passes. The behavior across a trade:</p>
+
+   <ul style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;padding-left:1.5rem;">
+    <li><strong>Days 0–30:</strong> theta is moderate, vega is large. Position is sensitive to IV changes; directional exposure is stable.</li>
+    <li><strong>Days 30–14:</strong> theta accelerates, vega decays, gamma starts to matter near the strikes.</li>
+    <li><strong>Days 14–0:</strong> theta is large, gamma is enormous near the strikes, vega is small. Position behaves like a binary bet.</li>
+   </ul>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;">The "Greeks across the lifecycle" pattern drives most of the exit rules on Dependability.us. The 2-week rule for bull call spreads, the 7-DTE decision for calendar spreads, the 21-DTE exit for iron condors — all are functions of how Greeks behave at those points in the trade.</p>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Related Research</h2>
+
+   <ul style="font-size:1rem;line-height:1.7;color:#333;margin-bottom:1.5rem;padding-left:1.5rem;">
+    <li><a href="/articles/2026-05-23-understanding-the-vix/" style="color:#c8001e;">Understanding the VIX</a> — vol regime context</li>
+    <li><a href="/articles/bull-call-spread-greeks-delta-theta/" style="color:#c8001e;">Bull Call Spread Greeks Across the Lifecycle</a></li>
+    <li><a href="/articles/calendar-spread-greeks-time-decay/" style="color:#c8001e;">Calendar Spread Greeks — Front-Month vs Back-Month</a></li>
+    <li><a href="/education/volatility/" style="color:#c8001e;">Volatility Education</a></li>
+   </ul>
+
+   <div style="margin:2rem 0;padding:1rem;border-left:3px solid #888;background:#fafafa;">
+    <p style="font-size:0.875rem;line-height:1.6;color:#666;margin:0;"><em>For informational and educational purposes only. Not investment advice. See our <a href="/disclaimer/" style="color:#666;">full disclosure</a>.</em></p>
+   </div>
+
+  </div>
+
+ </main>
+
+ <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+ <script src="/nav.js"></script>
+
+<div id="site-footer">
+  <div class="main-footer">
+   <div class="footer-grid">
+    <div class="footer-brand">
+     <h4>Dependability Holdings LLC</h4>
+     <p>Independent financial research and market analysis.</p>
+    </div>
+    <div class="footer-nav">
+     <h5>Research</h5>
+     <ul>
+      <li><a href="/forecast/">S&amp;P 500 &amp; VIX Forecast</a></li>
+      <li><a href="/commentary/">Market Commentary</a></li>
+      <li><a href="/education/">Options Education</a></li>
+      <li><a href="/strategies/">Options Strategies</a></li>
+     </ul>
+    </div>
+    <div class="footer-nav">
+     <h5>Company</h5>
+     <ul>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/articles/forecast-methodology-2026/">Methodology</a></li>
+      <li><a href="/contact/">Contact</a></li>
+     </ul>
+    </div>
+    <div class="footer-nav">
+     <h5>Legal</h5>
+     <ul>
+      <li><a href="/privacy/">Privacy Policy</a></li>
+      <li><a href="/terms/">Terms of Service</a></li>
+      <li><a href="/disclaimer/">Investment Disclaimer</a></li>
+     </ul>
+    </div>
+   </div>
+   <div class="footer-bottom">
+    <p>&copy; 2026 Dependability Holdings LLC. All rights reserved.</p>
+    <p>For informational purposes only. Not investment advice.</p>
+   </div>
+  </div>
+</div>
+
+</body>
+</html>

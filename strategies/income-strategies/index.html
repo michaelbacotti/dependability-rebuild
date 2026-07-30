@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+ <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+ <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+ <title>Covered Calls, Cash-Secured Puts, and the Wheel: Income Strategy Guide | Dependability Holdings LLC</title>
+ <meta name="description" content="Earn premium on existing positions or cash reserves. Covered call strike selection, cash-secured put sizing, and the wheel — with position sizing rules and exit frameworks.">
+ <link rel="canonical" href="https://dependability.us/strategies/income-strategies/">
+ <meta property="og:type" content="article">
+ <meta property="og:url" content="https://dependability.us/strategies/income-strategies/">
+ <meta property="og:image" content="https://dependability.us/og-image.jpg">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <link rel="manifest" href="/site.webmanifest">
+ <link rel="preload" href="/style.css" as="style">
+ <link rel="stylesheet" href="/style.css" media="print" onload="this.media='all'">
+ <noscript><link rel="stylesheet" href="/style.css"></noscript>
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR7TV6QRSN"></script>
+ <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CR7TV6QRSN');
+ </script>
+ <!-- FAQ Schema -->
+ <script type="application/ld+json">
+ {
+   "@context": "https://schema.org",
+   "@type": "FAQPage",
+   "mainEntity": [
+     {"@type": "Question", "name": "What is a covered call?",
+      "acceptedAnswer": {"@type": "Answer", "text": "A covered call owns 100 shares of stock and sells one call against them. The call premium is income; the tradeoff is capping upside at the strike. Used by long-term holders who want to monetize volatility on stocks they plan to hold anyway."}},
+     {"@type": "Question", "name": "What is a cash-secured put?",
+      "acceptedAnswer": {"@type": "Answer", "text": "A cash-secured put sells a put at a strike at or below your target buy-in price and sets aside enough cash to buy 100 shares if assigned. Premium is income; if the put expires worthless, you keep it; if assigned, you buy at your target."}},
+     {"@type": "Question", "name": "What is the Wheel Strategy?",
+      "acceptedAnswer": {"@type": "Answer", "text": "The wheel runs cash-secured puts until assigned, then transitions into covered calls on the assigned shares until called away, then returns to cash-secured puts. It generates income continuously but locks you into a stock through multiple cycles."}},
+     {"@type": "Question", "name": "How much cash should I set aside for a cash-secured put?",
+      "acceptedAnswer": {"@type": "Answer", "text": "100% of the strike price × 100 shares. If you sell a $50 strike put, you need $5,000 in cash reserved. The cash earns interest (money market or short-term Treasuries) until the put expires or you're assigned."}},
+     {"@type": "Question", "name": "When should I roll a covered call?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Roll up and out when the underlying approaches the short strike and you want to maintain the position for more premium. Roll down when the underlying has fallen and you want to reduce the short strike to collect more premium. Don't roll into a worse setup — sometimes closing is correct."}},
+     {"@type": "Question", "name": "What's the risk of the Wheel Strategy?",
+      "acceptedAnswer": {"@type": "Answer", "text": "The wheel traps you in a stock that may be falling. If you sell puts on a stock at $50 and it falls to $30, you get assigned at $50, then sell covered calls at $50 — and watch the stock fall further. Income collected may not offset the unrealized loss. Only wheel stocks you'd be comfortable owning through a drawdown."}}
+   ]
+ }
+ </script>
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+  <div class="page-hero">
+   <h1>Income Strategies</h1>
+   <p>Covered calls, cash-secured puts, and the wheel — premium-collection frameworks for traders who want to generate income on existing positions or on cash reserves, with the discipline to manage exits.</p>
+  </div>
+
+  <div style="margin:1.5rem auto;max-width:336px;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+   <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+   <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966"></ins>
+  </div>
+
+  <div class="page-content" style="max-width:880px;margin:0 auto;padding:0 1rem 2rem;">
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;">Income strategies are the most-used single-leg options structures for retail traders who already own stock or are willing to own it at a target price. Covered calls generate income on long stock by capping upside. Cash-secured puts generate income on cash by waiting to buy at a target. The Wheel combines both into a continuous cycle. This guide covers the mechanics, sizing rules, exit frameworks, and the tradeoffs that determine which income strategy fits which market view.</p>
+
+   <div style="background:#f9f9f9;border:1px solid #e0e0e0;border-left:3px solid #c8001e;padding:20px;margin:1.5rem 0;">
+    <p style="font-size:.95rem;line-height:1.7;margin:0;color:#2a2a2a;"><strong>What this guide covers.</strong> Covered calls on long stock → cash-secured puts on cash reserves → covered call vs cash-secured put comparison → the wheel strategy → position sizing and account risk → income strategy FAQ.</p>
+   </div>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Covered Calls on Long Stock</h2>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">A covered call owns 100 shares of stock and sells one call per 100 shares. The premium is income; the tradeoff is capping upside at the strike. If you own 100 shares of XYZ at $48 and sell a $52 call for $1.50, you collect $150 in premium and agree to sell your shares at $52 if the call is exercised. The position makes money as long as XYZ stays below $52 + the premium collected.</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">Strike selection is the most important decision. Three approaches:</p>
+
+   <ul style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;padding-left:1.5rem;">
+    <li><strong>At-the-money (ATM) calls:</strong> collect the highest premium but cap upside immediately. Best when you expect the stock to be range-bound and you're willing to sell at current levels.</li>
+    <li><strong>Slightly out-of-the-money (OTM) calls:</strong> collect less premium but allow room for upside. Standard choice when you want income but want to participate in some upside.</li>
+    <li><strong>Deep OTM calls:</strong> small premium, large upside room. Best when you expect the stock to move up and want to keep most of that move.</li>
+   </ul>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">Standard strike selection: 1–3% OTM with 30–45 DTE. This collects 30–60% of the premium an ATM call would, while allowing meaningful upside capture.</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">Expiration: 30–45 DTE is the sweet spot for monthly income. Shorter expirations (14–21 DTE) collect less premium but allow more frequent adjustments; longer expirations (60–90 DTE) collect more premium but lock in for longer. Avoid expirations through earnings (the IV crush benefits the call holder, not the seller).</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;">Exit rules: take profit at 50% of the premium collected (close the call for half what you sold it for, capturing the bulk of the time decay). Buy back if the underlying drops >10% from your cost basis (cut losses on the underlying position and reset the call). Roll up and out if the underlying approaches the strike and you want to maintain the position for more premium.</p>
+
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1.5rem;"><a href="/articles/covered-call-income-math/" style="color:#c8001e;font-weight:600;">Read the Covered Call Income Math guide →</a></p>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Cash-Secured Puts</h2>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">A cash-secured put sells a put at a strike at or below your target buy-in price and sets aside enough cash to buy 100 shares if assigned. If you want to buy XYZ at $45 and it's currently at $48, sell a $45 put for $1.20. Collect $120 in premium; if XYZ stays above $45, the put expires worthless and you keep the premium. If XYZ falls below $45, you're assigned and buy at $45 — effectively your cost basis is $43.80 ($45 minus the $1.20 premium).</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">The 100% cash collateral rule: every short put requires cash equal to the strike × 100 shares held in reserve. A $50 strike requires $5,000 in cash; a $45 strike requires $4,500. The cash earns interest (typically in a money market fund or short-term Treasury) until the put expires or you're assigned.</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">Strike selection for cash-secured puts:</p>
+
+   <ul style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;padding-left:1.5rem;">
+    <li><strong>At your target buy-in price:</strong> maximum premium for the strike you'd be happy to own at.</li>
+    <li><strong>Slightly below your target:</strong> less premium but better margin of safety — only assigned if the stock falls further than you wanted to buy.</li>
+    <li><strong>Below support levels:</strong> technical levels where you'd expect buying interest to step in.</li>
+   </ul>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;">Exit rules: take profit at 50% of premium collected (buy back the put for half what you sold it for). Roll down if the underlying drops significantly and you want to maintain the position at a lower strike for more premium. Avoid rolling into a worse setup — if your target buy-in is below current levels, you might want to close and wait for a better entry.</p>
+
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1.5rem;"><a href="/articles/cash-secured-put-reserve-cash-sizing/" style="color:#c8001e;font-weight:600;">Read the Cash-Secured Put Reserve Cash Sizing guide →</a></p>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Covered Call vs Cash-Secured Put</h2>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">Both strategies generate income but differ in obligation and exposure:</p>
+
+   <ul style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;padding-left:1.5rem;">
+    <li><strong>Covered call</strong> requires you to already own the stock. Caps upside at the strike but the downside is just the stock falling (you keep the premium as a small cushion).</li>
+    <li><strong>Cash-secured put</strong> requires you to have cash reserved. If the put is assigned, you buy the stock at the strike (lower than current price by the premium collected). If not assigned, you keep the premium and the cash.</li>
+   </ul>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">Tax treatment differs. Covered calls on stock held for more than a year qualify for long-term capital gains treatment on the stock if called away. Cash-secured puts that get assigned start a new holding period on the resulting stock. Short-term vs long-term capital gains can swing the after-tax return materially.</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;">Practical rule: if you already own the stock and want to generate income on it, sell a covered call. If you have cash and want to buy the stock at a discount to current levels, sell a cash-secured put. The two strategies are mirror images of each other.</p>
+
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1.5rem;"><a href="/articles/covered-call-vs-cash-secured-put-comparison/" style="color:#c8001e;font-weight:600;">Read the full Covered Call vs Cash-Secured Put comparison →</a></p>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">The Wheel Strategy</h2>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">The Wheel runs cash-secured puts until assigned, then transitions into covered calls on the assigned shares until called away, then returns to cash-secured puts. It generates income continuously as long as the underlying stays in a range:</p>
+
+   <ol style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;padding-left:1.5rem;">
+    <li><strong>Phase 1 — Cash-secured put:</strong> Sell a put at your target buy-in price. Collect premium. Wait for expiration or assignment.</li>
+    <li><strong>Phase 2 — Covered call:</strong> If assigned, you now own 100 shares at the strike. Sell a covered call at or above your cost basis. Collect premium. Wait for the call to expire or be exercised.</li>
+    <li><strong>Phase 3 — Back to phase 1:</strong> If called away, you've sold at the strike + premium. Return to cash, sell another cash-secured put at the new lower price target.</li>
+   </ol>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">The Wheel works well in range-bound or slowly-trending markets. It generates consistent income as long as the underlying doesn't break out sharply in either direction. The trap: in a sharp downtrend, you get assigned, sell covered calls above your cost basis, watch the stock fall further, and accumulate unrealized losses that exceed the income collected.</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;">The Wheel is appropriate for stocks you'd be comfortable owning through a drawdown. If the stock falls 30% and you have to hold the position, that's a real cost. Don't run the Wheel on names where the downside scenario would force you to sell at a loss.</p>
+
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1.5rem;"><a href="/articles/wheel-strategy-covered-call-cash-secured-put/" style="color:#c8001e;font-weight:600;">Read the full Wheel Strategy guide →</a></p>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Position Sizing and Account Risk</h2>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">Income strategies are defined-outcome but not riskless. Cash-secured puts have downside equal to the strike minus current price (if the stock goes to zero, you're buying at the strike). Covered calls cap upside but the underlying stock still has full downside. Position sizing matters.</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1rem;">Standard rule: keep cash-secured put collateral under 30–50% of the trading account. If you have $100K, reserve $30–50K for short puts. Don't put all your cash to work selling puts — diversification matters even in income strategies.</p>
+
+   <p style="font-size:1.0625rem;line-height:1.8;color:#333;margin-bottom:1.5rem;">For covered calls, the position size is determined by the underlying stock position. Use the same position sizing rules you would for outright stock ownership — 1–5% of the account per single name, more if it's a long-term core holding.</p>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Income Strategy FAQ</h2>
+
+   <div class="edu-section" style="margin-bottom:24px;">
+    <h3 style="font-size:1.1rem;color:#1a1a1a;margin:1.25rem 0 .5rem;">How much can I realistically earn with covered calls?</h3>
+    <p style="font-size:1rem;line-height:1.7;color:#333;margin-bottom:1rem;">A typical monthly covered call on a liquid large-cap stock collects 0.5–2% of the stock value in premium. Annualized, that's 6–24% if you roll monthly — but with capped upside and continued stock risk. Real returns after assignment and dividend events tend to be 8–15% annualized in favorable regimes and lower (or negative) when the stock falls.</p>
+
+    <h3 style="font-size:1.1rem;color:#1a1a1a;margin:1.25rem 0 .5rem;">What happens if my cash-secured put gets assigned?</h3>
+    <p style="font-size:1rem;line-height:1.7;color:#333;margin-bottom:1rem;">You buy 100 shares at the strike price. The cash collateral is converted to the stock position. Your effective cost basis is the strike minus the premium you collected. You now own the stock — typically the next move is to sell a covered call against it to continue generating income (the Wheel).</p>
+
+    <h3 style="font-size:1.1rem;color:#1a1a1a;margin:1.25rem 0 .5rem;">Can I sell puts on a stock I wouldn't want to own?</h3>
+    <p style="font-size:1rem;line-height:1.7;color:#333;margin-bottom:1rem;">Technically yes — there's no rule against it. But it's a bad idea. If you sell puts on a stock you don't want to own, getting assigned creates a position you don't want to hold, and you'll often sell at a loss to exit. Only sell puts on stocks you'd be comfortable owning through a drawdown.</p>
+
+    <h3 style="font-size:1.1rem;color:#1a1a1a;margin:1.25rem 0 .5rem;">Should I roll or close when the underlying moves against me?</h3>
+    <p style="font-size:1rem;line-height:1.7;color:#333;margin-bottom:1rem;">It depends on whether the new setup is better than the old. If rolling down a put gives you a lower strike (better entry) for net additional premium, roll. If rolling forces you into a worse setup or extends a position that's working against you, close. The default rule: closing is correct more often than rolling.</p>
+
+    <h3 style="font-size:1.1rem;color:#1a1a1a;margin:1.25rem 0 .5rem;">What's the breakeven on a covered call?</h3>
+    <p style="font-size:1rem;line-height:1.7;color:#333;margin-bottom:1rem;">The breakeven is your cost basis minus the premium collected. If you bought at $50 and sold a $52 call for $1.50, breakeven is $48.50. Below $48.50, you're net negative; above $52, you cap your upside at $52 + the premium.</p>
+
+    <h3 style="font-size:1.1rem;color:#1a1a1a;margin:1.25rem 0 .5rem;">Are weekly covered calls a good idea?</h3>
+    <p style="font-size:1rem;line-height:1.7;color:#333;margin-bottom:1rem;">Weekly covered calls collect less premium per trade but allow more frequent adjustments. The trade-off is more transaction costs and more management time. Weekly is appropriate for traders who want active income; monthly is the default for most long-term holders.</p>
+   </div>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">The Income Strategy Series</h2>
+
+   <ul style="font-size:1rem;line-height:1.7;color:#333;margin-bottom:1.5rem;padding-left:1.5rem;">
+    <li><a href="/articles/covered-call-income-math/" style="color:#c8001e;">Covered Call Income Math — Premium, Caps, and Yield</a></li>
+    <li><a href="/articles/cash-secured-put-reserve-cash-sizing/" style="color:#c8001e;">Cash-Secured Put Reserve Cash Sizing — The 100% Collateral Rule</a></li>
+    <li><a href="/articles/covered-call-vs-cash-secured-put-comparison/" style="color:#c8001e;">Covered Call vs Cash-Secured Put — Tax, Assignment, and Use Cases</a></li>
+    <li><a href="/articles/wheel-strategy-covered-call-cash-secured-put/" style="color:#c8001e;">The Wheel Strategy — CSP to Covered Call and Back</a></li>
+    <li><a href="/articles/covered-calls-cash-secured-puts-income/" style="color:#c8001e;">Covered Calls &amp; Cash-Secured Puts for Income — A Complete Framework</a></li>
+   </ul>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Related Research</h2>
+
+   <ul style="font-size:1rem;line-height:1.7;color:#333;margin-bottom:1.5rem;padding-left:1.5rem;">
+    <li><a href="/strategies/bull-call-spreads/" style="color:#c8001e;">Bull Call Spreads</a> — defined-risk directional alternative to covered calls when you don't own the underlying</li>
+    <li><a href="/strategies/calendar-spreads/" style="color:#c8001e;">Calendar Spreads</a> — IV-driven premium collection without the obligation of stock ownership</li>
+    <li><a href="/articles/2026-05-23-understanding-the-vix/" style="color:#c8001e;">Understanding the VIX</a> — IV regime gauge for sizing covered call strikes</li>
+   </ul>
+
+   <div style="margin:2rem 0;padding:1rem;border-left:3px solid #888;background:#fafafa;">
+    <p style="font-size:0.875rem;line-height:1.6;color:#666;margin:0;"><em>For informational and educational purposes only. Not investment advice. Options trading involves substantial risk of loss. Income strategies cap upside and may leave you holding stocks in drawdowns. Past performance does not guarantee future results. See our <a href="/disclaimer/" style="color:#666;">full disclosure</a>.</em></p>
+   </div>
+
+  </div>
+
+ </main>
+
+ <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+ <script src="/nav.js"></script>
+
+<div id="site-footer">
+  <div class="main-footer">
+   <div class="footer-grid">
+    <div class="footer-brand">
+     <h4>Dependability Holdings LLC</h4>
+     <p>Independent financial research and market analysis. Our work focuses on options market dynamics, volatility regimes, and macro-driven positioning.</p>
+    </div>
+    <div class="footer-nav">
+     <h5>Research</h5>
+     <ul>
+      <li><a href="/forecast/">S&amp;P 500 &amp; VIX Forecast</a></li>
+      <li><a href="/commentary/">Market Commentary</a></li>
+      <li><a href="/education/">Options Education</a></li>
+      <li><a href="/strategies/">Options Strategies</a></li>
+     </ul>
+    </div>
+    <div class="footer-nav">
+     <h5>Company</h5>
+     <ul>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/articles/forecast-methodology-2026/">Methodology</a></li>
+      <li><a href="/contact/">Contact</a></li>
+     </ul>
+    </div>
+    <div class="footer-nav">
+     <h5>Legal</h5>
+     <ul>
+      <li><a href="/privacy/">Privacy Policy</a></li>
+      <li><a href="/terms/">Terms of Service</a></li>
+      <li><a href="/disclaimer/">Investment Disclaimer</a></li>
+     </ul>
+    </div>
+   </div>
+   <div class="footer-bottom">
+    <p>&copy; 2026 Dependability Holdings LLC. All rights reserved.</p>
+    <p>For informational purposes only. Not investment advice. See our <a href="/articles/forecast-methodology-2026/">full disclosures</a>.</p>
+   </div>
+  </div>
+</div>
+
+</body>
+</html>
