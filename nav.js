@@ -45,6 +45,8 @@
    '  <a href="/articles/">Articles</a>',
    '  <a href="/strategies/">Strategies</a>',
    '  <a href="/education/">Education</a>',
+   '  <a href="/macro/">Macro &amp; Rates</a>',
+   '  <a href="/sectors/">Sectors</a>',
    ' </div>',
    '</div>'
   ].join('\n');
@@ -69,6 +71,18 @@
      path === '/forecast/'   || path.startsWith('/forecast')) {
   var parent = document.querySelector('.tab-bar-inner .dropdown-toggle');
   if (parent) parent.classList.add('active');
+ }
+
+ // If we're on /macro/<anything>, light up Macro tab
+ if (path.startsWith('/macro')) {
+  var macroTab = document.querySelector('.tab-bar-inner a[href="/macro/"]');
+  if (macroTab) macroTab.classList.add('active');
+ }
+
+ // If we're on /sectors/<anything>, light up Sectors tab
+ if (path.startsWith('/sectors')) {
+  var sectorsTab = document.querySelector('.tab-bar-inner a[href="/sectors/"]');
+  if (sectorsTab) sectorsTab.classList.add('active');
  }
 
  // ── Touch / click fallback for the dropdown (no hover on tablets) ──────────
