@@ -42,6 +42,13 @@
    '  <p>&copy; 2026 Dependability Holdings LLC. All rights reserved.</p>',
    '  <p>For informational purposes only. Not investment advice. '
    +    'See our <a href="/methodology/">full disclosures</a>.</p>',
+   '  <p style="font-size:.8rem;color:#888;margin-top:.5rem;">'
+   +    'Affiliate disclosure: Some outbound links in our market commentary and strategy articles are affiliate links. '
+   +    'When a link is to an affiliate partner (e.g., <a href="https://optionstrat.com/ventureprise" rel="sponsored noopener">OptionStrat</a>), '
+   +    'Dependability Holdings LLC may earn a commission at no cost to the reader. '
+   +    'Affiliate relationships do not influence our editorial coverage, sourcing, or analysis. '
+   +    'See <a href="/methodology/">Research Methodology &amp; Disclosures</a> for the full disclosure.'
+   +    '</p>',
    ' </div>',
    '</div>'
   ].join('\n');
