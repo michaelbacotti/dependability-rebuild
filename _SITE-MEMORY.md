@@ -224,5 +224,5 @@ Current homepage card sections:
 
 ## Build & Deploy
 - Edit HTML source in `entities/dependability/website/`
-- Commit and push to `github.com/michaelbacoti/dependability-rebuild`
+- Commit and push to `github.com/michaelbacotti/dependability-rebuild`
 - Deploy via CF Pages or run `workflows/dependability/forecast-update.lobster` for full deploy
