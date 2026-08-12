@@ -19,6 +19,25 @@
  .share-btn { display: inline-flex; align-items: center; gap: 5px; padding: 7px 12px; border-radius: 4px; font-size: 12px; text-decoration: none; border: 1px solid #cc0000; background: transparent; cursor: pointer; font-family: inherit; color: #cc0000; transition: opacity 0.15s; }
  .share-btn:hover { opacity: 0.7; }
  .disclaimer { margin: 2.5rem 0; padding: 1rem 1.25rem; background: #f5f0e8; border-left: 4px solid #cc0000; font-size: 0.875rem; line-height: 1.6; color: #555; }
+
+ /* Phase 2A: breadcrumbs + related-articles */
+ .article-breadcrumb { font-size: 0.8125rem; margin: 1.25rem 0 0.75rem; color: #888; }
+ .article-breadcrumb ol { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+ .article-breadcrumb li { display: inline-flex; align-items: center; }
+ .article-breadcrumb li:not(:last-child)::after { content: "›"; margin-left: 0.5rem; color: #bbb; font-weight: 400; }
+ .article-breadcrumb a { color: #888; text-decoration: none; transition: color 0.15s; }
+ .article-breadcrumb a:hover { color: #c8001e; text-decoration: underline; }
+ .article-breadcrumb [aria-current="page"] { color: #444; font-weight: 500; }
+ .related-articles { margin: 2.5rem 0 1rem; padding: 1.5rem 0; border-top: 1px solid #e8e4dd; }
+ .related-articles h2 { font-size: 1.125rem; margin: 0 0 1.25rem; color: #555; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
+ .related-articles ul { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
+ .related-articles li { padding: 0.75rem 0; border-bottom: 1px solid #f0ece5; }
+ .related-meta { font-size: 0.75rem; color: #999; margin-bottom: 0.25rem; }
+ .related-cat { color: #c8001e; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+ .related-articles h4 { margin: 0 0 0.25rem; font-size: 1rem; line-height: 1.35; font-weight: 600; }
+ .related-articles h4 a { color: #1a1a1a; text-decoration: none; }
+ .related-articles h4 a:hover { color: #c8001e; text-decoration: underline; }
+ .related-articles p { margin: 0; font-size: 0.875rem; line-height: 1.5; color: #666; }
  </style>
 <link rel="canonical" href="https://dependability.us/archive/"> <meta property="og:title" content="PAGE TITLE">
  <meta property="og:description" content="PAGE DESCRIPTION">
@@ -59,7 +78,7 @@
  <div id="site-nav"></div>
 
  <main>
-<!-- BANNER_AREA -->
+
 
   <div class="page-hero">
    <h1>Afternoon Market Commentary Archive</h1>
@@ -76,108 +95,12 @@
    <div style="margin-bottom:32px;"><a href="/forecast/">&#8592; Back to current forecast</a></div>
    <div class="archive-list">
 
-    <article id="forecast-2026-08-10" style="padding:20px 0;border-bottom:1px solid #e0e0e0;">
-     <div style="font-size:0.7rem;font-weight:600;color:var(--color-accent);letter-spacing:.05em;text-transform:uppercase;margin-bottom:6px;">AFTERNOON MARKET COMMENTARY — August 10, 2026</div>
-     <div style="font-size:1.25rem;font-weight:bold;color:#1a1a1a;margin-bottom:8px;">S&P 500 Daily Update — August 10, 2026: Record Close Holds as Energy + Healthcare Lead Defensive Rotation | Dependability</div>
-     <p style="font-size:0.9rem;color:#555;margin-bottom:10px;"><strong>Current:</strong> 7,753.11 &nbsp;|&nbsp; <strong>1-Month:</strong> 7,800 &nbsp;|&nbsp; <strong>3-Month:</strong> 7,900 &nbsp;|&nbsp; <strong>Year-End:</strong> 8,000</p>
-     <div style="font-size:0.9rem;color:#555;line-height:1.6;margin-bottom:8px;">S&P 500 holds at 7,753.11 on Monday's close (-0.06%) as energy (XLE +4.66%) and healthcare (XLV +1.76%) lead a defensive rotation; gold (GLD +8.34% WTD) extends</div>
-     <div style="font-size:.8rem;"><a href="/forecast/2026-08-10/" style="color:#c8001e;text-decoration:none;border-bottom:1px solid #c8001e;">View full forecast &#8594;</a></div>
-     <div style="margin-top:8px;font-size:.8rem;color:#888;">Previous forecast: <a href="/forecast/2026-08-09/" style="color:#c8001e;">August 09, 2026</a></div>
-    </article>
-    <article id="forecast-2026-08-09" style="padding:20px 0;border-bottom:1px solid #e0e0e0;">
-     <div style="font-size:0.7rem;font-weight:600;color:var(--color-accent);letter-spacing:.05em;text-transform:uppercase;margin-bottom:6px;">AFTERNOON MARKET COMMENTARY — August 09, 2026</div>
-     <div style="font-size:1.25rem;font-weight:bold;color:#1a1a1a;margin-bottom:8px;">S&P 500 Weekly Forecast — Week of August 9, 2026: Jobs Report Cuts, Hormuz Deal Nears, CPI Week Looms</div>
-     <p style="font-size:0.9rem;color:#555;margin-bottom:10px;"><strong>Current:</strong> 7,757.64 &nbsp;|&nbsp; <strong>1-Month:</strong> 7,800 &nbsp;|&nbsp; <strong>3-Month:</strong> 7,900 &nbsp;|&nbsp; <strong>Year-End:</strong> 8,000</p>
-     <div style="font-size:0.9rem;color:#555;line-height:1.6;margin-bottom:8px;">S&P 500 closes week at 7,757.64 (+2.07% WTD) after record Friday close on -23K July payrolls + Fed cut hopes; Iran Hormuz deal framework close; CPI Wednesday th</div>
-     <div style="font-size:.8rem;"><a href="/forecast/2026-08-09/" style="color:#c8001e;text-decoration:none;border-bottom:1px solid #c8001e;">View full forecast &#8594;</a></div>
-     <div style="margin-top:8px;font-size:.8rem;color:#888;">Previous forecast: <a href="/forecast/2026-08-07/" style="color:#c8001e;">August 07, 2026</a></div>
-    </article>
-    <article id="forecast-2026-08-07" style="padding:20px 0;border-bottom:1px solid #e0e0e0;">
-     <div style="font-size:0.7rem;font-weight:600;color:var(--color-accent);letter-spacing:.05em;text-transform:uppercase;margin-bottom:6px;">AFTERNOON MARKET COMMENTARY — August 07, 2026</div>
-     <div style="font-size:1.25rem;font-weight:bold;color:#1a1a1a;margin-bottom:8px;">S&P 500 Daily Update — August 7, 2026</div>
-     <p style="font-size:0.9rem;color:#555;margin-bottom:10px;"><strong>Current:</strong> 7,757.64 &nbsp;|&nbsp; <strong>1-Month:</strong> 7,800 &nbsp;|&nbsp; <strong>3-Month:</strong> 7,900 &nbsp;|&nbsp; <strong>Year-End:</strong> 8,000</p>
-     <div style="font-size:0.9rem;color:#555;line-height:1.6;margin-bottom:8px;">S&P 500 closes at 7,757.64 (+0.62%) for a fresh record after a hot-macro-turns-cool July Jobs Report (-23K vs +110K consensus, unemployment 4.1% unchanged); Nas</div>
-     <div style="font-size:.8rem;"><a href="/forecast/2026-08-07/" style="color:#c8001e;text-decoration:none;border-bottom:1px solid #c8001e;">View full forecast &#8594;</a></div>
-     <div style="margin-top:8px;font-size:.8rem;color:#888;">Previous forecast: <a href="/forecast/2026-08-06/" style="color:#c8001e;">August 06, 2026</a></div>
-    </article>
-    <article id="forecast-2026-08-06" style="padding:20px 0;border-bottom:1px solid #e0e0e0;">
-     <div style="font-size:0.7rem;font-weight:600;color:var(--color-accent);letter-spacing:.05em;text-transform:uppercase;margin-bottom:6px;">AFTERNOON MARKET COMMENTARY — August 06, 2026</div>
-     <div style="font-size:1.25rem;font-weight:bold;color:#1a1a1a;margin-bottom:8px;">S&P 500 Daily Update — August 6, 2026</div>
-     <p style="font-size:0.9rem;color:#555;margin-bottom:10px;"><strong>Current:</strong> 7,709.96 &nbsp;|&nbsp; <strong>1-Month:</strong> 7,800 &nbsp;|&nbsp; <strong>3-Month:</strong> 7,900 &nbsp;|&nbsp; <strong>Year-End:</strong> 8,000</p>
-     <div style="font-size:0.9rem;color:#555;line-height:1.6;margin-bottom:8px;">S&P 500 eases -0.18% to 7,709.96 ahead of Friday's July Jobs Report as Iran's restrictive Hormuz draft plan lifts oil (XLE +1.45%, day's leader); megacap tech c</div>
-     <div style="font-size:.8rem;"><a href="/forecast/2026-08-06/" style="color:#c8001e;text-decoration:none;border-bottom:1px solid #c8001e;">View full forecast &#8594;</a></div>
-     <div style="margin-top:8px;font-size:.8rem;color:#888;">Previous forecast: <a href="/forecast/2026-08-04/" style="color:#c8001e;">August 04, 2026</a></div>
-    </article>
-    <article id="forecast-2026-08-04" style="padding:20px 0;border-bottom:1px solid #e0e0e0;">
-     <div style="font-size:0.7rem;font-weight:600;color:var(--color-accent);letter-spacing:.05em;text-transform:uppercase;margin-bottom:6px;">AFTERNOON MARKET COMMENTARY — August 04, 2026</div>
-     <div style="font-size:1.25rem;font-weight:bold;color:#1a1a1a;margin-bottom:8px;">S&P 500 Daily Update — August 4, 2026</div>
-     <p style="font-size:0.9rem;color:#555;margin-bottom:10px;"><strong>Current:</strong> 7,736.52 &nbsp;|&nbsp; <strong>1-Month:</strong> 7,800 &nbsp;|&nbsp; <strong>3-Month:</strong> 7,900 &nbsp;|&nbsp; <strong>Year-End:</strong> 8,000</p>
-     <div style="font-size:0.9rem;color:#555;line-height:1.6;margin-bottom:8px;">S&P 500 closes at 7,736.52 (+1.79% on the day) for a fresh all-time high as mega-cap tech extends the post-Palantir re-rate and Strait of Hormuz reopening hopes</div>
-     <div style="font-size:.8rem;"><a href="/forecast/2026-08-04/" style="color:#c8001e;text-decoration:none;border-bottom:1px solid #c8001e;">View full forecast &#8594;</a></div>
-     <div style="margin-top:8px;font-size:.8rem;color:#888;">Previous forecast: <a href="/forecast/2026-08-03/" style="color:#c8001e;">August 03, 2026</a></div>
-    </article>
-    <article id="forecast-2026-08-03" style="padding:20px 0;border-bottom:1px solid #e0e0e0;">
-     <div style="font-size:0.7rem;font-weight:600;color:var(--color-accent);letter-spacing:.05em;text-transform:uppercase;margin-bottom:6px;">AFTERNOON MARKET COMMENTARY — August 03, 2026</div>
-     <div style="font-size:1.25rem;font-weight:bold;color:#1a1a1a;margin-bottom:8px;">S&P 500 Daily Update — August 3, 2026</div>
-     <p style="font-size:0.9rem;color:#555;margin-bottom:10px;"><strong>Current:</strong> 7,600.50 &nbsp;|&nbsp; <strong>1-Month:</strong> 7,650 &nbsp;|&nbsp; <strong>3-Month:</strong> 7,750 &nbsp;|&nbsp; <strong>Year-End:</strong> 7,800</p>
-     <div style="font-size:0.9rem;color:#555;line-height:1.6;margin-bottom:8px;">S&P 500 closes at 7,600.50 (+1.48% on the day, +2.53% WTD) as the post-AMZN/MSFT mega-cap tech re-rate extends and Iran de-escalation (Trump's Saturday call-off</div>
-     <div style="font-size:.8rem;"><a href="/forecast/2026-08-03/" style="color:#c8001e;text-decoration:none;border-bottom:1px solid #c8001e;">View full forecast &#8594;</a></div>
-     <div style="margin-top:8px;font-size:.8rem;color:#888;">Previous forecast: <a href="/forecast/2026-08-02/" style="color:#c8001e;">August 02, 2026</a></div>
-    </article>
-    <article id="forecast-2026-08-02" style="padding:20px 0;border-bottom:1px solid #e0e0e0;">
-     <div style="font-size:0.7rem;font-weight:600;color:var(--color-accent);letter-spacing:.05em;text-transform:uppercase;margin-bottom:6px;">AFTERNOON MARKET COMMENTARY — August 02, 2026</div>
-     <div style="font-size:1.25rem;font-weight:bold;color:#1a1a1a;margin-bottom:8px;">S&P 500 Weekly Forecast — Week of August 2, 2026: Mega-Cap Tech Validates AI Capex as 10Y Tops 4.70%</div>
-     <p style="font-size:0.9rem;color:#555;margin-bottom:10px;"><strong>Current:</strong> 7,489.72 &nbsp;|&nbsp; <strong>1-Month:</strong> 7,500 &nbsp;|&nbsp; <strong>3-Month:</strong> 7,600 &nbsp;|&nbsp; <strong>Year-End:</strong> 7,800</p>
-     <div style="font-size:0.9rem;color:#555;line-height:1.6;margin-bottom:8px;">S&P 500 at 7,489.72 (+1.03% WTD) as Amazon's record AWS beat (+37% YoY) and Microsoft's 15% post-earnings surge validate the AI capex durability thesis — but th</div>
-     <div style="font-size:.8rem;"><a href="/forecast/2026-08-02/" style="color:#c8001e;text-decoration:none;border-bottom:1px solid #c8001e;">View full forecast &#8594;</a></div>
-     <div style="margin-top:8px;font-size:.8rem;color:#888;">Previous forecast: <a href="/forecast/2026-07-31/" style="color:#c8001e;">July 31, 2026</a></div>
-    </article>
-    <article id="forecast-2026-07-31" style="padding:20px 0;border-bottom:1px solid #e0e0e0;">
-     <div style="font-size:0.7rem;font-weight:600;color:var(--color-accent);letter-spacing:.05em;text-transform:uppercase;margin-bottom:6px;">AFTERNOON MARKET COMMENTARY — July 31, 2026</div>
-     <div style="font-size:1.25rem;font-weight:bold;color:#1a1a1a;margin-bottom:8px;">S&P 500 Daily Update — July 31, 2026</div>
-     <p style="font-size:0.9rem;color:#555;margin-bottom:10px;"><strong>Current:</strong> 7,489.72 &nbsp;|&nbsp; <strong>1-Month:</strong> 7,500 &nbsp;|&nbsp; <strong>3-Month:</strong> 7,600 &nbsp;|&nbsp; <strong>Year-End:</strong> 7,800</p>
-     <div style="font-size:0.9rem;color:#555;line-height:1.6;margin-bottom:8px;">S&P 500 closes Friday at 7,489.72 (+0.70% on the day, +1.03% WTD) as AMZN Q2's record AWS beat (+37% YoY, fastest in 18 quarters) and June PCE's first negative </div>
-     <div style="font-size:.8rem;"><a href="/forecast/2026-07-31/" style="color:#c8001e;text-decoration:none;border-bottom:1px solid #c8001e;">View full forecast &#8594;</a></div>
-     <div style="margin-top:8px;font-size:.8rem;color:#888;">Previous forecast: <a href="/forecast/2026-07-30/" style="color:#c8001e;">July 30, 2026</a></div>
-    </article>
-    <article id="forecast-2026-07-30" style="padding:20px 0;border-bottom:1px solid #e0e0e0;">
-     <div style="font-size:0.7rem;font-weight:600;color:var(--color-accent);letter-spacing:.05em;text-transform:uppercase;margin-bottom:6px;">AFTERNOON MARKET COMMENTARY — July 30, 2026</div>
-     <div style="font-size:1.25rem;font-weight:bold;color:#1a1a1a;margin-bottom:8px;">S&P 500 Daily Update — July 30, 2026</div>
-     <p style="font-size:0.9rem;color:#555;margin-bottom:10px;"><strong>Current:</strong> 7,437.63 &nbsp;|&nbsp; <strong>1-Month:</strong> 7,500 &nbsp;|&nbsp; <strong>3-Month:</strong> 7,600 &nbsp;|&nbsp; <strong>Year-End:</strong> 7,800</p>
-     <div style="font-size:0.9rem;color:#555;line-height:1.6;margin-bottom:8px;">S&P 500 closes Thursday at 7,437.63 (+1.66% on the day, +0.33% WTD) as Microsoft's record 15% post-earnings surge leads a mega-cap tech re-rate, META's revenue </div>
-     <div style="font-size:.8rem;"><a href="/forecast/2026-07-30/" style="color:#c8001e;text-decoration:none;border-bottom:1px solid #c8001e;">View full forecast &#8594;</a></div>
-     <div style="margin-top:8px;font-size:.8rem;color:#888;">Previous forecast: <a href="/forecast/2026-07-29/" style="color:#c8001e;">July 29, 2026</a></div>
-    </article>
-    <article id="forecast-2026-07-29" style="padding:20px 0;border-bottom:1px solid #e0e0e0;">
-     <div style="font-size:0.7rem;font-weight:600;color:var(--color-accent);letter-spacing:.05em;text-transform:uppercase;margin-bottom:6px;">AFTERNOON MARKET COMMENTARY — July 29, 2026</div>
-     <div style="font-size:1.25rem;font-weight:bold;color:#1a1a1a;margin-bottom:8px;">S&P 500 Daily Update — July 29, 2026</div>
-     <p style="font-size:0.9rem;color:#555;margin-bottom:10px;"><strong>Current:</strong> 7,316.15 &nbsp;|&nbsp; <strong>1-Month:</strong> 7,500 &nbsp;|&nbsp; <strong>3-Month:</strong> 7,600 &nbsp;|&nbsp; <strong>Year-End:</strong> 7,800</p>
-     <div style="font-size:0.9rem;color:#555;line-height:1.6;margin-bottom:8px;">S&P 500 closes Wednesday at 7,316.15 (-1.52% on the day, -1.31% WTD) as the Warsh Fed holds at 3.50-3.75% with 3 hawkish dissents, refuses to call it a 'pause,'</div>
-     <div style="font-size:.8rem;"><a href="/forecast/2026-07-29/" style="color:#c8001e;text-decoration:none;border-bottom:1px solid #c8001e;">View full forecast &#8594;</a></div>
-     <div style="margin-top:8px;font-size:.8rem;color:#888;">Previous forecast: <a href="/forecast/2026-07-28/" style="color:#c8001e;">July 28, 2026</a></div>
-    </article>
-    <article id="forecast-2026-07-28" style="padding:20px 0;border-bottom:1px solid #e0e0e0;">
-     <div style="font-size:0.7rem;font-weight:600;color:var(--color-accent);letter-spacing:.05em;text-transform:uppercase;margin-bottom:6px;">AFTERNOON MARKET COMMENTARY — July 28, 2026</div>
-     <div style="font-size:1.25rem;font-weight:bold;color:#1a1a1a;margin-bottom:8px;">S&P 500 Daily Update — July 28, 2026</div>
-     <p style="font-size:0.9rem;color:#555;margin-bottom:10px;"><strong>Current:</strong> 7,428.78 &nbsp;|&nbsp; <strong>1-Month:</strong> 7,500 &nbsp;|&nbsp; <strong>3-Month:</strong> 7,600 &nbsp;|&nbsp; <strong>Year-End:</strong> 7,800</p>
-     <div style="font-size:0.9rem;color:#555;line-height:1.6;margin-bottom:8px;">S&P 500 closes Tuesday at 7,428.78 (+0.21% on the day, +0.21% WTD) on a defensive-rotation pre-FOMC tape: healthcare (XLV +2.47%) and staples (XLP +1.84%) led, </div>
-     <div style="font-size:.8rem;"><a href="/forecast/2026-07-28/" style="color:#c8001e;text-decoration:none;border-bottom:1px solid #c8001e;">View full forecast &#8594;</a></div>
-     <div style="margin-top:8px;font-size:.8rem;color:#888;">Previous forecast: <a href="/forecast/2026-07-27/" style="color:#c8001e;">July 27, 2026</a></div>
-    </article>
-    <article id="forecast-2026-07-27" style="padding:20px 0;border-bottom:1px solid #e0e0e0;">
-     <div style="font-size:0.7rem;font-weight:600;color:var(--color-accent);letter-spacing:.05em;text-transform:uppercase;margin-bottom:6px;">AFTERNOON MARKET COMMENTARY — July 27, 2026</div>
-     <div style="font-size:1.25rem;font-weight:bold;color:#1a1a1a;margin-bottom:8px;">S&P 500 Daily Update — July 27, 2026</div>
-     <p style="font-size:0.9rem;color:#555;margin-bottom:10px;"><strong>Current:</strong> 7,413.18 &nbsp;|&nbsp; <strong>1-Month:</strong> 7,500 &nbsp;|&nbsp; <strong>3-Month:</strong> 7,600 &nbsp;|&nbsp; <strong>Year-End:</strong> 7,800</p>
-     <div style="font-size:0.9rem;color:#555;line-height:1.6;margin-bottom:8px;">S&P 500 closes essentially flat at 7,413 (+0.02% on the day, -0.40% WTD) as the US-Iran de-escalation extended into a second night of paused strikes, pulling WT</div>
-     <div style="font-size:.8rem;"><a href="/forecast/2026-07-27/" style="color:#c8001e;text-decoration:none;border-bottom:1px solid #c8001e;">View full forecast &#8594;</a></div>
-     <div style="margin-top:8px;font-size:.8rem;color:#888;">Previous forecast: <a href="/forecast/2026-07-26/" style="color:#c8001e;">July 26, 2026</a></div>
-    </article>
-    <article id="forecast-2026-07-26" style="padding:20px 0;border-bottom:1px solid #e0e0e0;">
-     <div style="font-size:0.7rem;font-weight:600;color:var(--color-accent);letter-spacing:.05em;text-transform:uppercase;margin-bottom:6px;">AFTERNOON MARKET COMMENTARY — July 26, 2026</div>
-     <div style="font-size:1.25rem;font-weight:bold;color:#1a1a1a;margin-bottom:8px;">S&P 500 Weekly Forecast — Week of July 26, 2026: Oil Above $100, Durable Goods Miss, and the Pre-FOMC Positioning Window</div>
+    <article id="forecast-2026-07-24" style="padding:20px 0;border-bottom:1px solid #e0e0e0;">
+     <div style="font-size:0.7rem;font-weight:600;color:var(--color-accent);letter-spacing:.05em;text-transform:uppercase;margin-bottom:6px;">AFTERNOON MARKET COMMENTARY — July 24, 2026</div>
+     <div style="font-size:1.25rem;font-weight:bold;color:#1a1a1a;margin-bottom:8px;">Afternoon Market Commentary — July 24, 2026</div>
      <p style="font-size:0.9rem;color:#555;margin-bottom:10px;"><strong>Current:</strong> 7,411.98 &nbsp;|&nbsp; <strong>1-Month:</strong> 7,500 &nbsp;|&nbsp; <strong>3-Month:</strong> 7,600 &nbsp;|&nbsp; <strong>Year-End:</strong> 7,800</p>
-     <div style="font-size:0.9rem;color:#555;line-height:1.6;margin-bottom:8px;">S&P 500 closes week at 7,411.98 (-0.42% WTD) with VIX 18.58 and WTI oil +7.31% to $89.31 Friday close. Weekend: Iran strikes pause for first time in 13 nights (</div>
-     <div style="font-size:.8rem;"><a href="/forecast/2026-07-26/" style="color:#c8001e;text-decoration:none;border-bottom:1px solid #c8001e;">View full forecast &#8594;</a></div>
+     <div style="font-size:0.9rem;color:#555;line-height:1.6;margin-bottom:8px;">S&P 500 closes Friday at 7,411.98 (+0.05% on the day, -0.42% WTD) as the morning's S&P Global Flash US Services PMI surged to 53.6 (vs 51.5 consensus, 51.2 prio</div>
+     <div style="font-size:.8rem;"><a href="/forecast/2026-07-24/" style="color:#c8001e;text-decoration:none;border-bottom:1px solid #c8001e;">View full forecast &#8594;</a></div>
      <div style="margin-top:8px;font-size:.8rem;color:#888;">Previous forecast: <a href="/forecast/2026-07-17/" style="color:#c8001e;">July 17, 2026</a></div>
     </article>
     <article id="forecast-2026-07-17" style="padding:20px 0;border-bottom:1px solid #e0e0e0;">

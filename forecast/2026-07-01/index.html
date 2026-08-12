@@ -19,6 +19,25 @@
  .share-btn { display: inline-flex; align-items: center; gap: 5px; padding: 7px 12px; border-radius: 4px; font-size: 12px; text-decoration: none; border: 1px solid #cc0000; background: transparent; cursor: pointer; font-family: inherit; color: #cc0000; transition: opacity 0.15s; }
  .share-btn:hover { opacity: 0.7; }
  .disclaimer { margin: 2.5rem 0; padding: 1rem 1.25rem; background: #f5f0e8; border-left: 4px solid #cc0000; font-size: 0.875rem; line-height: 1.6; color: #555; }
+
+ /* Phase 2A: breadcrumbs + related-articles */
+ .article-breadcrumb { font-size: 0.8125rem; margin: 1.25rem 0 0.75rem; color: #888; }
+ .article-breadcrumb ol { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+ .article-breadcrumb li { display: inline-flex; align-items: center; }
+ .article-breadcrumb li:not(:last-child)::after { content: "›"; margin-left: 0.5rem; color: #bbb; font-weight: 400; }
+ .article-breadcrumb a { color: #888; text-decoration: none; transition: color 0.15s; }
+ .article-breadcrumb a:hover { color: #c8001e; text-decoration: underline; }
+ .article-breadcrumb [aria-current="page"] { color: #444; font-weight: 500; }
+ .related-articles { margin: 2.5rem 0 1rem; padding: 1.5rem 0; border-top: 1px solid #e8e4dd; }
+ .related-articles h2 { font-size: 1.125rem; margin: 0 0 1.25rem; color: #555; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
+ .related-articles ul { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
+ .related-articles li { padding: 0.75rem 0; border-bottom: 1px solid #f0ece5; }
+ .related-meta { font-size: 0.75rem; color: #999; margin-bottom: 0.25rem; }
+ .related-cat { color: #c8001e; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+ .related-articles h4 { margin: 0 0 0.25rem; font-size: 1rem; line-height: 1.35; font-weight: 600; }
+ .related-articles h4 a { color: #1a1a1a; text-decoration: none; }
+ .related-articles h4 a:hover { color: #c8001e; text-decoration: underline; }
+ .related-articles p { margin: 0; font-size: 0.875rem; line-height: 1.5; color: #666; }
  </style>
 <link rel="canonical" href="https://dependability.us/forecast/2026-07-01/"> <meta property="og:title" content="PAGE TITLE">
  <meta property="og:description" content="PAGE DESCRIPTION">
