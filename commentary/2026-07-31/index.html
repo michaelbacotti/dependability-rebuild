@@ -19,6 +19,25 @@
  .share-btn { display: inline-flex; align-items: center; gap: 5px; padding: 7px 12px; border-radius: 4px; font-size: 12px; text-decoration: none; border: 1px solid #cc0000; background: transparent; cursor: pointer; font-family: inherit; color: #cc0000; transition: opacity 0.15s; }
  .share-btn:hover { opacity: 0.7; }
  .disclaimer { margin: 2.5rem 0; padding: 1rem 1.25rem; background: #f5f0e8; border-left: 4px solid #cc0000; font-size: 0.875rem; line-height: 1.6; color: #555; }
+
+ /* Phase 2A: breadcrumbs + related-articles */
+ .article-breadcrumb { font-size: 0.8125rem; margin: 1.25rem 0 0.75rem; color: #888; }
+ .article-breadcrumb ol { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+ .article-breadcrumb li { display: inline-flex; align-items: center; }
+ .article-breadcrumb li:not(:last-child)::after { content: "›"; margin-left: 0.5rem; color: #bbb; font-weight: 400; }
+ .article-breadcrumb a { color: #888; text-decoration: none; transition: color 0.15s; }
+ .article-breadcrumb a:hover { color: #c8001e; text-decoration: underline; }
+ .article-breadcrumb [aria-current="page"] { color: #444; font-weight: 500; }
+ .related-articles { margin: 2.5rem 0 1rem; padding: 1.5rem 0; border-top: 1px solid #e8e4dd; }
+ .related-articles h2 { font-size: 1.125rem; margin: 0 0 1.25rem; color: #555; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
+ .related-articles ul { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
+ .related-articles li { padding: 0.75rem 0; border-bottom: 1px solid #f0ece5; }
+ .related-meta { font-size: 0.75rem; color: #999; margin-bottom: 0.25rem; }
+ .related-cat { color: #c8001e; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+ .related-articles h4 { margin: 0 0 0.25rem; font-size: 1rem; line-height: 1.35; font-weight: 600; }
+ .related-articles h4 a { color: #1a1a1a; text-decoration: none; }
+ .related-articles h4 a:hover { color: #c8001e; text-decoration: underline; }
+ .related-articles p { margin: 0; font-size: 0.875rem; line-height: 1.5; color: #666; }
  </style>
 <link rel="canonical" href="https://dependability.us/commentary/2026-07-31/"> <meta property="og:title" content="PAGE TITLE">
  <meta property="og:description" content="PAGE DESCRIPTION">
@@ -34,7 +53,7 @@
   gtag('config', 'G-CR7TV6QRSN');
  </script>
  <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "Article", "headline": "Morning Update \u2014 AMZN Q2 Blowout, AAPL \u22127% Pre-Market; PCE Caps the Week", "description": "AMZN +12% premarket on AWS +37% YoY (fastest since 2021); AAPL \u22127% on weak Q3 guide. SPX 7,437.63 Thu. PCE 8:30 AM ET is the binary catalyst.", "articleSection": "MORNING MARKET ANALYSIS", "datePublished": "2026-07-31", "dateModified": "2026-07-31", "author": {"@type": "Organization", "name": "Dependability Research Desk", "url": "https://dependability.usabout/"}, "publisher": {"@type": "Organization", "name": "Dependability Holdings LLC", "logo": {"@type": "ImageObject", "url": "https://dependability.usog-image.jpg"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://dependability.us/commentary/2026-07-31/"}, "image": "https://dependability.usog-image.jpg"}
+{"@context": "https://schema.org", "@type": "Article", "headline": "Morning Market Analysis \u2014 July 31, 2026 | Dependability Holdings LLC", "description": "AMZN +12% premarket on AWS +37% YoY (fastest since 2021); AAPL \u22127% on weak Q3 guide. SPX 7,437.63 Thu. PCE 8:30 AM ET is the binary catalyst.", "articleSection": "MORNING MARKET ANALYSIS", "datePublished": "2026-07-31T07:00:00-04:00", "dateModified": "2026-07-31T07:00:00-04:00", "author": {"@type": "Organization", "name": "Dependability Research Desk", "url": "https://dependability.usabout/"}, "publisher": {"@type": "Organization", "name": "Dependability Holdings LLC", "logo": {"@type": "ImageObject", "url": "https://dependability.usog-image.jpg"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://dependability.us/commentary/2026-07-31/"}, "image": "https://dependability.usog-image.jpg"}
 </script>
 
 <style>
@@ -59,7 +78,7 @@
  <div id="site-nav"></div>
 
  <main>
-<!-- BANNER_AREA -->
+
 
   <div class="page-hero">
    <h1>Morning Market Analysis</h1>
@@ -72,10 +91,11 @@
 
    <div style="background:#fff;border:1px solid #e0e0e0;padding:24px;margin-bottom:28px;">
     <div class="category-label" style="margin-bottom:14px;">PRE-MARKET BRIEF</div>
-    <h2 style="margin-bottom:16px;border-bottom:2px solid #c8001e;padding-bottom:8px;">Morning Update — AMZN Q2 Blowout, AAPL −7% Pre-Market; PCE Caps the Week</h2>
+    <h2 style="margin-bottom:16px;border-bottom:2px solid #c8001e;padding-bottom:8px;">Morning Market Analysis — July 31, 2026 | Dependability Holdings LLC</h2>
     <p style="font-size:.95rem;color:#666;line-height:1.5;margin-bottom:16px;font-style:italic;">AMZN +12% premarket on AWS +37% YoY (fastest since 2021); AAPL −7% on weak Q3 guide. SPX 7,437.63 Thu. PCE 8:30 AM ET is the binary catalyst.</p>
 <div class="article-body">
 <h1>Morning Market Analysis — Friday, July 31, 2026</h1>
+<p>Morning Market Analysis — Friday, July 31, 2026</p>
 <p>The Q2 earnings tape is sorting AI winners from losers with brutal clarity: <strong>Amazon (AMZN) is +12% in premarket trading (~$263)</strong> following Thursday's after-close Q2 print that landed the strongest AWS expansion since 2021, while <strong>Apple (AAPL) is −7% premarket</strong> on weak Q3 guidance citing memory-supply constraints. Thursday's MSFT +15.5% (record one-day value gain in MSFT history per Motley Fool Midday Update verified) and AMZN's +12% premarket have ended the debate over whether the AI capex cycle is real — the question now is which companies can fund the capex without breaking free cash flow. <strong>ES +0.36% to 7,499.25, NQ +1.13% to 28,556.50, RTY +0.39% at 2,965.90</strong>, and the <strong>VIX normalized to 16.97</strong> (-17.9% from the post-FOMC spike peak of 20.66). Today's binary macro print: <strong>June PCE Inflation Report at 8:30 AM ET</strong> — the Fed's preferred inflation gauge and the cleanest read on whether the post-FOMC re-rate extends into the close.</p>
 <h2>Overnight Headlines</h2>
 <p><strong>AMZN +12% Premarket After Q2 Print — Revenue $200.6B, AWS +37% YoY, Op Income $27.5B (+43% YoY):</strong> Thursday after the close, <a href="https://www.aboutamazon.com/news/company-news/amazon-earnings-q2-2026-report" target="_blank" rel="noopener" style="color:#c8a96e;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px;">Amazon reported Q2 revenue $200.61B vs $196.47B expected (+20% YoY per LSEG)</a>, <strong>AWS revenue +37% year-over-year — fastest growth since 2021</strong>, operating income $27.5B (+43% YoY), $169B annualized AWS run rate. Capex guidance raised to <strong>$220B for 2026</strong>, AWS backlog hit <strong>$496B</strong>. AMZN premarket $262.98 (public.com) implies +11.6% vs Thursday's $235.50 close — the cleanest signal yet that AI capex durability is being repriced upward.</p>
@@ -90,25 +110,17 @@
   <li><strong>10-year yield (^TNX):</strong> 4.663% Thursday close (intraday 4.65-4.68 overnight); TLT $82.66 pre-market — steepener arrested, not extended</li>
   <li><strong>DXY (dollar index):</strong> 100.30, +0.29% vs Thursday's 100.01; UUP ETF $28.22 — dollar stable, not risk-off bid</li>
   <li><strong>WTI crude (CL=F):</strong> $84.94, +1.56% from Thursday's $83.59 settle; gold (GC=F) $4,111.70, +0.28% — risk-on oil bid, gold flat</li>
-</ul>
 <h2>Calendar — Friday, July 31</h2>
-<ul>
   <li><strong>8:30 AM ET — June PCE Inflation Report (<a href="https://www.bea.gov" target="_blank" rel="noopener" style="color:#c8a96e;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px;">BEA</a>):</strong> Consensus +0.2% MoM core, +2.6% YoY (the Fed's preferred inflation gauge after the Warsh-Fed-pause Wednesday). Soft print re-anchors disinflation; hot print pressures 10Y toward 4.70%+ and forces multiple compression. <strong>Binary catalyst for the close.</strong></li>
   <li><strong>8:45 AM ET — Chicago PMI (<a href="https://www.mnimarkets.com" target="_blank" rel="noopener" style="color:#c8a96e;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px;">MNI</a>):</strong> Prior 56.70 (June); print ≥55.0 reinforces manufacturing-recovery narrative.</li>
   <li><strong>10:00 AM ET — UMich Consumer Sentiment (Final, July):</strong> Consensus ~62.0 vs June 60.7; 1Y inflation expectations the cleanest read on household anchoring.</li>
   <li><strong>Earnings Friday:</strong> No major S&P 500 names report. QQQ heavyweight Q2 cycle shifts to next week — GOOGL, AAPL (Aug 1), AVGO, NVDA into mid-August.</li>
-</ul>
 <h2>What to Watch at the Open</h2>
-<ol>
   <li><strong>AMZN +12% vs AAPL −7% — is the AI-winner rotation extending or fading at the bell?</strong> The premarket divergence is the cleanest expression of the new tape thesis: companies whose AI capex generates measurable revenue growth are rewarded; companies whose growth is supply-constrained or whose Q3 guide disappoints are penalized. AMZN's AWS +37% YoY is the gold-standard confirmation; AAPL's 9-11% Q3 guide on memory supply is the gold-standard denial. If AMZN holds above $260 into the cash open, the AI-capex-durable trade extends to GOOGL, NVDA, and the broader chip complex. If AMZN fades back below $250 by 10:00 AM ET, the rotation loses momentum. Watch NVDA premarket tape as the read-through.</li>
-</ol>
-<ol>
   <li><strong>June PCE 8:30 AM ET — the binary catalyst that determines whether the AMZN re-rate extends or fades.</strong> Consensus +0.2% MoM core, +2.6% YoY per the <a href="/forecast/2026-07-30/" style="color:#c8a96e;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px;">yesterday afternoon forecast</a>. The Fed's preferred gauge after the Warsh-Fed-pause-with-hawkish-dissent Wednesday (10Y settled at 4.663% Thu close per ^TNX). A soft print (≤+0.2% MoM core) re-anchors the disinflation thesis — AMZN + MSFT + META's three-print validation sequence plus a soft PCE = the cleanest setup for the 7,500 retest. A hot print (≥+0.3% MoM core) forces a 10Y re-test toward 4.70%+ and pressures multiples.</li>
-</ol>
-<ol>
   <li><strong>VIX at 16.97 — is the post-FOMC vol normalization durable into the close?</strong> VIX dropped from 20.66 (Wed post-FOMC spike) to 17.09 (Thu) to 16.97 (Fri pre) — a -17.9% drawdown in 48 hours. A VIX hold below 17.50 into the close would re-anchor the pre-FOMC vol regime; a re-spike above 18.50 on a hot PCE would confirm the post-FOMC regime remains live. AMZN + MSFT + META + soft PCE = VIX < 17.00; AMZN + MSFT + META + hot PCE = VIX re-tests 18-19 area.</li>
-</ol>
 <h2>The Structural Read</h2>
+</ul>
 <p>The AMZN +12% / AAPL −7% premarket divergence is the cleanest expression of the current tape regime: the market is sorting AI-related businesses into three buckets — <strong>(1) AI-spend-to-profit translators</strong> (MSFT, AMZN, GOOGL — rewarded on confirmation); <strong>(2) AI-spend-as-headwind</strong> (META — punished on capex concerns); <strong>(3) AI-adjacent but supply-constrained</strong> (AAPL — punished on guidance despite no reported miss). The structural bull case is that bucket (1) is broadening; the bear case is that it's concentrated in 3-4 names. The 10Y at 4.663% suggests the bond market is comfortable with both readings — not pricing recession, not pricing reacceleration.</p>
 <p>The post-FOMC reversion (VIX 20.66 → 16.97, SPX 7,316.15 → 7,437.63) is complete in two sessions — a structural signal: the Warsh Fed's 9-3 hawkish-dissent hold was fully absorbed by Thursday's close, and the AMZN-led AI-capex re-rating is the dominant tape driver. The path of least resistance is consolidation in the 7,400-7,500 range as the market digests AMZN's $220B capex raise. The 1-month SPX target of 7,500 is +0.84% above Thursday's 7,437.63 — the closest reading to target since June 12. Friday's close determines whether that target is hit today or deferred into next week's Q2 mega-cap earnings cycle.</p>
 <p><strong>Bottom line:</strong> AMZN's overnight +12% is the structural event of the week — AWS +37% YoY (fastest since 2021) validates the AI-capex thesis Wednesday's FOMC briefly threatened; AAPL's −7% is the counterpoint. Pre-market futures reflect the AMZN re-anchor (ES +0.36%, NQ +1.13%, RTY +0.39%) and VIX at 16.97 confirms vol normalization. June PCE at 8:30 AM ET is the binary catalyst — soft extends re-rate to 7,500 retest, hot forces 10Y toward 4.70%+. The structural uptrend remains intact; path of least resistance is consolidation in the 7,400-7,500 range pending PCE, then 7,500+ into next week's earnings cycle.</p>

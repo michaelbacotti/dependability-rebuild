@@ -19,6 +19,25 @@
  .share-btn { display: inline-flex; align-items: center; gap: 5px; padding: 7px 12px; border-radius: 4px; font-size: 12px; text-decoration: none; border: 1px solid #cc0000; background: transparent; cursor: pointer; font-family: inherit; color: #cc0000; transition: opacity 0.15s; }
  .share-btn:hover { opacity: 0.7; }
  .disclaimer { margin: 2.5rem 0; padding: 1rem 1.25rem; background: #f5f0e8; border-left: 4px solid #cc0000; font-size: 0.875rem; line-height: 1.6; color: #555; }
+
+ /* Phase 2A: breadcrumbs + related-articles */
+ .article-breadcrumb { font-size: 0.8125rem; margin: 1.25rem 0 0.75rem; color: #888; }
+ .article-breadcrumb ol { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+ .article-breadcrumb li { display: inline-flex; align-items: center; }
+ .article-breadcrumb li:not(:last-child)::after { content: "›"; margin-left: 0.5rem; color: #bbb; font-weight: 400; }
+ .article-breadcrumb a { color: #888; text-decoration: none; transition: color 0.15s; }
+ .article-breadcrumb a:hover { color: #c8001e; text-decoration: underline; }
+ .article-breadcrumb [aria-current="page"] { color: #444; font-weight: 500; }
+ .related-articles { margin: 2.5rem 0 1rem; padding: 1.5rem 0; border-top: 1px solid #e8e4dd; }
+ .related-articles h2 { font-size: 1.125rem; margin: 0 0 1.25rem; color: #555; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
+ .related-articles ul { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
+ .related-articles li { padding: 0.75rem 0; border-bottom: 1px solid #f0ece5; }
+ .related-meta { font-size: 0.75rem; color: #999; margin-bottom: 0.25rem; }
+ .related-cat { color: #c8001e; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+ .related-articles h4 { margin: 0 0 0.25rem; font-size: 1rem; line-height: 1.35; font-weight: 600; }
+ .related-articles h4 a { color: #1a1a1a; text-decoration: none; }
+ .related-articles h4 a:hover { color: #c8001e; text-decoration: underline; }
+ .related-articles p { margin: 0; font-size: 0.875rem; line-height: 1.5; color: #666; }
  </style>
 <link rel="canonical" href="https://dependability.us/commentary/2026-08-12/"> <meta property="og:title" content="PAGE TITLE">
  <meta property="og:description" content="PAGE DESCRIPTION">
@@ -34,7 +53,7 @@
   gtag('config', 'G-CR7TV6QRSN');
  </script>
  <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "Article", "headline": "Morning Update: CPI Day \u2014 Futures Bid Into 8:30 Print, Bonds Calmer, Oil Anchored at $83", "description": "S&P 500 futures +0.24% to 7,766 ahead of the July CPI print at 8:30 AM ET (consensus +0.2% core MoM / +2.5% YoY; headline +0.1% MoM / +3.4% YoY); 10Y eased to 4", "articleSection": "MORNING MARKET ANALYSIS", "datePublished": "2026-08-12", "dateModified": "2026-08-12", "author": {"@type": "Organization", "name": "Dependability Research Desk", "url": "https://dependability.usabout/"}, "publisher": {"@type": "Organization", "name": "Dependability Holdings LLC", "logo": {"@type": "ImageObject", "url": "https://dependability.usog-image.jpg"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://dependability.us/commentary/2026-08-12/"}, "image": "https://dependability.usog-image.jpg"}
+{"@context": "https://schema.org", "@type": "Article", "headline": "Morning Market Analysis \u2014 August 12, 2026 | Dependability Holdings LLC", "description": "S&P 500 futures +0.24% to 7,766 ahead of the July CPI print at 8:30 AM ET (consensus +0.2% core MoM / +2.5% YoY; headline +0.1% MoM / +3.4% YoY); 10Y eased to 4", "articleSection": "MORNING MARKET ANALYSIS", "datePublished": "2026-08-12T07:00:00-04:00", "dateModified": "2026-08-12T07:00:00-04:00", "author": {"@type": "Organization", "name": "Dependability Research Desk", "url": "https://dependability.usabout/"}, "publisher": {"@type": "Organization", "name": "Dependability Holdings LLC", "logo": {"@type": "ImageObject", "url": "https://dependability.usog-image.jpg"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://dependability.us/commentary/2026-08-12/"}, "image": "https://dependability.usog-image.jpg"}
 </script>
 
 <style>
@@ -59,7 +78,7 @@
  <div id="site-nav"></div>
 
  <main>
-<!-- BANNER_AREA -->
+
 
   <div class="page-hero">
    <h1>Morning Market Analysis</h1>
@@ -68,14 +87,15 @@
 
   <div class="page-content">
 
-<div style="display:flex;justify-content:space-between;margin-bottom:24px;"><a href="/commentary/2026-08-11/" class="accent-link" style="font-size:.875rem;">← Previous: August 11, 2026</a></div>
+<div style="display:flex;justify-content:space-between;margin-bottom:24px;"><a href="/commentary/2026-08-11/" class="accent-link" style="font-size:.875rem;">← Previous: August 11, 2026</a><a href="/commentary/2026-08-13/" class="accent-link" style="font-size:.875rem;">Next: August 13, 2026→</a></div>
 
    <div style="background:#fff;border:1px solid #e0e0e0;padding:24px;margin-bottom:28px;">
     <div class="category-label" style="margin-bottom:14px;">PRE-MARKET BRIEF</div>
-    <h2 style="margin-bottom:16px;border-bottom:2px solid #c8001e;padding-bottom:8px;">Morning Update: CPI Day — Futures Bid Into 8:30 Print, Bonds Calmer, Oil Anchored at $83</h2>
+    <h2 style="margin-bottom:16px;border-bottom:2px solid #c8001e;padding-bottom:8px;">Morning Market Analysis — August 12, 2026 | Dependability Holdings LLC</h2>
     <p style="font-size:.95rem;color:#666;line-height:1.5;margin-bottom:16px;font-style:italic;">S&P 500 futures +0.24% to 7,766 ahead of the July CPI print at 8:30 AM ET (consensus +0.2% core MoM / +2.5% YoY; headline +0.1% MoM / +3.4% YoY); 10Y eased to 4</p>
 <div class="article-body">
 <h1>Morning Market Analysis — Wednesday, August 12, 2026</h1>
+<p>Morning Market Analysis — Wednesday, August 12, 2026</p>
 <p>The tape is opening Wednesday with one event defined above all others: the <strong>July CPI report at 8:30 AM ET</strong> — the dominant binary catalyst of the week. Pre-market positioning is constructive but not euphoric: S&P 500 futures (ES=F) at 7,766.00 (+0.24% versus Tuesday's 7,747.50 settle), Nasdaq (NQ=F) at 29,817.75 (+0.65%), Russell 2000 (RTY=F) at 3,038.20 (+0.09%) — a futures-led bid that suggests positioning for a soft print. The 10-year yield held at 4.68% Tuesday (down from Monday's 4.70%, a 2bp relief rally), the VIX eased to 15.28, and gold extended to GLD $404.78 pre-market (+0.95% from Tuesday's $400.96). WTI is steady at $83.45. <strong>Consensus core CPI +0.2% MoM / +2.5% YoY and headline +0.1% MoM / +3.4% YoY (vs June -0.4% MoM / +3.5% YoY)</strong> — a clean in-line print confirms the disinflation trend, opens the door to a September Fed cut, and supports the 1-month target of 7,800. A hot core print (+0.3%+ MoM or +2.6%+ YoY) forces a 10Y retest of 4.80% and risks a SPX pullback to 7,650-7,700.</p>
 <h2>Overnight Headlines</h2>
 <p><strong>Tuesday's Bond Rally Sets the Stage — 10Y Eased 2bp to 4.68%, VIX Calmed to 15.28.</strong> The 10-year yield (^TNX) closed Tuesday at 4.68%, down 2bp from Monday's 4.70% — a modest relief rally heading into the CPI binary. TLT closed at $82.19 (+0.16% vs Monday's $82.06). The VIX closed at 15.28 (yfinance), down from Monday's 15.46 — the options market is not pricing meaningful alarm (implied move sub-1% for an SPX session). The 2bp relief is not a wholesale dovish repricing: the 3-year note auction cleared at 4.291% vs 4.179% prior (a 12bp jump), suggesting the front end is carrying more inflation premium than the long end. The 10Y at 4.68% is the most important yield level since the 4.80% intraday high three weeks ago.</p>
@@ -89,27 +109,19 @@
   <li><strong>10-year yield (^TNX):</strong> 4.68%, -2bp from Monday's 4.70% close (Tuesday's bond rally)</li>
   <li><strong>DXY:</strong> 99.86, +0.04% from Tuesday's 99.82 close</li>
   <li><strong>WTI crude (CL=F):</strong> $83.45/bbl, +0.30% from Tuesday's $83.20 settle</li>
-</ul>
 <h2>Calendar — Wednesday, August 12</h2>
-<ul>
   <li><strong>7:00 AM ET — MBA Mortgage Applications (released):</strong> Mortgage rate 6.77% (prior 6.81%); purchase index 157.9 (prior 154.0). Supportive for housing, not market-binary.</li>
   <li><strong>8:30 AM ET — JULY CPI REPORT (DOMINANT EVENT).</strong> Consensus: headline +0.1% MoM / +3.4% YoY (vs June -0.4% MoM / +3.5% YoY); core +0.2% MoM / +2.5% YoY (vs June 0.0% MoM / +2.6% YoY). A clean in-line print confirms disinflation; a hot core print (+0.3%+ MoM or +2.6%+ YoY) forces a 10Y retest of 4.80%.</li>
   <li><strong>10:30 AM ET — EIA Crude Oil Stocks (delayed).</strong> Consensus +0.5M vs prior -2.7M. A large build (consistent with the API's +9.072M surprise) would weigh on WTI and XLE.</li>
-  <li><strong>2:00 PM ET — 30-Year Bond Auction ($25B).</strong> The duration signal of the week. A strong auction (tail <= 1bp) anchors 10Y near 4.65-4.70%; a weak auction (tail > 2bp) pushes 10Y toward 4.80%.</li>
+  <li><strong>2:00 PM ET — 30-Year Bond Auction ($25B).</strong> The duration signal of the week. A strong auction (tail  2bp) pushes 10Y toward 4.80%.</li>
   <li><strong>After Close — Cisco Systems (CSCO) Q4 FY2026 Earnings.</strong> Consensus $1.17 adjusted EPS, $16.83B revenue. Proxy for enterprise IT spending and AI infrastructure networking demand.</li>
   <li><strong>Thursday August 13:</strong> July PPI (consensus -0.3% MoM headline, +0.2% MoM core); Initial Jobless Claims (consensus 199K vs prior 198K). Applied Materials (AMAT) Q3 FY2026 earnings after close (consensus $3.36 adjusted EPS, +35.5% YoY).</li>
-</ul>
 <h2>What to Watch at the Open</h2>
-<ol>
   <li><strong>The 8:30 AM ET CPI print — the binary event of the week.</strong> The consensus +0.2% core MoM / +2.5% YoY would mark the smallest annual core print since February 2026 and confirm the post-June disinflation trajectory. The market is positioned for this: futures bid (+0.24% ES, +0.65% NQ), bond rally (10Y -2bp to 4.68%), VIX 15.28 — all signal a soft-print lean. <strong>The test: does the print come in at or below consensus, or does the core MoM surprise to the upside?</strong> A clean in-line print opens the path to 7,800 (1-month target, +0.93% from current) and supports the September Fed cut thesis. A hot core print (+0.3%+ MoM) forces a 10Y retest of 4.80% and risks a SPX pullback to 7,650-7,700. Watch the policy-rate-cut-probability repricing within 30 minutes of the 8:30 release.</li>
-</ol>
-<ol>
   <li><strong>The 30-Year Auction at 2:00 PM ET — the duration test of the week.</strong> The 30-year auction is the second duration test of the week after Tuesday's hot 3-year (cleared 4.291% vs 4.179% prior — a 12bp jump). It will determine whether the 10Y holds 4.68% or extends toward 4.75-4.80% on the back of CPI-eve positioning. Strong auction (low tail, foreign demand firm) anchors the long end near 4.70%; weak auction (tail > 2bp) compounds any post-CPI hawkish repricing and pressures rate-sensitive sectors (XLRE, XLU, XLF).</li>
-</ol>
-<ol>
   <li><strong>Energy and the $83 oil floor — does XLE hold or fade?</strong> WTI is at $83.45 pre-market, holding the Iran-Hormuz risk premium. XLE is -0.27% pre-market at $60.77 (public.com) — a divergence that signals the equity market is not extending the geopolitical-risk bid to the integrated majors. The EIA crude stocks report at 10:30 AM ET (delayed) will be the next major catalyst. <strong>The test: does the EIA confirm the API's +9.072M build (bearish WTI → XLE drag), or show a drawdown that pulls XLE back above $60.93?</strong> A persistent WTI/XLE divergence would signal the equity market is treating the oil move as transient.</li>
-</ol>
 <h2>The Structural Read</h2>
+</ul>
 <p>Wednesday is the binary event of the week, and the setup is constructive: futures bid, bonds rallied into the print, VIX calm, gold at a fresh cycle high. The Tuesday close at SPX 7,728.20 (-0.32% from Monday's 7,753.11) held the prior week's 7,757.64 record and defended the 7,700 support zone — a textbook pre-binary-catalyst setup with tight ranges, defensive rotation, light volume. The 10Y at 4.68% is the most important yield level since the 4.80% intraday high three weeks ago.</p>
 <p>The structural posture is unchanged: long-term bullish on US equities, supported by earnings growth (+30% Q2), AI capex durability (Alphabet's $85-90B and Meta's $64-72B 2026 commitments, hyperscaler $300B+ aggregate), US manufacturing reshoring, healthcare innovation, and a Fed cut window opening if the disinflation trajectory holds. The CPI print is the single biggest variable for whether the September 15-16 FOMC median SEP projection signals at least one cut in 2026 — the cleanest gate to the 1-month target of 7,800 and the 3-month target of 7,900. <strong>A soft print: 7,800 activates. A hot print: 7,650-7,700 pullback, 10Y retests 4.80%.</strong></p>
 <p>The market is positioned for the soft print. The futures bid is the cleanest signal. The structural bullish case has not been broken by Tuesday's -0.32% session. The disinflation trajectory is intact.</p>
@@ -119,7 +131,7 @@
 </div>
    </div>
 
-<div style="display:flex;justify-content:space-between;margin-bottom:24px;"><a href="/commentary/2026-08-11/" class="accent-link" style="font-size:.875rem;">← Previous: August 11, 2026</a></div>
+<div style="display:flex;justify-content:space-between;margin-bottom:24px;"><a href="/commentary/2026-08-11/" class="accent-link" style="font-size:.875rem;">← Previous: August 11, 2026</a><a href="/commentary/2026-08-13/" class="accent-link" style="font-size:.875rem;">Next: August 13, 2026→</a></div>
 
 
 <!-- topic: stocks, options, market, investing, S&P 500, VIX, volatility, Federal Reserve, FOMC -->

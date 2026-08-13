@@ -19,6 +19,25 @@
  .share-btn { display: inline-flex; align-items: center; gap: 5px; padding: 7px 12px; border-radius: 4px; font-size: 12px; text-decoration: none; border: 1px solid #cc0000; background: transparent; cursor: pointer; font-family: inherit; color: #cc0000; transition: opacity 0.15s; }
  .share-btn:hover { opacity: 0.7; }
  .disclaimer { margin: 2.5rem 0; padding: 1rem 1.25rem; background: #f5f0e8; border-left: 4px solid #cc0000; font-size: 0.875rem; line-height: 1.6; color: #555; }
+
+ /* Phase 2A: breadcrumbs + related-articles */
+ .article-breadcrumb { font-size: 0.8125rem; margin: 1.25rem 0 0.75rem; color: #888; }
+ .article-breadcrumb ol { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+ .article-breadcrumb li { display: inline-flex; align-items: center; }
+ .article-breadcrumb li:not(:last-child)::after { content: "›"; margin-left: 0.5rem; color: #bbb; font-weight: 400; }
+ .article-breadcrumb a { color: #888; text-decoration: none; transition: color 0.15s; }
+ .article-breadcrumb a:hover { color: #c8001e; text-decoration: underline; }
+ .article-breadcrumb [aria-current="page"] { color: #444; font-weight: 500; }
+ .related-articles { margin: 2.5rem 0 1rem; padding: 1.5rem 0; border-top: 1px solid #e8e4dd; }
+ .related-articles h2 { font-size: 1.125rem; margin: 0 0 1.25rem; color: #555; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
+ .related-articles ul { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
+ .related-articles li { padding: 0.75rem 0; border-bottom: 1px solid #f0ece5; }
+ .related-meta { font-size: 0.75rem; color: #999; margin-bottom: 0.25rem; }
+ .related-cat { color: #c8001e; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+ .related-articles h4 { margin: 0 0 0.25rem; font-size: 1rem; line-height: 1.35; font-weight: 600; }
+ .related-articles h4 a { color: #1a1a1a; text-decoration: none; }
+ .related-articles h4 a:hover { color: #c8001e; text-decoration: underline; }
+ .related-articles p { margin: 0; font-size: 0.875rem; line-height: 1.5; color: #666; }
  </style>
 <link rel="canonical" href="https://dependability.us/commentary/2026-08-04/"> <meta property="og:title" content="PAGE TITLE">
  <meta property="og:description" content="PAGE DESCRIPTION">
@@ -34,7 +53,7 @@
   gtag('config', 'G-CR7TV6QRSN');
  </script>
  <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "Article", "headline": "Morning Update: Mega-Cap Tech Bid Extends \u2014 XLK +1.55% After-Hours; Alphabet Q2 Looms", "description": "S&P 500 closed Monday at 7,600.50 (+1.48%); pre-market extends with XLK +1.55%, QQQ +0.74%; WTI at $89.94; Alphabet Q2 after the bell is the dominant catalyst.", "articleSection": "MORNING MARKET ANALYSIS", "datePublished": "2026-08-04", "dateModified": "2026-08-04", "author": {"@type": "Organization", "name": "Dependability Research Desk", "url": "https://dependability.usabout/"}, "publisher": {"@type": "Organization", "name": "Dependability Holdings LLC", "logo": {"@type": "ImageObject", "url": "https://dependability.usog-image.jpg"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://dependability.us/commentary/2026-08-04/"}, "image": "https://dependability.usog-image.jpg"}
+{"@context": "https://schema.org", "@type": "Article", "headline": "Morning Market Analysis \u2014 August 04, 2026 | Dependability Holdings LLC", "description": "S&P 500 closed Monday at 7,600.50 (+1.48%); pre-market extends with XLK +1.55%, QQQ +0.74%; WTI at $89.94; Alphabet Q2 after the bell is the dominant catalyst.", "articleSection": "MORNING MARKET ANALYSIS", "datePublished": "2026-08-04T07:00:00-04:00", "dateModified": "2026-08-04T07:00:00-04:00", "author": {"@type": "Organization", "name": "Dependability Research Desk", "url": "https://dependability.usabout/"}, "publisher": {"@type": "Organization", "name": "Dependability Holdings LLC", "logo": {"@type": "ImageObject", "url": "https://dependability.usog-image.jpg"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://dependability.us/commentary/2026-08-04/"}, "image": "https://dependability.usog-image.jpg"}
 </script>
 
 <style>
@@ -59,7 +78,7 @@
  <div id="site-nav"></div>
 
  <main>
-<!-- BANNER_AREA -->
+
 
   <div class="page-hero">
    <h1>Morning Market Analysis</h1>
@@ -72,10 +91,11 @@
 
    <div style="background:#fff;border:1px solid #e0e0e0;padding:24px;margin-bottom:28px;">
     <div class="category-label" style="margin-bottom:14px;">PRE-MARKET BRIEF</div>
-    <h2 style="margin-bottom:16px;border-bottom:2px solid #c8001e;padding-bottom:8px;">Morning Update: Mega-Cap Tech Bid Extends — XLK +1.55% After-Hours; Alphabet Q2 Looms</h2>
+    <h2 style="margin-bottom:16px;border-bottom:2px solid #c8001e;padding-bottom:8px;">Morning Market Analysis — August 04, 2026 | Dependability Holdings LLC</h2>
     <p style="font-size:.95rem;color:#666;line-height:1.5;margin-bottom:16px;font-style:italic;">S&P 500 closed Monday at 7,600.50 (+1.48%); pre-market extends with XLK +1.55%, QQQ +0.74%; WTI at $89.94; Alphabet Q2 after the bell is the dominant catalyst.</p>
 <div class="article-body">
 <h1>Morning Market Analysis — Tuesday, August 4, 2026</h1>
+<p>Morning Market Analysis — Tuesday, August 4, 2026</p>
 <p>The post-AMZN/MSFT mega-cap tech re-rate that defined Monday's tape is extending into Tuesday's after-hours and pre-market, with <strong>XLK +1.55% (last $181.44 vs Monday close $178.67) and QQQ +0.74% (last $705.95 vs Monday close $700.75)</strong> carrying the bid while energy, financials, and consumer discretionary are essentially flat (XLE +0.14%, XLF -0.31%, XLY -0.35%). The S&P 500 closed Monday at <strong>7,600.50 (+1.48% on the day, +2.53% WTD)</strong> — the freshest post-FOMC recovery high and the highest close since June 18, 2026 — and the after-hours tape shows no signs of profit-taking ahead of Alphabet's Q2 2026 print tonight (Tuesday after-market close). <strong>WTI crude (CL) is at $89.94 (-1.56% from Monday's $91.30 settle)</strong> — the Iran-de-escalation premium that compressed over the weekend has stabilized near $90, with no fresh geopolitical catalyst overnight to drive a second leg. <strong>VIX at 15.61 (vs prior 15.86, -1.58%)</strong> continues to compress, the lowest reading since early July and below the 1-year mean of ~18. The 10-year yield is holding at <strong>Friday's 4.74% close</strong> (no fresh Monday print from yfinance; bond market absorbed Monday's +1.48% equity rally without further steepening). The macro calendar is light today — June Trade Balance at 12:30 PM ET (consensus -$73.0B), Factory Orders at 2:00 PM ET (consensus +0.4% MoM) — making Alphabet's after-close print the dominant single catalyst for the week.</p>
 <h2>Overnight Headlines</h2>
 <p><strong>Mega-Cap Tech Continuation: XLK +1.55% After-Hours, QQQ +0.74% — The Post-AMZN/MSFT Re-Rate Extends:</strong> The most significant overnight market development is the persistence of Monday's mega-cap tech bid into Tuesday's pre-market. Per public.com at 7:05 AM ET Tuesday, <strong>XLK last $181.44 (+1.55% vs Monday close $178.67)</strong>, <strong>QQQ last $705.95 (+0.74% vs Monday close $700.75)</strong>, and <strong>SPX last 7,600.50 unchanged at Monday's close</strong> (the index doesn't have a futures print but the ETF complex confirms the bid). The pattern matches the post-AMZN/MSFT structural re-rate that drove Monday's +1.48% rally: AI capex durability (per AMZN Q2 record AWS beat +37% YoY, MSFT +15.5% post-earnings surge, and Alphabet's expected +24% revenue / +82% Cloud YoY print tonight) is being absorbed by the market as a multi-quarter thesis, not a single-trade event. XLK has now closed higher in two of the last three sessions and the +1.55% after-hours extension puts it on track for the highest close since June. <strong>For positioning: the structural overweight on XLK / QQQ for AI capex durability is intact; tonight's Alphabet Q2 print is the next validation bar.</strong> A Cloud +82% YoY confirmation would extend the rally toward SPX 7,650-7,700; a modest miss would consolidate without breaking the uptrend.</p>
@@ -91,9 +111,7 @@
   <li><strong>10-year yield (^TNX):</strong> <strong>4.74% — Friday's close held; no fresh Monday print from yfinance</strong> (Monday's data NaN, likely a 1-day lag in the daily pull); the bond market absorbed Monday's +1.48% equity rally without further steepening, consistent with the "higher-for-longer-into-2027-but-disinflation-trend-intact" framework.</li>
   <li><strong>DXY (UUP as proxy):</strong> <strong>28.21 (+0.00% vs Monday 28.17; +0.14% vs Friday 28.17)</strong> — dollar essentially flat; no fresh catalyst from the euro or yen overnight.</li>
   <li><strong>WTI crude (CL=F):</strong> <strong>$89.94 (-1.56% from Monday's $91.30 settle; +6.2% week-over-week from Friday's $84.67)</strong> — the Iran-de-escalation premium is largely extracted; oil consolidating in the $89-$92 zone; USO $122.98 (+0.88% from Monday $121.91) confirms the spot trade, not the futures curve, is the binding signal.</li>
-</ul>
 <h2>Calendar — Tuesday, August 4</h2>
-<ul>
   <li><strong>8:55 AM ET — Redbook retail index (Johnson Redbook):</strong> Weekly retail sales read; consensus not standardized but +5-8% YoY trend consistent with the soft-landing consumer; secondary market impact unless a sharp deviation.</li>
   <li><strong>12:30 PM ET — June Trade Balance (<a href="https://www.bea.gov" target="_blank" rel="noopener" style="color:#c8a96e;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px;">BEA</a>):</strong> Consensus <strong>-$73.0B</strong>; the prior May print was wider due to tariff-related import cost effects; a narrower deficit would be a slight USD-positive / tariff-cost-cooling read.</li>
   <li><strong>2:00 PM ET — Factory Orders (<a href="https://www.census.gov" target="_blank" rel="noopener" style="color:#c8a96e;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px;">Census</a>):</strong> Consensus <strong>+0.4% MoM</strong>; durable goods orders (the leading component) were confirmed earlier in the cycle; a confirmatory print supports the manufacturing expansion thesis (ISM 53.9 on Monday).</li>
@@ -102,18 +120,12 @@
   <li><strong>Thursday August 6 — Initial Jobless Claims + Productivity:</strong> Initial Claims at 12:30 PM ET (consensus 200K); Continuing Claims at 1,798K; Nonfarm Productivity (consensus +0.6% QoQ); Unit Labour Costs (consensus +2.0%). Labor market remains historically tight.</li>
   <li><strong>Friday August 7, 8:30 AM ET — July Jobs Report (<a href="https://www.bls.gov" target="_blank" rel="noopener" style="color:#c8a96e;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px;">BLS</a>):</strong> The dominant macro catalyst. Consensus <strong>+195K to +200K payrolls</strong>, unemployment <strong>4.2%</strong> (prior: +172K, 4.2%). The single most important input into the August 20-21 FOMC's decision calculus. Watch 10Y behavior at 9:00 AM ET.</li>
   <li><strong>August 20–21 — FOMC Meeting (17 days away):</strong> Fed in pre-meeting blackout; no speakers scheduled this week; Jackson Hole symposium August 27-29 where Chair Warsh is expected to deliver a major policy address.</li>
-</ul>
 <h2>What to Watch at the Open</h2>
-<ol>
   <li><strong>Tech leadership confirmation: Can XLK hold the +1.55% after-hours premium into the cash open?</strong> XLK last $181.44 (+1.55% vs Monday close $178.67) and QQQ last $705.95 (+0.74% vs $700.75) show the post-AMZN/MSFT mega-cap tech continuation extending. <strong>The test: at 9:30 AM ET, does XLK open above $181 (a +1.4% gap from Monday's $178.67) and hold the bid through the first 30 minutes?</strong> A clean gap-and-hold above $181 would set the table for Alphabet's after-close print — Cloud +82% YoY confirmation would extend the rally to SPX 7,650-7,700. <strong>A fade of the after-hours premium back to flat-on-the-day by 10:00 AM ET would signal the market is positioning defensively ahead of Alphabet, and the 7,600 level becomes the immediate resistance.</strong> Watch the XLK / XLF relative strength ratio (currently very wide: tech leadership vs financials flat) — a narrowing of that ratio would signal rotation away from tech into cyclicals ahead of the print.</li>
-</ol>
-<ol>
   <li><strong>Alphabet Q2 setup: Position the after-close print as the dominant single catalyst of the week.</strong> Alphabet reports Q2 2026 after market close Tuesday. The setup: <strong>expected revenue $119.796B (+24% YoY vs $116.93B consensus)</strong>, <strong>Google Cloud +82% YoY</strong> (fastest expansion in segment history), <strong>operating income +30% YoY</strong>, <strong>capex +26% QoQ</strong>. <strong>A Cloud print of +80% YoY or better would extend the post-AMZN/MSFT structural re-rate and lift QQQ toward $710 and SPX toward 7,650-7,700.</strong> <strong>A Cloud print below +70% YoY (still strong but missing the +82% bar) would consolidate XLK in the $178-182 range without breaking the uptrend.</strong> <strong>A Cloud miss below +60% YoY would force a 3-5% XLK pullback to the $172-175 area and re-introduce the "AI capex sustainability" question.</strong> The smart positioning is to use today's session as a window to add to existing AI-infrastructure exposure on any pre-print weakness, with a defined risk-reward around the print.</li>
-</ol>
-<ol>
   <li><strong>WTI crude stability check: Does oil hold the $89-$92 range, or break lower?</strong> WTI at $89.94 (-1.56% from Monday's $91.30) is consolidating the Iran-de-escalation premium. <strong>The test: does CL hold above $89 into the open?</strong> A break below $88 would signal fresh supply-side comfort (OPEC+ commentary, Iran permit resumption, or US-Iran de-escalation follow-through) and would be input-cost relief for airlines (DAL, UAL, AAL), chemicals (DOW, LYB), and freight (FDX, UPS) — sectors that lagged Monday's rally. <strong>A break above $92 would signal fresh geopolitical risk and force XLE to re-test Monday's high.</strong> The dollar (UUP at $28.21, essentially flat) and gold (GLD at $371.92, -0.05% vs Monday) are not signaling any safe-haven bid; the macro read is constructive, not cautious.</li>
-</ol>
 <h2>The Structural Read</h2>
+</ul>
 <p>The most important observation from Monday's +1.48% rally is that it came on <strong>light volume</strong> — the SPX volume of 3.19B shares (per yfinance partial print) was the lowest since late June, suggesting the move was driven by strategic rebalancing and post-earnings positioning rather than short-term momentum chasing. That characteristic — a high-conviction, low-volume breakout — is the hallmark of a structural re-rating rather than a tactical squeeze. The XLK +1.89%, QQQ +1.85%, XLC +2.86% trifecta was the cleanest mega-cap tech continuation since the June FOMC, and the post-AMZN/MSFT structural bid (AI capex durability per Q2 earnings validation) extended into Tuesday's after-hours with XLK +1.55% and QQQ +0.74%.</p>
 <p>The macro framework is now: <strong>soft-landing with disinflation trend intact, 10Y yield range-bound at 4.70-4.80%, VIX compressing toward the 15-handle, mega-cap tech dominance confirmed by three bars of Q2 earnings (TSMC capex raise, MSFT +15.5% surge, AMZN AWS +37% YoY), and Iran de-escalation extracting the geopolitical oil premium.</strong> Friday's Jobs Report is the single biggest test of this framework in the next two weeks. A print in the +175K to +210K range confirms the soft-landing; a print below +150K re-introduces recession risk and would force the Fed to consider pre-FOMC easing signals; a print above +225K validates the Warsh Fed's hawkish posture and risks a 10Y re-test of 4.80%+.</p>
 <p>The structural context matters: the US economy has now absorbed three rate-cycle pressure tests (10Y climb from 4.49% to 4.74% in the week ended July 31, soft June PCE all-clear at -0.1% MoM headline, Iran de-escalation over the weekend) without breaking the equity uptrend. <strong>The VIX at 15.61 (vs 1-year mean ~18) is the cleanest single signal that the options market is comfortable with the current regime</strong> — it's the lowest two-day stretch since early July, and the term structure (front-month VIX vs 3-month VIX) is in shallow backwardation consistent with constructive risk-taking, not defensive hedging.</p>
