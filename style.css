@@ -570,9 +570,12 @@ small, .small {
  text-align: left;
 }
 
-.page-hero h1 {
+.page-hero h1,
+.page-hero .hero-title {
  font-size: 2.25rem;
- margin-bottom: 16px;
+ font-weight: 700;
+ line-height: 1.2;
+ margin: 0 0 16px;
  text-align: center;
 }
 
@@ -601,6 +604,18 @@ small, .small {
  padding: 48px 24px;
  max-width: var(--max-width);
  margin: 0 auto;
+}
+
+/* Featured-article h2 wrapper used when the listing page inlines the latest article body.
+   Visually equivalent to the original h1 (2.25rem, centered), but semantically h2 since
+   the listing page's <h1> is "Market Commentary". */
+.article-body > .featured-h1:first-child {
+ font-size: 2.25rem;
+ font-weight: 700;
+ line-height: 1.2;
+ margin: 0 0 1.25rem;
+ text-align: center;
+ color: #1a1a1a;
 }
 
 /* 12. Feature Cards (Forecast page) */
