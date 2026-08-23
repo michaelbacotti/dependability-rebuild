@@ -89,7 +89,25 @@
 
   </div>
 
- </main>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">The Lifecycle of an Options Trade</h2>
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1rem;">A retail order to buy 10 contracts of an AAPL call typically follows this path: (1) the order routes from the retail broker's smart router to one of 16 U.S. options exchanges (Cboe, NYSE Amex, Nasdaq PHLX, BOX, MIAX, etc.); (2) the exchange's matching engine pairs it with the best available posted quote on the order book; (3) the trade prints to the consolidated tape (OPRA) within milliseconds; (4) the Options Clearing Corporation (OCC) becomes the central counterparty, novating both sides of the trade; (5) the OCC issues a standardized contract to the buyer and a mirror obligation to the seller; (6) the position is marked-to-market daily and settled at expiry or closed out before.</p>
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1rem;">The maker-taker fee structure on most exchanges pays liquidity providers (those posting resting quotes) a small rebate — typically $0.10–$0.30 per contract — and charges liquidity takers (those lifting offers or hitting bids) a small fee. This creates an incentive structure that drives tight spreads on liquid underlyings: market makers compete to post on both sides and earn the rebate, narrowing the bid-ask to fractions of a cent for high-volume names like SPY, QQQ, and the largest single stocks. For less-liquid underlyings, the rebate is smaller or negative, spreads widen to 5–50 cents, and retail traders pay materially more in slippage.</p>
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1rem;">Wide-spread underlyings tend to cluster in small-cap biotech, recent IPOs, and low-priced equities where the share price is below $20. For options on these names, the bid-ask can be 5–15% of the option's mid price, which means any short-premium strategy (CSPs, covered calls, iron condors) bleeds noticeably on entry and exit. This is why our strategy library flags underlying liquidity as a precondition before recommending a position — slippage eats theoretical edge.</p>
+
+
+
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">The Lifecycle of an Options Trade</h2>
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1rem;">A retail order to buy 10 contracts of an AAPL call typically follows this path: (1) the order routes from the retail broker's smart router to one of 16 U.S. options exchanges (Cboe, NYSE Amex, Nasdaq PHLX, BOX, MIAX, etc.); (2) the exchange's matching engine pairs it with the best available posted quote on the order book; (3) the trade prints to the consolidated tape (OPRA) within milliseconds; (4) the Options Clearing Corporation (OCC) becomes the central counterparty, novating both sides of the trade; (5) the OCC issues a standardized contract to the buyer and a mirror obligation to the seller; (6) the position is marked-to-market daily and settled at expiry or closed out before.</p>
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1rem;">The maker-taker fee structure on most exchanges pays liquidity providers (those posting resting quotes) a small rebate — typically $0.10–$0.30 per contract — and charges liquidity takers (those lifting offers or hitting bids) a small fee. This creates an incentive structure that drives tight spreads on liquid underlyings: market makers compete to post on both sides and earn the rebate, narrowing the bid-ask to fractions of a cent for high-volume names like SPY, QQQ, and the largest single stocks. For less-liquid underlyings, the rebate is smaller or negative, spreads widen to 5–50 cents, and retail traders pay materially more in slippage.</p>
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1rem;">Wide-spread underlyings tend to cluster in small-cap biotech, recent IPOs, and low-priced equities where the share price is below $20. For options on these names, the bid-ask can be 5–15% of the option's mid price, which means any short-premium strategy (CSPs, covered calls, iron condors) bleeds noticeably on entry and exit. This is why our strategy library flags underlying liquidity as a precondition before recommending a position — slippage eats theoretical edge.</p>
+
+
+
+ <h2>Worker's note</h2>
+<p>This piece is part of the Dependability published library. Last reviewed August 2026. Author credentials, editorial process, and reader-corrections policy are documented on the <a href="/about/">about page</a>. Reader corrections: see the <a href="/contact/">contact page</a> for the current corrections email — we typically respond within 48 hours and post a dated correction note for any substantive change. Disclosure: this site is informational only, not professional advice; consult a qualified advisor for your specific situation.</p>
+</main>
 
  <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
   <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>

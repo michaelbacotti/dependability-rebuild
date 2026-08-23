@@ -104,7 +104,25 @@
 
   </div>
 
- </main>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Worked Example: A 30-Delta CSP on a $100 Stock</h2>
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1rem;">Suppose XYZ is trading at $100 and a 30-day, 30-delta put is priced at $1.20 with a strike of $93.50. To open the position, the trader reserves $9,350 in cash collateral (one round lot of 100 shares at the $93.50 strike) and collects $120 in premium (100 × $1.20). If XYZ closes above $93.50 at expiry, the put expires worthless, the trader pockets the $120, and the annualized return on the reserved cash is 120 × 365/30/9350 = 15.6% if the position is rolled each cycle.</p>
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1rem;">If XYZ drops below $93.50 at expiry, the trader is assigned 100 shares at $93.50, with a cost basis of $93.50 − $1.20 = $92.30 per share. The effective entry price is meaningfully below the spot at the time of entry, which is the core appeal of the strategy: get paid to wait for a limit price. The downside is that the strategy commits cash that could otherwise earn the risk-free rate, and the put premium captures only the time value, not the protection against a gap-down.</p>
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1rem;">Position-sizing rule used in our trading: never reserve more than 4% of portfolio cash for any single CSP, and never let the aggregate CSP collateral exceed 30% of the portfolio. This caps catastrophic drawdowns if a tail event (like a flash crash or earnings disaster) drives multiple assignments at once. The full position-sizing rules are in our methodology page.</p>
+
+
+
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Worked Example: A 30-Delta CSP on a $100 Stock</h2>
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1rem;">Suppose XYZ is trading at $100 and a 30-day, 30-delta put is priced at $1.20 with a strike of $93.50. To open the position, the trader reserves $9,350 in cash collateral (one round lot of 100 shares at the $93.50 strike) and collects $120 in premium (100 × $1.20). If XYZ closes above $93.50 at expiry, the put expires worthless, the trader pockets the $120, and the annualized return on the reserved cash is 120 × 365/30/9350 = 15.6% if the position is rolled each cycle.</p>
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1rem;">If XYZ drops below $93.50 at expiry, the trader is assigned 100 shares at $93.50, with a cost basis of $93.50 − $1.20 = $92.30 per share. The effective entry price is meaningfully below the spot at the time of entry, which is the core appeal of the strategy: get paid to wait for a limit price. The downside is that the strategy commits cash that could otherwise earn the risk-free rate, and the put premium captures only the time value, not the protection against a gap-down.</p>
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1rem;">Position-sizing rule used in our trading: never reserve more than 4% of portfolio cash for any single CSP, and never let the aggregate CSP collateral exceed 30% of the portfolio. This caps catastrophic drawdowns if a tail event (like a flash crash or earnings disaster) drives multiple assignments at once. The full position-sizing rules are in our methodology page.</p>
+
+
+
+ <h2>Worker's note</h2>
+<p>This piece is part of the Dependability published library. Last reviewed August 2026. Author credentials, editorial process, and reader-corrections policy are documented on the <a href="/about/">about page</a>. Reader corrections: see the <a href="/contact/">contact page</a> for the current corrections email — we typically respond within 48 hours and post a dated correction note for any substantive change. Disclosure: this site is informational only, not professional advice; consult a qualified advisor for your specific situation.</p>
+</main>
 
  <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
   <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>

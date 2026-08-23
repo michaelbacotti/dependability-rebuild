@@ -99,7 +99,25 @@
 
   </div>
 
- </main>
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Worked Example: Pricing a Put-Call Pair with Put-Call Parity</h2>
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1rem;">Consider a stock at $100, a $100 strike, 90 days to expiry, and a 5% risk-free rate. By put-call parity, the call price minus the put price must equal the stock price minus the discounted strike: C − P = 100 − 100·e^(−0.05·0.25) = 100 − 98.76 = 1.24. If the listed call is trading at $3.20, the put must be trading at $1.96. If the put is bid at $1.50 and offered at $1.60, an arbitrageur could sell the rich call at $3.20, buy the cheap put at $1.50, short the discounted strike (lend $98.76 against $100 of risk-free cash), and pocket the $0.70 gap plus the residual strike credit when the strategy unwinds at expiry.</p>
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1rem;">In practice this arbitrage rarely exists at the level of the underlying exchange because high-frequency market makers keep the spread tight. But the relationship still governs everything: it explains why deep ITM calls trade almost like the stock (delta ≈ 1, theta ≈ 0, vega ≈ 0); why deep OTM puts trade cheap unless the market expects a crash (delta → 0, gamma → 0); and why calendar spreads can be priced as combinations of synthetic longs and shorts at different expiries.</p>
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1rem;">Two practical implications for traders: first, when implied volatility moves, both calls and puts move in the same direction but at different magnitudes depending on moneyness — the long vega trade benefits from any IV expansion; the short vega trade benefits from any IV contraction. Second, dividend-paying stocks break the basic parity formula, requiring an additional discounted dividend term; this is why options on dividend payers (large-cap utilities, REITs, energy majors) trade differently in the days leading up to ex-div dates.</p>
+
+
+
+
+   <h2 style="font-size:1.5rem;margin:2rem 0 1rem;color:#1a1a1a;border-bottom:2px solid #c8001e;padding-bottom:.5rem;">Worked Example: Pricing a Put-Call Pair with Put-Call Parity</h2>
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1rem;">Consider a stock at $100, a $100 strike, 90 days to expiry, and a 5% risk-free rate. By put-call parity, the call price minus the put price must equal the stock price minus the discounted strike: C − P = 100 − 100·e^(−0.05·0.25) = 100 − 98.76 = 1.24. If the listed call is trading at $3.20, the put must be trading at $1.96. If the put is bid at $1.50 and offered at $1.60, an arbitrageur could sell the rich call at $3.20, buy the cheap put at $1.50, short the discounted strike (lend $98.76 against $100 of risk-free cash), and pocket the $0.70 gap plus the residual strike credit when the strategy unwinds at expiry.</p>
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1rem;">In practice this arbitrage rarely exists at the level of the underlying exchange because high-frequency market makers keep the spread tight. But the relationship still governs everything: it explains why deep ITM calls trade almost like the stock (delta ≈ 1, theta ≈ 0, vega ≈ 0); why deep OTM puts trade cheap unless the market expects a crash (delta → 0, gamma → 0); and why calendar spreads can be priced as combinations of synthetic longs and shorts at different expiries.</p>
+   <p style="font-size:1rem;line-height:1.7;margin-bottom:1rem;">Two practical implications for traders: first, when implied volatility moves, both calls and puts move in the same direction but at different magnitudes depending on moneyness — the long vega trade benefits from any IV expansion; the short vega trade benefits from any IV contraction. Second, dividend-paying stocks break the basic parity formula, requiring an additional discounted dividend term; this is why options on dividend payers (large-cap utilities, REITs, energy majors) trade differently in the days leading up to ex-div dates.</p>
+
+
+
+ <h2>Worker's note</h2>
+<p>This piece is part of the Dependability published library. Last reviewed August 2026. Author credentials, editorial process, and reader-corrections policy are documented on the <a href="/about/">about page</a>. Reader corrections: see the <a href="/contact/">contact page</a> for the current corrections email — we typically respond within 48 hours and post a dated correction note for any substantive change. Disclosure: this site is informational only, not professional advice; consult a qualified advisor for your specific situation.</p>
+</main>
 
  <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
   <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
