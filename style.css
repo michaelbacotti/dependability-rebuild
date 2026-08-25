@@ -644,6 +644,10 @@ small, .small {
  color: #444;
  font-weight: 500;
 }
+.article-breadcrumb .sep {
+ margin: 0 0.5rem;
+ color: #bbb;
+}
 
 /* Prev/next article chip — a proper chip, not a one-element flex space-between */
 .article-prev-link,
@@ -697,6 +701,33 @@ small, .small {
  text-align: center;
  color: #1a1a1a;
 }
+
+/* E-E-A-T block at bottom of articles — proper padding, margin, divider */
+.eeat-block {
+ margin: 3rem auto 4rem;
+ padding: 1.75rem 2rem 2rem;
+ max-width: 880px;
+ background: #fafafa;
+ border: 1px solid #e8e8e8;
+ border-left: 4px solid #c8001e;
+ border-radius: 6px;
+}
+.eeat-block h2 {
+ margin: 0 0 1rem;
+ font-size: 1.125rem;
+ font-weight: 600;
+ color: #1a1a1a;
+ padding-bottom: 0.6rem;
+ border-bottom: 1px solid #e0e0e0;
+}
+.eeat-block p {
+ margin: 0 0 0.9rem;
+ font-size: 0.9375rem;
+ line-height: 1.65;
+ color: #444;
+}
+.eeat-block p:last-child { margin-bottom: 0; }
+.eeat-block a { color: #c8001e; }
 
 /* 12. Feature Cards (Forecast page) */
 .feature-grid {

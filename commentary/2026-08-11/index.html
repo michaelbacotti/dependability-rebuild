@@ -27,6 +27,7 @@
  .article-breadcrumb li:not(:last-child)::after { content: "›"; margin-left: 0.5rem; color: #bbb; font-weight: 400; }
  .article-breadcrumb a { color: #888; text-decoration: none; transition: color 0.15s; }
  .article-breadcrumb a:hover { color: #c8001e; text-decoration: underline; }
+ .article-breadcrumb .sep { margin: 0 0.5rem; color: #bbb; }
  .article-breadcrumb [aria-current="page"] { color: #444; font-weight: 500; }
  .related-articles { margin: 2.5rem 0 1rem; padding: 1.5rem 0; border-top: 1px solid #e8e4dd; }
  .related-articles h2 { font-size: 1.125rem; margin: 0 0 1.25rem; color: #555; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
@@ -89,7 +90,12 @@
 
   <div class="page-content">
 
-<div style="display:flex;justify-content:space-between;margin-bottom:24px;"><a href="/commentary/2026-08-10/" class="accent-link" style="font-size:.875rem;">← Previous: August 10, 2026</a><a href="/commentary/2026-08-12/" class="accent-link" style="font-size:.875rem;">Next: August 12, 2026→</a></div>
+<nav class="article-breadcrumb" aria-label="Breadcrumb">
+  <a href="/">Home</a><span class="sep">›</span>
+  <a href="/commentary/">Commentary</a><span class="sep">›</span>
+  <span aria-current="page">August 11, 2026</span>
+</nav>
+<div class="article-prev-next"><a href="/commentary/2026-08-10/" class="article-prev-link"><span class="article-prev-link__arrow">←</span><span>Previous: August 10, 2026</span></a><a href="/commentary/2026-08-12/" class="article-next-link"><span>Next: August 12, 2026</span><span class="article-prev-link__arrow">→</span></a></div>
 
    <div style="background:#fff;border:1px solid #e0e0e0;padding:24px;margin-bottom:28px;">
     <div class="category-label" style="margin-bottom:14px;">PRE-MARKET BRIEF</div>
@@ -133,7 +139,7 @@
 </div>
    </div>
 
-<div style="display:flex;justify-content:space-between;margin-bottom:24px;"><a href="/commentary/2026-08-10/" class="accent-link" style="font-size:.875rem;">← Previous: August 10, 2026</a><a href="/commentary/2026-08-12/" class="accent-link" style="font-size:.875rem;">Next: August 12, 2026→</a></div>
+<div class="article-prev-next"><a href="/commentary/2026-08-10/" class="article-prev-link"><span class="article-prev-link__arrow">←</span><span>Previous: August 10, 2026</span></a><a href="/commentary/2026-08-12/" class="article-next-link"><span>Next: August 12, 2026</span><span class="article-prev-link__arrow">→</span></a></div>
 
 
 <!-- topic: stocks, options, market, investing, S&P 500, VIX, volatility, Federal Reserve, FOMC -->
