@@ -566,7 +566,7 @@ small, .small {
 /* 11. Page Layouts (Forecast, Commentary, Education, About) */
 .page-hero {
  border-bottom: 1px solid var(--color-border);
- padding: 48px 24px;
+ padding: 72px 24px 56px;
  text-align: left;
 }
 
@@ -601,10 +601,90 @@ small, .small {
 }
 
 .page-content {
- padding: 48px 24px;
+ padding: 56px 24px 72px;
  max-width: var(--max-width);
  margin: 0 auto;
 }
+
+/* Breadcrumb (article pages) — chevron-separated, no default <ol> numbers */
+.article-breadcrumb {
+ font-size: 0.8125rem;
+ margin: 0 0 1.25rem;
+ color: #888;
+}
+.article-breadcrumb ol {
+ list-style: none;
+ padding: 0;
+ margin: 0;
+ display: flex;
+ flex-wrap: wrap;
+ gap: 0.5rem;
+ align-items: center;
+}
+.article-breadcrumb li {
+ display: inline-flex;
+ align-items: center;
+}
+.article-breadcrumb li:not(:last-child)::after {
+ content: "›";
+ margin-left: 0.5rem;
+ color: #bbb;
+ font-weight: 400;
+}
+.article-breadcrumb a {
+ color: #888;
+ text-decoration: none;
+ transition: color 0.15s;
+}
+.article-breadcrumb a:hover {
+ color: #c8001e;
+ text-decoration: underline;
+}
+.article-breadcrumb [aria-current="page"] {
+ color: #444;
+ font-weight: 500;
+}
+
+/* Prev/next article chip — a proper chip, not a one-element flex space-between */
+.article-prev-link,
+.article-next-link {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.4rem;
+ padding: 0.4rem 0.85rem;
+ margin: 0 0 1.5rem;
+ background: #f6f6f6;
+ border: 1px solid #e5e5e5;
+ border-radius: 999px;
+ font-size: 0.8125rem;
+ color: #444;
+ text-decoration: none;
+ transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+.article-prev-link:hover,
+.article-next-link:hover {
+ background: #fafafa;
+ border-color: #c8001e;
+ color: #c8001e;
+}
+.article-prev-link__arrow {
+ color: #c8001e;
+ font-weight: 600;
+}
+
+/* Side-by-side prev + next (e.g., mid-week articles with both neighbors) */
+.article-prev-next {
+ display: flex;
+ justify-content: space-between;
+ gap: 0.75rem;
+ margin: 0 0 1.5rem;
+ flex-wrap: wrap;
+}
+.article-prev-next .article-prev-link,
+.article-prev-next .article-next-link {
+ margin: 0;
+}
+
 
 /* Featured-article h2 wrapper used when the listing page inlines the latest article body.
    Visually equivalent to the original h1 (2.25rem, centered), but semantically h2 since
