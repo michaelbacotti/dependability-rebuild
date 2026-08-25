@@ -601,7 +601,7 @@ small, .small {
 }
 
 .page-content {
- padding: 56px 24px 72px;
+ padding: 48px 24px 56px;
  max-width: var(--max-width);
  margin: 0 auto;
 }
