@@ -164,3 +164,9 @@ https://www.dependability.us/* https://dependability.us/:splat 301!
 
 # Removed forecast page (rolled back 2026-07-15): 410 Gone
 /forecast/2026-07-15 /forecast/2026-07-15/ 410
+
+# ── /trade-log/ removed 2026-08-26 (Mike: let tredey.com do all trades) ──
+# dependability.us no longer publishes a public position tracker. All
+# trade-journal / closed-trade-archive content lives on tredey.com.
+# /trade-log/ redirects there for any inbound link.
+/trade-log/  https://tredey.com/forecasts/  301
